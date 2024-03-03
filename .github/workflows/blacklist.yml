@@ -2,7 +2,7 @@ name: Generate Blacklist
 on: 
   workflow_dispatch:
   schedule:
-  - cron: 0 1 * * *
+  - cron: 0 3 * * *
 
 env:
   TZ: Asia/Shanghai
@@ -31,8 +31,7 @@ jobs:
       - name: Setup SmartDNS
         run: |
           mkdir -p $SMARTDNS_PATH
-          wget $SMARTDNS_URL -O $SMARTDNS_PATH/smartdns
-          chmod +x $SMARTDNS_PATH/smartdns
+          curl $SMARTDNS_URL > $SMARTDNS_PATH/smartdns
           cp smartdns.conf $SMARTDNS_PATH/smartdns.conf
           nohup $SMARTDNS_PATH/smartdns -f -x -c $SMARTDNS_PATH/smartdns.conf > /dev/null 2>&1 &
 
@@ -49,8 +48,8 @@ jobs:
           else
             echo "status=success" >> $GITHUB_OUTPUT
             git add .
-            git config --local user.email "217heidai@gmail.com"
-            git config --local user.name "217heidai"
+            git config --local user.email "nyy1228854804@gmail.com"
+            git config --local user.name "Claire9518"
             git commit -m "Updated at $(date)" -a
           fi
             

@@ -160,7 +160,6 @@ class Resolver(object):
                 if match('^/.*/$', line):
                     filter = line
                     break
-                # 判断是否为单纯的域名
                 if line.find('.')>0 and not line.startswith('*.') and not line.startswith('-') and line.find('=')<0 and line.find(':')<0 and line.find('*')<0 and line.find('_')<0 and line.find('?')<0 and line.find(';')<0 and line.find('|')<0 and line.find('$')<0 and line.find('#')<0 and line.find('/')<0:
                     if line[len(line) - 1] == '^':
                         domain = line[:-1]

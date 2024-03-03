@@ -12,7 +12,7 @@ class BlackList(object):
     def __init__(self):
         self.__blacklistFile = os.getcwd() + "/rules/black.txt"
         self.__domainlistFile = os.getcwd() + "/rules/adblockdns.backup"
-        self.__maxTask = 500
+        self.__maxTask = 2000
 
     def GenerateDomainList(self):
         try:
@@ -108,8 +108,6 @@ class BlackList(object):
             total = len(domainList)
             if total < 1:
                 return
-            #domainList = domainList[:self.__maxTask]
-
             blackDict = self.TestDomain(domainList, ["127.0.0.1"], 5053) # 使用本地 smartdns 进行域名解析，配置3组国内、3组国际域名解析服务器，提高识别效率
 
             blackList = []

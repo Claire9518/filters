@@ -4,7 +4,7 @@ on:
     branches: [ main ]
   workflow_dispatch:
   schedule:
-  - cron: 0 */8 * * *
+  - cron: 0 0/12 * * *
 
 env:
   TZ: Asia/Shanghai
@@ -41,8 +41,8 @@ jobs:
           else
             echo "status=success" >> $GITHUB_OUTPUT
             git add .
-            git config --local user.email "217heidai@gmail.com"
-            git config --local user.name "217heidai"
+            git config --local user.email "nyy1228854804@gmail.com"
+            git config --local user.name "Claire9518"
             git commit -m "Updated at $(date)" -a
           fi
             
