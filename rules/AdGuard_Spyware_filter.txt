@@ -4375,9 +4375,10 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+|c.blue.*.com^|
+||apcdp.apnews.com^
 ||3p-udc.yahoo.com^
 ||3p-geo.yahoo.com^
-||blue.nbc4i.com^
 ||t.streetsblog.org^
 ||receive.wmcdp.io^
 ||event-router.olympics.com^
@@ -5227,8 +5228,6 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ||beta.simpel.nl^
 ||bi-eventtracker-*.amazonaws.com^
 ||bia.brightinfo.com^
-||blue.fox8.com^
-||blue.thehill.com^
 ||bonfire.spklw.com^
 ||boomerang.dell.com^
 ||broker.datazoom.io^
@@ -105855,13 +105854,14 @@ zmail.neolab.ubilab.me$image
 /com.snowplowanalytics.$domain=~snowplowanalytics.com
 .com.br/tracking.set^|
 .com.br/cliente/trackRemote^|
+! BlueConic
+||blue.*.com/script.js|$~third-party
 ! jentis.com tracker
 /get/*/live/_/jts.js
 ! GfUBServer
 /__ub.gif?
 ! webtrekk
 /wt?p=
-!
 ! transsion.com
 /athena-etm.js
 ! newrelic.com
