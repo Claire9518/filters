@@ -100,6 +100,9 @@ spletnik.ru#%#//scriptlet('set-local-storage-item', 'adrcid', '$remove$')
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/174672
+ofiii.com#%#//scriptlet('set-constant', 'COMSCORE', 'emptyObj')
+ofiii.com#%#//scriptlet('set-constant', 'COMSCORE.beacon', 'noopFunc')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/173847
 archive.org#%#//scriptlet('set-constant', 'archive_analytics', 'noopFunc')
 archive.org#%#//scriptlet('set-constant', 'archive_analytics.send_ping', 'noopFunc')
@@ -4376,6 +4379,8 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||analytics.pixels.ai^
+||globalservices.conde.digital^
 ||tracking.pennypublications.com^
 |c.blue.*.com^|
 ||apcdp.apnews.com^
@@ -106625,7 +106630,7 @@ _tracking.php?b=
 ||assets.adobedtm.com^$domain=mcclatchydc.com|elnuevoherald.com|bellinghamherald.com|sacbee.com|charlotteobserver.com|newsobserver.com|miamiherald.com|ef.ru|algida.com.tr|bmw-motorrad.co.uk|cif.com.tr|clearhaircare.com|domestos.com|dove.com|elidor.com.tr|f1sport.autorevue.cz|geico.com|hellmanns.com.tr|herkessofraya.com|johnsonsbaby.com.tr|lipton.com|lnk.to|lux.com|magnumicecream.com|neutrogena.com.tr|omo.com|rexona.com|samsung.com|sap.com|schwarzkopf.com.tr|signalturkiye.com|msnbc.com|nbcnews.com|kbb.com|eurosport.ru|timgate.it|intermiles.com|oxfordmail.co.uk|spiegel.de|hp.com|deutschepost.de|thebay.com|s.shufoo.net|tsn.ca|tabelog.com|euronews.com|newshub.co.nz|fredmeyer.com|viabcp.com|carsales.com.au|falabella.com|aarp.org|thehill.com|realtor.com|nzherald.co.nz|aia.com.ph|baynews9.com|thesaurus.com|dhc.co.jp|0101.co.jp
 !
 ||ljc.coupang.com^$redirect=nooptext
-/^https:\/\/(www|m)\.coupang\.com\/[A-Za-z0-9_]+\/[A-Za-z0-9_]+\/[A-Za-z0-9_]+\/[A-Za-z0-9_]+\/[A-Za-z0-9_]+\/[A-Za-z0-9_]+\/[A-Za-z0-9_]+(\/[A-Za-z0-9_]+){1,3}$/$domain=coupang.com,xmlhttprequest,method=post
+/^https:\/\/(www|m)\.coupang\.com\/[A-Za-z0-9_]+\/[A-Za-z0-9_]+\/[A-Za-z0-9_]+\/[A-Za-z0-9_]+\/[A-Za-z0-9_]+(\/[A-Za-z0-9_]+){0,5}$/$domain=coupang.com,xmlhttprequest,method=post
 ||streetsblog.org/api/session|
 ||clarin.com/js/meter*.js
 ||st-wzb.clarin.com/weizenbock/amazon/min.js
@@ -112907,6 +112912,12 @@ inapps.appsflyersdk.com^
 !#endif
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/174651
+@@||googletagmanager.com/gtm.js$domain=irishtimes.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/174672
+||scorecardresearch.com/beacon.js$script,redirect=scorecardresearch-beacon,domain=ofiii.com
+!+ PLATFORM(ios, ext_safari, ext_android_cb)
+@@||scorecardresearch.com/beacon.js$domain=ofiii.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/174614
 !+ PLATFORM(ios, ext_safari, ext_android_cb)
 @@||eu.spgo.io/*~/aaa$~image
