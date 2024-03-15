@@ -2,9 +2,9 @@
 ! Title: GOODBYEADS
 ! Homepage: https://github.com/8680/GOODBYEADS
 ! Expires: 12 Hours
-! Version: 2024-03-14 20:30:20（北京时间）
+! Version: 2024-03-15 09:10:11（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 6830
+! Total count: 6835
 @@$csp=worker-src 'none',domain=uptostream.com
 @@$generichide,domain=vidoza.co|vidoza.net
 @@&ad_type=$domain=ultimate-guitar.com
@@ -581,6 +581,7 @@
 @@||ads.cdn.tvb.com^*.key
 @@||ads.cricbuzz.com/adserver/units/mobile/set_ads_values.php
 @@||ads.dainikbhaskar.com/AdTech/ads/ads.js
+@@||ads.digital.disneyadvertising.com^$app=com.disney.disneyplus
 @@||ads.dygdigital.com/services/pauseroll?site=$domain=startv.com.tr|ntv.com.tr|puhutv.com|tlctv.com.tr|discoverychannel.com.tr|dmax.com.tr
 @@||ads.elevateplatform.co.uk^$popup
 @@||ads.exoclick.com/ads.js$domain=sss.xxx|hdzog.com|hclips.com
@@ -1802,6 +1803,7 @@
 @@||cohesionapps.com/cohesion/$domain=bankrate.com|frontier.com
 @@||cohesionapps.com/preamp/$subdocument,xmlhttprequest,domain=frontier.com
 @@||coinadster.com^$script,stylesheet,xmlhttprequest,other,image,domain=coinadster.com
+@@||coinblocktyrusmiram.com^$script,domain=rgeyyddl.skin
 @@||coinmarketcap.com/static/addetect/$script,~third-party
 @@||colatour.com.tw/webDM/*/adbanner$~third-party
 @@||colatour.com.tw^$generichide
@@ -2328,6 +2330,7 @@
 @@||facebook.com/share/share_now_menu/$domain=facebook.com
 @@||facebook.com/tr$domain=rusradio.ru
 @@||facebook.com^$generichide
+@@||facebook.com^$generichide,badfilter
 @@||faculty.uml.edu^$image,stylesheet
 @@||fakt.pl/*&srcc=ucs$removeparam
 @@||fakt.pl/*?utm_source=$removeparam
@@ -4606,6 +4609,7 @@
 @@||mts.ru^$stealth
 @@||mtvnetworks.tt.omtrdc.net^$script,domain=mtv.com
 @@||mui.com^$generichide
+@@||multitest.ua/static/bower_components/boomerang/boomerang.js$~third-party
 @@||multiup.org/*/mirror^
 @@||munchkin.marketo.net/munchkin.js$domain=st.com|telus.com
 @@||munchkin.marketo.net/munchkin.js$domain=telus.com
@@ -5241,6 +5245,7 @@
 @@||qa.smbc.co.jp^$stealth=dpi
 @@||qccommunity.qcloudimg.com^$stealth,domain=cloud.tencent.com
 @@||qcheng.cc/x/statics/js/guanggao.
+@@||qds.it/wp-content/plugins/digistream/digiplayer/js/videojs.ga.js?$script,~third-party
 @@||qhimg.com^*/monitor_analytic.
 @@||qhres.com^*/monitor_analytic.js$domain=mse.360.cn
 @@||qianpanso.cn/other/*.js$domain=cilimao.co|cilimao.one
