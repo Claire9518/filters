@@ -213,6 +213,7 @@
 ||startup.mobile.webvisor.com^
 ||startup-mobile.ap.yandex-net.ru^
 !
+||kiesta.net^$third-party
 ||cdn-ads.tmap.co.kr^
 ||downloadshi.b-cdn.net^
 ||ads.rmbl.ws^
@@ -1021,6 +1022,12 @@
 ! Bad: ||ad.doubleclick.net^ (should be in adservers.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/167434
+@@||b1.best-hit.tv^$generichide
+@@||h178.com^$generichide
+@@||j-baseball.club^$generichide
+@@||j-basketball.club^$generichide
+h178.com,j-baseball.club,j-basketball.club###gStickyAd
 ! https://github.com/AdguardTeam/AdguardFilters/issues/169823
 !+ PLATFORM(ios, ext_android_cb)
 @@||d0o0d.com^$generichide
@@ -2618,10 +2625,17 @@ otakei.otakuma.net,nikkan-gendai.com,ranking.goo.ne.jp,m.hellporno.com,topics.sm
 !
 ! SECTION: Regular rules
 !
+milk-key.com##.rectangleBox
+||images.j-basketball.club/banner/pr.jpg$domain=jukenbbs.com
+hikaritube.com###sp_cont_middle
+hikaritube.com###sp_middle
+apexlegends-leaksnews.com##.ad-inserter
+spabusiness.com##.leaderboardMobileContainer
+news.denfaminicogamer.jp###dfng-underarticle-center
 poyopara.com#?#iframe[src^="https://pokoran.com/ad/"]:upward(1)
 poyopara.com##.mtb150p
 poyopara.com##div[id="sp_footer"]
-poyopara.com,javym.net,nukistream.com###sp_top_head
+hikaritube.com,poyopara.com,javym.net,nukistream.com###sp_top_head
 ||korewaeroi.com/wp-content/wptouch-data/themes/*/default/ad
 ||korewaeroi.com/fukugan_sp_3x4_rec.html
 2chav.com##div[style="width:100%;height:285px;margin:10px 0 0 0;overflow:hidden;"]
