@@ -2,9 +2,9 @@
 ! Title: GOODBYEADS
 ! Homepage: https://github.com/8680/GOODBYEADS
 ! Expires: 12 Hours
-! Version: 2024-03-22 20:29:23（北京时间）
+! Version: 2024-03-23 09:08:23（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 6896
+! Total count: 6897
 @@$csp=worker-src 'none',domain=uptostream.com
 @@$generichide,domain=vidoza.co|vidoza.net
 @@&ad_type=$domain=ultimate-guitar.com
@@ -124,7 +124,7 @@
 @@/chunklist/*.m3u8$xmlhttprequest,stealth=referrer,domain=hdfungamezz.xyz
 @@/chunks.m3u8$stealth
 @@/clarity-*.js$domain=clarity-project.info
-@@/clickn(download|upload)\.[a-z]{3,5}/$script,xmlhttprequest,domain=clickndownload.org|clicknupload.click|clicknupload.link|clicknupload.red|clicknupload.vip|clicknupload.xyz|clickndownload.space
+@@/clickn(download|upload)\.[a-z]{3,5}/$script,xmlhttprequest,domain=clickndownload.*|clicknupload.*
 @@/common/cf/*$domain=66u.com|changhong.com|fei3d.com|oneplusbbs.com|readboy.com
 @@/cpc_cpm_$domain=ygo-sem.cn
 @@/dash?tvid=$stealth,domain=iqiyi.com
@@ -1249,7 +1249,7 @@
 @@||brm-core-0.brsrvr.com/api/*/core/?account_id=$domain=m.toysrus.com
 @@||brn-ads.sa.cz/www/delivery/*.php?zoneid=$domain=studentagency.eu
 @@||browser-intake-datadoghq.com^$app=com.nttdocomo.android.caboneurecord
-@@||browser.sentry-cdn.com^$domain=acustica-audio.com|dic.pixiv.net|doconcall.com.my|eco-clobber.co.uk|fundhero.io|marshmallow-qa.com|menshealth.com|podcasty.seznam.cz|roomster.com|shop.dns-net.de|spacemarket.com|timesprime.com|vivareal.com.br|womenshealthmag.com
+@@||browser.sentry-cdn.com^$domain=acustica-audio.com|dic.pixiv.net|doconcall.com.my|eco-clobber.co.uk|fundhero.io|marshmallow-qa.com|menshealth.com|ocado.com|podcasty.seznam.cz|roomster.com|shop.dns-net.de|spacemarket.com|timesprime.com|vivareal.com.br|womenshealthmag.com
 @@||browserleaks.com^$generichide
 @@||browserscope.org/user/beacon/*?callback=$script,domain=jsperf.com
 @@||brutalmania.io/ads.js
@@ -2082,6 +2082,7 @@
 @@||discretemath.org/ads/
 @@||discretemath.org^$image,stylesheet
 @@||disneyplus.com^$generichide
+@@||disneyplus.com^$generichide,badfilter
 @@||disneyplus.disney.co.jp/view/vendor/analytics/$~third-party
 @@||dispatcher.oewabox.at^$domain=krone.at
 @@||disqus.com/api/3.0/embed/threadDetails.json
