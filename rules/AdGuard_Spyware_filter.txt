@@ -99,7 +99,6 @@ spletnik.ru#%#//scriptlet('set-local-storage-item', '/^_ym/', '$remove$')
 spletnik.ru#%#//scriptlet('set-local-storage-item', 'adrcid', '$remove$')
 !
 !
-!
 ! https://github.com/AdguardTeam/AdguardFilters/issues/175476
 pullandbear.com#%#//scriptlet('prevent-element-src-loading', 'script', 'widget.fitanalytics.com/widget.js')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/174672
@@ -575,6 +574,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 !
 !
 !
+||tags.qortex.ai^$third-party
 ||analytics-ingestion.pbpms.de^
 ||fpad.jp^$third-party
 ||palibzh.tech^
@@ -5024,7 +5024,6 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ||client-metrics.chess.com^
 ||stat.kwikmotion.com^
 ||analytics.vpplayer.tech^
-||h.seznam.cz^
 ||stat.cncenter.cz^
 ||metrics.roblox.com^
 ||t.xoom.com^
@@ -96763,6 +96762,9 @@ _tracking.php?b=
 /analytics.js$domain=tokyometro.jp|resumes.breakdownexpress.com|techcult.com|inbox.lv|kopeda.com|freexcafe.com|rusvideos.tv|nakubani.ru|lun.com|songsara.net|newsmax.com|bolgehastanesi.com|ewtc.de|newsdig.tbs.co.jp|imore.com|city.kushiro.lg.jp|emeraldbridal.com.au|emarat-news.ae|imobie.jp|tikla.com.tr|rusvideos.porn|jrkyushu.co.jp|amiunique.org|edit.ing|konami.com
 ||assets.adobedtm.com^$domain=mcclatchydc.com|elnuevoherald.com|bellinghamherald.com|sacbee.com|charlotteobserver.com|newsobserver.com|miamiherald.com|ef.ru|algida.com.tr|bmw-motorrad.co.uk|cif.com.tr|clearhaircare.com|domestos.com|dove.com|elidor.com.tr|f1sport.autorevue.cz|geico.com|hellmanns.com.tr|herkessofraya.com|johnsonsbaby.com.tr|lipton.com|lnk.to|lux.com|magnumicecream.com|neutrogena.com.tr|omo.com|rexona.com|samsung.com|sap.com|schwarzkopf.com.tr|signalturkiye.com|msnbc.com|nbcnews.com|kbb.com|eurosport.ru|timgate.it|intermiles.com|oxfordmail.co.uk|spiegel.de|hp.com|deutschepost.de|thebay.com|s.shufoo.net|tsn.ca|tabelog.com|euronews.com|newshub.co.nz|fredmeyer.com|viabcp.com|carsales.com.au|falabella.com|aarp.org|thehill.com|realtor.com|nzherald.co.nz|aia.com.ph|baynews9.com|thesaurus.com|dhc.co.jp|0101.co.jp|staples.com
 !
+/hitcount.js$domain=kurier.de|np-coburg.de|frankenpost.de
+||idowa.de/build/js/snowplow-tracker.tatest.js
+||open.spotifycdn.com/cdn/js/retargeting-pixels.*.js
 ||client-log.box.com/analytics-events/
 ||np-coburg.de/cms/hitcount
 ||cdn.tickaroo.com/api/collect/
@@ -103188,6 +103190,13 @@ inapps.appsflyersdk.com^
 !#endif
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/176429
+newton.by#%#//scriptlet('set-constant', 'yaCounter22339861.reachGoal', 'noopFunc')
+newton.by#%#//scriptlet('set-constant', 'ga', 'noopFunc')
+!#if (adguard_ext_safari || adguard_app_ios || adguard_ext_android_cb)
+@@||googletagmanager.com/gtm.js$domain=newton.by
+@@||mc.yandex.ru/metrika/tag.js$domain=newton.by
+!#endif
 ! broken notificatoin
 @@||rtoaster.jp^$script,domain=cecile.co.jp
 ! https://github.com/AdguardTeam/AdguardFilters/issues/176193
