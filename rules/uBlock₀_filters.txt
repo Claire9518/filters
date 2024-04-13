@@ -3716,9 +3716,9 @@ oltacidergisi.com##+js(acs, atob, minimalDrainValue)
 ! https://infosec.exchange/@urldna/112224043535026915
 ! https://infosec.exchange/@urldna/112244333356436954
 /^https:\/\/[a-z]{3}\.[a-z]{3}\.mybluehost\.me\/[a-z]{2,}\/[0-9A-z]{3,}\/contract\//$doc,frame,match-case
-/^https?:\/\/usps\.post[a-z]{2,}\.com\//$doc,domain=~usps.com
-/^https?:\/\/usp[a-z]\.[a-z]{5,}\.top\//$doc,domain=~usps.com
-.top/pg?do=index$doc
+/^https:\/\/usps\.[-a-z]{6,}\.(?:com|top)\/(?:address\.html|information|verify)\b/$doc,domain=com|top|~usps.com
+/^https:\/\/ur[ce][a-z]{2}\.com\/(?:address\.html|information|verify)\b/$doc,domain=com|~usps.com
+.top/pg?do=$doc,domain=top
 ||usps.posttrackre.com^$all
 ||usps.postiw.com^$all
 ||usps.mytrackingie.top^$all
@@ -3756,6 +3756,7 @@ oltacidergisi.com##+js(acs, atob, minimalDrainValue)
 ||beluxrepm.followme.fr/FolloWMe$all
 ||mybluehost.me/Cope346/$all
 ||secure-documents.glitch.me^$all
+||fz9q.info/NZ-195/$all
 ||glitch.me/pdf.html?email=^$doc
 ! http://s5[.]qb6agda[.]cursorltd.com/
 ||cursorltd.com^$doc
@@ -3831,3 +3832,6 @@ oltacidergisi.com##+js(acs, atob, minimalDrainValue)
 ! https://lsvn.vn/cong-bo-danh-sach-cac-website-duong-link-gia-mao-1689820821.html
 ! https://www.facebook.com/LYNVietnam/photos/a.367113197050114/1391216614639762/
 ||lynstore.net^$all,to=~lynvn.com
+
+! https://dichvucong[.]vsgov[.]com/ - gov phishing site
+||dichvucong.$doc,domain=~gov.vn
