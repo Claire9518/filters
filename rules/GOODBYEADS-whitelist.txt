@@ -2,9 +2,9 @@
 ! Title: GOODBYEADS
 ! Homepage: https://github.com/8680/GOODBYEADS
 ! Expires: 12 Hours
-! Version: 2024-04-13 08:59:46（北京时间）
+! Version: 2024-04-13 20:26:24（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 6832
+! Total count: 6822
 @@$cookie=__gads,domain=rseducationinfo.com|rsinsuranceinfo.com|rsadnetworkinfo.com|rsfinanceinfo.com|rshostinginfo.com|rssoftwareinfo.com
 @@$csp=worker-src 'none',domain=uptostream.com
 @@$generichide,domain=vidoza.co|vidoza.net
@@ -151,7 +151,6 @@
 @@/hls/*.m3u8$stealth=referrer,domain=techclips.net|focus4ca.com|lovesomecommunity.com|b4ucast.com|thegentleclass.com
 @@/hls/*.ts$stealth=referrer,domain=techclips.net|abolishstand.net|planetfastidious.net|thegentleclass.com
 @@/home/ads/*$domain=esunbank.com.tw
-@@/iframe*.php$subdocument,stealth,domain=dizipal700.com|dizipal701.com|dizipal702.com|dizipal703.com|dizipal704.com|dizipal705.com|dizipal706.com|dizipal707.com|dizipal709.com|dizipal710.com|dizipal711.com|dizipal712.com|dizipal713.com|dizipal714.com|dizipal715.com|dizipal716.com|dizipal717.com|dizipal718.com|dizipal719.com|dizipal720.com|dizipal721.com|dizipal722.com|dizipal723.com|dizipal724.com|dizipal725.com|dizipal726.com|dizipal727.com|dizipal728.com|dizipal730.com|dizipal731.com|dizipal732.com|dizipal733.com|dizipal734.com|dizipal735.com|dizipal736.com|dizipal737.com|dizipal738.com|dizipal739.com|dizipal740.com|dizipal741.com|dizipal743.com|dizipal745.com|dizipal755.com|dizipal801.com|dizipal802.com|dizipal803.com|dizipal804.com|dizipal805.com|dizipal806.com|dizipal807.com|dizipal808.com|dizipal809.com|dizipal810.com|dizipal811.com|dizipal812.com|dizipal813.com|dizipal814.com|dizipal815.com|dizipal816.com|dizipal817.com|dizipal818.com|dizipal819.com|dizipal820.com|dizipal821.com|dizipal822.com|dizipal823.com|dizipal824.com|dizipal825.com|dizipal826.com|dizipal827.com|dizipal828.com|dizipal829.com|dizipal830.com|dizipal831.com|dizipal832.com|dizipal833.com|dizipal834.com|dizipal835.com|dizipal836.com|dizipal837.com|dizipal838.com|dizipal839.com|dizipal840.com|dizipal841.com|dizipal842.com|dizipal843.com
 @@/image/ad/*$domain=gashpoint.com
 @@/image/share_$domain=pan.baidu.com
 @@/images/*/*.gif$domain=maichun5.info|myhhg.com
@@ -195,6 +194,7 @@
 @@/pubads*theguardian.com
 @@/rwd_cap.js$domain=ibf.tw
 @@/s_code_acdc.js$domain=adobe.com
+@@/scripts/*js|$xmlhttprequest,stealth=referrer,domain=1stream.eu|1stream.soccer|streameast.app|thecrackstreams.live|meth-streams.ai|buffstreams.app
 @@/sd0embed/*$subdocument,stealth=referrer,domain=vipbox.lc
 @@/sensorsdata-$domain=aixiaoyuan.cn|zkh.com
 @@/sensorsdata.$domain=36kr.com|binance.com|by56.com|canon.com.cn|chuanglan.com|fenbi.com|guancha.cn|imooc.com|kuque.com|modian.com|saicskoda.com.cn|shanbay.com|tianyancha.com|ttcdw.cn|xinrenxinshi.com|zzjiasuqi.com
@@ -900,9 +900,7 @@
 @@||api.joara.com/v1/banner/main_popup.joa$app=com.joara.mobile
 @@||api.leanplum.com^$app=com.dolap.android
 @@||api.leanplum.com^$app=com.thetrainline
-@@||api.mapbox.com/*/mapbox.mapbox-terrain-*,mapbox.mapbox-streets-*^$stealth
 @@||api.mapbox.com/*?secure&access_token=$stealth
-@@||api.mapbox.com/geocoding/$stealth
 @@||api.mapbox.com^$stealth,domain=gpx.studio
 @@||api.mercari.jp^$stealth
 @@||api.mi-img.com^$stealth=referrer
@@ -1294,7 +1292,6 @@
 @@||camelcamelcamel.com/tracker?rf=
 @@||camerabay.tv/ads/entry/camerabay/fullbk/bg.jpg
 @@||camhub.world/player/player_ads.html
-@@||camvideoshub.com/livejasmin.com.js$script
 @@||canada.com/js/ooyala/comscore.js
 @@||canadacomputers.com/templates/ccnew/assets/js/jquery.browser-fingerprint-$~third-party
 @@||canadiantire.ca^*/analytics.sitecatalyst.js
@@ -1656,6 +1653,7 @@
 @@||cgmodel.com/plugin/share/
 @@||chaintv.xyz/homestatic/js/adjs.js
 @@||challenges.cloudflare.com/turnstile/$script
+@@||challenges.cloudflare.com^$domain=download.megaup.net
 @@||challenges.cloudflare.com^$stealth
 @@||chanel.com/js/chanel-tracking.js$script
 @@||changyan.sohu.com/debug/cookie?
@@ -2183,7 +2181,6 @@
 @@||e.mail.ru^$stealth
 @@||e.zg-api.com/*/analytics.js$domain=zillow.com
 @@||e9china.net^$generichide
-@@||eapteka.ru/*/personal/$stealth
 @@||easternbank.com/sites/easternbank/files/google_tag/eastern_bank/google_tag.script.js$script,~third-party
 @@||easy-firmware.com/templates/default/html/*/assets/js/fingerprint2.min.js$script,~third-party
 @@||easylife.tw/js/adblockDetector.js
@@ -3556,7 +3553,6 @@
 @@||hopto.org/js/prebid-ads.
 @@||hopto.org^$generichide
 @@||hostlogr.com/etc/geo.php?
-@@||hosts-file.net/ad_servers.txt
 @@||hotmail.com/mail/*/i2a.js
 @@||hotpornfile.org/wp-admin/admin-ajax.php$domain=hotpornfile.org
 @@||hotstarext.com/web-messages/core/error/v52.json$xmlhttprequest,domain=hotstar.com
@@ -3635,7 +3631,6 @@
 @@||identity.mparticle.com^$xmlhttprequest
 @@||idm.hit.gemius.pl/gplayer.js$domain=muratorplus.pl
 @@||idm.hit.gemius.pl/gplayer.js$domain=poradnikzdrowie.pl|mjakmama24.pl|se.pl|eskarock.pl|voxfm.pl|radioplus.pl|eska.pl|radiosupernova.pl|vibefm.pl|urzadzamy.pl
-@@||idmsa.apple.com/appleauth/$stealth,domain=icloud.com|icloud.com.cn
 @@||idos.idnes.cz^$csp
 @@||idsly.com^$generichide
 @@||iejima.org/ad-banner/$image,~third-party
@@ -3794,7 +3789,6 @@
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=sonyliv.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=spox.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=stack.com
-@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=tenceretv.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=texastech.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=timesnownews.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=tranimeci.com
@@ -3820,7 +3814,6 @@
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=wetteronline.de
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=wetv.vip
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=wibc.com
-@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=wordgames.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=wsls.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=xxxdan.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=yad.com
@@ -4016,7 +4009,6 @@
 @@||itv.1tv.ru/stat.php?
 @@||itv.com/itv/hserver/*/site=itv/$xmlhttprequest
 @@||itv.com/itv/tserver/$~third-party
-@@||itv.com/itv/tserver/*size=*/*/viewid=
 @@||itworld.com/elqnow/elq*.js
 @@||iv*.imgview.net/i/$image
 @@||ivwbox.de/2004/01/survey.js$domain=stylished.de|t-online.de
@@ -4977,7 +4969,6 @@
 @@||partner-api.sddan.com/api/*/segment-$domain=6play.fr
 @@||partner.googleadservices.com/gpt/pubads_$domain=mlb.com
 @@||partner.googleadservices.com/gpt/pubads_impl_$domain=ukr.net
-@@||partner.market.yandex.ru^$stealth=referrer
 @@||partner1.cashback.zen.com/aff_
 @@||partnerads.ysm.yahoo.com/ypa/?ct=*suchmaschine.com$domain=suchmaschine.com
 @@||pass.1688.com^$subdocument
@@ -5391,7 +5382,6 @@
 @@||rubiconproject.com/prebid/dynamic/$script,domain=ask.com|journaldequebec.com
 @@||rudaw.net/images/pixel.gif$~third-party
 @@||rule34hentai.net^$generichide
-@@||rumble.com/embed/$stealth
 @@||rumcdn.geoedge.be/*/grumi.js$domain=comingsoon.net
 @@||runative-syndicate.com/do2/*$domain=onemanhua.com
 @@||runescape.wiki^$image,~third-party
@@ -6003,6 +5993,7 @@
 @@||supercloudsms.com/static/ad/ads.js
 @@||supersonicads.com^$app=com.square_enix.android_googleplay.dqwalkj
 @@||support.google.com^$domain=support.google.com
+@@||support.logi.com/*/articles/$stealth=useragent
 @@||support.thesslstore.com/visitor/index.php
 @@||support.weixin.qq.com^
 @@||surfguru.com^$generichide
@@ -6473,7 +6464,6 @@
 @@||vatanbilgisayar.com/upload/banner/
 @@||vatchus.com^$generichide
 @@||vattastic.com/js/fp2/fingerprint2.min.js
-@@||vector.hereapi.com/v*/vectortiles/$stealth
 @@||vegetariantimes.com^$stealth=dpi
 @@||verizon.com/images/track/track.gif?track=load&$xmlhttprequest
 @@||verticalscope-com.videoplayerhub.com/galleryplayer.js$domain=skyscrapercity.com
