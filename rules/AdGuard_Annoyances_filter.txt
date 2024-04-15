@@ -2407,6 +2407,7 @@ damota.me,pracazarohom.*,seduo.*#%#//scriptlet('remove-class', 'force--consent|s
 !
 ! NOTE: Regular rules
 !
+s-court.me#%#//scriptlet('set-cookie', 'cookie_accept', 'true')
 lastmile.lt#%#//scriptlet('trusted-set-cookie', '__consent', '%5B%22required%22%5D')
 sony.ua###__tealiumDNS_banner
 hocomo.pl#%#//scriptlet('trusted-set-cookie', 'cookie-consent', '%7B%22marketing%22%3Afalse%2C%22advertisement%22%3Afalse%7D')
@@ -15218,6 +15219,8 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_ext
 !
 !
 !
+! s-court.me - unable to login
+s-court.me#@#.cookie_accept
 ! mz.de - broken player
 @@||cdn.privacy-mgmt.com/wrapperMessagingWithoutDetection.js$domain=mz.de
 @@||cdn.privacy-mgmt.com/mms/$domain=mz.de
@@ -41444,6 +41447,7 @@ m.tokopedia.com#$#div[data-testid="divOverlay"] { display: none!important; }
 ! causes some issues: https://github.com/AdguardTeam/AdguardForMac/issues/550
 ~status.im,~lafenice.io,~kurer-sreda.ru,~chorki.com,~zattoo.com,~zaycev.net,~hitta.se,~mail.ru,~facebook.com,~instagram.com,~drive.google.com$$link[rel="manifest"]
 !
+ganganonline.com##.Base_banner__UbMI_
 mail.yahoo.com#%#//scriptlet('trusted-click-element', '.landshark > a.close-button')
 sp.live.nicovideo.jp##.ga-ns-app-alert-dialog
 sp.live.nicovideo.jp##div[class^="___overlay_"][data-overlay-role="cover"]
