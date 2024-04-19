@@ -2407,7 +2407,7 @@ codesandbox.io,damota.me,pracazarohom.*,seduo.*#%#//scriptlet('remove-class', 'f
 ! !SECTION: Cookies - Popular rules
 !
 ! NOTE: Regular rules
-s.weddingpark.net##.cookie
+weddingpark.net##.cookie
 tvoe.live##div[class^="Alert_acceptCookies"]
 oko.press#%#//scriptlet('trusted-set-cookie', 'privacy2', 'necessary')
 kyoceradocumentsolutions.us#%#//scriptlet('set-cookie', 'essentialsCookies', 'true')
@@ -5469,7 +5469,7 @@ xxxlutz.ro##._v-qs6Y5hTXMmFt87
 databreachtoday.com,bankinfosecurity.com##.cookies-alert-box-wrapper
 pptvhd36.com###policy_cookie_div
 ifortuna.sk,ifortuna.cz,efortuna.pl##div[id^="cookie-consent-modal"]
-czasnaherbate.net,mango.pl,dragonbox.de,tvokazje.pl,market2go.it###lgcookieslaw_banner
+herbolariorosana.com,czasnaherbate.net,mango.pl,dragonbox.de,tvokazje.pl,market2go.it###lgcookieslaw_banner
 miele.com.au##div[class^="cookie-info-more-options-"]
 rdc.pl##.new-cp
 leroymerlin.ru##div[data-qa-cookie-notification]
@@ -20775,7 +20775,7 @@ jsfiddle.net##body > #modal-body.unblockRequest
 jsfiddle.net#%#//scriptlet('set-constant', '_bsa', 'emptyObj')
 rutube.ru##.notification-container-module__infoNotifications
 watson.de#$##adBlockerTest { display: block !important; }
-raenonx.cc#%#(()=>{const e={apply:async(e,t,a)=>{if(a[0]&&a[0]?.match(/adsbygoogle|doubleclick/)){const e=(e="{}",t="",a="opaque")=>{const n=new Response(e,{statusText:"OK"}),o=String((s=50800,r=50900,Math.floor(Math.random()*(r-s+1)+s)));var s,r;return n.headers.set("Content-Length",o),Object.defineProperties(n,{type:{value:a},status:{value:0},statusText:{value:""},url:{value:""}}),Promise.resolve(n)};return e("{}",a[0])}return Reflect.apply(e,t,a)}};window.fetch=new Proxy(window.fetch,e)})();
+raenonx.cc#%#(()=>{const e={apply:async(e,t,a)=>{if(a[0]&&a[0]?.match(/adsbygoogle|doubleclick|googlesyndication|static\.cloudflareinsights\.com\/beacon\.min\.js/)){const e=(e="{}",t="",a="opaque")=>{const n=new Response(e,{statusText:"OK"}),o=String((s=50800,r=50900,Math.floor(Math.random()*(r-s+1)+s)));var s,r;return n.headers.set("Content-Length",o),Object.defineProperties(n,{type:{value:a},status:{value:0},statusText:{value:""},url:{value:""}}),Promise.resolve(n)};return e("{}",a[0])}return Reflect.apply(e,t,a)}};window.fetch=new Proxy(window.fetch,e)})();
 myfxbook.com#%#//scriptlet('prevent-setTimeout', 'detectLoadedAdsContainer')
 iphoned.nl##.adblock-detect
 @@||iphoned.nl/wp-content/themes/*/scripts/adv_out.js
@@ -23450,10 +23450,6 @@ sanalkurs.net###toast-container > .toast-error[aria-live="assertive"]
 ###credential_picker_container
 ! mobile
 ###credential_picker_iframe
-! Google Chrome may render the popup as a floating element which is not a part of the page
-! that is why cosmetic rule `###credential_picker_container` does not work
-! https://developer.mozilla.org/en-US/docs/Web/API/FedCM_API
-!||accounts.google.com/gsi/client^$third-party,script,domain=
 !
 api.flocktory.com
 /wp-content/plugins/ays-facebook-popup-likebox/*
@@ -23549,8 +23545,16 @@ api.flocktory.com
 ! Good: any type of the rules will be good
 ! Bad:  @@||example.org^ (should be in popups_allowlist.txt)
 !
+!
+!
+! Google Chrome may render the popup as a floating element which is not a part of the page
+! that is why cosmetic rule `###credential_picker_container` does not work
+! https://developer.mozilla.org/en-US/docs/Web/API/FedCM_API
+||accounts.google.com/gsi/client^$third-party,script,domain=dtf.ru|stackoverflow.com
+!
 ! SECTION: Popups - Regular rules
 !
+dobreprogramy.pl#%#//scriptlet('trusted-set-local-storage-item', 'action_tooltip_1', '$now$')
 order.ymobile.jp#$#body { overflow: auto !important; position: static !important; }
 order.ymobile.jp#$##not-supported-browser-modal { display: none !important; }
 r10.net##div[data-cname^="topbar10barrk"]
