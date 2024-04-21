@@ -26918,8 +26918,6 @@ lowellsun.com,saratogian.com,denverpost.com#$#.modal-scrollable ~ div.connext-mo
 saratogian.com#$#body { overflow: auto !important; }
 saratogian.com#?#.modal-scrollable:has(> .Mg2-connext > #fullscreennewsletter)
 trovit.it,lostiempos.com,nazya.com,firstthings.com###cboxOverlay
-nitro.download###superbox-wrapper
-nitro.download###superbox-overlay
 vamvelosiped.ru###TucanModal
 medicalexpo.de###sticky-rfq
 pcloud.com##body > div.notify_bar_wrap
@@ -29584,7 +29582,6 @@ worldsoffood.de##div[id^="fblike"]
 newengland.com##div[id^="haven-paywall"]
 shoneekapoor.com,24news.com.ua,akillitelefon.com,instinctcoder.com##div[id^="ppsPopup"]
 afyonhaber.com,tamindir.com,bigfishgames.de,adapostasi.com##div[id^="simplemodal-"]
-nitroflare.com##div[id^="superbox-"]
 temaretik.com##div[ng-if="$root.joinGuest"]
 techblogng.com##iframe.HB-Takeover[src="about:blank"]
 com-magazin.de##w-div[role$="dialog"]
@@ -30209,6 +30206,8 @@ kurashiru.com#$#html.dly-modal-active { overflow: auto !important; }
 ! SECTION: Popups - Mobile sites only
 !#if (adguard_app_android || adguard_app_ios || adguard_ext_android_cb || ext_ublock)
 !
+ufret.jp#$##full-screen-ad { display: none !important; }
+ufret.jp#$#.no-scroll { overflow: auto !important; }
 nanboya.com##.footer_fixedcta__shop
 kidsna.com##.content__sticky-block
 chester-tax.com##.fixed-footer
@@ -31603,6 +31602,7 @@ mentalfloss.com,90min.com,fansided.com,90min.de,12thmanrising.com,1428elm.com,8p
 !
 ! SECTION: Subscriptions - Regular rules
 !
+autodesk.com###uf-cta-beside
 winaero.com###ebpa
 winaero.com##.ebpa-close
 vadimkravcenko.com##.custom-backdrop-show
@@ -38387,6 +38387,7 @@ turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,rabota.by,temp-
 ! https://github.com/AdguardTeam/AdguardFilters/issues/161301
 temu.com#?#div[role="main"] div[style] > div[style]:has(> div[style] div[js-selector="mobile-download-ui"])
 !
+relax-job.com##.p-category-app-banner__outer--bottom
 lotteeatz.com#%#//scriptlet('trusted-click-element', '#goAppPopup button[onclick*=".popClose"]:not([onclick*="moveAppMarket"])', '', '500')
 ||baby-calendar.jp/babycalendar/img/side/banner_side_app.png
 store.monsterhunternow.com##section[data-ws-testid$="app-download-banner-container"]
@@ -41460,6 +41461,8 @@ m.tokopedia.com#$#div[data-testid="divOverlay"] { display: none!important; }
 ! causes some issues: https://github.com/AdguardTeam/AdguardForMac/issues/550
 ~status.im,~lafenice.io,~kurer-sreda.ru,~chorki.com,~zattoo.com,~zaycev.net,~hitta.se,~mail.ru,~facebook.com,~instagram.com,~drive.google.com$$link[rel="manifest"]
 !
+relax-job.com##.js-smartapp-banner
+relax-job.com##.p-top-app-appeal
 baby-calendar.jp##.l-anime-bana.js-bcweb-only
 savefrom.net##.smart-app-br
 epark.jp##.header_app_banner
@@ -47079,6 +47082,7 @@ theguardian.com##.contributions__adblock
 !
 ! SECTION: Self-promo - Regular rules
 !
+diamondblog.jp##div[class^="special_link_in"]
 famitsu.com##.l-contents-block:has(> div.row > div > div.card > div.ad-native-campaign-leftout)
 famitsu.com##div[class^="ArticleDetail_column_"]:has(> ul[class^="PrimaryCardList_wrapper_"] p[class^="PrimaryCardInner_adText"])
 dengekionline.com##li[class^="ArticleList_listBanner__"]
@@ -47848,8 +47852,8 @@ atida.fr##header .cmpt_flash_info
 atida.fr###top-info
 weather.yahoo.co.jp###rbnr > p[style="margin:0px 0px 20px 0px;text-align:center;"]
 !+ NOT_PLATFORM(ext_ublock)
-novelskey.tarbin.net,gp.tsukimi.club,misskey.neos.love,mk.yopo.work,nijimiss.moe#%#//scriptlet('json-prune', 'ads.[].imageUrl')
-novelskey.tarbin.net,gp.tsukimi.club,misskey.neos.love,mk.yopo.work,nijimiss.moe##.xF6dY
+nijimiss.moe,novelskey.tarbin.net,gp.tsukimi.club,misskey.neos.love,mk.yopo.work,nijimiss.moe#%#//scriptlet('json-prune', 'ads.[].imageUrl')
+nijimiss.moe,novelskey.tarbin.net,gp.tsukimi.club,misskey.neos.love,mk.yopo.work,nijimiss.moe##.xF6dY
 bilibili.com##.video-page-special-card-small
 bilibili.com##a[href*="cm.bilibili.com"][data-target-url*=".bili"]
 123pan.com##div[style="width:100%;position:fixed;bottom:25px"]
