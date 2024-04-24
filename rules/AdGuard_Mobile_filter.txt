@@ -2648,6 +2648,9 @@ otakei.otakuma.net,nikkan-gendai.com,ranking.goo.ne.jp,m.hellporno.com,topics.sm
 !
 ! SECTION: Regular rules
 !
+reuters.com#%#//scriptlet('remove-attr', 'style', 'div[class*="site-header__with-mobile-leaderboard"]')
+the-miyanichi.co.jp##.banner:has(> div[id^="div-gpt-"])
+okinawatimes.co.jp##.l-main > div[style=" height:130px;"]
 the-miyanichi.co.jp##.sp_all_header
 video.fc2.com##.c-boxList-sp1 > li:has(.pr-ads)
 vjav.*##.video-page__wrapper > section[style="display: flex;"]
@@ -2723,7 +2726,7 @@ m.foodingredientsfirst.com##.supplier_banner
 m.foodingredientsfirst.com##div[data-category="MobileTopBanner"]
 newluxe.jp##.post-content > div[style="height: 500px;"]
 zozovideo.com##.cactus-single-content > div.content-top-sidebar-wrap:has(> .zozov-widget)
-sportbible.com,unilad.com,ladbible.com##div[class^="article-observer_bottomAd"]
+gamingbible.com,sportbible.com,unilad.com,ladbible.com##div[class^="article-observer_bottomAd"]
 comic.pixiv.net#$#.bottom-\[100px\][class^="jsx-"] { bottom: 0 !important; }
 eroist.site##.nexkoukoku500
 nukistream.com#?#.article_list .w100:has(a[target="_blank"]:contains(PR))
