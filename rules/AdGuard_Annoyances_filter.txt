@@ -2408,6 +2408,11 @@ codesandbox.io,damota.me,pracazarohom.*,seduo.*#%#//scriptlet('remove-class', 'f
 !
 ! NOTE: Regular rules
 !
+shop.blu-blumen.de#%#//scriptlet('set-constant', 'cb_isMarketingAllowed', 'noopFunc')
+ynjn.jp##article.fixed > .items-center.text-white:has(> div > a[href*="/privacy/privacy_detail.html"])
+jackjones.com#$#body { overflow: auto !important; }
+jackjones.com#$#.flyout--cookienotification { display: none !important; }
+tjapan.jp##.fixed_banner
 nonno.hpplus.jp##.popup_banner
 m-tac.pl##.cookie-notice-ui
 m-tac.pl##.mess-bg
@@ -15214,6 +15219,9 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_ext
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/177450
+!+ PLATFORM(ios, ext_android_cb, ext_safari)
+@@||shop.blu-blumen.de/Scripts/CookieBanner.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/177605
 ! https://github.com/AdguardTeam/AdguardFilters/issues/160618
 biomedcentral.com#@#.cc-banner
@@ -31113,7 +31121,7 @@ masrawy.com##.lstNwsNtfy
 ||storage.googleapis.com/dito/sdk.js$domain=newbalance.com.br
 tvi.iol.pt,cnnportugal.iol.pt,tviplayer.iol.pt##.bell
 tvi.iol.pt,cnnportugal.iol.pt,tviplayer.iol.pt###popover
-tengrinews.kz,vesti.kz##.push-form-container
+tengriauto.kz,tengrinews.kz,vesti.kz##.push-form-container
 protranslate.net###pushModal
 protranslate.net###pushModal ~ .modal-backdrop
 ||ziare.com/firebase-messaging-init.js
@@ -31631,6 +31639,9 @@ mentalfloss.com,90min.com,fansided.com,90min.de,12thmanrising.com,1428elm.com,8p
 !
 ! SECTION: Subscriptions - Regular rules
 !
+cloudflare.com##.mb7 > div.bg-blue4:has(> section > form input#Email)
+monopol-magazin.de###block-stickyfooter
+monopol-magazin.de###block-footer-newsletter-form
 acouplecooks.com##.block-email
 market.yandex.*##div[id="/content/footer/subscription"]
 ig.com##div[class^="grid__bg image-background "][style*="/NEWS-LEADGEN-BGIMAGE.jpg"]
@@ -49632,6 +49643,8 @@ newsweek.com##iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
 !##############################
 ! SECTION: Tweaks - JS
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/177320 timer
+wdho.ru#%#//scriptlet('set-constant', 'window.c', '1')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/177548
 dwgshare.com#%#//scriptlet('adjust-setInterval', 'secounds', '*', '0.001')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/176233
