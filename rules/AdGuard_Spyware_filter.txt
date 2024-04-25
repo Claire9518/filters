@@ -99,6 +99,8 @@ spletnik.ru#%#//scriptlet('set-local-storage-item', '/^_ym/', '$remove$')
 spletnik.ru#%#//scriptlet('set-local-storage-item', 'adrcid', '$remove$')
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/177870
+mwed.jp#%#//scriptlet('abort-current-inline-script', 'document.createElement', 'keen-tracking')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/150584
 nicovideo.jp#%#//scriptlet('prevent-fetch', 'stella.nicovideo.jp')
 nicovideo.jp#%#//scriptlet('prevent-xhr', 'stella.nicovideo.jp')
@@ -4439,6 +4441,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||aa-metrics.hotpepper.jp^
 ||c615.denverpost.com^
 ||newsstat.dallasnews.com^
 ||e.channelexco.com^
@@ -72779,6 +72782,10 @@ _tracking.php?b=
 /analytics.js$domain=tokyometro.jp|resumes.breakdownexpress.com|techcult.com|inbox.lv|kopeda.com|freexcafe.com|rusvideos.tv|nakubani.ru|lun.com|songsara.net|newsmax.com|bolgehastanesi.com|ewtc.de|newsdig.tbs.co.jp|imore.com|city.kushiro.lg.jp|emeraldbridal.com.au|emarat-news.ae|imobie.jp|tikla.com.tr|rusvideos.porn|jrkyushu.co.jp|amiunique.org|edit.ing|konami.com
 ||assets.adobedtm.com^$domain=mcclatchydc.com|elnuevoherald.com|bellinghamherald.com|sacbee.com|charlotteobserver.com|newsobserver.com|miamiherald.com|ef.ru|algida.com.tr|bmw-motorrad.co.uk|cif.com.tr|clearhaircare.com|domestos.com|dove.com|elidor.com.tr|f1sport.autorevue.cz|geico.com|hellmanns.com.tr|herkessofraya.com|johnsonsbaby.com.tr|lipton.com|lnk.to|lux.com|magnumicecream.com|neutrogena.com.tr|omo.com|rexona.com|samsung.com|sap.com|schwarzkopf.com.tr|signalturkiye.com|msnbc.com|nbcnews.com|kbb.com|eurosport.ru|timgate.it|intermiles.com|oxfordmail.co.uk|spiegel.de|hp.com|deutschepost.de|thebay.com|s.shufoo.net|tsn.ca|tabelog.com|euronews.com|newshub.co.nz|fredmeyer.com|viabcp.com|carsales.com.au|falabella.com|aarp.org|thehill.com|realtor.com|nzherald.co.nz|aia.com.ph|baynews9.com|thesaurus.com|dhc.co.jp|0101.co.jp|staples.com
 !
+||amazonaws.com/jsstore/*/ge.js
+||billboard.com/wp-content/plugins/pmc-plugins/pmc-trackonomics/build/index.js
+||billboard.com/wp-content/plugins/pmc-plugins/pmc-social-share-bar/build/tracking.js
+||mwed.jp/assets/packs/js/measurements/
 ||numerama.com/plsbl/api/event
 ||video-player.arcpublishing.com/beacon|
 ||cbs12.com/api/rest/analytics/
@@ -73045,9 +73052,7 @@ thehindu.com###sectiondivicymi
 ||1password.com/gtag-production.*.js
 ||1password.com/js/analytics.*.js
 ||p.typekit.net/p.gif
-||merkur.de/bi/dev/
-||merkur.de/bi/doop/
-||hna.de/bi/doop/
+.de/bi/d*$domain=merkur.de|hna.de|serienjunkies.de
 ||game-i.daa.jp/skin/analytics.php
 ||game-i.daa.jp/skin/jquery.iframetracker.min.js
 ||dropbox.com/pithos/*ux_analytics$script
