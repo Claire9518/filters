@@ -99,6 +99,8 @@ spletnik.ru#%#//scriptlet('set-local-storage-item', '/^_ym/', '$remove$')
 spletnik.ru#%#//scriptlet('set-local-storage-item', 'adrcid', '$remove$')
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/177971
+bgr.com#%#//scriptlet("set-constant", "pmc_do_analytics_pagecount", "false")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/177870
 mwed.jp#%#//scriptlet('abort-current-inline-script', 'document.createElement', 'keen-tracking')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/150584
@@ -576,6 +578,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 !
 !
 !
+||whos.amung.us^$third-party
 ||zdw.w8.com.cn^
 ||pbjs-stream.bydata.com^
 ||collector*.ex.co^
@@ -6696,7 +6699,6 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ||weblog.hankookilbo.com^
 ||weblog.zdnet.co.kr^
 ||webvitals.luxnet.ua^
-||whos.amung.us^
 ||widget.perfectmarket.com^
 ||wl.yna.co.kr^
 ||wlog.tmon.co.kr^
