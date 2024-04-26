@@ -1045,17 +1045,14 @@ h178.com,j-baseball.club,j-basketball.club###gStickyAd
 !+ PLATFORM(ios, ext_android_cb)
 @@||megapornfreehd.com^$generichide
 ! https://github.com/AdguardTeam/AdguardFilters/issues/164959
-mx3a.nan-net.jp#%#//scriptlet('remove-node-text', 'script', 'adblock')
-mx3a.nan-net.jp##div[id^="adblock"]
-mx3a.nan-net.jp##div[class^="adblock"]
+nan-net.jp,nan-net.com#%#//scriptlet('remove-node-text', 'script', 'adblock')
+nan-net.jp,nan-net.com###adblock_guide_mask
+nan-net.jp,nan-net.com##.adblock_guide_box
 ! nazology.net,nijimen.net anti-adb
 nazology.net,nijimen.net#%#//scriptlet('prevent-setTimeout', 'adBoxEl')
 ||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=googlesyndication-adsbygoogle,domain=nazology.net|nijimen.net
 !+ PLATFORM(ios, ext_android_cb)
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=nazology.net|nijimen.net
-! Repeatedly shown soft anti-adb on mobile
-nan-net.com###adblock_guide_mask
-nan-net.com##.adblock_guide_box
 ! Rules for AdFender to block injected ads when AdGuard DNS is active
 !+ PLATFORM(ios, ext_android_cb)
 ||chefkoch.de/magazin/sites/default/files/styles/*/public/media/image/*/*_*x*.jpg
@@ -2649,6 +2646,15 @@ otakei.otakuma.net,nikkan-gendai.com,ranking.goo.ne.jp,m.hellporno.com,topics.sm
 !
 ! SECTION: Regular rules
 !
+firstpost.com##.stkadbtm
+firstpost.com##.mblad
+adacomi.com##body > a[href] ~ .bbs_box
+adacomi.com##a[href][target] > .bbs_box
+adacomi.com##body > div[style*="min-height:"][align="center"]
+forum.donanimhaber.com##article > div[style]:has(> div[style] > div.empower-ad)
+estadao.com.br##.house-ads-container
+estadao.com.br#$#@media only screen and (max-width: 576px) { .navbar-header-estadao.--not-subscriber { top: 0 !important; } }
+estadao.com.br#$#@media only screen and (max-width: 576px) { .nav-bar-reserved-area { height: 48px !important; } }
 mwed.jp##.displayable[data-controller="bottom-fixed-advertisement"]
 motorauthority.com##.adv-spacer-top-wraper
 motorauthority.com##.adv-spacer
@@ -2663,6 +2669,7 @@ vjav.*##.video-page__wrapper > section[style="display: flex;"]
 hochi.news##.ad_response
 hochi.news#$#div[style="min-height: 1000px;"] { min-height: auto !important; }
 nan-net.com###bottomad2
+famitsu.com##div[class^="SpecialBanner_container_"]
 famitsu.com##.banner-header-video-container
 famitsu.com##.banner-window-jack-wrapper
 famitsu.com##div[class^="BasicLayout_movieBanner_"]
@@ -4927,7 +4934,9 @@ gaytail.com##.happy-before-list
 gaytail.com##.happy-before-video
 kompasiana.com###bannerhorz
 m.faz.net##.iqadtile_wrapper
+||mx-movie.nan-net.jp/system/s-profile/banner/mx_bottom/
 ||nan-net.com/*/bbs/s/inc/$subdocument
+nan-net.com##body > a + div.bbs_box:has(> script)
 nan-net.com##div[style^="background-color:#f5f5f5; margin-top:0px"] > div[style$="height:40px;"]
 nan-net.com##.bbs_box[style="height:50px;"]
 nan-net.com##a[href="https://search.nan-net.com/bbslist.php"] + div.bbs_box

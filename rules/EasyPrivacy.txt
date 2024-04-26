@@ -1,8 +1,8 @@
 [Adblock Plus 1.1]
-! Checksum: hzQrTr0zLx0wxwN2GJQ0pg
-! Version: 202404251151
+! Checksum: gipnxYdURmOG8OLEDn17mQ
+! Version: 202404260011
 ! Title: EasyPrivacy
-! Last modified: 25 Apr 2024 11:51 UTC
+! Last modified: 26 Apr 2024 00:11 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -2728,6 +2728,9 @@ _WebVitalsReporter_
 /usage/ReportEvent?
 ! hellofresh / greenchef / everyplate
 /otlp/traces
+! Pinterest
+/_/_/logClientError/*
+/_/trace/trace/*
 ! real time web analytics
 /rrweb-script.js
 /rrweb.js
@@ -2760,8 +2763,6 @@ _WebVitalsReporter_
 &pagegroup=*&url=$script
 /ajax/eulerian/*
 /eulerian.js
-! clicktripz
-/r/ucb.js$script,~third-party
 ! google tracking
 /client_204?$image,other,ping,script
 /csi_204?$image,other,ping,script
@@ -3225,6 +3226,7 @@ omni.soundestlink.com$image
 ||mdstats.info^
 ||mediamathrdrt.com^
 ||mirabelanalytics.com^
+||mircheigeshoa.com^
 ||mitour.de^
 ||mitself.net^
 ||ml-sys.xyz^
@@ -3249,6 +3251,7 @@ omni.soundestlink.com$image
 ||notifpush.com^
 ||ns1p.net^
 ||nxakpj4ac8gkd53.info^
+||o1ych4jb.com^
 ||omappapi.com^
 ||omtrdc.net^
 ||openfpcdn.io^
@@ -10496,6 +10499,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||mofa.go.jp^*/count.cgi?
 ||monipla.com/launch.js
 ||moshimo.com^*/impression?
+||ocn-tag.sienca.jp/api/v1/event/pv
 ||omt.shinobi.jp^
 ||otoshiana.com/ufo/
 ||panda.kasika.io^
@@ -11837,7 +11841,6 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||pingback.issuu.com^
 ||pingo.staticmoly.me^
 ||pinkvilla.com/comscore_response.php
-||pinterest.com/_/_/$xmlhttprequest
 ||pixel.archive.
 ||pixel.archivecaslytosk.onion^
 ||pixel.archiveiya74codqgiixo33q62qlrqtkgmcitqx5u2oeqnmn5bpcbiyd.onion^
@@ -48630,6 +48633,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 @@||redbull.com/gtm.js$~third-party
 @@||res-x.com^*/Resonance.aspx?
 @@||researchintel.com^*/feedback.asp$xmlhttprequest,domain=intel.com
+@@||rest.edit.site/geoip-service/geoip$domain=systemshouse.com
 @@||retailmenot.com/__wsm.gif$ping,~third-party,xmlhttprequest
 @@||rfksrv.com/rfk/js/*/init.js$script,domain=riteaid.com
 @@||rollbar.com^*/rollbar.min.js$domain=rollingstone.com|variety.com|wwd.com
