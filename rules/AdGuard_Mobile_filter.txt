@@ -1151,6 +1151,7 @@ westseattleblog.com#@#.header-ad
 ya.ru##services-feed div.banner
 !
 ! Yandex.Search
+! Update unblocking rule for the search ads in usefulads.txt
 yandex.*##div[class^="Direct"]
 [$path=/search/touch]yandex.*#?#div[class^="serp-list"] > div.serp-item:has(> div[data-bem*="organic"] > div.Organic-Columns > div.Organic-Column > a[href][data-event-required])
 [$path=/search/touch]yandex.*#?#div[class^="serp-list"] > div.serp-item:has(> div[data-bem*="organic"] > div[class^="VanillaReact"] > a[href][data-event-required])
@@ -1321,8 +1322,6 @@ healthshots.com#%#//scriptlet('hide-in-shadow-dom', 'div[class^="storyBlock"]:no
 m.viptube.com#%#//scriptlet("set-constant", "player.postitialTimeout", "0")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/126103
 thestudentroom.co.uk#%#//scriptlet('remove-class', 'fixed_ad', '#header.fixed_ad')
-! popunder on clicking thumbnails
-share-videos.se#%#//scriptlet("abort-current-inline-script", "$", "clickurl")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/120699
 ! popup on back/erobanach.com overlay
 openloadpro.com,erobanach.com#%#//scriptlet('prevent-addEventListener', '', 'returnAd')
@@ -2646,6 +2645,10 @@ otakei.otakuma.net,nikkan-gendai.com,ranking.goo.ne.jp,m.hellporno.com,topics.sm
 !
 ! SECTION: Regular rules
 !
+cloud.mail.ru##div[class^="Page-touch__root"] > div[id][class][style="visibility: visible;"]:empty
+b.best-hit.tv##center > a[target="_blank"] > img
+b.best-hit.tv##div[style="margin-top:15px; margin-bottom:15px; text-align:center;"]
+b.best-hit.tv##.substitute-show-area-on
 firstpost.com##.stkadbtm
 firstpost.com##.mblad
 adacomi.com##body > a[href] ~ .bbs_box

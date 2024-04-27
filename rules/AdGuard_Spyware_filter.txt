@@ -99,6 +99,8 @@ spletnik.ru#%#//scriptlet('set-local-storage-item', '/^_ym/', '$remove$')
 spletnik.ru#%#//scriptlet('set-local-storage-item', 'adrcid', '$remove$')
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/177871
+blackserie.ru#%#//scriptlet('set-constant', '_top100q', 'emptyObj')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/177971
 bgr.com#%#//scriptlet("set-constant", "pmc_do_analytics_pagecount", "false")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/177870
@@ -532,6 +534,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 !
 ! The list of bug-tracker services(Sentry, etc.)
 ! Add as commented rules. Will be used in additional list and/or strict DNS
+! ||data.debugbear.com^
 ! ||js.cdn.applicationinsights.io^
 ! ||eastus-*.applicationinsights.azure.com^
 ! ||admob-app-id-*.firebaseio.com^
@@ -578,6 +581,8 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 !
 !
 !
+||antillephone.com^$third-party
+||prodalet.ru^
 ||whos.amung.us^$third-party
 ||zdw.w8.com.cn^
 ||pbjs-stream.bydata.com^
@@ -4446,6 +4451,8 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||log.dzen.ru^
+||flask.us.nextdoor.com^
 ||ev.indianexpress.com^
 ||aa-metrics.beauty.hotpepper.jp^
 ||aa-metrics.hotpepper.jp^
@@ -72788,6 +72795,7 @@ _tracking.php?b=
 /analytics.js$domain=tokyometro.jp|resumes.breakdownexpress.com|techcult.com|inbox.lv|kopeda.com|freexcafe.com|rusvideos.tv|nakubani.ru|lun.com|songsara.net|newsmax.com|bolgehastanesi.com|ewtc.de|newsdig.tbs.co.jp|imore.com|city.kushiro.lg.jp|emeraldbridal.com.au|emarat-news.ae|imobie.jp|tikla.com.tr|rusvideos.porn|jrkyushu.co.jp|amiunique.org|edit.ing|konami.com
 ||assets.adobedtm.com^$domain=mcclatchydc.com|elnuevoherald.com|bellinghamherald.com|sacbee.com|charlotteobserver.com|newsobserver.com|miamiherald.com|ef.ru|algida.com.tr|bmw-motorrad.co.uk|cif.com.tr|clearhaircare.com|domestos.com|dove.com|elidor.com.tr|f1sport.autorevue.cz|geico.com|hellmanns.com.tr|herkessofraya.com|johnsonsbaby.com.tr|lipton.com|lnk.to|lux.com|magnumicecream.com|neutrogena.com.tr|omo.com|rexona.com|samsung.com|sap.com|schwarzkopf.com.tr|signalturkiye.com|msnbc.com|nbcnews.com|kbb.com|eurosport.ru|timgate.it|intermiles.com|oxfordmail.co.uk|spiegel.de|hp.com|deutschepost.de|thebay.com|s.shufoo.net|tsn.ca|tabelog.com|euronews.com|newshub.co.nz|fredmeyer.com|viabcp.com|carsales.com.au|falabella.com|aarp.org|thehill.com|realtor.com|nzherald.co.nz|aia.com.ph|baynews9.com|thesaurus.com|dhc.co.jp|0101.co.jp|staples.com
 !
+||cdn.dzen.ru/pingx
 ||ocn-tag.sienca.jp/api/v1/event/pv
 ||amazonaws.com/jsstore/*/ge.js
 ||billboard.com/wp-content/plugins/pmc-plugins/pmc-trackonomics/build/index.js
@@ -73082,7 +73090,6 @@ thehindu.com###sectiondivicymi
 ||nicolive.cdn.nimg.jp/relive/sp/trackingService.*.js
 ||a-mpd.com/pixel.png
 ||amazonaws.com/*/adtechanalytics-poc-*?Action=SendMessage&MessageBody=logType=
-||dzen.ru/api/*/launcher/stats/
 ||nihon-u.ac.jp/*/js/ga.js
 ||arttrk.com/pixel/
 ||kanagawa-u.ac.jp/assets/inc/googleAnalytics
