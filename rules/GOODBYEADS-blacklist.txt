@@ -2,9 +2,9 @@
 ! Title: GOODBYEADS
 ! Homepage: https://github.com/8680/GOODBYEADS
 ! Expires: 12 Hours
-! Version: 2024-05-13 09:16:37（北京时间）
+! Version: 2024-05-13 20:33:04（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 122454
+! Total count: 122466
 
 ###ADtip
 ###Ad_windows
@@ -7434,6 +7434,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 @@||nodkey.xyz^$generichide
 @@||noodid.ee/chordQuiz/$~third-party
 @@||notafree.host^$generichide
+@@||now.com/*/js/dfpAsset_prebid.js
 @@||nowscore.com/script/common/adHelper.js
 @@||noxgroup.com/noxinfluencer/sensor_sdk/$script,domain=noxinfluencer.com
 @@||noy1.top/api/ads_v2$~third-party
@@ -10747,6 +10748,7 @@ hkcards.com###ad-slot[style="min-width: 300px; min-height: 300px;"]
 hkcards.com##.row > .col-12 > #ad-slot
 hkcards.com#@##ad-slot
 hkdm688.com##.bb01
+hkepc.com###headBanner
 hkepc.com##.headBanner
 hkgolden.com##.hkg-ad
 hkmovie6.com##.hotmobad
@@ -12665,6 +12667,8 @@ nanrenwo.net##div[id^="content"]
 naozhong.net.cn###pnl-ne0n
 nasyun.com##img[width="275"]
 nasyun.com##img[width="970"]
+natgeomedia.com##div[id^="AD-970x250"]
+natgeomedia.com,setn.com,eprice.com.tw##div[class^="ad-"]
 nb.zol.com.cn##.article-cont > div.zol-eshop
 nba.hupu.com##div[class^="nba-ad"]
 ncnews.com.cn##div[id^="ban"]
@@ -12833,6 +12837,9 @@ novipnoad.com##.ad_single_title
 novipnoad.com##.bg-ad
 novipnoad.com##img[src*="/bd/"] + span
 novipnoad.com#?#.video-item:-abp-has(img[src*="/bd/"])
+now.com#%#//scriptlet('set-constant', 'preBid', 'emptyObj')
+now.com#%#//scriptlet('set-constant', 'preBid.displayAd', 'noopFunc')
+now.com#%#//scriptlet('set-constant', 'preBid.getPrerollVASTUrl', 'noopFunc')
 nowcoder.com##.mini-banner
 nownews.com###ads-footer-bar
 nownews.com###crazy-video
@@ -13529,7 +13536,6 @@ sese733.info##.fp-player > div[style^="position: absolute;"][style*="overflow: h
 seselah.com###video-ads
 setn.com###aspnetForm > .rightFloat
 setn.com##.e_ad
-setn.com,eprice.com.tw##div[class^="ad-"]
 sex-gen.com##.navi
 sex8.cc###nv > ul.cl > li > a[href^="http"]
 sex8.cc##.V-video-float
@@ -23687,6 +23693,7 @@ zzzyk.com###Tinfo
 ||ads-go.adroi.com.cn^
 ||ads-img-qc.xhscdn.com^
 ||ads-interfaces.sc-cdn.net^
+||ads-jp.tiktok.com^
 ||ads-leaseweb.appsgeyser.com^
 ||ads-management.su^
 ||ads-media.gameforge.com^
@@ -23705,6 +23712,7 @@ zzzyk.com###Tinfo
 ||ads-trk.vidible.tv^
 ||ads-twitter.com^
 ||ads-union.jd.com^
+||ads-us.tiktok.com^
 ||ads-verify.flurry.com^
 ||ads-video-al.xhscdn.com^
 ||ads-video-qc.xhscdn.com^
@@ -23781,6 +23789,7 @@ zzzyk.com###Tinfo
 ||ads.brazzers.com^
 ||ads.bumq.com^
 ||ads.businessstyle.vn^
+||ads.cadovn.biz^
 ||ads.canalblog.com^
 ||ads.canoe.ca^
 ||ads.careerbuilder.vn^
@@ -23791,6 +23800,7 @@ zzzyk.com###Tinfo
 ||ads.cc^
 ||ads.ccstock.cn^
 ||ads.cdn.rovio.com^
+||ads.cdvn.vip^
 ||ads.ce.cn^
 ||ads.celtra.com^
 ||ads.centraliprom.com^
@@ -26771,6 +26781,7 @@ zzzyk.com###Tinfo
 ||analytics.amakings.com^
 ||analytics.americanfunds.com^
 ||analytics.amig.com^
+||analytics.andisearch.com^
 ||analytics.andrewsmith.com.au^
 ||analytics.angelina-fieber.com^
 ||analytics.any.do^
@@ -42763,7 +42774,6 @@ zzzyk.com###Tinfo
 ||d3qilfrpqzfrg4.cloudfront.net^
 ||d3qinhqny4thfo.cloudfront.net^
 ||d3qk9u6c2k2cid.cloudfront.net^
-||d3qrbrazsnzdog.cloudfront.net^
 ||d3qttli028txpv.cloudfront.net^
 ||d3qu0b872n4q3x.cloudfront.net^
 ||d3qvcyf9oa6vhw.cloudfront.net^
@@ -56718,6 +56728,7 @@ zzzyk.com###Tinfo
 ||gtm.vanmoof.com^
 ||gtm.wise.com^
 ||gtm.wonderbly.com^
+||gtmfsstatic.getgoogletagmanager.com^
 ||gtmjs.com^
 ||gtoonfd.com^
 ||gtop.ro^$third-party
@@ -60728,6 +60739,7 @@ zzzyk.com###Tinfo
 ||imarketservices.com^
 ||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima3,domain=hoy.tv
 ||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima3,domain=line.me
+||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima3,domain=now.com,important
 ||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima3,important,domain=linetv.tw
 ||imasdk.googleapis.com^
 ||imathematica.org^
