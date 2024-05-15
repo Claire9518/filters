@@ -2,9 +2,9 @@
 ! Title: GOODBYEADS
 ! Homepage: https://github.com/8680/GOODBYEADS
 ! Expires: 12 Hours
-! Version: 2024-05-14 09:14:57（北京时间）
+! Version: 2024-05-14 20:33:37（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 122545
+! Total count: 122549
 
 ###ADtip
 ###Ad_windows
@@ -8646,12 +8646,10 @@ bilibili.com##.banner-card
 bilibili.com##.bili-app
 bilibili.com##.bili-app-link-container
 bilibili.com##.bili-dyn-ads
-bilibili.com##.bili-video-card > div[class^="extension-tips"]
 bilibili.com##.bili-video-card:has(.bili-video-card__info--ad) > .bili-video-card__wrap
 bilibili.com##.bili-video-card:has(.bili-video-card__info--creative-ad) > .bili-video-card__wrap
 bilibili.com##.bili-video-card__wrap > a[href^="http"]:not([href*=".bilibili.com/"])
 bilibili.com##.btn-ctnr
-bilibili.com##.carousel-container > .carousel-transform > div[class^="carousel-slide"] > div[class^="extension-tips"]
 bilibili.com##.clearfix.h5-download-bar
 bilibili.com##.desktop-download-tip
 bilibili.com##.download-client-trigger.download-entry
@@ -8685,9 +8683,12 @@ bilibili.com##div[style*="height:"][data-loc-id]
 bilibili.com##span[style*="height:"][data-loc-id]
 bilibili.com#$#.bili-video-card:has(.bili-video-card__info--ad) > .bili-video-card__skeleton { visibility: visible !important; }
 bilibili.com#$#.bili-video-card:has(.bili-video-card__info--creative-ad) > .bili-video-card__skeleton { visibility: visible !important; }
+bilibili.com#$?#.bili-video-card > div[class]:only-child:matches-css(before, content: /Adblock/) { remove: true; }
+bilibili.com#$?#.carousel-container > .carousel-transform > div[class^="carousel-slide"] > div[class]:only-child:matches-css(before, content: /Adblock/) { remove: true; }
 bilibili.com#$?#.container > div.floor-single-card:has(> div.skeleton) { remove: true; }
 bilibili.com#$?#.ex-card-common:has(.gg-icon) { remove: true; }
 bilibili.com#$?#.van-slide > .item:has(.bypb-icon) { remove: true; }
+bilibili.com#%#//scriptlet('spoof-css', '.__adblockhidden > a', 'display', 'block')
 bilibili.com#?#.eva-extension-body > .bili-video-card:-abp-has(.bili-video-card__info--ad)
 bilibili.com#?#.van-popover__reference:contains(下载)
 bilibili.com#?#.video-card-common:-abp-has(>.card-pic>a[href*="cm.bilibili.com"][data-target-url])
@@ -13153,6 +13154,7 @@ poklw.com##img[alt="恰饭广告"]
 polyapt.com#@#.ad-one
 popart.hk###slideshow
 popbee.com##.adblocker
+popdaily.com.tw##div[class^="ad-delimiter-"]
 popo.tw#@#.header_ad
 porn5f.com###dprecommend
 porn5f.com###main_video_block > .m-t-5.pull-right
@@ -32440,6 +32442,7 @@ zzzyk.com###Tinfo
 ||beacon.kmi-us.com^$third-party
 ||beacon.krxd.net^
 ||beacon.lycos.com^
+||beacon.nc-net.or.jp^
 ||beacon.netflix.com^
 ||beacon.qq.com^
 ||beacon.riskified.com^
@@ -76833,6 +76836,7 @@ zzzyk.com###Tinfo
 ||mqrupjsm.xyz^
 ||mqs.ioam.de^
 ||mqsicr.smiggle.co.uk^
+||mqsjzm.cn^
 ||mqsnce.xyz^
 ||mquwyx.engelhorn.de^
 ||mqvyob.vidaxl.fi^
@@ -87678,6 +87682,7 @@ zzzyk.com###Tinfo
 ||qwmamh.icu^
 ||qwnmfiti.xyz^
 ||qwoyfys.com^
+||qwsanan.top^
 ||qwyonzatjoq.com^
 ||qwyoxrmhep.com^
 ||qx0.xnxxtubevideos.com^
@@ -88336,7 +88341,6 @@ zzzyk.com###Tinfo
 ||realeducation.kangan.edu.au^
 ||realestate.collinscu.org^
 ||realevalbs.com^
-||realhumandeals.com^
 ||realisecheerfuljockey.com^
 ||realiseequanimityliteracy.com^
 ||realist.gen.tr^$third-party
@@ -121832,7 +121836,7 @@ zzzyk.com###Tinfo
 ||zenaot.xyz^
 ||zenaps.com^
 ||zencudo.co.uk^
-||zendesk.com/frontendevents/pv?
+||zendesk.com/frontendevents/$xmlhttprequest
 ||zendiclayaway.website^
 ||zendonetwise.com^
 ||zendplace.pro^
