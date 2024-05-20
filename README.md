@@ -77,4 +77,4 @@
 | The Big List of Hacked | host | [原始链接](https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/hosts) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Claire9518/filters/main/rules/The_Big_List_of_Hacked.txt) | 2024/03/03 |
 | WindowsSpyBlocker | host | [原始链接](https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Claire9518/filters/main/rules/WindowsSpyBlocker.txt) | 2024/03/03 |
 | yhost | host | [原始链接](https://raw.githubusercontent.com/VeleSila/yhosts/master/hosts.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Claire9518/filters/main/rules/yhost.txt) | 2024/03/03 |
-| YoursList | host | [原始链接](https://github.com/yous/YousList/raw/master/youslist.txt) | [加速链接]() | |
+| YoursList | host | [原始链接](https://raw.githubusercontent.com/yous/YousList/master/hosts.txt) | [加速链接]() | |
