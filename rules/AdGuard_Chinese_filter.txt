@@ -80,6 +80,7 @@
 ! Bad: ||adssubdomain.legitwebsite.com^ (should be in adservers_firstparty.txt)
 !
 !
+||tagtoo.co^$third-party
 ||ad.886112.xyz^
 ||1x5jlh.xyz^$popup
 ||98765.pw^
@@ -322,6 +323,10 @@
 ! Bad: ||ad.doubleclick.net^ (should be in adservers.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/179468
+wandhi.com#%#//scriptlet('prevent-fetch', '/googlesyndication\.com|doubleclick\.net/')
+!+ PLATFORM(ios, ext_android_cb, ext_safari)
+@@||googleads.g.doubleclick.net/favicon.ico,domain=music.wandhi.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/177998
 colamanga.com#$#html { overflow: auto !important; }
 colamanga.com#$#div[class^="layui-layer-"] { display: none !important; }
@@ -1263,6 +1268,7 @@ $script,third-party,denyallow=fastly.net|statically.io|sharecast.ws|b-cdn.net|bu
 !
 !
 !
+music.wandhi.com##.google-auto-placed
 6park.com##div[align="center"][style="background:#fbfeea;min-height:90px;"]
 6park.com##div[style^="width:990px;background:white;"]
 6park.com##table[width][align="center"] > tbody > tr > td[bgcolor="#FFFFEE"]:has(> div[id*="ScriptRoot"])
@@ -1360,7 +1366,7 @@ hgamefree.info###text-7
 /bookhaitang\.com\/assets\/.+\.js(?<!\.min\.js|pageTran\.js)/$domain=bookhaitang.com
 qdmm.com###page-ops
 123pan.com##.baidu-banner-container
-daybuy.tw##body .code-block
+free.com.tw,daybuy.tw##body .code-block
 tw.news.yahoo.com##.caas-body > .caas-iframe-wrapper > .flourish
 ||flo.uri.sh/visualisation/14819166/embed?auto=$subdocument,domain=tw.news.yahoo.com
 ||tw.buy.yahoo.com/smartbanner/$domain=tw.news.yahoo.com
@@ -5889,6 +5895,8 @@ newduba.cn###jq_youxi
 ||ogidskik.top^
 ||yhimpnr.icu^
 ||tdhnxf.xyz^
+||axa123.com^
+||lozmtk.cn^
 ||zuvbzl.xyz^
 ||zwdtvx.xyz^
 ||zwxxcb.icu^
@@ -14298,6 +14306,7 @@ hxsame.hexun.com$domain=~quote.hexun.com
 ||koyso.com/static/js/abc.
 ||bcebos.com/24x360x528.gif
 szxx.com.cn###A0
+douyin.com#?#.page-recommend-container:-abp-has(span[style^="background"]:-abp-contains(广告))
 cnbeta.com.tw##.article-global
 hupu.com##div[class*="-banner_"]
 wenxuecity.com###gg_multitext
