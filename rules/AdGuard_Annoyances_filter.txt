@@ -2428,6 +2428,7 @@ consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-label
 !
 ! NOTE: Regular rules
 !
+livelo.com.br##.notifi
 ||gsm24.pl/modules/x13eucookies/
 hurt.com.pl##.cover
 wetter.com#%#//scriptlet('trusted-click-element', 'body.cmp-prevent-scroll button#cmp-btn-accept')
@@ -15351,6 +15352,13 @@ adguard.info,adguard.com,adguard.app#$#.hello_from_adguard_advanced_protection_i
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/179919
+@@||blogs.microsoft.com/wp-content/plugins/microsoft-oembeds/cookie-consent.js
+@@||blogs.microsoft.com/wp-content/plugins/microsoft-oembeds/cookie-consent.css
+! https://github.com/AdguardTeam/AdguardFilters/issues/179915
+@@||cdn.privacy-mgmt.com/mms/$domain=bbc.com
+@@||cdn.privacy-mgmt.com/unified/$domain=bbc.com
+@@||cdn.privacy-mgmt.com/privacy-manager/index.html$domain=bbc.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179731
 ladies.de#@#.cookie-check
 ladies.de#@##cookie-overlay
@@ -23870,9 +23878,9 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+dramacool.*##div[style^="z-index:99999;position: fixed;bottom: 0;"]
 lesbelleslettres.com###popin-wrapper
 my.telkomsel.com##div[class^="DialogInstall"]
-kotobank.jp###myPaymentModal
 myrtlebeach.com#%#//scriptlet('set-cookie', 'Bring-on-Spring', 'true')
 futura-sciences.com##.viously > div.viously-sticked
 photopoint.ee#$#.fancybox-overlay { display: none !important; }
@@ -31201,7 +31209,7 @@ g123.jp,accounts.binance.com#@##credential_picker_container
 ! Disabling of push-notifications
 !
 ! #%#//scriptlet('set-constant', 'Notification.requestPermission', 'noopFunc')
-sakshi.com,shiftdelete.net,community.oneplus.com,lnc.nc,superfilmes.ph,meduza.global.ssl.fastly.net,meduza.io,yenisafak.com,offidocs.com,onedio.com,hpplus.jp,fullfilmcibaba1.com,joom.com,nbc.com,maximum.ru,ch3plus.com,dropmefiles.com,rg.ru,reddit.com,life.ru#%#//scriptlet('set-constant', 'Notification.requestPermission', 'noopFunc')
+haber.biz,sakshi.com,shiftdelete.net,community.oneplus.com,lnc.nc,superfilmes.ph,meduza.global.ssl.fastly.net,meduza.io,yenisafak.com,offidocs.com,onedio.com,hpplus.jp,fullfilmcibaba1.com,joom.com,nbc.com,maximum.ru,ch3plus.com,dropmefiles.com,rg.ru,reddit.com,life.ru#%#//scriptlet('set-constant', 'Notification.requestPermission', 'noopFunc')
 !
 wallstreet-online.de,dni.ru#%#if (window.PushManager) { window.PushManager.prototype.subscribe = function () { return { then: function (func) { } }; }; }
 macwelt.de,pcwelt.de#%#//scriptlet("set-constant", "firebase.messaging", "noopFunc")
@@ -31834,6 +31842,8 @@ aol.com#$#.banner-active { margin-top: 0 !important; }
 !
 ! SECTION: Push notifications - Allowlist
 !
+! fix lamoda breakage
+@@||a.lmcdn.ru/static/*/assets/pushwoosh-*.js$domain=lamoda.ru
 ! https://github.com/AdguardTeam/AdguardFilters/issues/170522
 @@||esputnik.com/scripts/$domain=dnipro-m.ua
 @@||esputnik.com/forms/$domain=dnipro-m.ua
@@ -32032,6 +32042,8 @@ mentalfloss.com,90min.com,fansided.com,90min.de,12thmanrising.com,1428elm.com,8p
 !
 ! SECTION: Subscriptions - Regular rules
 !
+estadao.com.br##div[class^="styles__ContainerNewsletter-"]
+bonappetit.com#%#//scriptlet('trusted-click-element', '.eSzAsR > button[aria-label="Collapse"]')
 livemint.com##.btmStrip
 gamedeveloper.com#?#div[data-module="newsletter-signup-promo"]
 gamedeveloper.com##div[data-module="newsletter-signup-promo"]
@@ -32738,7 +32750,7 @@ themoscowtimes.com##.newsletterbanner
 news.un.org##.block-content-footer > div.block__content
 ||yamatogokoro.jp/inbound/wp-content/uploads/2021/06/bannar_side_mail_4.png
 electrek.co##.article__youtube-video
-thelensnola.org,thecity.nyc,asiatimes.com##.newspack-popup__content-wrapper
+hcn.org,thelensnola.org,thecity.nyc,asiatimes.com##.newspack-popup__content-wrapper
 interestingengineering.com##div[class*="_googleNews"]
 lbcgroup.tv#?#.allow-fixed > div.row > div.floatL:has( .MainControlDiv > div.row > div.d-flex > div.btn-normal > a[href^="/subscribe/"])
 travelvoice.jp##.mailmagazine-button
@@ -42679,6 +42691,10 @@ instagram.com##._aagw:empty
 ! End: Instagram.com
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/179902
+roskomsvoboda.org###post-foreign-agent
+! https://github.com/AdguardTeam/AdguardFilters/issues/179896
+douyu.com###js-room-activity
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179083
 fontanka.ru##.gridContainer  > section[class]:has(> div > a[href="/pressrelease"])
 fontanka.ru##.gridContainer  > section[class]:has(> div > a[href="/format/fproject/"])
