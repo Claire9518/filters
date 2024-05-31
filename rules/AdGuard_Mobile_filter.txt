@@ -1153,6 +1153,7 @@ ya.ru##services-feed div.banner
 ! Yandex.Search
 ! Update unblocking rule for the search ads in usefulads.txt
 yandex.*##div[class^="Direct "]
+ya.ru,yandex.*##div[class^="serp-list"] > div.serp-item:has(> div[data-bem*="organic"] > div[class^="Organic"] > div[class^="VanillaReact"] > a[data-event-required])
 ya.ru,yandex.*##div[class^="serp-list"] > div.serp-item:has(> div[data-bem*="organic"] > div.Organic-Columns > div.Organic-Column > a[href][data-event-required])
 ya.ru,yandex.*##div[class^="serp-list"] > div.serp-item:has(> div[data-bem*="organic"] > div[class^="VanillaReact"] > a[href][data-event-required])
 !
@@ -2664,6 +2665,8 @@ otakei.otakuma.net,nikkan-gendai.com,ranking.goo.ne.jp,m.hellporno.com,topics.sm
 !
 ! SECTION: Regular rules
 !
+sport24.ru###adfox_Sport24_branding
+ortacizgi.com##div.display:has(> div.post-ad-title)
 mynet.com##.body-banner-block
 article.auone.jp##.appeal__text-lower
 sp.seiga.nicovideo.jp##div[style^="--ads-width:"]
