@@ -38820,6 +38820,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||analytics.poferries.com^
 ||collector-*.px-cloud.net^
 ||collector-*.px-cdn.net^
 ||collector-*.pxchk.net^
@@ -69146,6 +69147,10 @@ inapps.appsflyersdk.com^
 !#endif
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/180713
+@@||googletagmanager.com/gtm.js$domain=redwigwam.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/180702
+@@||optimizely.com^$domain=sonos.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/180416
 @@||googletagmanager.com/gtm.js$domain=megacurioso.com.br
 @@||static.chartbeat.com/js/chartbeat.js$domain=megacurioso.com.br
