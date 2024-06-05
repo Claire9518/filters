@@ -2212,10 +2212,6 @@ motherless.com$$script[tag-content="awentw.com"][min-length="2000"][max-length="
 !
 !
 !
-! https://github.com/AdguardTeam/AdguardFilters/issues/180493
-@@||advertising-cdn.dpgmedia.cloud/web-advertising/$domain=totaaltv.nl
-@@||advertising-cdn.dpgmedia.cloud/native-renderer/main.js$domain=totaaltv.nl
-@@||acdn.adnxs.com/ast/ast.js$domain=totaaltv.nl
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179429
 @@||cmp.inmobi.com/GVL-v2/$domain=express.co.uk
 ! https://github.com/AdguardTeam/AdguardFilters/issues/177593
@@ -2668,6 +2664,7 @@ otakei.otakuma.net,nikkan-gendai.com,ranking.goo.ne.jp,m.hellporno.com,topics.sm
 !
 ! SECTION: Regular rules
 !
+totaaltv.nl#$?##c1 { remove: true; }
 spiegel.de##div[class*="min-h"]:has(> div[data-sticky-ad-offset] > [data-advertisement])
 hk01.com###article-content-section > div[class]:has(> div[class] > div[data-id="lazyload-placeholder"])
 m.fishki.net##div[class^="adv-mobile"]
