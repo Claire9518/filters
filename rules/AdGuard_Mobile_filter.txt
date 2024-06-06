@@ -2664,6 +2664,8 @@ otakei.otakuma.net,nikkan-gendai.com,ranking.goo.ne.jp,m.hellporno.com,topics.sm
 !
 ! SECTION: Regular rules
 !
+lapkins.ru##.start .start-ban
+gizmodo.com##.ad-mobile-dynamic
 engadget.com##.caas-da
 totaaltv.nl#$?##c1 { remove: true; }
 spiegel.de##div[class*="min-h"]:has(> div[data-sticky-ad-offset] > [data-advertisement])
@@ -7276,6 +7278,7 @@ yandex.ru#?#body[class*="news_phone"] div.news-container > span > div > div.unit
 ! END: Yandex
 !
 ! Dzen
+dzen.ru##div[class^="dzen-mobile__widgetContainer-"] ~ div[class*=" dzen-mobile__"]  div[style^="padding-top:"]
 dzen.ru##div[class*="topContent"][class*="mobile__hasBanner"]
 dzen.ru##.article-render-mobile__embed_embed-type_yandex-direct
 m.dzen.ru##div[class*="Advert_"]
