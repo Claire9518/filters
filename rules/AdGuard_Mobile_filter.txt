@@ -1424,6 +1424,8 @@ sasisa.ru#%#AG_onLoad(function() { window.Umobi = function() {}; });
 !-------CSS---------
 !-------------------
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/181367
+subito.it#$#div[id^="index-module_mobile-navigation"] { height: auto !important; }
 ! leftover
 climate-data.org#$##header-holder { padding-top: 0 !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/175610
@@ -2666,6 +2668,9 @@ otakei.otakuma.net,nikkan-gendai.com,ranking.goo.ne.jp,m.hellporno.com,topics.sm
 !
 ! SECTION: Regular rules
 !
+health.tvbs.com.tw##main > div.fixed.bottom-0
+health.tvbs.com.tw##div.w-\[320px\].max-w-\[320px\].items-center.pt-8
+subito.it##div[data-google-interstitial] > div[style^="min-height:150px;"]
 tunein.com##div[data-testid="viewModelAd"]
 worldstarhiphop.com,worldstar.com##div[style*="height:280px;text-align:center;margin-left:auto;margin-right:auto"]
 fontanka.ru##.gridFullMobile > div:has(div.flickity-enabled a[href*="/?erid="])
@@ -6121,7 +6126,7 @@ cnn.com###social-share_gig_containerParent .PartnerZone
 mobile.donanimhaber.com##body > div[style="float: left;width:100%;"] > div[style="margin:10px auto; text-align:center; width:300px; height:250px;"]
 techrum.vn###revive_banner_mobile_div
 usatooday.com##.partner-placement
-denverpost.com###mobile-adhesion
+twincities.com,denverpost.com##body #mobile-adhesion
 analdin.com,tubewolf.com##.banner-top
 yahoo.com##.stream-sm-ad
 zerohedge.com##iframe[src^="//www.dianomi.com"]
