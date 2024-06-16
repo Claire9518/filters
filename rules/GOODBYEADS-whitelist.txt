@@ -2,9 +2,9 @@
 ! Title: GOODBYEADS
 ! Homepage: https://github.com/8680/GOODBYEADS
 ! Expires: 12 Hours
-! Version: 2024-06-15 20:32:31（北京时间）
+! Version: 2024-06-16 09:24:25（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 14388
+! Total count: 14389
 @@#.banner%20ad.$image,domain=dokuo666.blog98.fc2.com
 @@$csp=worker-src 'none',domain=uptostream.com
 @@$generichide,domain=stfly.cc
@@ -292,6 +292,7 @@
 @@/inc/embed/*ads.js$domain=wcostream.org|watchanimesub.net|wco.tv|wcostream.net|wcostream.com|wcoforever.tv
 @@/inc/embed/suv4.js$domain=wcostream.org|watchanimesub.net|wco.tv|wcostream.net|wcostream.com|wcoforever.tv
 @@/index.m3u8$xmlhttprequest,stealth=referrer,domain=ienjoyhd.site|poscishd.online|claplivehdplay.ru
+@@/index.m3u8$xmlhttprequest,stealth=referrer,domain=olalivehdplay.ru|lewblivehdplay.ru
 @@/index.m3u8?wmsAuthSign=$stealth
 @@/invoke.js$domain=emurom.net
 @@/iplookup.$domain=cankaoxiaoxi.com|dongfeng-nissan.com.cn|huomao.com|loldk.com|sina.com.cn
@@ -382,8 +383,7 @@
 @@/storage/js/taboola_ads.js$~third-party,domain=luxusmail.org|10minuteemails.com
 @@/store_ad/*$domain=pcstore.com.tw
 @@/streamlive/*.m3u8?token=$stealth,domain=stream.televall.website
-@@/stylesheet/*/*.m3u8$xmlhttprequest,stealth=referrer,domain=fabtech.work
-@@/stylesheet/*/css|$xmlhttprequest,stealth=referrer,domain=fabtech.work
+@@/stylesheet/*$xmlhttprequest,stealth=referrer,domain=gamingzen.xyz|fabtech.work
 @@/tghr.js$domain=biqle.com
 @@/tghr.js$domain=manga1000.com|manga1001.com
 @@/themes/flow/frontend_assets/js/advertisement.js|$~third-party
@@ -3361,6 +3361,7 @@
 @@||cll.press^$generichide
 @@||cllkme.com^$generichide
 @@||cloadstream*.xyz/hls/$stealth
+@@||closedjelly.net/embed/$subdocument,stealth=referrer
 @@||closeload.com/video/embed/$stealth
 @@||closeload.com^$generichide
 @@||cloud-*.onionflix.$stealth
