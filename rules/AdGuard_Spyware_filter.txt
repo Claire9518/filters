@@ -99,6 +99,8 @@ spletnik.ru#%#//scriptlet('set-local-storage-item', '/^_ym/', '$remove$')
 spletnik.ru#%#//scriptlet('set-local-storage-item', 'adrcid', '$remove$')
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/181813
+variety.com#%#//scriptlet('set-attr', 'iframe[data-lazy-src]:not([src^="http"])', 'src', '[data-lazy-src]')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/180029
 m-1.fm#%#//scriptlet('set-constant', 'ga', 'noopFunc')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/177871
@@ -3875,6 +3877,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ||ib.snssdk.com^
 ||xlog.snssdk.com^
 ||log.snssdk.com^
+||au1.qualtrics.com^
 ||siteintercept.qualtrics.com^
 ||tjk-njk.com^
 ||tracker.insurads.com^
@@ -37703,6 +37706,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||analytics.sonjj.com^
 ||status.techtarget.itmedia.co.jp^
 ||ephemeralcounters.api.roblox.com^
 ||px.adfulplatform.com^
@@ -67492,6 +67496,11 @@ inapps.appsflyersdk.com^
 !#endif
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/181813
+!#if (adguard_ext_safari || adguard_app_ios || adguard_ext_android_cb)
+@@||cdn.cxense.com/cx.js$domain=variety.com
+@@||cdn.cxense.com/cx.cce.js$domain=variety.com
+!#endif
 ! https://github.com/AdguardTeam/AdguardFilters/issues/181699
 @@||globo.com^$cookie=_ga
 @@||globo.com^$cookie=/^_ga_/

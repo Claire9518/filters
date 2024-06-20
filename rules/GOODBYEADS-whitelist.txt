@@ -2,9 +2,9 @@
 ! Title: GOODBYEADS
 ! Homepage: https://github.com/8680/GOODBYEADS
 ! Expires: 12 Hours
-! Version: 2024-06-19 20:34:45（北京时间）
+! Version: 2024-06-20 09:17:20（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 14392
+! Total count: 14399
 @@#.banner%20ad.$image,domain=dokuo666.blog98.fc2.com
 @@$csp=worker-src 'none',domain=uptostream.com
 @@$generichide,domain=stfly.cc
@@ -59,6 +59,7 @@
 @@.m3u8$stealth,domain=luluvdo.com
 @@.m3u8$xmlhttprequest,domain=thestreameast.to
 @@.mp4$domain=crunchyroll.com,stealth
+@@.mp4$media,stealth=referrer,domain=sekai.one
 @@.myvi.ru^$stealth
 @@.net/click-$domain=bradsdeals.com|coupons.com|dealigg.com|dealnews.com|goodsearch.com|groupon.com|hotukdeals.com|moneysavingexpert.com|offers.com|retailmenot.com|slickdeals.net
 @@.online^$xmlhttprequest,stealth=referrer,domain=playru.net
@@ -3939,6 +3940,7 @@
 @@||deals.nextag.com^*/ClickTracker.jsp
 @@||debenhams.com/foresee/foresee-trigger.js
 @@||decomaniacos.es^$generichide
+@@||decompiler.com/javascripts/ads-prebid/prebid-ad*.js
 @@||decorardicas.com.br^$stealth
 @@||deep-vision.cloud/graphql$stealth=3p-auth,domain=doveze.cz
 @@||deepbrid.com/backend-dl/app/views/site/default/ads/advertisement.js
@@ -4792,7 +4794,6 @@
 @@||fingerprintjs.com^$generichide
 @@||finishline.com^$stealth
 @@||finn.no/*/ad.html
-@@||finn.no/*ad.html?
 @@||firebase.google.com/docs/analytics/$~third-party
 @@||firefaucet.win^$generichide
 @@||firefox.com.cn/media/img/mozcn/spread/468-60-
@@ -5327,6 +5328,8 @@
 @@||globe24.cz^$generichide
 @@||globecharge.com/images/ping.gif?
 @@||globes.co.il/news/inc/banners/ad_banner.js
+@@||globo.com^$cookie=/^_ga_/
+@@||globo.com^$cookie=_ga
 @@||glookup.info/api/json/$domain=grabify.link
 @@||gls-group.eu/*/csomagkovetes$elemhide,jsinject
 @@||gls-group.eu^$extension
@@ -5806,6 +5809,7 @@
 @@||googlesyndication.com/safeframe/$domain=soranews24.com
 @@||googlesyndication.com^$domain=searchftps.org
 @@||googlesyndication.com^$script,xmlhttprequest,domain=financemonk.net|rtxkeeda.com|houseofblogger.com|dropgalaxy.com|djxmaza.in|miuiflash.com|thecubexguide.com|jytechs.in
+@@||googletagmanager.com/gtag/$domain=globo.com
 @@||googletagmanager.com/gtag/$domain=usnews.com
 @@||googletagmanager.com/gtag/js$domain=9to5mac.com|academy.com|acornonline.com|aena.es|afisha.timepad.ru|aliexpress.com|carhartt-wip.com|cbslocal.com|checkout.ao.com|cmoa.jp|devclass.com|dholic.co.jp|ejgiftcards.com|enmotive.com|euronics.ee|factory.pixiv.net|game.anymanager.io|herculesstands.com|honeystinger.com|hostingvergelijker.nl|huion.com|inforesist.org|kawasaki.com|liene-life.com|livongo.com|m.putlocker.how|mediaite.com|mirrativ.com|modehasen.de|montcopa.org|nihontsushin.com|oko.sh|panflix.com.br|papajohns.com|radiosarajevo.ba|rintraccialamiaspedizione.it|schwab.com|seatmaps.com|showroom-live.com|skylar.com|starblast.io|timparty.tim.it|toptal.com|truckspring.com|virginmedia.com|virginplus.ca|winefolly.com|winhappy.com|xl-bygg.no|zf1.tohoku-epco.co.jp
 @@||googletagmanager.com/gtag/js$domain=av01.tv|javhd.com
@@ -5997,6 +6001,7 @@
 @@||googletagmanager.com/gtm.js$domain=gfn.ru
 @@||googletagmanager.com/gtm.js$domain=givingfuel.com|regfox.com|ticketspice.com|redpodium.com
 @@||googletagmanager.com/gtm.js$domain=glamusha.ru
+@@||googletagmanager.com/gtm.js$domain=globo.com
 @@||googletagmanager.com/gtm.js$domain=godaddy.com
 @@||googletagmanager.com/gtm.js$domain=gratis.com
 @@||googletagmanager.com/gtm.js$domain=gumtree.com
@@ -7203,6 +7208,7 @@
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=news4jax.com|gmg-wjxt-prod.cdn.arcpublishing.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=news8000.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=nick.com|nickjr.com|cc.com
+@@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=sonyliv.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=timesnownews.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=vix.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=wcvb.com
@@ -9745,6 +9751,7 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=listvpn.net
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=litecoinfaucet.info
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=live.alexsportz.online
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=live.golato.io
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=livehindustan.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=livemint.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=lolalytics.com
@@ -12236,7 +12243,7 @@
 @@||stadt-bremerhaven.de^$generichide
 @@||stalker-mods.clan.su^$generichide
 @@||stalker-mods.su^$generichide
-@@||standard.co.uk/js/third-party/prebid*.js$domain=standard.co.uk
+@@||standard.co.uk/js/third-party/prebid8.$~third-party
 @@||standardmedia.co.ke/assets/js/prebid-google-ads.js
 @@||stapewithadblock.monster^$generichide
 @@||star-telegram.com/mistats/sites/dfw/startelegram.js
