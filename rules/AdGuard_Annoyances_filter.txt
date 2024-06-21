@@ -2437,6 +2437,8 @@ consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-label
 !
 ! NOTE: Regular rules
 !
+sex.com#%#//scriptlet('trusted-set-cookie-reload', 'privacy-preferences', '%7B%22essential%22%3Atrue%2C%22analytics%22%3Afalse%7D')
+copaamerica.com#%#//scriptlet('set-cookie', 'localConsent', 'true')
 spk-bergkamen-boenen.de#%#//scriptlet('trusted-click-element', 'a[data-form=".eprivacy_optin_decline"]')
 backmarket.de#%#//scriptlet('set-cookie-reload', 'BM_Advertising', 'false')
 backmarket.de#%#//scriptlet('set-cookie', 'BM_Analytics', 'false')
@@ -2734,7 +2736,7 @@ hetzner.com#%#//scriptlet('trusted-click-element', 'button#DeclineCookies', '!co
 ||utils.cedsdigital.it/src/js/cmpConsentWall.js$domain=leggo.it
 leggo.it#%#//scriptlet('adjust-setTimeout', 'Atteso troppo tempo per CMP', '*', '0.001')
 camp-fire.jp##.cookie-policy-agreement-notification
-biomedcentral.com#%#//scriptlet('trusted-set-cookie', 'sncc', 'P%3D15%3AV%3D34.0.0%26C%3DC01%26D%3Dtrue', '', '/', 'biomedcentral.com')
+biomedcentral.com#%#//scriptlet('trusted-set-cookie', 'sncc', 'P%3D15%3AV%3D35.0.0%26C%3DC01%26D%3Dtrue', '', '/', 'biomedcentral.com')
 dagbladet.no,elbil24.no,kk.no,seher.no,sol.no###am-branding
 tvoe.live##div[class^="Alert_acceptCookies"]
 oko.press#%#//scriptlet('trusted-set-cookie', 'privacy2', 'necessary')
@@ -8106,8 +8108,6 @@ studierenplus.de##.chimpify-popup
 merxu.com##.mxu-cookie-consent
 cm.com##.s-cookie-popup
 tierarzt-onlineverzeichnis.de,vergleichen-und-sparen.de###vs-cookiehinweis
-sex.com#$#body { overflow: auto !important; }
-sex.com#$#body > .bg-overlay:has(> #cookie-modal) { display: none !important; }
 flazio.com##.flazio-cookie
 hij.airport.jp,cede.de,minimed.at,justiz.nrw###cookieAgree
 krautreporter.de##.js-flash-messages-container
@@ -14765,7 +14765,6 @@ ieatfoodtours.co.uk,londraculturale.it,onceinrome.com,weliketuscany.it#%#//scrip
 pdf24.org#%#//scriptlet('trusted-click-element', 'div[id*="EntryPage"] > .buttons > .declineAll')
 vr.fi#%#(function(){try{"undefined"!==typeof localStorage&&(localStorage.setItem('cookieConsent','{"consented":true,"levels":{"level1":true,"level2":false,"level3":false,"level4":false}}'))}catch(a){}})();
 openingceremony.com#%#(function(){try{"undefined"!==typeof localStorage&&(localStorage.setItem("SHOW_COOKIE_BANNER","no"))}catch(a){}})();
-sex.com#%#//scriptlet('set-cookie', 'sx_cookie_ok', '1')
 play.hbomax.com#%#(function(){try{"undefined"!==typeof localStorage&&(localStorage.setItem("dataservices.PreferencesManager.targetingCookies","off"),localStorage.setItem("dataservices.PreferencesManager.performanceCookies","off"),localStorage.setItem("dataservices.PreferencesManager.functionalCookies","on"))}catch(a){}})();
 voka.tv#%#//scriptlet('set-local-storage-item', 'ALLOW_COOKIES', 'false')
 gns3.com#%#//scriptlet('set-local-storage-item', 'user-has-accepted-cookies', 'true')
@@ -24104,6 +24103,8 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+smclinic.ru#%#//scriptlet('set-constant', 'popup.showWin', 'noopFunc')
+mydown.yesky.com##.bottom_fc
 mail.ru##.popup-container:has(> div.snack-container > div.snack > div.snack__content > a[href="https://help.mail.ru/legal/terms/common/mainrecommendation"])
 mail.ru##.rn-container:has(> div.bar > div.bar__text > a[href="https://help.mail.ru/legal/terms/common/mainrecommendation"])
 thepostmillennial.com##div[aria-labelledby="modalLabel"][aria-modal="true"]
@@ -28051,8 +28052,8 @@ touristik-aktuell.de,zinspilot.de,fussball.com,ionos.it,giardiniblog.it#$##bio_e
 puntocellulare.it#$?##pushbox { remove: true; }
 puntocellulare.it#%#//scriptlet('set-cookie', 'ilike', '1')
 shotam.info,khiphach.vn,bahndampf.de,vpncompare.co.uk,nurgsm.com##.sgpb-popup-dialog-main-div-wrapper
-shotam.info,khiphach.vn,bahndampf.de,jardinierparesseux.com,enfasys.net,unimoni.in,gameviet.mobi,gartenflora.de,pasada.com.tr,sonperiyot.com,vpncompare.co.uk,nurgsm.com,retromedia.pl,ranchoportugues.com.br,knote.com.tr,capage.in,ekremcoskundoner.com.tr,savunmahaber.com,python-scripts.com,labkom.co.id,petroturk.com##.sgpb-popup-overlay
-jardinierparesseux.com,enfasys.net,unimoni.in,gameviet.mobi,gartenflora.de,pasada.com.tr,sonperiyot.com,retromedia.pl,ranchoportugues.com.br,knote.com.tr,capage.in,ekremcoskundoner.com.tr,savunmahaber.com,python-scripts.com,labkom.co.id,petroturk.com###sgpb-popup-dialog-main-div-wrapper
+sozgazetesi.org.tr,shotam.info,khiphach.vn,bahndampf.de,jardinierparesseux.com,enfasys.net,unimoni.in,gameviet.mobi,gartenflora.de,pasada.com.tr,sonperiyot.com,vpncompare.co.uk,nurgsm.com,retromedia.pl,ranchoportugues.com.br,knote.com.tr,capage.in,ekremcoskundoner.com.tr,savunmahaber.com,python-scripts.com,labkom.co.id,petroturk.com##.sgpb-popup-overlay
+sozgazetesi.org.tr,jardinierparesseux.com,enfasys.net,unimoni.in,gameviet.mobi,gartenflora.de,pasada.com.tr,sonperiyot.com,retromedia.pl,ranchoportugues.com.br,knote.com.tr,capage.in,ekremcoskundoner.com.tr,savunmahaber.com,python-scripts.com,labkom.co.id,petroturk.com###sgpb-popup-dialog-main-div-wrapper
 voltimum.de,sicurezza.net##.mf-modal-overlay
 voltimum.de,sicurezza.net##.mf-modal-iframe
 apk.tw###main01
@@ -48221,6 +48222,8 @@ theguardian.com##.contributions__adblock
 !
 ! SECTION: Self-promo - Regular rules
 !
+faselhds.*##.alert-danger
+faselhds.*##body > div[id]:has(> div > a[href^="https://www.faselplus.com/onboarding?"])
 hesgoal.watch###block-9
 email1.io##.browser-card
 thetimes.com#$#html { overflow: auto !important; }
