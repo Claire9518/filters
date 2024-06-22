@@ -2437,6 +2437,7 @@ consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-label
 !
 ! NOTE: Regular rules
 !
+arhcity.ru###cookieAnnounce
 sex.com#%#//scriptlet('trusted-set-cookie-reload', 'privacy-preferences', '%7B%22essential%22%3Atrue%2C%22analytics%22%3Afalse%7D')
 copaamerica.com#%#//scriptlet('set-cookie', 'localConsent', 'true')
 spk-bergkamen-boenen.de#%#//scriptlet('trusted-click-element', 'a[data-form=".eprivacy_optin_decline"]')
@@ -10421,7 +10422,6 @@ tk.de#$#body { overflow-y: visible !important; }
 stayer.su##.info-panel
 millet-mountain.com##.banner-cookies-alert
 shop-lot.ru###jnr-cookie
-bazaraki.com,market.fenerium.com,istegelsin.com##.privacy-cookies
 gemoo.com,ioforth.com,imobie.jp,imobie.com##.fixedbot
 scania.com##c-cookie
 ||cdn.ethyca.com/org/*/cookie.js
@@ -11917,7 +11917,7 @@ netto-online.de###cookie-popup2
 minecraft-statistic.net###cookie-privacy-info
 image-line.com###cookie-toolbar
 budgetthuis.nl###cookie-wall
-dagiunderwear.com,vesti-ua.net,dagi.com.tr,cmwltd.co.uk,vidobu.com,kockariyerim.com,bebekodam.com,sleepy.com.tr,alniaciklar.com,investors.atlassian.com,kocakademi.com,foxpost.hu,k-booster.info,sport1tv.cz,sport1tv.hu###cookieAcceptBar
+otomobilir.com,dagiunderwear.com,vesti-ua.net,dagi.com.tr,cmwltd.co.uk,vidobu.com,kockariyerim.com,bebekodam.com,sleepy.com.tr,alniaciklar.com,investors.atlassian.com,kocakademi.com,foxpost.hu,k-booster.info,sport1tv.cz,sport1tv.hu###cookieAcceptBar
 flisekompaniet.no###cookieBlockOverlay
 cdkeys.com###cookieCDkeys
 halkbank.com.tr###cookieCT
@@ -14091,6 +14091,8 @@ jawoll.de,cafe-royal.com,campingplus.de,bikebox-shop.de,mline.com,blumixx.de,roe
 ! Misc rules, removed during optimization. If some rules are in groups, no need to move them here
 !
 !
+!+ NOT_OPTIMIZED
+bazaraki.com,market.fenerium.com,istegelsin.com##.privacy-cookies
 !+ NOT_OPTIMIZED
 carsales.com.au##csn-gdpr-toaster
 !+ NOT_OPTIMIZED
@@ -24103,6 +24105,9 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+communities.win###app > main ~ div:has(> div > button[aria-label="Close"])
+edumail.icu##.fixed.bottom-0
+wenku.baidu.com##.wk-chat-modal
 smclinic.ru#%#//scriptlet('set-constant', 'popup.showWin', 'noopFunc')
 mydown.yesky.com##.bottom_fc
 mail.ru##.popup-container:has(> div.snack-container > div.snack > div.snack__content > a[href="https://help.mail.ru/legal/terms/common/mainrecommendation"])
@@ -31875,7 +31880,6 @@ bongacams26.com,bongacams19.com,bongacams18.com,bongacams11.com,bongacams.net,ad
 ||uploadrar.com/sw.js
 liga.net#%#//scriptlet("abort-current-inline-script", "askPermission", "")
 ||tecmundo.com.br/assets/js/service-worker-register.
-||dailyuploads.net/sw.js
 nos.nl##div[class^="notificationBar_"]
 1prime.ru##.push-confirm
 life.ru##header ~ div[style^="pointer-events:"] + div[style*="animation-timing-function: ease; animation-duration: 400ms;"]
@@ -32317,6 +32321,7 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 !
 ! SECTION: Subscriptions - Regular rules
 !
+segodnya.ua##.article__newsfeeds
 standard.co.uk##div[data-island-hydration-component="NewsletterSignup"]
 kod.ru##div[class^="NewsDetail_smallBanner"]
 bbc.com##section[aria-labelledby="Подписывайтесь-на-наши-соцсети-и-рассылку"]
@@ -38966,7 +38971,7 @@ der-postillon.com##.whatsapp-abo
 mybroadband.co.za##.whatsapp-button
 mobil.berliner-zeitung.de##.whatsapp-widget-blz
 erdbeerlounge.de##.whatsapp-widget-container
-hdwalle.com,androidcentral.com,windowscentral.com,cinemablend.com,ef.com,ef.kz,exame.com,vandalism-sounds.com,deadline.com,emag.hu,cyclingnews.com,ef.ru,voxel.com.br##.widget-newsletter
+motor1.com,hdwalle.com,androidcentral.com,windowscentral.com,cinemablend.com,ef.com,ef.kz,exame.com,vandalism-sounds.com,deadline.com,emag.hu,cyclingnews.com,ef.ru,voxel.com.br##.widget-newsletter
 radiotimes.com,bikeradar.com##.widget-newsletter-sign-up
 beverfood.com,gamerant.ru##.widget-subscribe
 bestvpn.com##.widget-subscribe_widget
@@ -52880,6 +52885,8 @@ baynews.blog.jp,xresolutionx.livedoor.blog,kimamamatome.doorblog.jp,fgochaldeas.
 ! 2chblog.jp,blog.jp,blog.livedoor.jp,bloggeek.jp,blogism.jp,blogo.jp,blogstation.jp,blogto.jp,cafeblog.jp,corpblog.jp,diary.to,doorblog.jp,dreamlog.jp,gger.jp,golog.jp,ldblog.jp,liblo.jp,livedoor.biz,livedoor.blog,myjournal.jp,mynikki.jp,officeblog.jp,officialblog.jp,publog.jp,storeblog.jp,teamblog.jp,techblog.jp,weblog.to,xxxblog.jp,youblog.jp,seesaa.net,blog.fc2.com,blog.2nt.com
 ! specify subdomain or use unique and safe selector; for blog.livedoor.jp make your rule as specific as possible or use $path
 !
+tousatusin.com##.post div[id^="text-"]:has(iframe[data-src*="/blogparts_iframe.php?"])
+tousatusin.com##footer div[id^="text-"]:has(div.ninja-recommend-block)
 umaumanews.com###st_custom_html_widget-3
 umaumanews.com###text-20
 himasoku.com###article-contents > span[style="color: #CC0033; font-weight: bold; font-size: 25px;"]
@@ -52987,6 +52994,7 @@ blog.livedoor.jp##div[id^="shitarss_title_"]
 !
 ! NOTE: Blogroll specific rules
 !
+emuokunmaster.com##div[style="width: 1225px; height: 267px; margin: auto; text-align: center;"]
 drdinl.com##.header-info
 drdinl.com##div[id^="KLS-"]:has(> li > a[href^="http://newmofu.doorblog.jp/"])
 drdinl.com##div[id^="KLS-"]:has(> li > a[href^="https://moudamepo.com/"])
