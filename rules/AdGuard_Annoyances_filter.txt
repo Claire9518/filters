@@ -3553,7 +3553,7 @@ wlkp24.info#$#body { overflow: auto !important; padding-right: 0 !important; }
 northernpowergrid.com#$##block-cookiesui { display: none !important; }
 northernpowergrid.com#$#body { overflow: auto !important; }
 northernpowergrid.com#$#.blurred { filter: none !important; pointer-events: unset !important; }
-dr-brinkmann.com,bezpiecznedane.gov.pl##.modal-backdrop
+neubaukompass.de,dr-brinkmann.com,bezpiecznedane.gov.pl##.modal-backdrop
 bezpiecznedane.gov.pl##body .cookie-popup-modal
 andhrafriends.com##div[data-role="cookieConsentBar"]
 happymod.com##.use_cookie
@@ -19953,12 +19953,13 @@ fosspost.org,portalvirtualreality.ru,pingvin.pro,bonobono.com,curbsideclassic.co
 ! Exceptions are also required because these requests can be blocked by other rules
 !#safari_cb_affinity(general)
 ||succeedscene.com^$badfilter
-@@||succeedscene.com/_adslot/
-@@||succeedscene.com/pagead/ads?ad=
-@@||succeedscene.com/*/ads.load.js
-@@||succeedscene.com/ads/*/*.js
-@@||succeedscene.com/admr/site-adbanner.js
-@@||succeedscene.com/customads/custom_ads.js
+@@||succeedscene.com*.js^$script,third-party
+!@@||succeedscene.com/_adslot/
+!@@||succeedscene.com/pagead/ads?ad=
+!@@||succeedscene.com/*/ads.load.js
+!@@||succeedscene.com/ads/*/*.js
+!@@||succeedscene.com/admr/site-adbanner.js
+!@@||succeedscene.com/customads/custom_ads.js
 !#safari_cb_affinity
 ! https://github.com/AdguardTeam/AdguardFilters/pull/142877
 /^https:\/\/[0-9a-z]{7,25}\.com\/v2(?:\/0\/)?(?=[0-9a-z_-]{0,84}[A-Z])(?=[a-zA-Z_-]{0,84}[0-9])[0-9a-zA-Z_-]{54,85}(#\?v=[0-9a-f]{32})?$/$ping,script,xmlhttprequest,third-party,match-case
@@ -24105,6 +24106,7 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+carseven.co.jp##.fix_box
 communities.win###app > main ~ div:has(> div > button[aria-label="Close"])
 edumail.icu##.fixed.bottom-0
 wenku.baidu.com##.wk-chat-modal
@@ -32321,6 +32323,7 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 !
 ! SECTION: Subscriptions - Regular rules
 !
+hoffmann-germany.de##.needsclick
 segodnya.ua##.article__newsfeeds
 standard.co.uk##div[data-island-hydration-component="NewsletterSignup"]
 kod.ru##div[class^="NewsDetail_smallBanner"]
@@ -50029,7 +50032,7 @@ joom.com##div[class^="promoCorner_"]
 igromania.ru##a[href^="https://ads.adfox.ru/"]
 pcsecrets.ru##.mainbottom > div.yarpp-related ~ div[class][id]
 businessmens.ru##.uac
-sleep-hero.de,honor.ru##.top-banner
+curseforge.com,sleep-hero.de,honor.ru##.top-banner
 krapka.rv.ua##.deskmargbot-40
 krapka.rv.ua##a[href^="https://krapka.rv.ua/reklama-"]
 ||pcsecrets.ru/wp-content/uploads/*/word_book*.png
@@ -50194,7 +50197,7 @@ music.youtube.com##ytmusic-mealbar-promo-renderer
 youtube.com###ticker-content
 ||banner.consultant.ru^
 toto.rakuten.co.jp#?#.login-section2 > div.login-none-inner:has(> div.campaign)
-toto.rakuten.co.jp,themeforest.net##.banner
+curseforge.com,toto.rakuten.co.jp,themeforest.net##.banner
 alba.co.kr###MainBanner
 albamon.com##.stickyBestalba
 thinkster.io###carbonhold
@@ -50932,7 +50935,7 @@ thecustomrom.com#%#//scriptlet('adjust-setTimeout', 'window.location.href', '*',
 ! https://github.com/AdguardTeam/AdguardFilters/issues/160927
 vstdrive.in#%#//scriptlet('adjust-setInterval', 'time--', '*', '0.001')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/160924
-zeroupload.com#%#//scriptlet('adjust-setInterval', 'count', '*', '0.001')
+zeroupload.com#%#//scriptlet('adjust-setInterval', 'display', '1000', '0.001')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/163646
 ! https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-6912053
 antonimos.de,quesignifi.ca#%#//scriptlet('set-constant', 'waitTime', '0')
@@ -52994,6 +52997,10 @@ blog.livedoor.jp##div[id^="shitarss_title_"]
 !
 ! NOTE: Blogroll specific rules
 !
+fob.jp###swell_ad_widget-7
+fob.jp##.widget_swell_ad_widget:has(> div.p-blogParts > div.ek-linked-block)
+fob.jp##.swell-block-fullWide__inner > div.p-blogParts > div.swell-block-fullWide.u-mb-0:has(> div.swell-block-fullWide__inner.l-container > div.wp-block-columns > div.ek-linked-block-animate)
+emuokunmaster.com##div[style="margin: auto; text-align: center; width: 305px; height: 915px;"]
 emuokunmaster.com##div[style="width: 1225px; height: 267px; margin: auto; text-align: center;"]
 drdinl.com##.header-info
 drdinl.com##div[id^="KLS-"]:has(> li > a[href^="http://newmofu.doorblog.jp/"])
@@ -53927,7 +53934,7 @@ psneolog.com##.rss_box-sp
 2chav.com###kotei
 2chav.com##.cari001 + h3.midasih3
 2chav.com##.p3_uekotei
-panchiragazoumania.com,rastaneko-blog.com,2chav.com##.plugin3_outline
+rastaneko-blog.com,2chav.com##.plugin3_outline
 2chav.com##.kijinakakoteeei
 2chav.com##.kijinakakoteeei02
 2chav.com##div[style^="width:682px;height:385px"]
