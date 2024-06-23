@@ -133,9 +133,6 @@ holtrenfrew.com#%#//scriptlet('set-constant', 'ometria', 'emptyObj')
 holtrenfrew.com#%#//scriptlet('set-constant', 'ometria.init', 'noopFunc')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/170358
 foxnews.com#%#//scriptlet('set-local-storage-item', 'anon_fpid', '$remove$')
-! 4players.de - remove onclick tracking
-4players.de#%#//scriptlet('remove-attr', 'onclick', 'a[onclick*="send4PEvent"]')
-4players.de#%#//scriptlet('remove-attr', 'onclick', 'a[onclick*="Buy"]')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/169949
 ! Fixes video player
 nbcsports.com#%#//scriptlet('prevent-element-src-loading', 'script', 'sb.scorecardresearch.com')
@@ -39177,7 +39174,6 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ||lcs.modoo.at^
 ||lcs.naver.com^
 ||lexip.4pcdn.de^
-||lexip.4players.de^
 ||librato-collector.genius.com^
 ||live.rezync.com^
 ||livecounter.theyosh.nl^
@@ -39401,7 +39397,6 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ||pixazza.com/track/
 ||pixel.1und1.de^
 ||pixel.4pcdn.de^
-||pixel.4players.de^
 ||pixel.anyclip.com^
 ||pixel.bridge.dooca.store^
 ||pixel.bullion.media^
@@ -39747,7 +39742,6 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ||stt.nimbusweb.me^
 ||style.onvz.nl^
 ||su.addthis.com^
-||subpixel.4players.de^
 ||swa.metro.co.uk^
 ||sync.1dmp.io^
 ||sync.adap.tv^
@@ -64258,7 +64252,6 @@ dreamprogs.net##td[width="88"][height="31"]
 ||3dnews.ru/track?
 ||3sat.de/mediaplayer/*/plugins/IVWTrackingPlugin.swf
 ||3sat.de/mediathek/xmlservice/web/tracking
-||4players.de/javascript/awstats_misc_tracker.js
 ||aa.avvo.com/1/collect?*&events=
 ||ab-in-den-urlaub.de/TrackingPixel_
 ||ab-in-den-urlaub.de/nocacheTracking.php
@@ -67772,10 +67765,6 @@ abema.tv#%#//scriptlet('remove-node-text', 'script', 'NREUM')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/167552
 !+ PLATFORM(ios, ext_safari, ext_android_cb)
 @@||tineco.com/userCenter/js/sensorsdata.min.js
-! 4players.de - adblock event is sent when detected
-!#safari_cb_affinity(general)
-4players.de#@#.AdSense
-!#safari_cb_affinity
 ! pcgames.de - cannot expand comment in article
 @@||pcgames.de/webservices/remoteModulesTracker.php
 ! https://github.com/AdguardTeam/AdguardFilters/issues/166547#issuecomment-1826884259
