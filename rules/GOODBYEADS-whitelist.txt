@@ -2,9 +2,9 @@
 ! Title: GOODBYEADS
 ! Homepage: https://github.com/8680/GOODBYEADS
 ! Expires: 12 Hours
-! Version: 2024-06-24 09:19:59（北京时间）
+! Version: 2024-06-24 20:35:05（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 14417
+! Total count: 14415
 @@#.banner%20ad.$image,domain=dokuo666.blog98.fc2.com
 @@$csp=worker-src 'none',domain=uptostream.com
 @@$generichide,domain=stfly.cc
@@ -19,7 +19,6 @@
 @@*$script,third-party,domain=defienietlynotme.com|embedme.*|filemoon.*|finfang.*|hellnaw.*|moonembed.*|sbnmp.bar|sulleiman.com|vpcxz19p.xyz|z12z0vla.*|fmoonembed.*|kerapoxy.cc|rgeyyddl.skin|fmembed.cc
 @@*$stealth=referrer,domain=cdnbuzz.buzz
 @@*.php?player=desktop$stealth=referrer,domain=tv1337.buzz|soccermlbstream.top|hitsports.pro|feedzstream.com|cricplay2.xyz|antenatv.shop|virazo.sx|redditsoccerstream.online
-@@*ad*.cms$domain=indiatimes.com|timesofindia.com
 @@-atari-embeds.googleusercontent.com/embeds/*/inner-frame-minified.html$stealth
 @@-social-bar.$domain=mobi.yahoo.com
 @@-template-ads/*$domain=rapidgrab.pl
@@ -4860,9 +4859,6 @@
 @@||formula.ifz.ru/cgi-bin/tex2img-new.cgi$stealth
 @@||forrest.adverticum.net/inapp/user^$domain=embed.indavideo.hu
 @@||forum-pokemon-go.fr^$generichide
-@@||forum.adguard.com/index.php
-@@||forum.adguard.com/index.php$xmlhttprequest
-@@||forum.adguard.com/index.php?account$jsinject,elemhide
 @@||forum.admiregirls.com/js/*/ad160.js
 @@||forum.advance-rp.ru/forums/reklama.$domain=advance-rp.ru
 @@||forum.gocmod.com/js/*/*.js?_v=
@@ -7343,7 +7339,6 @@
 @@||indianrailways.info/js/adblocker.js
 @@||indiansgetfucked.com$generichide
 @@||indiatimes.com/configspace/
-@@||indiatimes.com/wp-content/themes/*/js/*ads*.js
 @@||indiatoday.in/embed-live-tv?
 @@||indiegogo.com^$stealth
 @@||indostarmedia.com^$generichide
@@ -8899,6 +8894,7 @@
 @@||mylogin.abc.net.au^$stealth
 @@||myneobuxportal.com/wp-content/plugins/*/adblock-detector/advertisement.js
 @@||mypapercraft.net^$generichide
+@@||myqcloud.com^$stealth=referrer,domain=chinadsl.net
 @@||myqqjd.com^$generichide
 @@||myreadingmanga.info^$generichide
 @@||myrtlebeachonline.com^$generichide
@@ -8993,6 +8989,7 @@
 @@||netflix.com^$generichide
 @@||netinsight.travelers.com/scripts/ntpagetaghttps.js
 @@||netmile.co.jp/ad/images/$image
+@@||netportal.hdfcbank.com^$stealth=referrer
 @@||netshoes.com.br/webanalytics/collect
 @@||nettavisen.no/api/mnemonic/v*/render/pluss.nettavisen.no/*dashboard.youplay.se*frontwidget$extension
 @@||nettavisen.no/templates/v*/resources/admanager/templates/topover/topover.jsp
@@ -12347,6 +12344,7 @@
 @@||static.doubleclick.net/instream/ad_status.js$domain=deblocker.merkulov.design
 @@||static.doubleclick.net/instream/ad_status.js$domain=game3rb.com
 @@||static.doubleclick.net/instream/ad_status.js$domain=idlixofficials.com|idlixofficial.co|idlixofficial.net
+@@||static.doubleclick.net/instream/ad_status.js$domain=idlixplus.*
 @@||static.doubleclick.net/instream/ad_status.js$domain=investing.com
 @@||static.doubleclick.net/instream/ad_status.js$domain=laksa19.github.io
 @@||static.doubleclick.net/instream/ad_status.js$domain=linkneverdie.com
