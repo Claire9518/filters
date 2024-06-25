@@ -1424,6 +1424,8 @@ sasisa.ru#%#AG_onLoad(function() { window.Umobi = function() {}; });
 !-------CSS---------
 !-------------------
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/182180
+balarm.it#$#.main-container#top[style^="margin-top:"] { margin-top: 110px !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/181367
 subito.it#$#div[id^="index-module_mobile-navigation"] { height: auto !important; }
 ! leftover
@@ -2670,6 +2672,9 @@ otakei.otakuma.net,nikkan-gendai.com,ranking.goo.ne.jp,m.hellporno.com,topics.sm
 !
 ! SECTION: Regular rules
 !
+s.minkabu.jp###ad9102
+sp.manga.nicovideo.jp##div[data-ads-name]
+balarm.it##.main-container .text-container > .row > div[style*="position: relative; left:"]:has(> :is(.inarticle-banner, .adsbygoogle))
 mantan-web.jp##.article__inner > aside[style="width:100%; padding:10px 0; background:#f3f3f3;"]
 mantan-web.jp##div[style^="text-align:center; margin-top:"][style$="color: #595757; font-size:0.7em; height:15px;"]
 diamond.jp##.list-box > div:has(> div.ad-related2)
@@ -2714,7 +2719,6 @@ sport24.ru###adfox_Sport24_branding
 ortacizgi.com##div.display:has(> div.post-ad-title)
 mynet.com##.body-banner-block
 article.auone.jp##.appeal__text-lower
-sp.seiga.nicovideo.jp##div[style^="--ads-width:"]
 news.livedoor.com###BrowsiVideo
 meiobit.com##.ad-container-discrete
 meiobit.com###ad-mobile-sticky-container
@@ -3476,7 +3480,6 @@ my-best.com##.l-wrapper > div > a[href^="https://hb.afl.rakuten.co.jp/ichiba"][t
 the-ans.jp##.banner-list-item > a:not([href*="the-ans.jp"])
 baseball.yahoo.co.jp,soccer.yahoo.co.jp,sports.yahoo.co.jp##.sn-videoEmbed__banner
 baseball.yahoo.co.jp,soccer.yahoo.co.jp,sports.yahoo.co.jp##.sn-videoEmbed__credit
-baseball.yahoo.co.jp,soccer.yahoo.co.jp,sports.yahoo.co.jp##.sn-modAppText
 sports.yahoo.co.jp##div[class^="yf-modCommon"]
 itc.ua,ain.ua##amp-wordpress-embed
 comic.pixiv.net##.bottom-0.fixed[style="bottom:env\(safe-area-inset-bottom\)"] > div.w-screen
@@ -4582,7 +4585,6 @@ delivery.rakuten.co.jp##.promArea
 koro-pokemon.com##.ad_int
 transit.yahoo.co.jp###posNM
 amazon.*##.csm-widget-type-sponsored-products-mobile-list-card
-seiga.nicovideo.jp##div[data-ads-name]
 businessinsider.de##.bi-banner
 epaper.freepressjournal.in##.ad-bx
 epaper.freepressjournal.in###ad-code-footer
@@ -7950,8 +7952,6 @@ adguard.info,adguard.com,adguard.app#$#.hello_from_adguard_advanced_protection_i
 ||facebook.com^$app=com.veraxen.colorbynumber.oilpainting|com.veraxen.jigsaw|com.veraxen.jigsawpuzzlescollectionhd
 ! https://github.com/AdguardTeam/AdguardFilters/issues/97849
 .ott.cibntv.net/youku/*.mp4?*&ykVideoShowType=2|$app=com.youku.phone
-! https://github.com/AdguardTeam/AdguardFilters/issues/95110
-||smartnews-ads.com^$app=jp.gocro.smartnews.android
 ! https://github.com/AdguardTeam/AdguardFilters/issues/94781
 ||s3.eu-central-1.amazonaws.com^$app=ru.yandex.metro
 ! https://github.com/AdguardTeam/AdguardFilters/issues/88275
