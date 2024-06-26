@@ -39430,6 +39430,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||matomo.promobil.de^
 ||api.ad-platform.jmty.jp^
 ||events.tryamped.com^
 ||track.sendlane.com^
@@ -67900,6 +67901,7 @@ alternativeto.net#%#//scriptlet('prevent-element-src-loading', 'script', 'double
 ! https://github.com/AdguardTeam/AdguardFilters/issues/164410
 @@||convertexperiments.com^$domain=skratchlabs.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/164104
+reuters.com#%#//scriptlet('set-constant', 'analytics', 'undefined')
 !#if (adguard_app_windows || adguard_app_mac || adguard_app_android || adguard_ext_chromium || adguard_ext_opera)
 ||cdn.segment.com^$script,redirect=noopjs,important,domain=reuters.com
 !#endif
