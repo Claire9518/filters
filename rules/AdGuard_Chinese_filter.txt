@@ -325,6 +325,9 @@
 ! Bad: ||ad.doubleclick.net^ (should be in adservers.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/182114
+ftchinese.com#@#.AdsBox
+ftchinese.com#%#//scriptlet('prevent-setTimeout', '.offsetHeight')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/182204
 manwa.fun#%#//scriptlet("prevent-setTimeout", "/alert\('请关闭.*Chrome/")
 !#if (adguard_app_ios || adguard_ext_safari || adguard_ext_android_cb)
@@ -1275,6 +1278,10 @@ $script,third-party,denyallow=authkong.com|rsc.cdn77.org|linkvertise.com|fastly.
 !
 !
 !
+dailygh.com###video_fade
+dailygh.com##.div_removeable
+xgcartoon.com,dailygh.com###video-top-ad
+/cjs/cprt.js$domain=dailygh.com|xgcartoon.com
 bbs.wps.cn##.topic-recommend-top
 manwa.fun#%#//scriptlet('remove-attr', 'style', '.two-ad-area')
 manwa.fun###detail > div:has(> div.ad-area-close)
@@ -4965,9 +4972,18 @@ newduba.cn###jq_youxi
 ||194.59.220.161^
 ||205.209.138.102^
 ||23.231.151.252^
-||67.21.92.163^
-||107.167.16.14^
+||67.21.92.*.gif
+||107.167.16.*.gif
 ||cupfox.app^$third-party
+||efhis.cn^
+||udoshbt.top^
+||lhtzfn.xyz^
+||stsesc.xyz^
+||gjwxy.cn^
+||ytoeyxz.icu^
+||szdtf.cn^
+||tyisloi.top^
+||pjdthz.xyz^
 ||talyrt.xyz^
 ||okagcw.xyz^
 ||vtlyrj.xyz^
