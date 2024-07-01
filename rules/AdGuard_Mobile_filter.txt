@@ -1215,6 +1215,7 @@ turbopages.org##.page__result > div[class*="type_native"]
 ! Good: ##.adv
 ! Bad: example.org##.adv (should be in specific.txt)
 !
+###mobile-adhesion:not(#style_important)
 ##.gnt_xmst
 ###ad-300x250_mid_mobile
 ##amp-iframe[src^="https://ad.vidverto.io/"]
@@ -1952,11 +1953,12 @@ motherless.com$$script[tag-content="awentw.com"][min-length="2000"][max-length="
 ! https://play.google.com/store/apps/details?id=fm.tokfm.android
 ! Fixes radio
 @@||imasdk.googleapis.com^$app=fm.tokfm.android
+! https://play.google.com/store/apps/details?id=pl.tvp.tvp_sport
 ! https://play.google.com/store/apps/details?id=pl.tvp.info
 ! https://play.google.com/store/apps/details?id=pl.tvp.stream
 ! https://play.google.com/store/apps/details?id=com.tvp.vodtv.mobile
 ! Fixes video player
-@@||imasdk.googleapis.com^$app=pl.tvp.stream|com.tvp.vodtv.mobile|pl.tvp.info
+@@||imasdk.googleapis.com^$app=pl.tvp.stream|com.tvp.vodtv.mobile|pl.tvp.info|pl.tvp.tvp_sport
 ! https://github.com/AdguardTeam/AdguardFilters/issues/149283
 @@||ia.hit.interia.pl^$app=pl.interia.news
 ! com.square_enix.android_googleplay.dqwalkj breakage
@@ -4656,7 +4658,6 @@ heise.de##.article-body > .visible-xs > .visible-xs[style*="min-height:"]
 eromanga-pon.com##.ad_big
 ||eromanga-castle.com/famsiro1.html
 erocomic-hunter.net,eromanga-life.com,ero-mangacafe.com,dojin-pandemic.com,dojinwatch.com,eromanga-castle.com,eromanga-cafe.com,doujincafe.com,nukerumannga.com,ero-mangalife.com,ero-mangasokuhou.com,ero-manga-platinum.net,erodoujinjohoukan.com,erodoujinshi-world.com,ero-comic-hunter.net,eromanga-cafe.com,eromanga-sevendays.net,moeero-library.com##.cntiframe
-pe.com##body #mobile-adhesion
 bfm.ru##.banner-mobile-wrap
 spieletipps.de,kino.de##.alice-root-topmobile2-container
 m.chinaz.com##div[class="article-suggest bd-keywords"]
@@ -6158,7 +6159,6 @@ cnn.com###social-share_gig_containerParent .PartnerZone
 mobile.donanimhaber.com##body > div[style="float: left;width:100%;"] > div[style="margin:10px auto; text-align:center; width:300px; height:250px;"]
 techrum.vn###revive_banner_mobile_div
 usatooday.com##.partner-placement
-twincities.com,denverpost.com##body #mobile-adhesion
 analdin.com,tubewolf.com##.banner-top
 yahoo.com##.stream-sm-ad
 zerohedge.com##iframe[src^="//www.dianomi.com"]
