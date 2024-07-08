@@ -2443,6 +2443,7 @@ consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-label
 !
 ! NOTE: Regular rules
 !
+uno-fluechtlingshilfe.de#%#//scriptlet('trusted-click-element', '#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll','','3500')
 f1-insider.com#%#//scriptlet('set-cookie', 'perfectSub', 'true')
 fashiontechnews.zozo.com##div[class^="style-module--consent--"]
 corp.zozo.com##.m-box-policy
@@ -15537,6 +15538,10 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/183094
+@@||consent.cookiebot.com/uc.js$domain=uno-fluechtlingshilfe.de
+@@||consentcdn.cookiebot.com/consentconfig/$domain=uno-fluechtlingshilfe.de
+@@||uno-fluechtlingshilfe.de/typo3conf/ext/basetpl/Resources/Public/scripts/cookiebar-dist.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/182965
 deltaoptical.pl#@#.cookie-modal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/182717
