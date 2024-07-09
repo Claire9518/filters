@@ -2313,7 +2313,7 @@ creativefabrica.com,flickplay.co,globenewswire.com,fashionunited.*,ahaan.co.uk,a
 ! ###didomi-host
 theobjective.com,dziennikzachodni.pl,standaard.be,closermag.fr,elnortedecastilla.es,ibtimes.co.uk,letelegramme.fr,mallorcamagazin.com,mitele.es,newsweek.com,nicematin.com,periodicodeibiza.es###didomi-host
 ! #%#//scriptlet('trusted-click-element', '#didomi-notice-agree-button')
-film.at,euronews.com,france24.com,elcorreo.com,ideal.es,lesoir.be,lavanguardia.com,dhnet.be,20minutes.fr,moviepilot.de,dnevnik.hr,lesechos.fr,lasprovincias.es,programme-television.org,cnews.fr,boursorama.com,marianne.net,ouest-france.fr,jeanmarcmorandini.com,publicsenat.fr,dna.fr,bfmtv.com,sudinfo.be,europe1.fr,public.fr,rtl.be,rfi.fr,kurier.at,telegraaf.nl,marmiton.org,reviewingthebrew.com,jaysjournal.com,leboncoin.fr,engadget.com,reignoftroy.com,actu.fr,elconfidencial.com,rtl.lu#%#//scriptlet('trusted-click-element', '#didomi-notice-agree-button')
+leparisien.fr,film.at,euronews.com,france24.com,elcorreo.com,ideal.es,lesoir.be,lavanguardia.com,dhnet.be,20minutes.fr,moviepilot.de,dnevnik.hr,lesechos.fr,lasprovincias.es,programme-television.org,cnews.fr,boursorama.com,marianne.net,ouest-france.fr,jeanmarcmorandini.com,publicsenat.fr,dna.fr,bfmtv.com,sudinfo.be,europe1.fr,public.fr,rtl.be,rfi.fr,kurier.at,telegraaf.nl,marmiton.org,reviewingthebrew.com,jaysjournal.com,leboncoin.fr,engadget.com,reignoftroy.com,actu.fr,elconfidencial.com,rtl.lu#%#//scriptlet('trusted-click-element', '#didomi-notice-agree-button')
 ! For the case if the scroll page is blocked
 numerama.com,goplay.be,lavozdegalicia.es,boursobank.com,corrieredellosport.it,recup.paylib.fr,radioclassique.fr,marca.com,joabet.fr,xataka.com,lejdd.fr,filmweb.pl,speedy.fr,manomano.fr,mein-mmo.de,talent-soft.com,jofogas.hu,m.rtl.be,elmundo.es,vecernji.hr,zive.cz,gamepro.de#$##didomi-host { display: none !important; }
 numerama.com,goplay.be,lavozdegalicia.es,boursobank.com,recup.paylib.fr,radioclassique.fr,marca.com,joabet.fr,xataka.com,lejdd.fr,filmweb.pl,speedy.fr,manomano.fr,mein-mmo.de,talent-soft.com,jofogas.hu,m.rtl.be,elmundo.es,vecernji.hr,zive.cz,gamepro.de#$#html > body.didomi-popup-open { overflow: auto !important; position: unset !important; }
@@ -2443,6 +2443,9 @@ consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-label
 !
 ! NOTE: Regular rules
 !
+fsbot.xyz#$##askcookie { display: none !important; }
+fsbot.xyz#$##askcookie ~ .modal-backdrop { display: none !important; }
+fsbot.xyz#$#body { overflow: auto !important; padding-right: 0 !important; }
 istories.media##div[class*="cookieConsentBanner"]
 widilo.it##.widilo-cookie-rules
 teamgroupinc.com##.privacyArea
@@ -14501,6 +14504,7 @@ chase.co.uk#%#//scriptlet('trusted-click-element', '#consent-manager-modal butto
 spoint.spox.com,cmpv2.berliner-zeitung.de#%#//scriptlet('trusted-click-element', 'button[title="Zustimmen"]')
 cmp.computerbild.de,cmp-sp.siegener-zeitung.de,cmp-sp.sportbuzzer.de#%#//scriptlet('trusted-click-element', 'button[title^="Alle akzeptieren"]')
 !
+consent.dailymotion.com#%#//scriptlet('trusted-click-element', 'button.sp_choice_type_SE')
 raiplay.it#%#//scriptlet('trusted-click-element', '.as-oil .as-oil__close-banner[data-optin-mode="close-banner"]')
 freikirche-hamm.de#%#//scriptlet('trusted-click-element', '.cc-window .cc-compliance a.cc-allow')
 doppelherz.de#%#//scriptlet('set-cookie', 'cookieConsent', 'false')
@@ -15543,6 +15547,8 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/183202
+@@||sdk.privacy-center.org^$domain=leparisien.fr
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183094
 @@||consent.cookiebot.com/uc.js$domain=uno-fluechtlingshilfe.de
 @@||consentcdn.cookiebot.com/consentconfig/$domain=uno-fluechtlingshilfe.de
@@ -21639,7 +21645,7 @@ maximum.ru,rusradio.ru,dfm.ru##.ad-blocked-message
 maximum.ru##.ad-blocked-message
 18comic.vip#?#.modal-footer > div[style]:contains(ADBLOCK)
 slideshare.net#%#//scriptlet('prevent-addEventListener', 'load', 'adblock_whitelist')
-||fundingchoicesmessages.google.com^$domain=cybermania.ws|taishin-miyamoto.com|telecomtalk.info|op.gg
+||fundingchoicesmessages.google.com^$domain=taishin-miyamoto.com|telecomtalk.info|op.gg
 pastedownload.com##.jegulo
 duhoctrungquoc.vn###danger_adblock
 gohatori.com#%#//scriptlet('abort-current-inline-script', 'setTimeout', 'none')
@@ -25852,7 +25858,7 @@ detik.com##.breakingnews-float
 birdsoftheworld.org##.SubscribeAd
 encyklopedia.pwn.pl##.slideout-widget > #social-slideout
 encyklopedia.pwn.pl##.slideout-widget > button[data-target="#social-slideout"]
-sibreal.org##.slide-in-wg
+severreal.org,sibreal.org##.slide-in-wg:not(#style_important)
 wawel-service.pl##.fixed--buttons > a.email
 forbes.com#$#.tp-backdrop { display: none !important; }
 forbes.com#?#body > div.tp-modal:has(> div.tp-iframe-wrapper > iframe[id^="offer_"])
@@ -29760,7 +29766,7 @@ docs.microsoft.com##.rating-helpful-active
 denverpost.com,theoaklandpress.com,twincities.com,macombdaily.com,delcotimes.com,chicoer.com,pe.com##.info-box.Mg2-connext > .info-box-body
 kinokadr.ru###floatleft
 androidauthority.com##.gcap-shown
-golosameriki.com,azattyq.org,currenttime.tv,radiosvoboda.org,amerikaninsesi.com,svoboda.azureedge.net,svoboda.org##body .slide-in-wg
+kavkazr.com,golosameriki.com,azattyq.org,currenttime.tv,radiosvoboda.org,amerikaninsesi.com,svoboda.azureedge.net,svoboda.org##body .slide-in-wg
 sunfood.com###pdv4overlay
 wixsite.com,wix.com,boxabl.com,sage.exchange,strive-magazine.de,stone-stream.com,twinlab.com###POPUPS_ROOT
 anti-malware.ru###parent_popup_ank
@@ -32464,6 +32470,9 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 !
 ! SECTION: Subscriptions - Regular rules
 !
+fujinkoron.jp###pianoj_slidein
+rg.ru##section[class^="ChannelButtonGroup_root"]
+severreal.org##.infgraphicsAttach
 mori-cinema.ru##div[class^="cinema-banner"]
 pagesix.com##.inline-module--newsletter
 gulfnews.com###article-nl-wrap
@@ -35059,7 +35068,6 @@ carteprepagate.org#$#div[data-popmake*="ricevi-un-codice-promo"] { display: none
 ancient-origins.net##.block-ao-activecampaign
 astv.ru##form[id^="FormUpdateUser"]
 ranak.me###yandex_zen_link
-rg.ru##div[aria-label="Дзен"]
 techradar.com,pcgamer.com,tomsguide.com##div[id^="slice-container-newsletter"]
 store.wacoal.jp##.spgCustom-endOutsidePopup
 store.wacoal.jp##.spm-navigation-overlay
@@ -35078,7 +35086,6 @@ post-gazette.com##.pg-notifybox
 charlotteobserver.com##.option-banners
 ||giardiniblog.it/wp-content/uploads/2022/01/tgdesktop2022.jpg
 courrierinternational.com##.banner-abo
-rg.ru##div[aria-label="Наш Telegram"]
 matadornetwork.com#$#body { overflow: auto !important; }
 matadornetwork.com#$#.brazen-modal-newsletter-subscribe { display: none !important; }
 iltalehti.fi#?#.column > div[style]:has(> div.card > div.block > div.iltalehti-newsletter-column-embed)
@@ -39512,6 +39519,7 @@ turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,rabota.by,temp-
 ! https://github.com/AdguardTeam/AdguardFilters/issues/161301
 temu.com#?#div[role="main"] div[style] > div[style]:has(> div[style] div[js-selector="mobile-download-ui"])
 !
+mobiletvshows.site#%#//scriptlet('abort-current-inline-script', 'localStorage', 'Download the Official Android App')
 newspicks.com##section + div[class^="css-"]:has(> div > img[src="/resources/images/banner-app-download.png"])
 medicalnote-qa.jp###header-app-banner
 news.ntv.co.jp##.introduction
@@ -48539,6 +48547,7 @@ theguardian.com##.contributions__adblock
 !
 ! SECTION: Self-promo - Regular rules
 !
+gamespark.jp##.news-list > section.item--special
 afisha.ru###root > a
 topics.r25.jp##img[alt="あなたの企業トピックスを新R25で発信しませんか？"]
 ||fitnesslove.net/wp0901/wp-content/uploads/2023/12/kyuin
@@ -51160,8 +51169,9 @@ dl.apkmoddone.com#%#//scriptlet('adjust-setTimeout', 'tick()', '*', '0.001')
 dl.apkmoddone.com#%#//scriptlet('adjust-setInterval', 'clearInterval', '*', '0.001')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/180944
 webhostsec.com,livenewsflix.com,apekite.com#%#//scriptlet("set-constant", "timeSec", "0")
+! https://github.com/AdguardTeam/AdguardFilters/issues/183075
 ! https://github.com/AdguardTeam/AdguardFilters/issues/180583
-onworks.net#%#//scriptlet('adjust-setTimeout', 'rewritebutton', '*', '0.002')
+myandroid.org,onworks.net#%#//scriptlet('adjust-setTimeout', 'rewritebutton', '*', '0.002')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/180144
 ndtv.com#%#//scriptlet('trusted-click-element', '.story__content > div > a.expand-btn__link')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/180127
