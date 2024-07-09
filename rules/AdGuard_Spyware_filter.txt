@@ -591,6 +591,8 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 !
 !
 !
+||exacttarget.com^
+||analytics.launch.bz^
 ||qobuz.surveysparrow.com^
 ||srvr.dmvs-apac.com^
 ||analytics.freespee.com^
@@ -11754,11 +11756,9 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ||sc.wa.gto.db.com^
 ||sc2.constantcontact.com^
 ||sc2.infor.com^
-||sc2metrics.exacttarget.com^
 ||sci.intuit.ca^
 ||sci.intuit.co.uk^
 ||sci.quickbooks.com^
-||scmetrics.exacttarget.com^
 ||scode.randomhouse.com^
 ||sconnectstats.mckesson.com^
 ||scp.deltadentalwa.com^
@@ -41115,6 +41115,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||trc.r25.jp^
 ||anal.doubledouble.top^
 ||peach-analytics.vercel.app^
 ||lfmetrics.loyalfans.com^
@@ -70845,6 +70846,8 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 /analytics.js$domain=tokyometro.jp|resumes.breakdownexpress.com|techcult.com|inbox.lv|kopeda.com|freexcafe.com|rusvideos.tv|nakubani.ru|lun.com|songsara.net|newsmax.com|bolgehastanesi.com|ewtc.de|newsdig.tbs.co.jp|imore.com|city.kushiro.lg.jp|emeraldbridal.com.au|emarat-news.ae|imobie.jp|tikla.com.tr|rusvideos.porn|jrkyushu.co.jp|amiunique.org|edit.ing|konami.com
 ||assets.adobedtm.com^$domain=mcclatchydc.com|elnuevoherald.com|bellinghamherald.com|sacbee.com|charlotteobserver.com|newsobserver.com|miamiherald.com|ef.ru|algida.com.tr|bmw-motorrad.co.uk|cif.com.tr|clearhaircare.com|domestos.com|dove.com|elidor.com.tr|f1sport.autorevue.cz|geico.com|hellmanns.com.tr|herkessofraya.com|johnsonsbaby.com.tr|lipton.com|lnk.to|lux.com|magnumicecream.com|neutrogena.com.tr|omo.com|rexona.com|samsung.com|sap.com|schwarzkopf.com.tr|signalturkiye.com|msnbc.com|nbcnews.com|kbb.com|eurosport.ru|timgate.it|intermiles.com|oxfordmail.co.uk|spiegel.de|hp.com|deutschepost.de|thebay.com|s.shufoo.net|tsn.ca|tabelog.com|euronews.com|newshub.co.nz|fredmeyer.com|viabcp.com|carsales.com.au|falabella.com|aarp.org|thehill.com|realtor.com|nzherald.co.nz|aia.com.ph|baynews9.com|thesaurus.com|dhc.co.jp|0101.co.jp|staples.com|rikunabi.com|directscout.recruit.co.jp|r-agent.com|sephora.com
 !
+||r25.jp/api/tracking/
+||kinokassa.kinoplan24.ru/*/cinema/analytics
 ||facebook.com/sem_mpixel/
 ||awsapprunner.com/api/frontend/client/metrics
 ||assets.askdoctors.jp/assets/packs/js/impression_tracker-*.js
@@ -74710,6 +74713,9 @@ link.gmapp*.net$image
 ! it's problematic that due to how Gmail proxy work, these domains aren't even exposed on the network level
 ! fortunately, extensions can see them (Gmail puts the real URL in the location.hash part of the src)
 !
+! 1password.co
+marketing.1password.co%2Ftrk%3Ft%3D$image
+marketing.1password.co/trk?t=$image
 ! Redsift
 link.redsift.com/e/o/$image
 link.redsift.com%2Fe%2Fo%2F$image
@@ -75177,10 +75183,12 @@ adguard.info,adguard.com,adguard.app#$#.hello_from_adguard_advanced_protection_i
 ! Bad:  example.org#@##cookie
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/183187
+@@||help.twilio.com^$cookie=_dd_s
 ! https://github.com/AdguardTeam/AdguardFilters/issues/178519
 @@||microsoft.com^$cookie=MUIDB
 ! https://github.com/AdguardTeam/AdguardFilters/issues/176294
-@@$cookie=__gads,domain=rseducationinfo.com|rsinsuranceinfo.com|rsadnetworkinfo.com|rsfinanceinfo.com|rshostinginfo.com|rssoftwareinfo.com
+@@$cookie=__gads,domain=rseducationinfo.com|rsinsuranceinfo.com|rsadnetworkinfo.com|rsfinanceinfo.com|rshostinginfo.com|rssoftwareinfo.com|armypowerinfo.com|artoffocas.com|bhugolinfo.com|bhugolinfo.com|cxissuegk.com|gknutshell.com|godstoryinfo.com|laweducationinfo.com|makeincomeinfo.com|rsfinanceinfo.com|rsgames.xyz|savemoneyinfo.com|vichitrainfo.com|workproductivityinfo.com|worldaffairinfo.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/174219
 @@||haisenryakuzu.net^$cookie=_ga
 ! https://github.com/AdguardTeam/AdguardFilters/issues/171285
