@@ -41139,6 +41139,8 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||beacon.necotracks.jp^
+||logs2.jobs.com^
 ||t.semafor.com^
 ||trc.r25.jp^
 ||anal.doubledouble.top^
@@ -77479,6 +77481,9 @@ inapps.appsflyersdk.com^
 !#endif
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/183357
+@@||scdn.cxense.com/cx.cce.js$domain=s.response.jp
+@@||api.cxense.com/public/widget/data?json=$domain=s.response.jp
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183277
 @@||event-collector.prd.data.s.joyn.de/*/beat
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183009
