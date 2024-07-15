@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
 ! Title: 乘风 广告过滤规则
-! Version: 202312161
+! Version: 202405161
 ! Expires: 2 days
 ! Homepage: https://github.com/xinggsf/Adblock-Plus-Rule/issues
 
@@ -8,14 +8,9 @@
 @@||bdstatic.com/static/common/widget/ui/admanager/$script,domain=image.baidu.com
 ||cpro.$domain=~baidu.com
 ada.baidu.com
-cstm.baidu.com
 ||dup.baidustatic.com/
 ||ubmcmm.baidustatic.com/
 ||adscdn.baidu.com/
-||als.baidu.com/dalog/log
-@@||eiv.baidu.com/fcimg
-||eiv.baidu.com/
-||f11.baidu.com/
 kstj.baidu.com
 ||pos.baidu.com/
 ||cbjs.baidu.com/
@@ -26,16 +21,14 @@ kstj.baidu.com
 ||pups.bdimg.com/
 baike.baidu.com##.after-content,#adLayerSideWrap
 baike.baidu.com##.squareAni.square.super-layer-promote
-||baike.baidu.com/api/wikiad/
+||baike.baidu.com/api/wikiad/$xhr
+||baike.baidu.com/*/directad?$xhr
+||baike.baidu.com/lemma/api/guesslike?$xhr
 fanyi.baidu.com##div.banner-wrap
 
 ||s1.bdstatic.com/r/www/cache/biz/ecom/common/api/$script
 jingyan.baidu.com##.wgt-cms-banner, .right-fixed-related-wrap, #bottom-ads-container
 ||exp.bdstatic.com/static/exp-pc/common-jquery/widget/popup-$script
-
-v.baidu.com##div[videoadv],a[href^="http://g.youxi.v.baidu."]
-||app.video.baidu.com/adver?
-||v.baidu.com/staticapi/videoAd.json?
 
 ||eduad.baidu.com/
 ||as2.wenku.baidu.com/$subdocument
@@ -52,9 +45,7 @@ tiebac.baidu.com,tieba.baidu.com,jump.bdimg.com,jump2.bdimg.com###thread_list>li
 @@||tb1.bdstatic.com/??/tb/_/*/ad_$script
 !----------------------通用、广告联盟站点-----------------------
 ! 去返利链接
-||jd.com^$removeparam=/^utm_/
-||taobao.com^$removeparam=/^utm_/
-||tmall.com^$removeparam=/^utm_/
+*$doc,removeparam=/^utm_/
 
 ||ad.
 */ad.
@@ -64,11 +55,6 @@ tiebac.baidu.com,tieba.baidu.com,jump.bdimg.com,jump2.bdimg.com###thread_list>li
 @@||www.microsoft.com/onerfstatics/marketingsites-*/ad-$script
 @@||static.zhihu.com/ad-raccoon-web/$script
 */ad-$~stylesheet
-*/ad0$script,domain=~discord.com
-*/ad1$script
-@@||www.youtube.com/s/desktop/ad$script
-*/ad2$script
-*/ad3$script
 */adbox/
 ||ads.
 */ads.
@@ -117,9 +103,7 @@ wwads.cn
 *##.adbox
 *##.adtable
 ~news.sina.com.cn##[id^=ad_]
-~crunchyroll.com##[class|=ad]
-~x.qcheng.cc,~4yydstxt178.com##[id|=ad]
-x.qcheng.cc##+js(set,killAdKiller,noopFunc)
+~4yydstxt178.com##[id|=ad]
 ##[id$="-ad"]
 *##div.a_mu,div.a_h,div.ad_pic,div.wp.a_f,div.wp.a_t,div.a_pb,div.a_pt,div.a_pr,div.a_cn,#ggPar,#preAdContent
 ~google.com,~mediafire.com##.ads
@@ -221,7 +205,7 @@ pcbeta.com###sitefocus
 ||pcgames.com.cn/g/extlin/pcdownpic/$script
 ||pcgames.com.cn/adpuba/show?
 ||pcgames.com.cn/g/*/fz/
-||img0.pcgames.com.cn^$object,object-subrequest
+||img0.pcgames.com.cn^$object
 
 pconline.com.cn##div.jcztl,div.box.best,div.ivy-330
 ||buy.pconline.com.cn/$script
@@ -424,34 +408,24 @@ ftchinese.com,cn.ft.com##.mpu-container-instory,div[data-id|=banner],div[data-id
 ||itv.hexun.com/
 ||www.hexun.com/hxpage/index.html$subdocument
 !-------------------IT----------------------
-51cto.com###ft~div
-51cto.com##div:has(#tonglanad)
-||i1.51cto.com/
-||i2.51cto.com/
-||i3.51cto.com/
-
+!51cto.com###ft~div
 autohome.com.cn###s2287
 ||x.autoimg.cn/dealer/custom/subsite/forcePicAd20160628.js
 ||autoimg.cn/admdfs/
 ||autohome.com.cn/adfront/
 
-blog.csdn.net###content_views pre, #content_views pre code:style(user-select:auto!important)
-@@||g.csdnimg.cn/$script
-||img-ads.csdn.net/
-csdn.net##div[class^=ad_],#ad_left,#ad_right,div.AD.mb-bg
+csdn.net###mainBox~*, body > .imgViewDom~*
+||g.csdnimg.cn/asdf/*/trackad.js|$script,important
 
 www.epinv.com###container>#sidebar~*,div.huadong,div.epinv_f
 ||www.epinv.com/wp-content/themes/ep/tu/
 ||firefoxchina.cn/html/$subdocument
 
-||api.huaban.com/ads^$xhr,1p,redirect=noop.txt
-||t1.hoopchina.com.cn/$subdocument
-hupu.com##[class|=sidebar-ad],[id|=div-gpt-ad],[class^=nba-ad],[class^=hp-ad],div[class^=ad],.topPub
-
+bbs.hupu.com###game-center-entrance-container
 ithome.com##.categoryimg,#hd_float,#side_func,#con>#tt5>div,div.related_buy,li.sb_list:nth-child(5)
 
-jb51.net##.clearfix.mtb10:first-child,div.r300>.idc3,#txtlink,div.topimg,#param.content-box+div,#xgd+dd
 ||files.jb51.net^$image
+icws.jb51.net
 
 jianshu.com###note-fixed-ad-container
 ||jianshu.io/assets/web/*-ads-$image
@@ -460,15 +434,10 @@ juejin.im##.banner,.wechat-banner
 ||gold-cdn.xitu.io/asset/sidbar-banner/$image
 wiki.mbalib.com###ad-phone
 
-mydrivers.com###right_tab li:first-child, #left_tab li:first-child
+news.mydrivers.com##.main_right_div:nth-of-type(4)
 mydrivers.com##.baidu, a[href^=http][target=_blank]
-||icons.mydrivers.com/news/2018/ry$image
-||icons.mydrivers.com/20*.gif^$image
-||mydrivers.com/*_728_90.$image
-
-||www.myhack58.com/Articleacb0$image
-myhack58.com##.CMBox>.adv32
-||files.nyaa.se/be-$image
+mydrivers.com##+js(set,jQuery.fn.resetIdleTimeup,trueFunc)
+||news.mydrivers.com/incutf8/HaoWuTuiJianTop6_2023.js$script
 
 oschina.net##.blog-left-ad,#project_ad_banner,a[data-traceid],a[href^="http://click.aliyun."]
 ||static.oschina.net/*_banner_$image
@@ -480,6 +449,7 @@ pcpop.com##[id^=ad_],div.ad1,div.pcpop_ad1,div#banner9th
 
 v2ex.com##.box:has(.sidebar_compliance)
 ||v2ex.assets.uxengine.net/assets/sidebar/$image
+www.zhihu.com##div[role=list] > .Pc-word:not([tabindex])
 zhihu.com##.Banner
 zhihu.com##.Banner-link
 zhihu.com##.Banner-image
@@ -569,7 +539,7 @@ erebor.douban.com
 ! https://www.ygdy8.com/
 ||ygdy8.com/jsy1/
 !------------------精简自adbyby规则------------------
-*/7mad.$image,object,object-subrequest
+*/7mad.$image,object
 */9vads
 */acadv
 */adadmin
@@ -589,7 +559,7 @@ erebor.douban.com
 */cc222ads
 */cpv123
 */cwjad
-*/ejia360$image,object,object-subrequest
+*/ejia360$image,object
 */fhHYTagNew
 */fkunion
 */gao.
@@ -597,7 +567,7 @@ erebor.douban.com
 */ggad
 */ggao.
 */gghead
-*/gguangg$image,object,object-subrequest
+*/gguangg$image,object
 */googlevideoads
 */gvodad
 */headbiggg_hq
@@ -607,7 +577,7 @@ erebor.douban.com
 */messagetip.
 */mier168
 */mopgg
-*/mygg$image,object,object-subrequest
+*/mygg$image,object
 */nadScreenFloat
 */nadTimeFlashLayer
 */newSNDAPop
@@ -625,7 +595,7 @@ erebor.douban.com
 */tcgg
 */tomFlashAdChanel
 */tttccc.
-*/tyad_$image,object,object-subrequest
+*/tyad_$image,object
 */ugcad
 */ulinkdir
 */ulinkjs
@@ -633,7 +603,7 @@ erebor.douban.com
 */w-z1.
 */wafp.
 */wcast
-*/weige.$image,object,object-subrequest
+*/weige.$image,object
 */wFloat.
 */wwwcpm
 */xiazaiyoudao
@@ -645,7 +615,7 @@ erebor.douban.com
 */zhifubao
 *&adsc_typpe=
 *-160-600.jpg|$image
-*-300X250.$image,object,object-subrequest
+*-300X250.$image,object
 *-980x60.gif$image
 *.91ivr.
 *.91wan.
@@ -869,7 +839,7 @@ erebor.douban.com
 */178acg/
 */198game_
 */2345float
-*/300250.swf$object,object-subrequest
+*/300250.swf$object
 */300X250.gif$image
 */300x250.swf
 */300x250_
@@ -887,7 +857,7 @@ erebor.douban.com
 */740_60.jpg
 */760.js|$script
 */760_*.js|$script
-*/778_110.$image,object,object-subrequest
+*/778_110.$image,object
 */789uc/sb.
 */8976_360100$subdocument
 */900x250.$subdocument
@@ -907,8 +877,8 @@ erebor.douban.com
 */a_d_c
 */a_d_s
 */aaadddd/2.js$script
-*/aadd/$image,object,object-subrequest
-*/acho/280x$image,object,object-subrequest
+*/aadd/$image,object
+*/acho/280x$image,object
 */acmsd/thea15
 */acmsd/thea17
 */acmsd/thea5
@@ -919,7 +889,7 @@ erebor.douban.com
 */adfshow?user=
 */adgg/
 */adiframe/
-*/adimages/$image,object,object-subrequest
+*/adimages/$image,object
 */adjs.
 */adjs/
 */adplayer/*.swf?v=
@@ -971,7 +941,7 @@ erebor.douban.com
 */code/popjs.asp?
 */code_img/
 */codepic/
-*/common/cf/$image,object,object-subrequest,domain=~wifi.liebao.cn|~96fei.com
+*/common/cf/$image,object,domain=~wifi.liebao.cn|~96fei.com
 */cont_adL
 */cont_adr
 */cont_bottom.js|
@@ -990,14 +960,14 @@ erebor.douban.com
 */displayAd.js?
 */doublePop.js
 */duilian_
-*/dzx/forum$image,object,object-subrequest
+*/dzx/forum$image,object
 */ead/union/
 */ejia/$domain=~189.cn
 */enkj.gif$image
 */eptgoal/
 */external/public126
 */fbookad/
-*/fdad/$image,object,object-subrequest
+*/fdad/$image,object
 */files/adv/
 */floatad.js|$script,domain=~fwxgx.com
 */floatadv.js|$script
@@ -1022,7 +992,7 @@ erebor.douban.com
 */gg_search_
 */ggao/
 */ggaotp/
-*/ggg/$image,object,object-subrequest
+*/ggg/$image,object
 */gggg
 */ggimages/
 */ggjs/
@@ -1044,14 +1014,14 @@ erebor.douban.com
 */html/cbjs.html?id=$subdocument
 */html/hot_s
 */html/yuedu$subdocument
-*/hxli/$image,object,object-subrequest
+*/hxli/$image,object
 */i.js^$script,third-party
 */icast/
 */idcgg/
 */if/07top-new
 */ikb/js/t.js|
-*/image/banner/$image
-*/images/169$object,object-subrequest
+*/image/banner/$image,domain=~bilinovel.com
+*/images/169$object
 */images/ad960.
 */images/bbsad/
 */images/ping.js|
@@ -1062,8 +1032,8 @@ erebor.douban.com
 */indexAD.js
 */inner_center1
 */intf/bbs_expert
-*/ja486$image,object,object-subrequest
-*/jbk.gif^$image,object,object-subrequest
+*/ja486$image,object
+*/jbk.gif^$image,object
 */js/1.htm$subdocument
 @@||wago.io/js/118.$script
 */js/118.
@@ -1113,7 +1083,7 @@ erebor.douban.com
 */jsgg/
 */jump.js|
 */kdjl_306x200
-*/kwgg/$image,object,object-subrequest
+*/kwgg/$image,object
 */lm/iframe/js/blognew2011
 */lmt_v
 */lsgg/
@@ -1123,7 +1093,7 @@ erebor.douban.com
 */mini/01.$subdocument
 */mlfoot.js|
 */mynicedd/
-*/nc.jpg$image,object,object-subrequest
+*/nc.jpg$image,object
 */nettv/adp/
 */newhuagg/
 */news_ad$subdocument
@@ -1142,10 +1112,10 @@ erebor.douban.com
 */pu_nocap_cn
 */push_n.php
 */pushcar.php
-*/rdidc.gif$image,object,object-subrequest
+*/rdidc.gif$image,object
 */RichMedia.js|
 */rightCornerPop/
-*/rnad/$image,object,object-subrequest
+*/rnad/$image,object
 */rsdowngood_
 */scad.h$subdocument
 */scad1.h$subdocument
@@ -1159,7 +1129,7 @@ erebor.douban.com
 */sluke/ml
 */soft_mid_
 */soqidian/
-*/svnad/$subdocument,image,object,object-subrequest
+*/svnad/$subdocument,image,object
 */sygg/$subdocument
 */tan/
 */tan1/
@@ -1184,7 +1154,7 @@ erebor.douban.com
 */union/link_
 */union/union_
 */upcontent.js|
-*/upfile/myshow$image,object,object-subrequest
+*/upfile/myshow$image,object
 */uuzu_
 */verycms/
 */view-960x90
@@ -1196,8 +1166,8 @@ erebor.douban.com
 */wizard.js^
 */www/deliver/
 */www/delivery/
-*/wzduilian/$image,object,object-subrequest
-*/wzygg/$image,object,object-subrequest
+*/wzduilian/$image,object
+*/wzygg/$image,object
 */xy/js/
 */yingsu*.gif$image
 */yinsu$image

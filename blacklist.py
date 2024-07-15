@@ -12,7 +12,7 @@ class BlackList(object):
     def __init__(self):
         self.__blacklistFile = os.getcwd() + "/rules/black.txt"
         self.__domainlistFile = os.getcwd() + "/rules/adblockdns.backup"
-        self.__maxTask = 2000
+        self.__maxTask = 500
 
     def GenerateDomainList(self):
         try:
@@ -74,7 +74,7 @@ class BlackList(object):
             if os.path.exists(self.__blacklistFile):
                 os.remove(self.__blacklistFile)
             
-            with open(fileName, "a") as f:
+            with open(fileName, "w") as f:
                 for domain in blackList:
                     f.write("%s\n"%(domain))
         except Exception as e:
