@@ -84,6 +84,8 @@
 !#######################################################
 ! SECTION: Cookies - General element hiding
 !
+###cconsent-bar
+##.ets_cookie_banber_block
 ##.cli-popupbar-overlay
 ##.seopress-user-consent
 ###buzzblogpro-cookie-banner
@@ -2241,8 +2243,6 @@ trashinbox.net,proglib.io,trashmail.ws,spambox.xyz,rainmail.xyz,promokod.pravda.
 chiba-tv.com,hab.co.jp,php.co.jp,ftm.nl,radios.co.at,radiosdepuertorico.com,jamaicaradio.net,radios.com.sv,radios.hn,radios.com.pa,radiosaovivo.net,radios.com.bo,radioarg.com,radios.com.co,radios.com.ec,emisoras.com.py,radios.com.pe,surinaamseradio.com,radios.com.uy,radio.co.ve,radiolisten.de,raadiod.com,emisora.org.es,radiofona.com.gr,radios.hr,ieradio.org,latvijasradio.com,radios.lu,radijas.org,radiohallgatas.hu,nederlandseradio.nl,nettradionorge.com,onlineradio.pl,radioonline.com.pt,radiosonline.ch,radiostanice.rs,nettiradiot.org,radio.org.se,internetradiouk.com,bg-radio.org,radio.pp.ru,radio.co.cm,radio.cd,radio.co.ci,radio.com.gh,radio.mg,radio.co.ma,egyptradio.net,radio.org.ng,radio.sn,radiosa.org,radiotunisienne.org,radio.co.ug,radios.hk,onlineradios.in,radioonline.co.id,radioonline.my,radionp.com,radio.net.pk,radio.org.ph,radiosingapore.org,radio.com.lk,vietnamradio.org,radios.org.il,radioth.net,zhibo.fm,radioau.net,radio.org.nz,emisoras.com.gt,radio.org.ro,siradio.si,ceskaradiaonline.cz,ecouterradioenligne.com,radiosonline.be,radios.co.ni,radioalgerie.eu,radios.co.cr,radio.or.ke,radios.tw,radioonline.kr,radio-bd.com,radios.com.do,trinidadradiostations.net,emisora.cl,radio.ht,radio.co.dk,emisoras.com.mx,jpradio.jp,instant.audio,radiosdecuba.com,consenthub.utiq.com,sketchup.com,kisarepo.jp,bitstamp.net,hesburger.*,znews.vn,amomeupet.org,egrp365.ru,sqlservercentral.com,saneibd.com,edukasicampus.net,godiva.co.jp,0patch.com,pvpoke-re.com,radioua.net,greenday.com,linuc.org,clicsante.ca,israelnationalnews.com,serpstat.com,pandavpnpro.com,freeyourmusic.com,liica.co.jp,x5.ru,adshnk.com,parkernathan.com,route-inn.co.jp,pastelink.net,dictum.com,tamtam.chat,ynjn.jp,881903.com,irisohyama.co.jp,olyrix.com,rutube.ru,asm.org,socialcomics.com.br,margarethowell.jp,ascoltareradio.com,wego.jp,storececotec.it,geeksforgeeks.org,dauc.cz,heidisql.com,sueddeutsche.de,plex.tv,tmohentai.com,gorsovet.com.ua##.cookie-consent
 ! ##.cookie-setting
 spokojnypes.sk,force.bike,lambimaailm.ee,lampmani.se,lampite.bg,svijet-svjetiljki.hr,liderlamp.pl,svet-svitidel.cz,lampak.hu,lumimania.fr,lumimania.be,fotistikosmos.gr,svet-svietidiel.sk,lampamania.es,lampemania.dk,lempumanija.lt,lampamania.pt,svet-svetil.si,valomania.fi,lampupasaule.lv,beleuchtung.at,luciamo.it,programia.cz,luminam.ro,beleuchtung.de,petalmaps.com##.cookie-setting
-! ###cconsent-bar
-cepteteb.com.tr,abbanoa.it,haberler.com,dutchbros.com,stentime.si,comune.lavis.tn.it,w-poblizu.pl,edisonmail.com,brandible.de,epubli.de,bmsofort.de,dogemate.com###cconsent-bar
 ! ##.b-cookie
 devtodev.com,videoporn.tube,trannytube.tv,matureporn.com,gaymovievids.com,teremok.ru,machotube.tv,icegay.tv,gayporno.fm,fitnessbar.ru,skillbox.ru,gaymensextube.com,igayvideos.tv,findgaytube.com,onlydudes.tv,icegaytube.tv,machogaytube.com,gogaytube.tv,good-gay.tv,shemaleporntube.tv,boy18tube.com,goldgay.tv,xgaytube.tv,gayfuckporn.tv,xlgaytube.tv,me-gay.com,gaysuperman.com##.b-cookie
 ! ##.sliding-popup-bottom
@@ -2444,6 +2444,24 @@ consent-pref.trustarc.com#%#//scriptlet('trusted-click-element', 'div[aria-label
 !
 ! NOTE: Regular rules
 !
+pressone.ro##body > div[style^="position: fixed;"]:has(> .cookie-notice)
+maudau.com.ua###__next > div[class^="css-"]:has(> div > button.chakra-button)
+heimatkurier.at###__nuxt > div[data-v-fae9901c]:has(> div[style="border-bottom-width: 1.25rem;"] > div > a[href^="/datenschutz"])
+rabbit.tech##main + div.items-center
+eznamka.sk###cookieagreed
+uvcw.be#$##cookieModal { display: none !important; }
+uvcw.be#$#.modal-backdrop { display: none !important; }
+uvcw.be#$#body[class] { overflow: auto !important; padding-right: 0 !important; }
+readmedium.com##body > .bg-gray-800
+shopbuddies.*#%#//scriptlet('set-cookie', 'ws-cookie-Marketing', 'true')
+shopbuddies.*#%#//scriptlet('set-cookie', 'ws-cookie-Techniques', 'true')
+esm-computer.de#$#.modal-backdrop-open { display: none !important; }
+esm-computer.de#$#.cookie-permission-container { display: none !important; }
+esm-computer.de#$#.no-scroll  { overflow: auto !important; }
+trinkgut.de,trinkgut.nl#%#//scriptlet('set-cookie', 'cookie-preference', '1')
+trinkgut.de,trinkgut.nl#%#//scriptlet('set-cookie', 'google-maps-consent', '1')
+trinkgut.de,trinkgut.nl#%#//scriptlet('set-cookie', 'vimeo-consent', '1')
+trinkgut.de,trinkgut.nl#%#//scriptlet('set-cookie', 'youtube-consent', '1')
 etyres.co.uk,asdatyres.co.uk#$##cookieBanner { display: none !important; }
 etyres.co.uk,asdatyres.co.uk#$#.modal-backdrop { display: none !important; }
 etyres.co.uk,asdatyres.co.uk#$#body { overflow: auto !important; padding-right: 0 !important; }
@@ -4567,8 +4585,8 @@ viabcp.com#$#body { overflow: auto !important; }
 1password.com##div > main + div.fixed.bottom-0.block
 gyakorikerdesek.hu###stialert
 kodinerds.net###adConsent
-sartor-stoffe.de,xm.sk,xm.cz#$#body[style] { overflow: auto !important; padding-right: 0 !important; }
-sartor-stoffe.de,xm.sk,xm.cz#$#.focus-cookiebara { display: none !important; }
+vivobarefoot.cz,vivobarefoot.sk,sartor-stoffe.de,xm.sk,xm.cz#$#body[style] { overflow: auto !important; padding-right: 0 !important; }
+vivobarefoot.cz,vivobarefoot.sk,sartor-stoffe.de,xm.sk,xm.cz#$#.focus-cookiebara { display: none !important; }
 cirrus.com#?#.page-canvas > div.links-are-reversed:has(> button#cookie-accept-btn)
 go4schools.com###i_a
 tridge.com###fixedBottomBar
@@ -5135,9 +5153,9 @@ group.emmi.com#$#.js-o-page__gdpr-overlay { display: none !important; }
 group.emmi.com#$#.h-layout--prevent-scrolling { overflow: auto !important; position: static !important; }
 urlaubspiraten.de#?#body > #hp-app ~ script + div:has( > div > div > div > button[mode="function"]:contains(akzeptieren))
 urlaubspiraten.de#$#body { overflow: auto !important; }
-physikinstrumente.de#$#.cc-window[aria-label="cookieconsent"] { display: none !important; }
-physikinstrumente.de#$#.cc-window-blocker { display: none !important; }
-physikinstrumente.de#$#.no-scroll { overflow: auto !important; }
+piceramic.com,physikinstrumente.de#$#.cc-window[aria-label="cookieconsent"] { display: none !important; }
+piceramic.com,physikinstrumente.de#$#.cc-window-blocker { display: none !important; }
+piceramic.com,physikinstrumente.de#$#.no-scroll { overflow: auto !important; }
 steamforged.com##.c-cookie-alert
 displayspecifications.com#$##window_cookie_consent_1_overlay { display: none !important; }
 displayspecifications.com#$#body { overflow: auto !important; }
@@ -15574,6 +15592,15 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/183715
+piceramic.com#@#.cc-window[aria-label="cookieconsent"]
+piceramic.com#@#.cc-floating
+! https://github.com/AdguardTeam/AdguardFilters/issues/183718
+pressone.ro#@#.cookie-notice:not(body):not(html)
+! https://github.com/AdguardTeam/AdguardFilters/issues/183740
+uvcw.be#@##cookieModal
+! https://github.com/AdguardTeam/AdguardFilters/issues/183716
+esm-computer.de#@#.cookie-permission-container
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183620
 etyres.co.uk,asdatyres.co.uk#@##cookieBanner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183609
@@ -21434,6 +21461,7 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 ! Do not forget about '!#safari_cb_affinity' section for exclusions:
 ! LINK: AnnoyancesFilter/Popups/sections/antiadblock.txt#general
 !
+ecosia.org##section[data-test-id="ad-block-notice"]
 cloudtempmail.com###popupADXBLOCC
 dr-dsgvo.de###vgzinfo
 unknowncheats.me#%#//scriptlet('abort-current-inline-script', 'EventTarget.prototype.addEventListener', '!document.getElementById(')
@@ -24268,6 +24296,8 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+techcrunch.com##main + div[data-testid="text-html"]:has(> div.showTemplate > div.pn-ribbon)
+shopbuddies.*###banner
 bestproducts.com##.journey-container-wrapper
 kenja-succession.com###modal-overlay
 trinity-tech.co.jp###cv-fixed
@@ -39611,6 +39641,7 @@ turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,rabota.by,temp-
 ! https://github.com/AdguardTeam/AdguardFilters/issues/161301
 temu.com#?#div[role="main"] div[style] > div[style]:has(> div[style] div[js-selector="mobile-download-ui"])
 !
+live.leisu.com##.app-banner
 cepteteb.com.tr#$#html #smartbanner { display: none !important; }
 cepteteb.com.tr#$#html { margin-top: 0px !important; }
 duckduckgo.com##.footer section[class]:has(> div[class] > a[href^="https://duckduckgo.com"][href$="funnel_serp___footercard"])
@@ -42838,6 +42869,7 @@ m.tokopedia.com#$#div[data-testid="divOverlay"] { display: none!important; }
 ! causes some issues: https://github.com/AdguardTeam/AdguardForMac/issues/550
 ~status.im,~lafenice.io,~kurer-sreda.ru,~chorki.com,~zattoo.com,~zaycev.net,~hitta.se,~mail.ru,~facebook.com,~instagram.com,~drive.google.com$$link[rel="manifest"]
 !
+anadolu.edu.tr###smartbanner
 view.inews.qq.com##div[class^="bottom-bar_buttonWrap__"]
 yama.minato-yamaguchi.co.jp##._phn._on
 minkara.carview.co.jp##.dlbanner
@@ -48652,6 +48684,8 @@ theguardian.com##.contributions__adblock
 !
 ! SECTION: Self-promo - Regular rules
 !
+myupchar.com##a[class^="ad_slot_"]
+myupchar.com##.banner_section
 1024terabox.com##.seo-banner-box
 jfrog.com##.top-fixed-stripe
 jfrog.com##.cta-div
@@ -54876,6 +54910,8 @@ indoxxi.show##.tawkto-btn
 !
 !   SECTION: Widgets - Suggestion widgets
 !
+otv.co.jp##.o_recommend__together
+otv.co.jp##.o_recommend
 webznam.ru###topalfaweb
 businesstoday.com.tw##iframe[src^="https://api.popin.cc/"]
 digitalspy.com##div[data-embed="embed-gallery"]
