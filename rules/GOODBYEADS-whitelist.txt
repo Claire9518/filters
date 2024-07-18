@@ -2,9 +2,9 @@
 ! Title: GOODBYEADS
 ! Homepage: https://github.com/8680/GOODBYEADS
 ! Expires: 12 Hours
-! Version: 2024-07-17 20:35:26（北京时间）
+! Version: 2024-07-18 09:20:02（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 14511
+! Total count: 14514
 @@#.banner%20ad.$image,domain=dokuo666.blog98.fc2.com
 @@$csp=worker-src 'none',domain=uptostream.com
 @@$generichide,domain=stfly.cc
@@ -2075,7 +2075,7 @@
 @@||auto.cz/js/base-cz/advert.js
 @@||autocentrum.pl/system/modules/adblock/js/advertisement.js
 @@||autocentrum.pl^$generichide
-@@||autocomplete.clearbit.com^$xmlhttprequest,domain=dzone.com
+@@||autocomplete.clearbit.com^$xmlhttprequest
 @@||autocomplete.geocoder.api.here.com/*/suggest.json$stealth
 @@||autofaucets.org^$generichide
 @@||autohome.com.cn/javascript/fingerprint.js
@@ -4421,6 +4421,7 @@
 @@||edge.microsoft.com/translate/auth
 @@||edge.mycdn.live/live/*.m3u8$stealth
 @@||edge.mycdn.live^$stealth,domain=futebolplayhd.com
+@@||edge.permutive.app/*-web.js$domain=eldo.lu
 @@||edgeservices.bing.com^$elemhide,jsinject,extension,content
 @@||edgeservices.bing.com^$stealth
 @@||edgesuite.net/crossdomain.xml$domain=sbs.com.au
@@ -7511,7 +7512,9 @@
 @@||itv.1tv.ru/stat.php?
 @@||itv.com/itv/hserver/*/site=itv/$xmlhttprequest
 @@||itv.com/itv/tserver/$~third-party
+@@||itv.com/itv/tserver/$~third-party,badfilter
 @@||itv.com/itv/tserver/*size=*/*/viewid=
+@@||itv.com/itv/tserver/*size=*/*/viewid=$badfilter
 @@||itworld.com/elqnow/elq*.js
 @@||iv*.imgview.net/i/$image
 @@||iv*.imgview.net/img/$image
