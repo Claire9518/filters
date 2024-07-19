@@ -578,6 +578,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ! ||sny.monosnap.com^
 ! ||lr-ingest.com^
 ! ||cdn.rollbar.com^$third-party
+! ||api.instabug.com^
 !
 !
 ! ||ensighten.com^$third-party - not a tracker
@@ -614,7 +615,6 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ||adtrack.adleadevent.com^
 ||metrics-fe-na1.hubspot.com^
 ||pixel.mintigo.com^
-||api.sardine.ai^
 ||au1.qualtrics.com^
 ||siteintercept.qualtrics.com^
 ||dmp.one^$third-party
@@ -40733,6 +40733,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||trackid.globoid.globo.com^
 ||stats.habr.com^
 ||analytics.qs-apps.com^
 ||cnt.web-apps-prod.wo-cloud.com^
@@ -40855,7 +40856,6 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ||analytics.verfacto.com^
 ||log.dzen.ru^
 ||flask.us.nextdoor.com^
-||ev.indianexpress.com^
 ||aa-metrics.beauty.hotpepper.jp^
 ||aa-metrics.hotpepper.jp^
 ||c615.denverpost.com^
@@ -71136,6 +71136,9 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 /analytics.js$domain=tokyometro.jp|resumes.breakdownexpress.com|techcult.com|inbox.lv|kopeda.com|freexcafe.com|rusvideos.tv|nakubani.ru|lun.com|songsara.net|newsmax.com|bolgehastanesi.com|ewtc.de|newsdig.tbs.co.jp|imore.com|city.kushiro.lg.jp|emeraldbridal.com.au|emarat-news.ae|imobie.jp|tikla.com.tr|rusvideos.porn|jrkyushu.co.jp|amiunique.org|edit.ing|konami.com
 ||assets.adobedtm.com^$domain=mcclatchydc.com|elnuevoherald.com|bellinghamherald.com|sacbee.com|charlotteobserver.com|newsobserver.com|miamiherald.com|ef.ru|algida.com.tr|bmw-motorrad.co.uk|cif.com.tr|clearhaircare.com|domestos.com|dove.com|elidor.com.tr|f1sport.autorevue.cz|geico.com|hellmanns.com.tr|herkessofraya.com|johnsonsbaby.com.tr|lipton.com|lnk.to|lux.com|magnumicecream.com|neutrogena.com.tr|omo.com|rexona.com|samsung.com|sap.com|schwarzkopf.com.tr|signalturkiye.com|msnbc.com|nbcnews.com|kbb.com|eurosport.ru|timgate.it|intermiles.com|oxfordmail.co.uk|spiegel.de|hp.com|deutschepost.de|thebay.com|s.shufoo.net|tsn.ca|tabelog.com|euronews.com|newshub.co.nz|fredmeyer.com|viabcp.com|carsales.com.au|falabella.com|aarp.org|thehill.com|realtor.com|nzherald.co.nz|aia.com.ph|baynews9.com|thesaurus.com|dhc.co.jp|0101.co.jp|staples.com|rikunabi.com|directscout.recruit.co.jp|r-agent.com|sephora.com|chronicle.com|channelnewsasia.com
 !
+||goldapple.ru/front/api/search/analytics/
+||61medya.net/wp-content/plugins/burst-statistics/
+||tabakhero.de/widgets/cbax/analytics/
 ||kts-tv.co.jp/common/js/analytics.js
 ||mgntrn.nl/api/event
 ||vid2faf.site/views/
@@ -76309,6 +76312,9 @@ $cookie=bf_visit
 ! Bad:  ||monerominer.rocks^$third-party (should be in adservers.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/183505
+||goldapple.ru^$cookie=advcake_track_id
+||goldapple.ru^$cookie=digi-analytics-sessionId
 ! manchestereveningnews.co.uk
 ||manchestereveningnews.co.uk^$cookie=TM_ga_clientId
 ! faz.net - adobe counter
@@ -77446,7 +77452,6 @@ inapps.appsflyersdk.com^
 ||analytics.any.do^
 ||m.vpadn.com^
 ||parse-ppom-prod.herokuapp.com/parse/events^
-||api.instabug.com^
 ||sts.batmobi.net^
 ||api.facebook.com/method/logging.clientevent
 ||pps-log.op-mobile.opera.com^
@@ -77764,6 +77769,17 @@ inapps.appsflyersdk.com^
 !#endif
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/183965
+||googletagmanager.com/gtm.js$script,redirect=googletagmanager-gtm,domain=ifoodie.tw
+@@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=ifoodie.tw
+!+ PLATFORM(ios, ext_safari, ext_android_cb)
+@@||googletagmanager.com/gtm.js$domain=ifoodie.tw
+! https://github.com/AdguardTeam/AdguardFilters/issues/183960
+samsung.com#%#//scriptlet('prevent-element-src-loading', 'script', 'mpsnare.iesnare.com/snare.js')
+!+ PLATFORM(ios, ext_safari, ext_android_cb)
+@@||mpsnare.iesnare.com/snare.js$domain=samsung.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/183895
+@@||scorecardresearch.com/*/streamingtag_plugin_jwplayer.js$domain=telemundopr.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183869
 @@||edge.permutive.app/*-web.js$domain=eldo.lu
 ! https://github.com/tofukko/filter/issues/99
