@@ -2,9 +2,9 @@
 ! Title: GOODBYEADS
 ! Homepage: https://github.com/8680/GOODBYEADS
 ! Expires: 12 Hours
-! Version: 2024-08-01 20:36:14（北京时间）
+! Version: 2024-08-02 09:21:30（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 14569
+! Total count: 14575
 @@#.banner%20ad.$image,domain=dokuo666.blog98.fc2.com
 @@$csp=worker-src 'none',domain=uptostream.com
 @@$generichide,domain=stfly.cc
@@ -589,6 +589,7 @@
 @@||1plus1.ua^$stealth,domain=1plus1.ua
 @@||1plus1.video/tvguide/embed/*?autoplay=$stealth
 @@||1plus1.video/video/embed/$stealth,~script,~xmlhttprequest,~other
+@@||1qwebplay.xyz/*.php$stealth=referrer
 @@||1trackapp.com/static/tracking/$script,stylesheet,~third-party
 @@||1trackapp.com^$stealth,xmlhttprequest,domain=1track.ru
 @@||1ttv.net/iframe.php$stealth
@@ -813,6 +814,7 @@
 @@||account.adobe.com^$document,domain=services.adobe.com,stealth=useragent
 @@||account.leagueoflegends.com/pm.html$jsinject,elemhide
 @@||account.mail.ru^$stealth
+@@||account.mcid.mynavi.jp^$stealth=referrer
 @@||account.microsoft.com/?refd=$stealth
 @@||account.microsoft.com/auth/$stealth
 @@||account.withings.com^$stealth
@@ -5178,6 +5180,7 @@
 @@||ganji.com/findjob/send_resume.*&ad_type=
 @@||ganma.jp/view/magazine/viewer/pages/advertisement/googleAdSense.html|$~third-party,xmlhttprequest
 @@||gannettdigital.com/universal-web-client/$domain=greenvilleonline.com
+@@||gapis.win^$stealth=referrer,domain=app.jscdn.win
 @@||gapl.hit.gemius.pl/gplayer.js$domain=player.antyradio.pl|player.radiozet.pl|player.chillizet.pl|player.meloradio.pl
 @@||gapl.hit.gemius.pl/gplayer.js$domain=redefine.pl
 @@||gapt.hit.gemius.pl/gplayer.js$domain=radiocomercial.iol.pt
@@ -7782,6 +7785,7 @@
 @@||kehai.com/front/dist/app/site/list/advertisement.js
 @@||keizai.biz^$generichide
 @@||kemono.su/.well-known/ddos-guard/mark/|
+@@||kenitv.me/*embed$stealth=referrer
 @@||kenoshanews.com^$generichide
 @@||kentucky.com/mistats/finalizestats.js
 @@||keran.co/*/js/advertisement.js
@@ -8006,7 +8010,6 @@
 @@||leonardo.it^$generichide
 @@||lep.co.uk^$generichide
 @@||leporno.org^$generichide
-@@||leroymerlin.ru^$urlblock
 @@||lesacasino.com^*/EMERPEventCollector.$script,subdocument
 @@||lesechos.com/*/dfp.js^
 @@||lesinrocks.com^$generichide
@@ -11797,6 +11800,7 @@
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$xmlhttprequest,domain=link.rota.cc
 @@||securepubads.g.doubleclick.net^$domain=hoyts.com.au
 @@||secureservercdn.net/*.myftpupload.com/wp-content/themes/jannah/assets/js/advertisement.js$domain=sailuniverse.com
+@@||securetoken.googleapis.com^$stealth=referrer
 @@||securevideotoken.tmgrup.com.tr/webtv/secure^$stealth
 @@||securitykiss.com$document
 @@||securitytrails.com/app/api/$domain=securitytrails.com
@@ -13737,6 +13741,7 @@
 @@||vaughnlive.tv/*/js/ima3.js
 @@||vaughnsoft.net/play/$stealth,domain=vaughn.live
 @@||vb.icdrama.se/advertisement.js
+@@||vcdn.xemcl.net/html/$stealth=referrer,domain=app.jscdn.win
 @@||vcdn.xszcdn.com/hls/$domain=xszav1.com
 @@||vcomic.net/app/*/assets/js/prebid-ads.js
 @@||vdncloud.org/iframe/$stealth=referrer
@@ -13969,6 +13974,7 @@
 @@||wakudan.seesaa.net^$generichide
 @@||walla.co.il^$csp
 @@||walla.co.il^$generichide
+@@||walletkeyslocker.me/?scode=*&stream=$stealth=referrer
 @@||walletkeyslocker.me/?stream$stealth=referrer
 @@||walletkeyslocker.me^$domain=nolive.me,stealth=referrer
 @@||wallpaper-house.com^$generichide
