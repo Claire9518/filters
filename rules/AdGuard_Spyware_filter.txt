@@ -163,10 +163,12 @@ firmwaredrive.com#%#setTimeout(function() { var el = document.querySelector('inp
 ! https://github.com/AdguardTeam/AdguardFilters/issues/167963
 wirkaufens.de#%#//scriptlet('trusted-replace-fetch-response', '/"ip":".*?"/', '"ip":""', 'api.ipify.org')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/167885
-pconline.pcvideo.com.cn#%#//scriptlet('set-constant', 'sensorsDataAnalytic201505', 'emptyObj')
-pconline.pcvideo.com.cn#%#//scriptlet('set-constant', 'sensorsDataAnalytic201505.init', 'noopFunc')
-pconline.pcvideo.com.cn#%#//scriptlet('set-constant', 'sensorsDataAnalytic201505.track', 'noopFunc')
-pconline.pcvideo.com.cn#%#//scriptlet('set-constant', 'sensorsDataAnalytic201505.registerPage', 'noopFunc')
+cib.com.cn,pconline.pcvideo.com.cn#%#//scriptlet('set-constant', 'sensorsDataAnalytic201505', 'emptyObj')
+cib.com.cn,pconline.pcvideo.com.cn#%#//scriptlet('set-constant', 'sensorsDataAnalytic201505.use', 'noopFunc')
+cib.com.cn,pconline.pcvideo.com.cn#%#//scriptlet('set-constant', 'sensorsDataAnalytic201505.init', 'noopFunc')
+cib.com.cn,pconline.pcvideo.com.cn#%#//scriptlet('set-constant', 'sensorsDataAnalytic201505.track', 'noopFunc')
+cib.com.cn,pconline.pcvideo.com.cn#%#//scriptlet('set-constant', 'sensorsDataAnalytic201505.quick', 'noopFunc')
+cib.com.cn,pconline.pcvideo.com.cn#%#//scriptlet('set-constant', 'sensorsDataAnalytic201505.registerPage', 'noopFunc')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/166258
 yourstory.com#%#(()=>{const n=function(){};window.pa={avInsights:{Media:function(){return{set:n}}},setConfigurations:n,sendEvent:n,refresh:n,getVisitorId:n}})();
 ! https://github.com/AdguardTeam/AdguardFilters/issues/165757
@@ -41105,6 +41107,8 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||events.betterhelp.com^
+||web-analytics.lastpass.com^
 ||tracking.aws.judge.me^
 ||analytics.rev.iq^
 ||error-tracking.reddit.com^
@@ -75823,6 +75827,10 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 /prod/dfm/g2i.min.js$redirect=nooptext,important,domain=dailycamera.com
 /prod/dfm/t8y9347t.min.js$redirect=nooptext,important,domain=dailycamera.com
 !
+natuero-dougakan.com##.side-menu:has(script[src="//accaii.com/natuero/script.js"])
+||turbovpn.com/api/mms/analytics/v1/events|
+||cdn.amplitude.com/libs/analytics-browser-*-min.js
+||cdp.ems.onet.pl/*/me?domain=
 ||yandex.*/an/rtbcount/
 ||yandex.*/an/tracking/
 ||web.telemetric.dk/t/$image
@@ -82474,6 +82482,13 @@ inapps.appsflyersdk.com^
 !@@||mc.yandex.ru/metrika/watch.js$domain=
 !#endif
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/185316
+@@||yelpcdn.com/assets/public/snowplow.*.chunk.js$domain=yelp.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/185302
+! TODO: change hint to !+ PLATFORM(ios, ext_safari, ext_android_cb)
+! when this issue will be fixed - https://github.com/AdguardTeam/AdguardBrowserExtension/issues/2855
+!+ NOT_PLATFORM(windows, mac, android)
+@@||cib.com.cn/cn/*/js/*/sensorsdata.min.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/185398
 mustar.meitetsu.co.jp#$#body[style="opacity: 0;"] { opacity: 1 !important; }
 !+ PLATFORM(ios, ext_safari, ext_android_cb)
