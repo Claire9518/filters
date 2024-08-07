@@ -2228,6 +2228,9 @@ motherless.com$$script[tag-content="awentw.com"][min-length="2000"][max-length="
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/185597
+zeenews.india.com#@#div[class^="ads-"]
+zeenews.india.com#@#div[class^="ads-box-"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179429
 @@||cmp.inmobi.com/GVL-v2/$domain=express.co.uk
 ! https://github.com/AdguardTeam/AdguardFilters/issues/177593
@@ -2683,6 +2686,11 @@ sp.manga.nicovideo.jp##div[style^="--ads-width:"]
 !
 ! SECTION: Regular rules
 !
+news18.com##.LiveBlog_outer > div[style]:has(> div[style] > div.nw18-dfp-ad)
+india.com##.taboola-code
+zeenews.india.com##.ads-placeholder-internal
+zeenews.india.com##.first-ad
+zeenews.india.com##.ads-box-300x250::before
 st.benesse.ne.jp##.text_c
 rawstory.com##div[id^="banner-"]
 mama.smt.docomo.ne.jp##div[class^="ads-"]
