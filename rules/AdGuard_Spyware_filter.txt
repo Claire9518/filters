@@ -99,6 +99,9 @@ spletnik.ru#%#//scriptlet('set-local-storage-item', '/^_ym/', '$remove$')
 spletnik.ru#%#//scriptlet('set-local-storage-item', 'adrcid', '$remove$')
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/185736
+! Content loads with delay if some requests are blocked, so rule below fixes this issue
+discover.hubpages.com#%#//scriptlet('adjust-setTimeout', 'beacon failed', '*', '0.001')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/184892
 zillow.com#%#//scriptlet('set-constant', 'DD_RUM.addError', 'noopFunc')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/183797
@@ -41563,7 +41566,6 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ||stat.gc.my.games^
 ||1l-hit.vkplay.ru^
 ||1l-view.my.games^
-||apptics.zoho.com^
 ||a*.smlog.co.kr^
 ||cdn.smlog.co.kr^
 ||collector-statistics.nhn-commerce.com^
@@ -77030,6 +77032,11 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 /prod/dfm/g2i.min.js$redirect=nooptext,important,domain=dailycamera.com
 /prod/dfm/t8y9347t.min.js$redirect=nooptext,important,domain=dailycamera.com
 !
+||massivecams.com/api/events
+||massivecams.com/api/statsd
+||massivecams.com/api/v1/activity
+||generflow.com/client-logs/
+||hybridclient.naiadsystems.com/api/v2/jsonlogger
 ||catxing365.com/catxing365/analyze.js
 ||cdn.staticmember.com/wtp/common/scripts/google-tagmanager-min.js
 ||pdfcrowd.com/pls/api/event
@@ -83704,6 +83711,8 @@ inapps.appsflyersdk.com^
 !@@||mc.yandex.ru/metrika/watch.js$domain=
 !#endif
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/185799
+@@||static.vocstatic.com/voonto2/latest/voonto.js$domain=secure.abc.es
 ! https://github.com/AdguardTeam/AdguardFilters/issues/185223
 @@||googletagmanager.com/gtm.js$domain=turkcell.com.tr
 ! https://github.com/AdguardTeam/AdguardFilters/issues/185316
