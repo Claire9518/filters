@@ -2686,6 +2686,7 @@ sp.manga.nicovideo.jp##div[style^="--ads-width:"]
 !
 ! SECTION: Regular rules
 !
+gtplanet.net##div[style="text-align:center;margin:30px 0 0;"] > a > img
 11880.com##body .search-result-list-item--topad
 ||m.xianqihaotianmi.org/4ENSM9hu/*.js
 pornpics.com##.adss-mob
@@ -7419,6 +7420,8 @@ dzen.ru#?#.feed-item article:matches-attr("/data[a-z-]+/"="/^card-[a-zA-Z]{3,}/"
 dzen.ru##.zenad-card-rtb
 [$path=/media]dzen.ru##div[class^="article-render-mobile"][class$="type_yandex-direct"]
 zen.yandex.by,zen.yandex.com,zen.yandex.kz,zen.yandex.ru##.article-render-mobile__block_embed
+! Dzen Video
+dzen.ru##.video-feed__doc2doc div[class$="__feed"] > div[class*="-video-card "] ~ div:not([class*="-video-card "])
 ! Dzen Weather
 [$path=/pogoda]dzen.ru##div[class^="Card_container"][class*="Advert"]
 ! Rambler
