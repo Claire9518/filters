@@ -99,6 +99,9 @@ spletnik.ru#%#//scriptlet('set-local-storage-item', '/^_ym/', '$remove$')
 spletnik.ru#%#//scriptlet('set-local-storage-item', 'adrcid', '$remove$')
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/185857
+nbcbayarea.com#%#//scriptlet('set-constant', 'ns_', 'emptyObj')
+nbcbayarea.com#%#//scriptlet('set-constant', 'ns_.StreamingAnalytics', 'noopFunc')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/185736
 ! Content loads with delay if some requests are blocked, so rule below fixes this issue
 discover.hubpages.com#%#//scriptlet('adjust-setTimeout', 'beacon failed', '*', '0.001')
@@ -41066,6 +41069,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||beacon.adelphic.com^
 ||pixels.spotify.com^
 ||ylog.huya.com^
 ||ax.amnezia.org^
@@ -77034,6 +77038,10 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 /prod/dfm/g2i.min.js$redirect=nooptext,important,domain=dailycamera.com
 /prod/dfm/t8y9347t.min.js$redirect=nooptext,important,domain=dailycamera.com
 !
+||playeur.com/plbio/api/event
+||myspace.com/beacon/
+||cm.nordpass.com/tracy$xmlhttprequest
+||expressvpn.com/jssdk/track/
 ||massivecams.com/api/events
 ||massivecams.com/api/statsd
 ||massivecams.com/api/v1/activity
@@ -83714,6 +83722,9 @@ inapps.appsflyersdk.com^
 !@@||mc.yandex.ru/metrika/watch.js$domain=
 !#endif
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/185857
+!+ PLATFORM(ios, ext_safari, ext_android_cb)
+@@||sb.scorecardresearch.com/*/streamingtag_plugin_jwplayer.js$domain=nbcbayarea.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/185351
 @@||googletagmanager.com/gtm.js$domain=adlibris.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/185799
