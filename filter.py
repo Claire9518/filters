@@ -112,6 +112,18 @@ class Filter(object):
 
         logger.info("generate adblock dns...")
 
+        start = time.time()
+        total = len(blockDict) + len(unblockDict)
+        processed = 0
+
+        blockList,blockList_all = sort(blockDict, blackSet, whiteSet)
+        processed += len(blockDict)
+        self.__print_progress(processed, total, start)
+
+        unblockList,unblockList_all = sort(unblockDict, blackSet, whiteSet)
+        processed += len(unblockDict)
+        self.__print_progress(processed, total, start)
+
         blockList,blockList_all = sort(blockDict, blackSet, whiteSet)
         unblockList,unblockList_all = sort(unblockDict, blackSet, whiteSet)
 
@@ -132,10 +144,10 @@ class Filter(object):
             os.remove(fileName)    
         with open(fileName, 'a') as f:
             f.write("!\n")
-            f.write("! Title: AdBlock DNS\n")
-            f.write("! Description: 适用于AdGuard的去广告合并规则，每8个小时更新一次。规则源：1Hosts (Lite)、AdGuard Base filter、AdGuard Base filter、AdGuard DNS filter、AdRules DNS List、Hblock、NEO DEV HOST、OISD Basic、1024 hosts、ad-wars hosts、StevenBlack hosts、xinggsf、EasyList、Easylist China、EasyPrivacy、CJX's Annoyance List、SmartTV Blocklist、AWAvenue Ads Rule、jiekouAD\n")
-            f.write("! Homepage: https://github.com/217heidai/adblockfilters\n")
-            f.write("! Source: https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdns.txt\n")
+            f.write("! Title: My AdBlock DNS-Claire\n")
+            f.write("! Description: 适用于AdGuard的去广告合并规则，每12个小时更新一次。\n")
+            f.write("! Homepage: https://github.com/Claire9518/filters\n")
+            f.write("! Source: https://raw.githubusercontent.com/Claire9518/filters/main/rules/adblockdns.txt\n")
             f.write("! Version: %s\n"%(time.strftime("%Y%m%d%H%M%S", time.localtime())))
             f.write("! Last modified: %s\n"%(time.strftime("%Y/%m/%d %H:%M:%S", time.localtime())))
             f.write("! Blocked domains: %s\n"%(len(blockList)))
@@ -147,6 +159,24 @@ class Filter(object):
                 f.write("@@||%s^\n"%(fiter))
         
         logger.info("adblock dns: block=%d, unblock=%d"%(len(blockList), len(unblockList)))
+
+    def __print_progress(self, processed, total, start):
+        if processed % 1000 == 0:
+            current = time.time()
+            used = current - start
+            remaining = used / processed * (total - processed) if processed > 0 else 0
+            
+            hours_used = int(used / 3600)
+            minutes_used = int((used % 3600) / 60)
+            seconds_used = int((used % 60))
+            
+            hours_remaining = int(remaining / 3600)
+            minutes_remaining = int((remaining % 3600) / 60)
+            seconds_remaining = int((remaining % 60))
+        
+            logger.info(f"Processed {processed}/{total}, "
+                f"Time used: {hours_used}h {minutes_used}m {seconds_used}s, "
+                f"Remaining: {hours_remaining}h {minutes_remaining}m {seconds_remaining}s")
 
     # 生成 filter 规则文件
     def __generateFilter(self, filterSet:Set[str], whiteSet:Set[str], fileName:str):
@@ -160,10 +190,10 @@ class Filter(object):
         
         with open(fileName, 'a') as f:
             f.write("!\n")
-            f.write("! Title: AdBlock Filter\n")
-            f.write("! Description: 适用于AdGuard的去广告合并规则，每8个小时更新一次。规则源：1Hosts (Lite)、AdGuard Base filter、AdGuard Base filter、AdGuard DNS filter、AdRules DNS List、Hblock、NEO DEV HOST、OISD Basic、1024 hosts、ad-wars hosts、StevenBlack hosts、xinggsf、EasyList、Easylist China、EasyPrivacy、CJX's Annoyance List、SmartTV Blocklist、AWAvenue Ads Rule、jiekouAD\n")
-            f.write("! Homepage: https://github.com/217heidai/adblockfilters\n")
-            f.write("! Source: https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockfilters.txt\n")
+            f.write("! Title: My AdBlock Filter-Claire\n")
+            f.write("! Description: 适用于AdGuard的去广告合并规则，每12个小时更新一次。\n")
+            f.write("! Homepage: https://github.com/Claire9518/filters\n")
+            f.write("! Source: https://raw.githubusercontent.com/Claire9518/filters/main/rules/adblockfilters.txt\n")
             f.write("! Version: %s\n"%(time.strftime("%Y%m%d%H%M%S", time.localtime())))
             f.write("! Last modified: %s\n"%(time.strftime("%Y/%m/%d %H:%M:%S", time.localtime())))
             f.write("! Blocked Filters: %s\n"%(len(filterList)))
