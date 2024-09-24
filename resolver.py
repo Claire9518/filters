@@ -249,7 +249,7 @@ class Resolver(object):
         if not os.path.exists(filename):
             return blockDict,unblockDict,filterSet
 
-        with open(filename, "r") as f:
+        with open(filename, "r", encoding='utf-8') as f:
             for line in f:
                 # 去掉换行符
                 line = line.replace('\r', '').replace('\n', '').strip()
