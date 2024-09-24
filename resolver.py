@@ -249,37 +249,43 @@ class Resolver(object):
         if not os.path.exists(filename):
             return blockDict,unblockDict,filterSet
 
-        with open(filename, "rb") as f:
-            for line in f:
-                try:
-                    # 尝试用 utf-8 解码
-                    decoded_line = line.decode('utf-8').strip()
-                except UnicodeDecodeError:
-                    try:
-                        # 如果 utf-8 失败，尝试 iso-8859-1
-                        decoded_line = line.decode('iso-8859-1').strip()
-                    except:
-                        # 如果还是失败，跳过这一行
-                        logger.warning(f"Failed to decode line in {filename}")
-                        continue
+        # 尝试多种编码
+        encodings = ['utf-8', 'iso-8859-1', 'gbk', 'gb2312', 'big5']
+        
+        for encoding in encodings:
+            try:
+                with open(filename, "r", encoding=encoding) as f:
+                    for line in f:
+                        # 去掉换行符
+                        line = line.replace('\r', '').replace('\n', '').strip()
+                        # 去掉空行
+                        if len(line) < 1:
+                            continue
 
-                if len(decoded_line) < 1:
-                    continue
-
-                block,unblock,filter = self.__resolveFilter(decoded_line)
+                        block,unblock,filter = self.__resolveFilter(line)
+                        
+                        if block:
+                            if block[0] not in blockDict:
+                                blockDict[block[0]] = {block[1],}
+                            else:
+                                blockDict[block[0]].add(block[1])
+                        if unblock:
+                            if unblock[0] not in unblockDict:
+                                unblockDict[unblock[0]] = {unblock[1],}
+                            else:
+                                unblockDict[unblock[0]].add(unblock[1])
+                        if filter:
+                            filterSet.add(filter)
                 
-                if block:
-                    if block[0] not in blockDict:
-                        blockDict[block[0]] = {block[1],}
-                    else:
-                        blockDict[block[0]].add(block[1])
-                if unblock:
-                    if unblock[0] not in unblockDict:
-                        unblockDict[unblock[0]] = {unblock[1],}
-                    else:
-                        unblockDict[unblock[0]].add(unblock[1])
-                if filter:
-                    filterSet.add(filter)
+                # 如果成功读取文件，跳出循环
+                break
+            except UnicodeDecodeError:
+                # 如果当前编码失败，尝试下一个
+                continue
+        else:
+            # 如果所有编码都失败
+            logger.error(f"Failed to decode file {filename} with all attempted encodings")
+            return blockDict,unblockDict,filterSet
 
         logger.info("%s: block=%d, unblock=%d, filter=%d"%(rule.name,len(blockDict),len(unblockDict),len(filterSet)))
         return blockDict,unblockDict,filterSet
