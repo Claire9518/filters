@@ -8,7 +8,7 @@ class ADBlock(object):
     def __init__(self):
         self.pwd = os.getcwd()
 
-    def refresh(self):
+    async def refresh(self):
         readme = ReadMe(self.pwd + '/README.md')
         ruleList = readme.getRules()
         
@@ -25,6 +25,10 @@ class ADBlock(object):
         # 生成 readme.md
         readme.setRules(ruleList)
         readme.regenerate()
+
+async def main():
+    adBlock = ADBlock()
+    await adBlock.refresh()
 
 if __name__ == '__main__':
     adBlock = ADBlock()
