@@ -16,6 +16,13 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@main
+        with:
+          fetch-depth: 0
+
+      - name: Fetch latest changes
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
 
       - name: Setup Python 3.9.x
         uses: actions/setup-python@main
