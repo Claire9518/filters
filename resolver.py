@@ -9,6 +9,8 @@ from loguru import logger
 
 from readme import Rule
 
+import chardet
+
 class Resolver(object):
     def __init__(self, path:str):
         self.path = path
@@ -249,43 +251,40 @@ class Resolver(object):
         if not os.path.exists(filename):
             return blockDict,unblockDict,filterSet
 
-        # 尝试多种编码
-        encodings = ['utf-8', 'iso-8859-1', 'gbk', 'gb2312', 'big5']
-        
-        for encoding in encodings:
-            try:
-                with open(filename, "r", encoding=encoding) as f:
-                    for line in f:
-                        # 去掉换行符
-                        line = line.replace('\r', '').replace('\n', '').strip()
-                        # 去掉空行
-                        if len(line) < 1:
-                            continue
+        # 检测文件编码
+        with open(filename, 'rb') as file:
+            raw_data = file.read()
+        detected = chardet.detect(raw_data)
+        encoding = detected['encoding']
 
-                        block,unblock,filter = self.__resolveFilter(line)
-                        
-                        if block:
-                            if block[0] not in blockDict:
-                                blockDict[block[0]] = {block[1],}
-                            else:
-                                blockDict[block[0]].add(block[1])
-                        if unblock:
-                            if unblock[0] not in unblockDict:
-                                unblockDict[unblock[0]] = {unblock[1],}
-                            else:
-                                unblockDict[unblock[0]].add(unblock[1])
-                        if filter:
-                            filterSet.add(filter)
-                
-                # 如果成功读取文件，跳出循环
-                break
-            except UnicodeDecodeError:
-                # 如果当前编码失败，尝试下一个
-                continue
-        else:
-            # 如果所有编码都失败
-            logger.error(f"Failed to decode file {filename} with all attempted encodings")
-            return blockDict,unblockDict,filterSet
+        logger.info(f"Detected encoding for {filename}: {encoding}")
+
+        try:
+            with open(filename, "r", encoding=encoding) as f:
+                for line in f:
+                    # 去掉换行符
+                    line = line.replace('\r', '').replace('\n', '').strip()
+                    # 去掉空行
+                    if len(line) < 1:
+                        continue
+
+                    block,unblock,filter = self.__resolveFilter(line)
+                    
+                    if block:
+                        if block[0] not in blockDict:
+                            blockDict[block[0]] = {block[1],}
+                        else:
+                            blockDict[block[0]].add(block[1])
+                    if unblock:
+                        if unblock[0] not in unblockDict:
+                            unblockDict[unblock[0]] = {unblock[1],}
+                        else:
+                            unblockDict[unblock[0]].add(unblock[1])
+                    if filter:
+                        filterSet.add(filter)
+        except UnicodeDecodeError as e:
+            logger.error(f"Failed to decode {filename} with detected encoding {encoding}: {str(e)}")
+            return blockDict, unblockDict, filterSet
 
         logger.info("%s: block=%d, unblock=%d, filter=%d"%(rule.name,len(blockDict),len(unblockDict),len(filterSet)))
         return blockDict,unblockDict,filterSet
