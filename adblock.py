@@ -1,4 +1,5 @@
 import os
+import asyncio
 
 from readme import ReadMe
 from updater import Updater
@@ -12,9 +13,9 @@ class ADBlock(object):
         readme = ReadMe(self.pwd + '/README.md')
         ruleList = readme.getRules()
         
-        # 更新上游规
+        # 更新上游规则
         updater = Updater(ruleList)
-        update, ruleList = updater.update(self.pwd + '/rules')
+        update, ruleList = await updater.update(self.pwd + '/rules')
         if not update:
             return
 
@@ -31,5 +32,4 @@ async def main():
     await adBlock.refresh()
 
 if __name__ == '__main__':
-    adBlock = ADBlock()
-    adBlock.refresh()
+    asyncio.run(main())
