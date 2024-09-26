@@ -299,6 +299,7 @@ reuters.com#%#//scriptlet('set-local-storage-item', 'ajs_anonymous_id', 'null')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/81513
 ! https://listauthorschat.slack.com/archives/C010N14G4TF/p1686743998780969
 ! https://www.reddit.com/r/uBlockOrigin/comments/1495nei/please_provide_advice_on_this_filter/
+!+ NOT_OPTIMIZED
 m.dcinside.com,upload.dcinside.com#%#//scriptlet('set-cookie-reload', '_ga', 'OK')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/136436
 cbssports.com#%#(()=>{window.admiral=function(d,a,b){if("function"==typeof b)try{b({})}catch(a){}}})();
@@ -36784,6 +36785,10 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||counter.best-hit.tv^
+||analytics-op.streak.ninja^
+||track.streak.ninja^
+||panorama.wixapps.net^
 ||msite.baidu.com^
 ||analitik.pendik.bel.tr^
 ||analytics-api.sconto.cz^
@@ -68797,6 +68802,7 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 /prod/dfm/g2i.min.js$redirect=nooptext,important,domain=dailycamera.com
 /prod/dfm/t8y9347t.min.js$redirect=nooptext,important,domain=dailycamera.com
 !
+||korewaeroi.com/fukugan_$subdocument
 ||shopch.jp/com/js/analytics.js
 ||cdn.shopify.com/extensions/*/tiktok-pixel-for-adtrace-*/tiktok-pixel.js
 ||services.meteored.com/web/usr/v1/check/
@@ -69548,7 +69554,6 @@ president.jp##.recommend
 ||carmazoon24-pu01.ihre-webseite.it/js/logger
 ||tracemyip.org/vLg/lgUrl.php
 ||minorasu.basf.co.jp/shared/scripts/vendor/google-analysis/
-||minkou.jp/js/tracking.js
 ||cdn.aimtell.com/trackpush/trackpush.min.js
 ||researchgate.net/track/
 ||pc.assets-cosme.net/js/ga.js
