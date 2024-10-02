@@ -621,6 +621,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 !
 !
 !
+||covatic.io^
 ||cdn.gpmdata.ru^$third-party
 ||petametrics.com^
 ||ultraimpression.jp^
@@ -35510,6 +35511,9 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||atom.warnermedia.com^
+||zion.api.cnn.io^
+||t.blog.livedoor.jp^
 ||l.ouest-france.fr^
 ||ana.3751chat.com^
 ||ana.chat.shalove.net^
@@ -77246,7 +77250,7 @@ _tracking.php?b=
 !
 ! Tealium
 ! The site should be carefully checked when you add this rule
-||tags.tiqcdn.com/utag/*/prod/utag.js$domain=mcafee.com|help.dropbox.com|radissonhotels.com|post.ch|usnews.com|krymr.com|cnet.com|adidas.co.uk|adidas.nl|adidas.pl|lineadirecta.com|sibreal.org|modernatx.com|louisvuitton.com|simplybusiness.co.uk|uber.com|monroeandmain.com|totaljobs.com|mitsubishi-motors.co.jp|ubereats.com|grubhub.com|talksport.com|truecar.com|hulu.com
+||tags.tiqcdn.com/utag/*/prod/utag.js$domain=mcafee.com|help.dropbox.com|radissonhotels.com|post.ch|usnews.com|krymr.com|cnet.com|adidas.co.uk|adidas.nl|adidas.pl|lineadirecta.com|sibreal.org|modernatx.com|louisvuitton.com|simplybusiness.co.uk|uber.com|monroeandmain.com|totaljobs.com|mitsubishi-motors.co.jp|ubereats.com|grubhub.com|talksport.com|truecar.com|hulu.com|qvc.jp
 ||tags.tiqcdn.com/utag/*/utag.sync.js$domain=yousee.dk|sibreal.org
 !
 !
@@ -77299,6 +77303,7 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 /prod/dfm/g2i.min.js$redirect=nooptext,important,domain=dailycamera.com
 /prod/dfm/t8y9347t.min.js$redirect=nooptext,important,domain=dailycamera.com
 !
+||qvc.jp/*/adobeanalytics.min.*.js
 ||masutabe.info/js/access.js
 ||statics.impresa.pt/js/analytics/
 ||tanweb.net/wordpress/?rest_route=/sng/v1/page-count
@@ -80063,7 +80068,6 @@ continentseven.com##.gaoop
 ||practicequiz.com/responsive/js/ga.js
 ||omt.shinobi.jp/pv^
 ||omt.shinobi.jp/tsumugi?location=
-||t.blog.livedoor.jp/u.js
 ||youku.com/compvlog?
 ||tinypass.com^*/track?
 ||e-kuzbass.ru/rank$third-party
@@ -85236,8 +85240,6 @@ goodwillfinds.com#%#//scriptlet("set-constant", "_etmc", "emptyArr")
 @@||googletagmanager.com/gtm.js$domain=rtl.de
 ! https://github.com/easylist/easylist/pull/14208
 ||login.eki-net.com^$badfilter
-! https://github.com/uBlockOrigin/uAssets/issues/15730
-@@||googletagmanager.com/gtm.js$domain=www.nicovideo.jp
 ! https://github.com/AdguardTeam/AdguardFilters/issues/133738
 @@||googletagmanager.com/gtm.js$domain=rocketnews24.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/135015
@@ -85685,6 +85687,8 @@ extrahop.com#%#//scriptlet('prevent-setTimeout', 'ad blocker')
 @@||tagger.opecloud.com/mediaconsortium/*/tagger.js$domain=zakzak.co.jp
 ! https://github.com/AdguardTeam/AdguardFilters/issues/112503
 ||googletagmanager.com/gtm.js$script,redirect=googletagmanager-gtm,domain=lodgecastiron.com
+!+ PLATFORM(ios, ext_safari)
+@@||googleoptimize.com/optimize.js$domain=lodgecastiron.com
 !+ PLATFORM(ios, ext_android_cb, ext_safari)
 @@||googletagmanager.com/gtm.js$domain=lodgecastiron.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/112228
@@ -86385,7 +86389,8 @@ demae-can.com#%#//scriptlet('remove-attr', 'data-trm-action|data-trm-category|da
 @@||google-analytics.com/plugins/ua/ec.js$domain=store.line.me
 !#endif
 ! https://github.com/AdguardTeam/AdguardFilters/issues/136093
-@@||st.top100.ru/top100/top100.js$domain=rambler.ru|m.gazeta.ru
+! https://github.com/AdguardTeam/AdguardFilters/issues/189257
+@@||st.top100.ru/top100/top100.js$domain=rambler.ru|m.gazeta.ru|motor.ru
 ! https://github.com/AdguardTeam/AdguardFilters/issues/71980
 @@||media.kaspersky.com/tracking/omniture/s_code_single_suite.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/71941
