@@ -2597,8 +2597,6 @@ deviantart.com#@#.mobile-ad
 @@||convertpad.com/ad/
 ! Prevent filtering apk storage of Google Play
 @@||android.clients.google.com/market/GetBinary/$document
-!+ PLATFORM(android)
-@@||play.google.com/store/apps/$document
 ! Do not break Taboola newsfeed in the samsung browser.
 ! It is used as a homepage there.
 ! https://news.internet.apps.samsung.com
@@ -2695,6 +2693,14 @@ sp.manga.nicovideo.jp##div[style^="--ads-width:"]
 !
 ! SECTION: Regular rules
 !
+shogis.com##.adv300_250
+meteored.mx#$#.pie-pagina { margin-bottom: 0 !important; }
+1000mg.jp$$script:contains(1000mg.jp/ad_com1.php)
+s.kakaku.com##.u-bt_ad
+s.kakaku.com##.p-box-foot_item
+dengekionline.com##.gAdBanner
+postimees.ee#$#.device-phone .header--sticky { top: 0 !important; }
+jiji.com###sp-overlay
 peing.net##div[id^="ad-container"]
 tsumanne.net###dmm
 weszlo.com##.article-list > .snap-mandatory > .snap-always.flex:has(> .overflow-hidden > .re-box-wrap)
