@@ -3,11 +3,14 @@
 ## 订阅链接
 1. AdGuard Home 等DNS拦截服务使用规则1
 2. AdGuard 等浏览器插件使用规则1 + 规则2
+3. 规则1’、规则2’为相应的 Lite 版，仅针对国内域名拦截
 
 | 规则 | 原始链接 | 加速链接 | 
 |:-|:-|:-|
 | 规则1：DNS 拦截 | [原始链接](https://raw.githubusercontent.com/Claire9518/filters/main/rules/adblockdns.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Claire9518/filters/main/rules/adblockdns.txt)  |
+| 规则1'：DNS 拦截 Lite | [原始链接](https://raw.githubusercontent.com/Claire9518/filters/main/rules/adblockdnslite.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Claire9518/filters/main/rules/adblockdnslite.txt) |
 | 规则2：插件拦截 | [原始链接](https://raw.githubusercontent.com/Claire9518/filters/main/rules/adblockfilters.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Claire9518/filters/main/rules/adblockfilters.txt) |
+| 规则2'：插件拦截 Lite | [原始链接](https://raw.githubusercontent.com/Claire9518/filters/main/rules/adblockfilterslite.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Claire9518/filters/main/rules/adblockfilterslite.txt) |
 ## 规则源
 
 | 规则 | 类型 | 原始链接 | 加速链接 |  更新日期 |
@@ -78,6 +81,6 @@
 | The Big List of Hacked | host | [原始链接](https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/hosts) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Claire9518/filters/main/rules/The_Big_List_of_Hacked.txt.txt) | 2024/09/24 |
 | WindowsSpyBlocker | host | [原始链接](https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Claire9518/filters/main/rules/WindowsSpyBlocker.txt.txt) | 2024/09/24 |
 | yhost | host | [原始链接](https://raw.githubusercontent.com/VeleSila/yhosts/master/hosts.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Claire9518/filters/main/rules/yhost.txt.txt) | 2024/09/24 |
-| yhost-tvbox | host | [原始链接](https://raw.githubusercontent.com/vokins/yhosts/master/data/tvbox.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Claire9518/filters/main/rules/yhost-tvbox.txt.txt) | 2023/12/19 |
+| yhost-tvbox | host | [原始链接](https://raw.githubusercontent.com/vokins/yhosts/master/data/tvbox.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Claire9518/filters/main/rules/yhost-tvbox.txt.txt) | 2024/10/24 |
 | YoursList | host | [原始链接](https://raw.githubusercontent.com/yous/YousList/master/hosts.txt) | [加速链接](https://mirror.ghproxy.com/https://raw.githubusercontent.com/Claire9518/filters/main/rules/YoursList.txt.txt) | 2024/09/24 |
 
