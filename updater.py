@@ -15,27 +15,27 @@ class Updater(object):
         self.ruleList = ruleList
         self.isNeedUpdate = False
 
-    async def update(self, path: str) -> Tuple[bool, List[Rule]]:
+    def update(self, path:str) -> Tuple[bool,List[Rule]]:
+        # 启动异步循环
+        loop = asyncio.get_event_loop()
+        # 添加异步任务
         taskList = []
         for rule in self.ruleList:
-            logger.info(f"updating {rule.name}...")
-            taskList.append(self.__Download(rule, path))
-        
-        results = await asyncio.gather(*taskList, return_exceptions=True)
-        
-        for result in results:
-            if isinstance(result, Exception):
-                logger.error(f"Task failed: {result}")
-            else:
-                new: Rule = result
-                for rule in self.ruleList:
-                    if new.name == rule.name:
-                        rule.latest = new.latest
-                        rule.update = new.update
-                        if rule.update:
-                            self.isNeedUpdate = True
-                        break
-        
+            logger.info("updating %s..."%(rule.name))
+            task = asyncio.ensure_future(self.__Download(rule, path))
+            taskList.append(task)
+        # 等待异步任务结束
+        loop.run_until_complete(asyncio.wait(taskList))
+        # 获取异步任务结果
+        for task in taskList:
+            new:Rule = task.result()
+            for rule in self.ruleList:
+                if new.name == rule.name:
+                    rule.latest = new.latest
+                    rule.update = new.update
+                    if rule.update:
+                        self.isNeedUpdate = rule.update
+                    break
         return self.isNeedUpdate, self.ruleList
 
     def __CalcFileSha256(self, filename):
@@ -44,28 +44,22 @@ class Updater(object):
             sha256obj.update(f.read())
             hash_value = sha256obj.hexdigest()
             return hash_value
-        
-    def __isConfigFile(self, filename):
-        filestats = os.stat(filename)
-        if filestats.st_size < 1024 * 4:
-            return False
-        return True
 
-    async def __Download(self, rule: Rule, path: str) -> Rule:
-        fileName = os.path.join(path, rule.filename)
+    async def __Download(self, rule:Rule, path:str) -> Rule:
+        fileName = path + "/" + rule.filename
         fileName_download = fileName + '.download'
         try:
             if os.path.exists(fileName_download):
                 os.remove(fileName_download)
 
-            async with httpx.AsyncClient(timeout=30.0) as client:
+            async with httpx.AsyncClient() as client:
                 response = await client.get(rule.url)
                 response.raise_for_status()
-                with open(fileName_download, 'wb') as f:
+                contentType = response.headers.get("Content-Type")
+                if contentType.find("text/plain") < 0:
+                    raise Exception("Content-Type[%s] error"%(contentType))
+                with open(fileName_download,'wb') as f:
                     f.write(response.content)
-            
-            if not self.__isConfigFile(fileName_download):
-                raise Exception("not rule file")
 
             if os.path.exists(fileName):
                 sha256Old = self.__CalcFileSha256(fileName)
@@ -78,22 +72,9 @@ class Updater(object):
 
             os.rename(fileName_download, fileName)
         except Exception as e:
-            logger.error(f'{rule.name} download failed: {e}')
-            raise  # 重新抛出异常，让 asyncio.gather 捕获
+            logger.error(f'%s download failed: %s' % (rule.name, e))
         finally:
             if rule.update:
                 rule.latest = time.strftime("%Y/%m/%d", time.localtime())
-            logger.info(f"{rule.name}: latest={rule.latest}, update={rule.update}")
+            logger.info("%s: latest=%s, update=%s"%(rule.name,rule.latest,rule.update))
             return rule
-        
-# 使用方法
-async def main():
-    rules = [Rule(...), Rule(...)]  # 初始化你的规则列表
-    updater = Updater(rules)
-    is_updated, updated_rules = await updater.update("/path/to/save")
-    print(f"Need update: {is_updated}")
-    for rule in updated_rules:
-        print(f"Rule: {rule.name}, Latest: {rule.latest}, Updated: {rule.update}")
-
-if __name__ == "__main__":
-    asyncio.run(main())
