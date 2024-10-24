@@ -9,31 +9,34 @@
 ! License: https://github.com/hagezi/dns-blocklists/blob/main/LICENSE
 ! Issues: https://github.com/hagezi/dns-blocklists/issues
 ! Expires: 1 day
-! Last modified: 22 Sep 2024 21:54 UTC
-! Version: 2024.0922.2154.55
+! Last modified: 22 Oct 2024 21:20 UTC
+! Version: 2024.1022.2120.59
 ! Syntax: AdGuard
-! Number of latin TLDs: 187 - punycode TLDs: 151
+! Number of latin TLDs: 198 - punycode TLDs: 151
 !
+||*.actor^
 ||*.africa^$denyallow=nation.africa
 ||*.agency^$denyallow=apptoro.agency|baam.agency|battlefield.agency|byteful.agency|robotzebra.agency|uphotel.agency|usenet.agency|ws.agency
 ||*.army^$denyallow=phishing.army
 ||*.asia^$denyallow=amzn.asia|bandainamcoent.asia|dbankcloud.asia|pansci.asia
+||*.auction^
 ||*.autos^
 ||*.baby^
-||*.bar^$denyallow=fap.bar
+||*.band^
+||*.bar^$denyallow=fap.bar|strem.bar
 ||*.beauty^$denyallow=vipbj.beauty
 ||*.best^$denyallow=epg.best
 ||*.bet^
 ||*.bid^
 ||*.bike^$denyallow=rapido.bike
 ||*.bingo^
-||*.bio^
-||*.biz^$denyallow=anonymurl.biz|beiniz.biz|bonial.biz|cloudns.biz|cyberciti.biz|epson.biz|ette.biz|gimmeporn.biz|iimwf.biz|localise.biz|luckysbarbershop.biz|movabletype.biz|panasonic.biz|slussen.biz|wyborcza.biz|yoox.biz
+||*.biz^$denyallow=anonymurl.biz|beiniz.biz|bonial.biz|cloudns.biz|cyberciti.biz|epson.biz|ette.biz|gamesindustry.biz|gimmeporn.biz|iimwf.biz|localise.biz|luckysbarbershop.biz|movabletype.biz|panasonic.biz|slussen.biz|wyborcza.biz|yoox.biz
 ||*.boats^
 ||*.bond^
 ||*.boo^
 ||*.boston^
 ||*.boutique^
+||*.builders^
 ||*.buzz^$denyallow=sideb.buzz
 ||*.cam^
 ||*.capital^$denyallow=scalable.capital
@@ -47,10 +50,10 @@
 ||*.church^$denyallow=life.church|online.church
 ||*.city^$denyallow=bypass.city
 ||*.claims^
-||*.click^$denyallow=popcat.click|popdog.click|xcine.click
+||*.click^$denyallow=popcat.click|popdog.click|ravelin.click|xcine.click
 ||*.clothing^
 ||*.club^$denyallow=baby-beamup.club|mbcherohub.club|pdfmagazines.club|thelemmy.club
-||*.computer^$denyallow=neat.computer|silly.computer
+||*.computer^$denyallow=libre.computer|neat.computer|silly.computer
 ||*.cool^
 ||*.coupons^
 ||*.cymru^
@@ -63,19 +66,23 @@
 ||*.degree^$denyallow=opf.degree|three60.degree
 ||*.dental^
 ||*.desi^$denyallow=xhamster.desi
-||*.directory^$denyallow=2fa.directory|passkeys.directory
+||*.directory^$denyallow=2fa.directory|passkeys.directory|reactnative.directory
 ||*.discount^$denyallow=real.discount
 ||*.download^$denyallow=caido.download|up4ever.download
-||*.eco^
+||*.eco^$denyallow=play.eco
 ||*.esq^$denyallow=erika.esq
 ||*.events^$denyallow=ticketco.events
+||*.expert^
 ||*.fan^$denyallow=lemmy.fan
 ||*.fashion^
 ||*.finance^
 ||*.financial^
 ||*.fishing^
 ||*.fit^$denyallow=appetit.fit|clubb.fit|justget.fit|pridegym.fit|union.fit
+||*.fitness^
 ||*.foo^$denyallow=helloworld.foo
+||*.forsale^
+||*.foundation^$denyallow=e.foundation|grapheneos.foundation|player.foundation
 ||*.fund^
 ||*.fyi^$denyallow=apollo.fyi|better.fyi|genderdysphoria.fyi|iusearchlinux.fyi|levels.fyi|lunar.fyi|vercel.fyi
 ||*.gdn^$denyallow=cst.gdn|pss.gdn
@@ -85,6 +92,7 @@
 ||*.giving^
 ||*.glass^$denyallow=domain.glass
 ||*.gold^
+||*.golf^
 ||*.gratis^
 ||*.green^
 ||*.guide^$denyallow=cfw.guide|discordjs.guide|hacks.guide|homebrew.guide|opensource.guide|wii.guide
@@ -93,7 +101,7 @@
 ||*.haus^
 ||*.health^$denyallow=sca.health
 ||*.healthcare^
-||*.homes^
+||*.homes^$denyallow=stremio.homes
 ||*.icu^$denyallow=lunar.icu
 ||*.ink^$denyallow=ishortn.ink|next.ink|short.ink|sumerian.ink|work.ink
 ||*.international^
@@ -105,13 +113,14 @@
 ||*.loans^
 ||*.lol^$denyallow=adsb.lol|anarchychess.lol|broke.lol|browser.lol|dankmemer.lol|hubcloud.lol|io.lol|kizuki.lol|lemy.lol|library.lol|limetorrents.lol|nos.lol|noted.lol|objection.lol|omg.lol|paste.lol|proven.lol|social.lol|status.lol|weblog.lol
 ||*.love^
-||*.ltd^$denyallow=homebrew.ltd
+||*.ltd^$denyallow=homebrew.ltd|swizzin.ltd
 ||*.luxe^
 ||*.makeup^$denyallow=bird.makeup
 ||*.management^
 ||*.market^$denyallow=digiseller.market|otto.market|plati.market|spotim.market|warframe.market
 ||*.markets^
 ||*.men^
+||*.miami^
 ||*.ml^$denyallow=aire.ml|amap.ml|fmhy.ml|ghostcloud.ml|google.ml|info-matin.ml|lemmygrad.ml|lemmy.ml|lingva.ml|loma.ml|mastodon.ml|melody.ml|precure.ml|prompt.ml
 ||*.mom^
 ||*.money^$denyallow=flowyour.money
@@ -120,12 +129,12 @@
 ||*.mov^$denyallow=david.mov|peerflix.mov|spankbang.mov
 ||*.name^
 ||*.navy^
-||*.new^$denyallow=git.new|postgres.new
+||*.new^$denyallow=bolt.new|git.new|lecture.new|postgres.new
 ||*.non^
 ||*.okinawa^
 ||*.ong^
 ||*.ooo^$denyallow=toast.ooo
-||*.partners^
+||*.partners^$denyallow=stripe.partners|xh.partners
 ||*.parts^
 ||*.party^$denyallow=ducks.party|mstdn.party|nezumi.party|spankbang.party
 ||*.pet^$denyallow=kickthespy.pet|kuma.pet
@@ -146,6 +155,7 @@
 ||*.recipes^
 ||*.red^$denyallow=bunkr.red
 ||*.rehab^
+||*.rent^
 ||*.rest^$denyallow=crystals.rest|nect.rest
 ||*.restaurant^
 ||*.review^
@@ -154,19 +164,20 @@
 ||*.rodeo^
 ||*.rugby^
 ||*.sale^
-||*.sbs^$denyallow=ecopulse.sbs|moae.sbs
+||*.sbs^$denyallow=ecopulse.sbs
 ||*.science^$denyallow=hal.science
 ||*.sew^
 ||*.sexy^$denyallow=privacy.sexy
-||*.shop^$denyallow=11ts.shop|eventix.shop|munu.shop|swedish-supplements.shop|terminal.shop|urlbluemedia.shop
+||*.shop^$denyallow=11ts.shop|chessvibes.shop|eventix.shop|munu.shop|swedish-supplements.shop|terminal.shop|urlbluemedia.shop
 ||*.shopping^
-||*.site^$denyallow=claude.site|dodi-repacks.site|fbsmarthome.site|fitgirl-repacks.site|gov-img.site|notion.site|reddit-doesnt-like-this.site
+||*.site^$denyallow=aftermath.site|claude.site|dodi-repacks.site|fbsmarthome.site|fitgirl-repacks.site|gov-img.site|notion.site|reddit-doesnt-like-this.site
 ||*.skin^
 ||*.solar^$denyallow=forecast.solar
-||*.space^$denyallow=dragonscave.space|drgns.space|hf.space|httpjames.space|hullseals.space|ippen.space|link.space|melmac.space|mempool.space|metahub.space|monitorburz.space|oldbytes.space|qwik.space|realcushion.space|searx.space|takeb1nzyto.space|truepeople.space
+||*.space^$denyallow=dragonscave.space|drgns.space|hf.space|httpjames.space|hullseals.space|ippen.space|link.space|mapstodon.space|melmac.space|mempool.space|metahub.space|monitorburz.space|ocr.space|oldbytes.space|qwik.space|realcushion.space|searx.space|takeb1nzyto.space|truepeople.space
 ||*.sport^
 ||*.store^$denyallow=androeed.store|cleanmasters.store|g-h.store|iqunix.store|shoplazza.store|timberjacks.store
 ||*.style^
+||*.su^$denyallow=catflix.su|promportal.su
 ||*.support^
 ||*.surf^$denyallow=s-wings.surf
 ||*.tattoo^
@@ -182,7 +193,7 @@
 ||*.vegas^
 ||*.ventures^
 ||*.vin^
-||*.vip^$denyallow=18comic.vip|stream.vip
+||*.vip^$denyallow=18comic.vip|ryde.vip|stream.vip
 ||*.vision^
 ||*.vlaanderen^
 ||*.vote^
