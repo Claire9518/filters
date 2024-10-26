@@ -11,6 +11,8 @@ from loguru import logger
 from dns.asyncresolver import Resolver as DNSResolver
 from dns.rdatatype import RdataType as DNSRdataType
 
+logger.level("ERROR")
+
 
 class ChinaDomian(object):
     def __init__(self, fileName, url):
