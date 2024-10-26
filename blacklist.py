@@ -1,6 +1,7 @@
 import os
 import asyncio
 import re
+import sys
 from concurrent.futures import ThreadPoolExecutor,as_completed
 
 import httpx
@@ -89,7 +90,7 @@ class ChinaDomian(object):
                         else:
                             self.domainSet.add(domain)
                     else:
-                        logger.error("%s: not domain[domain]"%(line))
+                        logger.warning("%s: not domain[domain]"%(line))
         except Exception as e:
             logger.error("%s"%(e))
 
@@ -182,7 +183,7 @@ class BlackList(object):
                 if ip != "0.0.0.0":
                     ipList.append(ip)
         except Exception as e:
-            logger.error('"%s": %s' % (domain, e if e else "Resolver failed"))
+            logger.warning('"%s": %s' % (domain, e if e else "Resolver failed"))
         finally:
             return ipList
 
@@ -214,7 +215,7 @@ class BlackList(object):
                             await writer.wait_closed()
                             ipList.append(host)
                         except Exception as e:
-                            logger.error('"%s": %s' % (domain, e if e else "Connect failed"))
+                            logger.warning('"%s": %s' % (domain, e if e else "Connect failed"))
             else:
                 count = 3
                 while len(ipList) < 1 and count > 0:
@@ -323,7 +324,7 @@ class BlackList(object):
                             break
                 break
         except Exception as e: 
-            logger.error('"%s": not domain'%(domain))
+            logger.warning('"%s": not domain'%(domain))
         finally:
             return domain,isChinaDomain
 
