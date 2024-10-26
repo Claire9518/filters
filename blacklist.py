@@ -10,7 +10,9 @@ from loguru import logger
 from dns.asyncresolver import Resolver as DNSResolver
 from dns.rdatatype import RdataType as DNSRdataType
 
-logger.level("ERROR")
+# 移除默认的处理器，添加新的处理器并设置级别
+logger.remove()
+logger.add(sink=sys.stderr, level="ERROR")
 
 class ChinaDomian(object):
     def __init__(self, fileName, url):
