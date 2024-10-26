@@ -3,7 +3,7 @@ import asyncio
 import re
 import sys
 from concurrent.futures import ThreadPoolExecutor,as_completed
-
+import time
 import httpx
 import IPy
 from tld import get_tld
@@ -15,7 +15,7 @@ from dns.rdatatype import RdataType as DNSRdataType
 logger.remove()
 logger.add(sink=sys.stderr, level="ERROR")
 
-class ChinaDomian(object):
+class ChinaDomain(object):
     def __init__(self, fileName, url):
         self.__fileName = fileName
         self.__url = url
@@ -23,76 +23,112 @@ class ChinaDomian(object):
         self.domainSet = set()
         self.regexpSet = set()
         self.keywordSet = set()
-        self.__update()
-        self.__resolve()
+        
+        # 使用错误重试机制
+        max_retries = 3
+        for _ in range(max_retries):
+            try:
+                self.__update()
+                self.__resolve()
+                break
+            except Exception as e:
+                logger.error(f"Attempt failed: {e}")
+                time.sleep(1)  # 重试前等待
 
     def __update(self):
         try:
+            # 安全删除文件
             if os.path.exists(self.__fileName):
-                os.remove(self.__fileName)
+                try:
+                    os.remove(self.__fileName)
+                except OSError as e:
+                    logger.error(f"Error removing file {self.__fileName}: {e}")
+                    return
             
-            with httpx.Client() as client:
+            # 添加超时和重试机制
+            timeout = httpx.Timeout(10.0)
+            limits = httpx.Limits(max_keepalive_connections=5, max_connections=10)
+            
+            with httpx.Client(timeout=timeout, limits=limits) as client:
                 response = client.get(self.__url)
                 response.raise_for_status()
-                with open(self.__fileName,'wb') as f:
+                
+                # 使用临时文件避免写入失败导致文件损坏
+                temp_file = f"{self.__fileName}.tmp"
+                with open(temp_file, 'wb') as f:
                     f.write(response.content)
+                os.rename(temp_file, self.__fileName)
+                
+        except httpx.RequestError as e:
+            logger.error(f"Request failed: {e}")
         except Exception as e:
-            logger.error("%s"%(e))
-    
+            logger.error(f"Update failed: {e}")
+
     def __isDomain(self, address):
-        fld, subdomain = '', ''
         try:
-            res = get_tld(address, fix_protocol=True, as_object=True) # 确认是否为域名
-            fld, subdomain = res.fld, res.subdomain
-        except Exception as e:
-            logger.error("%s: not domain"%(address))
-        finally:
-            return fld, subdomain
+            res = get_tld(address, fix_protocol=True, as_object=True)
+            return res.fld, res.subdomain
+        except Exception:
+            logger.warning(f"{address}: not domain")
+            return '', ''
 
     def __resolve(self):
+        if not os.path.exists(self.__fileName):
+            logger.error(f"File not found: {self.__fileName}")
+            return
+
         try:
-            if not os.path.exists(self.__fileName):
-                return
+            # 使用批处理来处理大文件
+            batch_size = 1000
+            current_batch = []
             
             with open(self.__fileName, 'r') as f:
                 for line in f:
-                    # 去掉换行符
-                    line = line.replace('\r', '').replace('\n', '').strip()
-                    # 去掉空行
-                    if len(line) < 1:
+                    line = line.strip()
+                    if not line or line.startswith('#'):
                         continue
-                    # 去掉注释
-                    if line.startswith('#'):
-                        continue
-                    if line.find('#') > 0:
+                    
+                    # 处理注释
+                    if '#' in line:
                         line = line[:line.find('#')].strip()
                     
-                    # regexp
+                    # 处理不同类型的规则
                     if line.startswith('regexp:'):
-                        self.regexpSet.add(line[len('regexp:'):])
-                        continue
-                    
-                    # keyword
-                    if line.startswith('keyword:'):
-                        self.keywordSet.add(line[len('keyword:'):])
-                        continue
-                    
-                    if line.startswith('full:'):
-                        domain = line[len('full:'):]
-                    elif line.startswith('domain:'):
-                        domain = line[len('domain:'):]
+                        self.regexpSet.add(line[7:])
+                    elif line.startswith('keyword:'):
+                        self.keywordSet.add(line[8:])
                     else:
-                        domain = line
-                    fld, subdomian = self.__isDomain(domain)
-                    if len(fld) > 0:
-                        if len(subdomian) > 0:
-                            self.fullSet.add(domain)
+                        if line.startswith('full:'):
+                            domain = line[5:]
+                        elif line.startswith('domain:'):
+                            domain = line[7:]
                         else:
-                            self.domainSet.add(domain)
-                    else:
-                        logger.warning("%s: not domain[domain]"%(line))
+                            domain = line
+                            
+                        current_batch.append(domain)
+                        
+                        # 批量处理域名
+                        if len(current_batch) >= batch_size:
+                            self.__process_domain_batch(current_batch)
+                            current_batch = []
+                
+                # 处理最后一批
+                if current_batch:
+                    self.__process_domain_batch(current_batch)
+                    
         except Exception as e:
-            logger.error("%s"%(e))
+            logger.error(f"Resolve failed: {e}")
+
+    def __process_domain_batch(self, domains):
+        for domain in domains:
+            fld, subdomain = self.__isDomain(domain)
+            if fld:
+                if subdomain:
+                    self.fullSet.add(domain)
+                else:
+                    self.domainSet.add(domain)
+            else:
+                logger.warning(f"{domain}: not domain[domain]")
 
 
 class BlackList(object):
@@ -128,9 +164,9 @@ class BlackList(object):
         logger.info("resolve China domain list...")
         fullSet,domainSet,regexpSet,keywordSet = set(),set(),set(),set()
         try:
-            domain_cn = ChinaDomian(self.__domainlistFile_CN, self.__domainlistUrl_CN)
-            domain_apple = ChinaDomian(self.__domainlistFile_CN_Apple, self.__domainlistUrl_CN_Apple)
-            domain_google = ChinaDomian(self.__domainlistFile_CN_Google, self.__domainlistUrl_CN_Google)
+            domain_cn = ChinaDomain(self.__domainlistFile_CN, self.__domainlistUrl_CN)
+            domain_apple = ChinaDomain(self.__domainlistFile_CN_Apple, self.__domainlistUrl_CN_Apple)
+            domain_google = ChinaDomain(self.__domainlistFile_CN_Google, self.__domainlistUrl_CN_Google)
 
             fullSet = domain_cn.fullSet | domain_apple.fullSet | domain_google.fullSet
             domainSet = domain_cn.domainSet | domain_apple.domainSet | domain_google.domainSet
@@ -170,50 +206,58 @@ class BlackList(object):
     async def __resolve(self, dnsresolver, domain):
         ipList = []
         try:
-            query_object = await dnsresolver.resolve(qname=domain, rdtype="A")
-            query_item = None
-            for item in query_object.response.answer:
-                if item.rdtype == DNSRdataType.A:
-                    query_item = item
-                    break
-            if query_item is None:
-                raise Exception("not A type")
-            for item in query_item:
-                ip = '{}'.format(item)
-                if ip != "0.0.0.0":
-                    ipList.append(ip)
+            # 添加超时控制
+            async with asyncio.timeout(5):  # 5秒超时
+                query_object = await dnsresolver.resolve(qname=domain, rdtype="A")
+                query_item = None
+                for item in query_object.response.answer:
+                    if item.rdtype == DNSRdataType.A:
+                        query_item = item
+                        break
+                if query_item is None:
+                    raise Exception("not A type")
+                for item in query_item:
+                    ip = '{}'.format(item)
+                    if ip != "0.0.0.0":
+                        ipList.append(ip)
+        except asyncio.TimeoutError:
+            logger.warning(f'"{domain}": DNS resolution timeout')
         except Exception as e:
             logger.warning('"%s": %s' % (domain, e if e else "Resolver failed"))
         finally:
             return ipList
 
     async def __pingx(self, dnsresolver, domain, semaphore):
-        async with semaphore: # 限制并发数，超过系统限制后会报错Too many open files
+        async with semaphore:
             host = domain
             port = None
             ipList = []
-            if domain.rfind(":") > 0: # 兼容 host:port格式
+            if domain.rfind(":") > 0:
                 offset = domain.rfind(":")
                 host = domain[ : offset]
                 port = int(domain[offset + 1 : ])
+            
             try:
-                get_tld(host, fix_protocol=True, as_object=True) # 确认是否为域名
+                get_tld(host, fix_protocol=True, as_object=True)
             except Exception as e:
                 port = 80
+
             if port:
                 try:
-                    _, writer = await asyncio.open_connection(host, port)
-                    writer.close()
-                    await writer.wait_closed()
-                    ipList.append(host)
+                    async with asyncio.timeout(5):  # 添加超时控制
+                        _, writer = await asyncio.open_connection(host, port)
+                        writer.close()
+                        await writer.wait_closed()
+                        ipList.append(host)
                 except Exception as e:
                     if port == 80:
                         port = 443
                         try:
-                            _, writer = await asyncio.open_connection(host, port)
-                            writer.close()
-                            await writer.wait_closed()
-                            ipList.append(host)
+                            async with asyncio.timeout(5):  # 添加超时控制
+                                _, writer = await asyncio.open_connection(host, port)
+                                writer.close()
+                                await writer.wait_closed()
+                                ipList.append(host)
                         except Exception as e:
                             logger.warning('"%s": %s' % (domain, e if e else "Connect failed"))
             else:
@@ -221,6 +265,8 @@ class BlackList(object):
                 while len(ipList) < 1 and count > 0:
                     ipList = await self.__resolve(dnsresolver, host)
                     count -= 1
+                    if count > 0 and not ipList:
+                        await asyncio.sleep(1)  # 添加重试延迟
 
             logger.info("%s: %s" % (domain, ipList))
             return domain, ipList
@@ -253,125 +299,142 @@ class BlackList(object):
 
     def __testDomain(self, domainList, nameservers, port=53):
         logger.info("resolve domain...")
-        # 异步检测
         dnsresolver = DNSResolver()
         dnsresolver.nameservers = nameservers
         dnsresolver.port = port
-        # 启动异步循环
-        loop = asyncio.get_event_loop()
-        semaphore = asyncio.Semaphore(self.__maxTask) # 限制并发量为500
-        # 添加异步任务
-        taskList = []
-        for domain in domainList:
-            task = asyncio.ensure_future(self.__pingx(dnsresolver, domain, semaphore))
-            taskList.append(task)
-        # 等待异步任务结束
-        loop.run_until_complete(asyncio.wait(taskList))
-        # 获取异步任务结果
-        domainDict = {}
-        for task in taskList:
-            domain, ipList = task.result()
-            domainDict[domain] = ipList
+        
+        async def run_tasks():
+            semaphore = asyncio.Semaphore(self.__maxTask)
+            tasks = [self.__pingx(dnsresolver, domain, semaphore) for domain in domainList]
+            
+            # 使用gather替代wait，支持取消操作
+            try:
+                results = await asyncio.gather(*tasks, return_exceptions=True)
+                return {domain: ipList for domain, ipList in results if isinstance(results, tuple)}
+            except asyncio.CancelledError:
+                logger.warning("Domain resolution cancelled")
+                return {}
+
+        try:
+            loop = asyncio.new_event_loop()
+            asyncio.set_event_loop(loop)
+            domainDict = loop.run_until_complete(run_tasks())
+        except Exception as e:
+            logger.error(f"Error during domain resolution: {e}")
+            domainDict = {}
+        finally:
+            loop.close()
 
         logger.info("resolve domain: %d"%(len(domainDict)))
         return domainDict
 
     def __isChinaDomain(self, domain, ipList, fullSet_CN, domainSet_CN, regexpSet_CN, keywordSet_CN, IPDict_CN):
         isChinaDomain = False
+        domain_without_port = domain.split(':')[0]  # 更简洁的端口分离
+        
         try:
-            if domain.find(':') > 0:
-                domain = domain[ : domain.find(':')]
+            # 域名检查
+            res = get_tld(domain_without_port, fix_protocol=True, as_object=True)
             
-            while True:
-                try:
-                    res = get_tld(domain, fix_protocol=True, as_object=True)
-                    if domain[-3:] == ".cn":
-                        isChinaDomain = True
-                        break
-                    # full:
-                    if domain in fullSet_CN:
-                        isChinaDomain = True
-                        break
-                    # doamin:
-                    if res.fld in domainSet_CN:
-                        isChinaDomain = True
-                        break
-                    # regexp:
-                    for regexp in regexpSet_CN:
-                        if re.match(regexp, domain):
-                            isChinaDomain = True
-                            break
-                    if isChinaDomain:
-                        break
-                    # keyword:
-                    for keyword in keywordSet_CN:
-                        if re.match(".*%s.*"%(keyword), domain):
-                            isChinaDomain = True
-                            break
-                    if isChinaDomain:
-                        break
-                    # IP
-                    raise Exception("try to resolve ip")
-                except Exception as e:
-                    # IP
-                    for ip in ipList:
-                        ip = IPy.parseAddress(ip)[0]
-                        for k, v in IPDict_CN.items():
-                            if (ip ^ k) >> (32 - v)  == 0:
-                                isChinaDomain = True
-                                break
-                        if isChinaDomain:
-                            break
-                break
-        except Exception as e: 
-            logger.warning('"%s": not domain'%(domain))
-        finally:
-            return domain,isChinaDomain
+            # 按优先级和性能消耗依次检查
+            if domain_without_port.endswith('.cn'):  # 使用endswith更高效
+                return domain, True
+                
+            if domain_without_port in fullSet_CN:
+                return domain, True
+                
+            if res.fld in domainSet_CN:
+                return domain, True
+                
+            # 正则和关键词匹配合并处理，避免重复break
+            for regexp in regexpSet_CN:
+                if re.match(regexp, domain_without_port):
+                    return domain, True
+                    
+            for keyword in keywordSet_CN:
+                if keyword in domain_without_port:  # 简单字符串匹配比正则更快
+                    return domain, True
+            
+            # IP检查
+            if ipList:
+                for ip in ipList:
+                    try:
+                        ip_int = IPy.parseAddress(ip)[0]
+                        for network, bits in IPDict_CN.items():
+                            if (ip_int ^ network) >> (32 - bits) == 0:
+                                return domain, True
+                    except Exception as e:
+                        logger.debug(f'IP parse error for {ip}: {e}')
+                        continue
+                        
+        except Exception as e:
+            logger.warning(f'Domain check error for "{domain}": {str(e)}')
+        
+        return domain, False
 
     def generate(self):
         try:
             domainList = self.__getDomainList()
-            if len(domainList) < 1:
+            if not domainList:
+                logger.warning("No domains to process")
                 return
-            #domainList = domainList[:1000] # for test
-            
-            domainDict = self.__testDomain(domainList, ["127.0.0.1"], 5053) # 使用本地 smartdns 进行域名解析，配置3组国内、3组国际域名解析服务器，提高识别效率
-            #domainDict = self.__testDomain(domainList, ["1.12.12.12"], 53) # for test
 
-            fullSet_CN,domainSet_CN,regexpSet_CN,keywordSet_CN = self.__getDomainSet_CN()
+            domainDict = self.__testDomain(domainList, ["127.0.0.1"], 5053)
+            
+            # 预检查必要条件
+            fullSet_CN, domainSet_CN, regexpSet_CN, keywordSet_CN = self.__getDomainSet_CN()
             IPDict_CN = self.__getIPDict_CN()
+            
+            if len(domainSet_CN) <= 100 or len(IPDict_CN) <= 100:
+                logger.error("Insufficient CN domain or IP data")
+                return
+                
+            # 使用线程池处理域名检查
             blackList = []
-            if len(domainSet_CN) > 100 and len(IPDict_CN) > 100:
-                thread_pool = ThreadPoolExecutor(max_workers=os.cpu_count() if os.cpu_count() > 4 else 4)
-                taskList = []
+            ChinaList = []
+            
+            # 优化线程池配置
+            max_workers = min(32, max(4, os.cpu_count() * 2))  # 限制最大线程数
+            
+            with ThreadPoolExecutor(max_workers=max_workers) as executor:
+                future_to_domain = {}
+                
+                # 提交任务
                 for domain in domainList:
-                    if len(domainDict[domain]):
-                        taskList.append(thread_pool.submit(self.__isChinaDomain, domain, domainDict[domain], fullSet_CN, domainSet_CN, regexpSet_CN, keywordSet_CN, IPDict_CN))
+                    if domainDict.get(domain):
+                        future = executor.submit(
+                            self.__isChinaDomain,
+                            domain,
+                            domainDict[domain],
+                            fullSet_CN,
+                            domainSet_CN,
+                            regexpSet_CN,
+                            keywordSet_CN,
+                            IPDict_CN
+                        )
+                        future_to_domain[future] = domain
                     else:
                         blackList.append(domain)
-                # 获取解析结果
-                ChinaSet_tmp = set()
-                for future in as_completed(taskList):
-                    domain,isChinaDomain = future.result()
-                    if isChinaDomain:
-                        ChinaSet_tmp.add(domain)
-                # 生成China域名列表
-                ChinaList = []
-                for domain in domainList:
-                    if domain in ChinaSet_tmp:
-                        ChinaList.append(domain)
-                if len(ChinaList):
-                    self.__generateChinaList(ChinaList)
-            else:
-                for domain in domainList:
-                    if domainDict[domain] is None:
-                        blackList.append(domain)
-
-            # 生成黑名单
-            if len(blackList):
+                
+                # 收集结果
+                for future in as_completed(future_to_domain):
+                    try:
+                        domain, isChinaDomain = future.result()
+                        if isChinaDomain:
+                            ChinaList.append(domain)
+                    except Exception as e:
+                        logger.error(f"Error processing domain {future_to_domain[future]}: {e}")
+                        blackList.append(future_to_domain[future])
+            
+            # 生成列表文件
+            if ChinaList:
+                self.__generateChinaList(ChinaList)
+            if blackList:
                 self.__generateBlackList(blackList)
+                
         except Exception as e:
-            logger.error("%s"%(e))
+            logger.error(f"Generation process failed: {e}")
+            raise  # 重新抛出异常，让上层处理
 
 if __name__ == "__main__":
     '''
