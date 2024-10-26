@@ -1,6 +1,7 @@
 import os
 import asyncio
 import re
+import chardet
 from concurrent.futures import ThreadPoolExecutor,as_completed
 
 import httpx
@@ -49,44 +50,49 @@ class ChinaDomian(object):
         try:
             if not os.path.exists(self.__fileName):
                 return
+            with open(self.__fileName, 'rb') as file:
+                raw_data = file.read()
+            detected = chardet.detect(raw_data)
+            encoding = detected['encoding']
             
-            with open(self.__fileName, 'r') as f:
-                for line in f:
-                    # 去掉换行符
-                    line = line.replace('\r', '').replace('\n', '').strip()
-                    # 去掉空行
-                    if len(line) < 1:
-                        continue
-                    # 去掉注释
-                    if line.startswith('#'):
-                        continue
-                    if line.find('#') > 0:
-                        line = line[:line.find('#')].strip()
+            try:
+                with open(self.__fileName, 'r') as f:
+                    for line in f:
+                        # 去掉换行符
+                        line = line.replace('\r', '').replace('\n', '').strip()
+                        # 去掉空行
+                        if len(line) < 1:
+                            continue
+                        # 去掉注释
+                        if line.startswith('#'):
+                            continue
+                        if line.find('#') > 0:
+                            line = line[:line.find('#')].strip()
                     
-                    # regexp
-                    if line.startswith('regexp:'):
-                        self.regexpSet.add(line[len('regexp:'):])
-                        continue
+                        # regexp
+                        if line.startswith('regexp:'):
+                            self.regexpSet.add(line[len('regexp:'):])
+                            continue
                     
-                    # keyword
-                    if line.startswith('keyword:'):
-                        self.keywordSet.add(line[len('keyword:'):])
-                        continue
+                        # keyword
+                        if line.startswith('keyword:'):
+                            self.keywordSet.add(line[len('keyword:'):])
+                            continue
                     
-                    if line.startswith('full:'):
-                        domain = line[len('full:'):]
-                    elif line.startswith('domain:'):
-                        domain = line[len('domain:'):]
-                    else:
-                        domain = line
-                    fld, subdomian = self.__isDomain(domain)
-                    if len(fld) > 0:
-                        if len(subdomian) > 0:
-                            self.fullSet.add(domain)
+                        if line.startswith('full:'):
+                            domain = line[len('full:'):]
+                        elif line.startswith('domain:'):
+                            domain = line[len('domain:'):]
                         else:
-                            self.domainSet.add(domain)
-                    else:
-                        logger.error("%s: not domain[domain]"%(line))
+                            domain = line
+                        fld, subdomian = self.__isDomain(domain)
+                        if len(fld) > 0:
+                            if len(subdomian) > 0:
+                                self.fullSet.add(domain)
+                            else:
+                                self.domainSet.add(domain)
+                        else:
+                            logger.error("%s: not domain[domain]"%(line))
         except Exception as e:
             logger.error("%s"%(e))
 
