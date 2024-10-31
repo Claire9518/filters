@@ -3449,9 +3449,12 @@ torrdroidforpc.com##[href^="http://slugmefilehos.xyz/"]
 ||re-captha-version-$all
 ! https://github.com/uBlockOrigin/uAssets/issues/24944
 ||valid-check-tl-$all
+! https://github.com/uBlockOrigin/uAssets/issues/25858
+! https://www.virustotal.com/gui/url/346513820edf167da7ee220fef88802fcc6568b8c7d42802d6c47796a455abc2
 ! https://blog.sucuri.net/2024/05/mal-metrica-redirects-users-to-scam-sites.html
 ! http://teluguodu.com/om-bheem-bush-movie-review/ - example site
-||check-tl-ver-$all
+||psh-static.b-cdn.net^
+||check-tl-$all
 ||tech4u.app^$all
 .com/?news&s|$popup
 ||cloud.tnewstraffic.com^$all
@@ -3633,6 +3636,9 @@ torrdroidforpc.com##[href^="http://slugmefilehos.xyz/"]
 ! https://www.virustotal.com/gui/url/bd11af06bb1ed081ae7b373bd79e5601c17e0664be6856d922a92f771b24aee0
 ! https://github.com/uBlockOrigin/uAssets/issues/24829
 /\/wap\/api\/(?:activity\/)?[a-zA-Z]+![-_a-zA-Z]+\.action\?/$xhr,1p,strict1p,match-case
+! https://www.reddit.com/r/Scams/comments/1gg7xif/tiktok_fake_link_i_am_so_anxious_please_help_me/
+! https://www.virustotal.com/gui/url/61c96fcfa32698a98f42c8ab0807a22e37d6722087fd478dfb2de71d3ebdbfa9
+||wetching.ru^$doc,frame
 
 ! made-in-china.com
 ! https://infosec.exchange/@urldna/112553754973872125
@@ -3982,7 +3988,6 @@ torrdroidforpc.com##[href^="http://slugmefilehos.xyz/"]
 ||bmoreferral.com^$all,to=~bmo.com
 ||personas.devbam.com^$all,to=~bam.com.gt
 ||negociebra.com.br^$all,to=~banco.bradesco
-||lloyd-group.com^$all,to=~lloydsbank.com
 ||itaconsorciodigital.com.br^$all,to=~itau.com.br
 ||wizardpayroll.com.ar^$all,to=~hsbc.com
 ||spareb1.com^$all,to=~sparebank1.no
@@ -3993,6 +3998,7 @@ torrdroidforpc.com##[href^="http://slugmefilehos.xyz/"]
 ||pncexc.com^$all,to=~pnc.com
 ||moonlightproshop.com^$all,to=~volksbank.at
 ||nbtbank.architect-cert.fiservapps.com^$all,to=~nbtbank.com
+||douroweb.eu^$all,to=~bankofamerica.com
 /^https:\/\/tpbank\.[-a-z0-9]{5,}\.[a-z]{3}(?:\.vn)?\//$doc,to=~edu|~gov|~gov.vn|~tpb.vn
 ! https://infosec.exchange/@urldna/112496070441371886
 ||mybluehost.me/service/*/nkl-log.php$doc,to=~nickel.eu
@@ -4041,6 +4047,11 @@ torrdroidforpc.com##[href^="http://slugmefilehos.xyz/"]
 ! https://www.virustotal.com/gui/url/d1238e6a106a6871b411d7c869ea03875cd04a3a5cd2731fb94c9d061f96c607
 ||correopackvia.freewebhostmost.com^$all,to=~hype.it
 ||freewebhostmost.com/DARKSIDE/hype/$doc,to=~hype.it
+
+! Lloyds Bank
+||lloyd-group.com^$all,to=~lloydsbank.com
+! https://www.virustotal.com/gui/url/2c42bd7b61c06bc03e1745f170382dd5aa057fc2beda209a5aefa712bd1e6630
+||lbg-calcs.vercel.app^$all,to=~lloydsbank.com
 
 ! hypovereinsbank.de
 ||gohvb-d634f.web.app^$all,to=~hypovereinsbank.de
@@ -4528,6 +4539,8 @@ torrdroidforpc.com##[href^="http://slugmefilehos.xyz/"]
 /^https:\/\/ht[a-z]\d{2}\.vip\//$doc,to=vip
 ! https://www.virustotal.com/gui/url/3891030a1d3e7fb7ebac20d4607242e3c30477016bcdad27da7e88c9cdf65d3f
 ||recouphh.top^$all
+! https://www.virustotal.com/gui/url/fc047acc620a85307852e4580ab5c21468a8fc8a175b5657a05950cd876ee07c
+||recovery-cr.top^$all
 ! https://www.virustotal.com/gui/url/9bfb25d3ef31de34855417314d030bdd6c668b7a7e4fd826531e0e0f239ad2e6
 /^https:\/\/xy[a-z]\d{2}\.cc\//$doc,to=cc
 
@@ -4635,8 +4648,8 @@ torrdroidforpc.com##[href^="http://slugmefilehos.xyz/"]
 ||codeanyapp.com/manage-SBB/$doc,to=~swisspass.ch
 ! https://urldna.io/scan/66f570a14bd3fd633b195269
 ! https://www.virustotal.com/gui/url/345b465213187507be93fc705ef0fa4a2cc6c0d458bcf0b29b220a5e1c8742e6
-||cffsbbhost-aniamaria*.codeanyapp.com^$all,to=~swisspass.ch
 ||codeanyapp.com/*/SWISSPASSC/$doc,to=~swisspass.ch
+||cffsbbhost-aniamaria*.codeanyapp.com^$all
 ! https://www.virustotal.com/gui/url/09ca05326d77f387fef2bd7bd8339221643d939ebcc2c4946ec727536ea849da
 ||manage-administrere-swisspass-*.codeanyapp.com^$doc,to=~swisspass.ch
 ! https://www.virustotal.com/gui/url/88a463b79f93e14c7bfd831ab894e1cd94f75c8bc44b6917854cdf6d71abb2b1
