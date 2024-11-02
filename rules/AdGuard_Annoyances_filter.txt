@@ -2492,6 +2492,8 @@ cmp.focus.de#%#//scriptlet('trusted-click-element', '.sp_choice_type_9[title*="Z
 !
 ! NOTE: Regular rules
 !
+herodevs.com##.fs-consent_component
+marieclaire.com.tw###privacyDesc
 heygen.com##.cw-cookie_banner
 egamersworld.com###cookieBot
 apteka.103.by##.wrapperCookiesNotification
@@ -2590,7 +2592,7 @@ tiempo.com#%#//scriptlet('trusted-click-element', '#btn-gdpr-accept')
 arena.pl##.MuiDialog-root:has(> .MuiDialog-container > .MuiPaper-root > .c-mp)
 newnoisemagazine.com###elementor-popup-modal-442174
 fotoplus.pl#%#//scriptlet('abort-current-inline-script', '$', '#cookiez')
-wpdesk.pl###flexiblecookies_container
+magazif.com,wpdesk.pl###flexiblecookies_container
 ban.lv###cookie-notification-block
 spcmp.oraridiapertura24.it#%#//scriptlet('trusted-click-element', 'button[title="Accettare"]')
 his-mobile.com##.cookieagree
@@ -3446,7 +3448,8 @@ bellroy.com#$#body { overflow-y: auto !important; }
 ||schoeck.com/Build/3134.7da4de8d.js
 newia.ru,dns.pl,bel.ru#%#//scriptlet('set-cookie', 'cookie-accepted', 'true')
 ||lahar.com.br^$third-party
-mydealz.de#%#//scriptlet('trusted-click-element', 'button[data-t^="acceptAll"]', '!cookie:cookie_policy_agreement', '1000')
+mydealz.de#%#//scriptlet('trusted-click-element', 'button[data-t="showCookiesSettings"]', '1200')
+mydealz.de#%#//scriptlet('trusted-click-element', 'button[data-t="rejectAll"]', '1200')
 ||kosik.cz/vue/*/CookieBarModal.
 ||cmp.*/*/consent-bundle-$domain=springer.com|nature.com|springernature.com
 springernature.com,nature.com,springer.com#$?#.cc-banner { remove: true; }
@@ -22685,6 +22688,7 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 ! Do not forget about '!#safari_cb_affinity' section for exclusions:
 ! LINK: AnnoyancesFilter/Popups/sections/antiadblock.txt#general
 !
+my.bidvert.com#$#.ad-wrapper.ads { display: block !important; }
 thebaynet.com##.newspack-popup-container
 sadistic.pl##.body-opacity-info
 pokeos.com#%#//scriptlet('prevent-fetch', 'www3.doubleclick.net')
@@ -25357,6 +25361,9 @@ aol.com#$#.ad__tile { height: 10px!important; position: absolute!important; left
 ! SECTION: Anti-adblock - The rules for content blockers only
 !#if (adguard_ext_safari || adguard_app_ios || adguard_ext_android_cb)
 !#safari_cb_affinity(general)
+my.bidvert.com#@#div[id^="div-gpt-"]
+my.bidvert.com#@#[id^="div-gpt-ad"]
+my.bidvert.com#@#.ad-wrapper
 @@||cdn.blueconic.net/hearst.js$domain=michigansthumb.com
 myshows.me#@#.adblock
 @@||myshows.me^$generichide
@@ -25564,6 +25571,7 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+waytofun.com.tw###popup-wrapper
 lol.ps##.svelte-hzsxmy
 jleague.jp##.popup
 mendozapost.com###stickynote-wrapper
@@ -34064,6 +34072,10 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 !
 ! SECTION: Subscriptions - Regular rules
 !
+vnexpress.net###box_register_mail
+newsletter.pragmaticengineer.com##div[class*=" _subscribeDialog_"] + div[class^="_background_"]
+newsletter.pragmaticengineer.com##div[class*=" _subscribeDialog_"]
+herodevs.com##.form-container_blog
 ladyblog.me###block-25
 thebaynet.com##div[class*="subscribe__style-"]
 prufy.ru##.recomend
@@ -41850,7 +41862,6 @@ truecaller.com#%#//scriptlet('set-cookie', 'tc:dismissexitintentpopup', 'true')
 sbermarket.ru##div[data-qa="b2c_home_landing_app_block"]
 freshauto.ru##.mobile-app-widget_big
 mydealz.de##.cept-banner-id-204
-marieclaire.com.tw##.adUnderlay
 liquipedia.net###networknotice-71
 music.yandex.ru##.head-kids__app
 ultimate-guitar.com##.spl-fixed-action
@@ -45533,6 +45544,8 @@ instagram.com##._aagw:empty
 ! End: Instagram.com
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/191602
+ign.com##div[data-cy="faceoff-view-trigger"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/191933
 dailystar.co.uk##.container > div[data-mod="renderRecommendation"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/191876
@@ -50821,6 +50834,8 @@ banki.ru##div[data-test="news-all-markdown"] > section > a[href^="https://www.ba
 !
 ! SECTION: Self-promo - Regular rules
 !
+300.ya.ru##.banner-container
+metro.co.uk##.trending-post-strip
 auto.ru##div[class="CardOfferBody__contentIsland"]
 auto.ru##.Modal:has(> div.Modal__container > div.Modal__content_wrapper div[class^="HelpSelectCarForm-"])
 regioactive.de##.sitebody > div.inner > div#slider
