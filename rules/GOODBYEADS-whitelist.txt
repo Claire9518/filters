@@ -2,9 +2,9 @@
 ! Title: GOODBYEADS
 ! Homepage: https://github.com/8680/GOODBYEADS
 ! Expires: 12 Hours
-! Version: 2024-11-12 09:37:09（北京时间）
+! Version: 2024-11-12 20:40:53（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 14629
+! Total count: 14632
 @@#.banner%20ad.$image,domain=dokuo666.blog98.fc2.com
 @@$csp=worker-src 'none',domain=uptostream.com
 @@$generichide,domain=stfly.cc
@@ -1836,6 +1836,7 @@
 @@||api.spendino.de/admanager^
 @@||api.splice.com/www/advertisement/community-explore$domain=splice.com
 @@||api.spotify.com/*?ids=$xmlhttprequest,stealth=3p-auth
+@@||api.spotify.com/v1/me|$xmlhttprequest,stealth=3p-auth
 @@||api.spotify.com/v1/playlists/$xmlhttprequest,stealth=3p-auth
 @@||api.sprig.com/sdk/$domain=paypal.com
 @@||api.surfeasy.com/*/geo_lookup$stealth
@@ -2137,6 +2138,7 @@
 @@||b-cloud.templatebank.com/js/gtag.js$~third-party
 @@||b.cdn13.com/*.mp4?$domain=xhamster.com
 @@||b.cdnst.net/javascript/amazon.js$domain=speedtest.net
+@@||b.cdnst.net/javascript/prebid.*.min.js$domain=speedtest.net
 @@||b.karte.io/event$domain=online.ysroad.co.jp
 @@||b.kavanga.ru/exp?sid=$domain=deita.ru
 @@||b.marfeelcache.com/statics/marfeel/prebid-worker/webworker.js$domain=ghacks.net
@@ -7508,6 +7510,7 @@
 @@||intoday.in/embeded/*_live?
 @@||inven.co.kr^$stealth=dpi
 @@||inven.co.kr^$stealth=ip
+@@||inven.com^$stealth=dpi
 @@||investing.com^$generichide
 @@||invodo.com^$domain=crutchfield.com
 @@||inwepo.co^$generichide
@@ -11055,7 +11058,7 @@
 @@||quizdiva.net^$generichide
 @@||quoteacademy.com^$generichide
 @@||r.*.tk/*/xox_*/jpeg$stealth
-@@||r.linksprf.com/v1/redirect?type=url$domain=pepper.pl
+@@||r.linksprf.com/v$domain=pepper.pl
 @@||r.trojmiasto.pl/adxmlrpc/json.php
 @@||r10s.jp/com/img/home/t.gif?$domain=24.rakuten.co.jp
 @@||r10s.jp/share/themes/ds/js/show_ads_randomly.js$domain=travel.rakuten.co.jp
