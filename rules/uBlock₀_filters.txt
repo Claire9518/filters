@@ -3147,30 +3147,30 @@ torrdroidforpc.com##[href^="http://slugmefilehos.xyz/"]
 
 ! Cryptocurrency Scams
 ||mevtime.com^$all
-||musk-project.com^$doc
-||muskusa.com^$doc
+||musk-project.com^$all
+||muskusa.com^$all
 ||cealits.com^$all
 ||pepzk-community.xyz^$all
-||earth-ling.org^$doc
-||muskevent.info^$doc
+||earth-ling.org^$all
+||muskevent.info^$all
 ||teslamaked.com^$all
 ||cryptomusk.io^$all
 ||youtube.com/@Tesla.debate_live2024^$doc
 ! https://github.com/uBlockOrigin/uAssets/issues/24296
 ! https://www.virustotal.com/gui/url/95c95990e40d0859a1766b2da6047f64d2faecee65d74669243d443c7c185ebf
 ! https://www.urlvoid.com/scan/teslafond.io/
-||teslafond.io^$doc
+||teslafond.io^$all
 ! https://github.com/uBlockOrigin/uAssets/issues/24590
-||teslacore.io^$doc
+||teslacore.io^$all
 ! https://github.com/uBlockOrigin/uAssets/issues/24734
 ||btc24.info^$all
 ||youtube.com/@tesla24official^$doc
 ! https://www.reddit.com/r/Scams/comments/1fjggp3/deepfake_of_elon_musk_promoting_a_scam_qr_code/
-||usmusk.net^$doc
+||usmusk.net^$all
 ! https://github.com/uBlockOrigin/uAssets/issues/25492
 ||foundations-x2024.*^$doc,to=foundations-x2024.*
-||foundations-x2024.cloud^$doc
-||foundations-x2024.sbs^$doc
+||foundations-x2024.cloud^$all
+||foundations-x2024.sbs^$all
 ! https://github.com/uBlockOrigin/uAssets/issues/25832
 ||trump-drop.org^$all
 ||youtube.com/@tesla.Iive.officiaI.24^$doc
@@ -3180,6 +3180,19 @@ torrdroidforpc.com##[href^="http://slugmefilehos.xyz/"]
 ! https://github.com/uBlockOrigin/uAssets/issues/26056
 ||stage3-last.$doc,to=~edu|~gov
 ||stage2024.$doc,to=~edu|~gov
+
+! xai scams
+/^https:\/\/xai\w+(?:\.\w+)?\.[a-z]{3,}\/presale\b/$doc,match-case,to=~edu|~gov
+||xaitoken.live^$all
+||investxai.pro^$all
+||xai85s.com^$all
+||xaitokensale.net^$all
+||xaitoken.$all,to=xaitoken.app|xaitoken.page.link|xaitoken.net
+! https://github.com/uBlockOrigin/uAssets/issues/25726#issuecomment-2483460915
+! https://www.reddit.com/r/CryptoScams/comments/1gv401z/xai_scam/
+||xaiofficial.com^$all
+||xaipresales.org^$all
+||xai19k.com^$all
 
 ||arbitragebot.team^$all
 ||arbitrageinstruction.media^$all
@@ -5932,3 +5945,24 @@ webflow.io##html.w-mod-js:not(.wf-active) > body:not([class]):not([id]) > a[clas
 ! https://github.com/uBlockOrigin/uAssets/issues/26102
 ||uploadfox.net^$inline-script
 uploadfox.net###ad-gs-05
+
+! https://github.com/uBlockOrigin/uBlock-issues/discussions/3461
+||allinoursite.com^$doc
+||bteux.com^$doc
+||doorsstormsy.shop^$doc
+||emailservicesnetau.com^$doc
+||euromaillinnk.com^$doc
+||findthorman.shop^$doc
+||glaters.com^$doc
+||keydoordasher.shop^$doc
+||makitfornows.com^$doc
+||mybach.xyz^$doc
+||threeneptuneboot.com^$doc
+/unsub/unsub^$doc
+/unsub_sent.php|$doc,method=post
+##html > body.hold-transition.theme-primary.bg-img[style^="background-image"][style*="wallpaperaccess.com"][style*="background-repeat"][style*="background-size"]
+##html > body > div.container > form#unsubscribe-form[onsubmit="submitUnsubscribeForm(event)"]
+
+! Pretending to be a government service
+||detranrapido.co^$all
+||pagamentocnh.com^$all
