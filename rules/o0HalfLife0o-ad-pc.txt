@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Checksum: 2bmxSdBx+JGDwBvwV2gGQQ
+! Checksum: 5nMn0ckwm6hSFEVbR+12dQ
 ! Title: My AdFilters（for PC）
 ! Expires: 12 hours
-! Version: 202411210801
-! Last Modified: 2024年11月21日 08:01
+! Version: 202411212000
+! Last Modified: 2024年11月21日 20:00
 ! Homepage: https://adf.minggo.eu.org
 ! 本规则合并自乘风视频广告过滤规则、Easylist、EasylistChina、EasyPrivacy、CJX'sAnnoyance
 ! 并补充了贴吧过滤规则，感谢各位前辈的分享！
@@ -799,7 +799,7 @@ tieba.baidu.com##.tuijian-wrap
 /amp4ads-host-v0.js$script
 /ane-popup-1/ane-popup.js$script
 /ane-popup-banner.js$script
-/api.ads.$domain=~ads.instacart.com|~www.ads.com
+/api.ads.$script,domain=~ads.instacart.com|~www.ads.com
 /api/ad.$script
 /api/ads?
 /api/users?token=$subdocument,third-party
@@ -55738,7 +55738,7 @@ thisismoney.co.uk###fiveDealsWidget
 point2homes.com,propertyshark.com###fixedban
 topsporter.net###fl-ai-widget-placement
 vscode.one###flamelab-convo-widget
-apkmody.mobi###flirtwith-modal
+apkmody.io,apkmody.mobi###flirtwith-modal
 nanoreview.net###float-sb-right
 animetrilogy.com###floatcenter
 editpad.org###floorad-wrapper
@@ -59464,7 +59464,7 @@ letsgodigital.org##.product__wrapper
 nymag.com##.products-package
 nymag.com##.products-package_single
 kohls.com##.products_grid.sponsored-product
-amtraktrains.com##.productslider
+amtraktrains.com,kitchenknifeforums.com##.productslider
 filehippo.com##.program-actions-header__promo
 filehippo.com##.program-description__slot
 as.com,gokunming.com##.prom
@@ -61023,6 +61023,7 @@ elitepvpers.com##[width="966"]
 presearch.com##[x-data*="kwrdAdFirst"]
 mobiforge.com##a > img[alt="Ad"]
 eztv.tf,eztv.yt##a > img[alt="Anonymous Download"]
+designtaxi.com##a.a-click[target="_blank"]
 cript.to##a.btn[target="_blank"][href^="https://cript.to/"]
 infowars.com##a.css-1yw960t
 darkreader.org##a.logo-link[target="_blank"]
@@ -61669,6 +61670,8 @@ forexlive.com##.article-slot__wrapper:has(.article-header__sponsored)
 time.com##.article-small-sidebar > .sticky-container:has(div[id^="ad-"])
 blitz.gg##.aside-content-column:has(.display-ad)
 olympics.com##.b2p-list__item:has(> .adv-fluid)
+bing.com##.b_algo:has(.rms_img[src*="/th?id=OADD2."][src$="21.2"])
+bing.com##.b_algo:has(.rms_img[src*="=AdsPlus"])
 atlanticsuperstore.ca,fortinos.ca,maxi.ca,newfoundlandgrocerystores.ca,nofrills.ca,provigo.ca,realcanadiansuperstore.ca,valumart.ca,yourindependentgrocer.ca,zehrs.ca##.block-wrapper:has(.element-header__sponsoredLabel)
 loblaws.ca##.block-wrapper:has([data-track-product-component="carousel||rmp_sponsored"])
 haveibeenpwned.com##.bodyGradient > :has(.why1Password)
@@ -61828,6 +61831,7 @@ skyscanner.com,skyscanner.net##div > a:has(div[class^="DefaultBanner_sponsorship
 manomano.co.uk,manomano.de,manomano.es,manomano.fr,manomano.it##div > div:has([data-testid="banner-spr-label"])
 inverse.com##div > p + div:has(amp-ad)
 outlook.live.com##div.customScrollBar > div > div[id][class]:has(img[src$="/images/ads-olk-icon.png"])
+androidauthority.com##div.d_mh:has-text(Latest deals)
 flightradar24.com##div.items-center.justify-center:has(> div#pb-slot-fr24-airplane:empty)
 douglas.at,douglas.be,douglas.ch,douglas.cz,douglas.de,douglas.es,douglas.hr,douglas.hu,douglas.it,douglas.nl,douglas.pl,douglas.pt,douglas.ro,douglas.si,douglas.sk##div.product-grid-column:has(button[data-testid="sponsored-button"])
 costco.ca##div.product:has(.criteo-sponsored)
@@ -66131,11 +66135,16 @@ newduba.cn###jq_youxi
 ||67.21.92.*.gif
 ||cnzz.trafficmanager.net^
 ||cupfox.app^$third-party
+||aoao11211iis.top^
+||luunels.com^
+||qcixkb1.xyz^
 ||nois5gj.xyz^
 ||qhestrad.com^
 ||vkbxaixl.icu^
 ||daiitmk.cn^
 ||syfgtby.cn^
+||hweizau.top^
+||1jok.icu^
 ||ilzies.com^
 ||cdlekgr.icu^
 ||cxvyk.com^
@@ -83037,7 +83046,7 @@ _rony.js$script,third-party
 ||lalabaos1*.top/$script,third-party
 /\.[a-z]oubli[a-z].top\//$script,third-party
 /\.[a-z]yjqgp[a-z].top\//$script,third-party
-.aoao111*iis.top/$script,third-party
+.aoao11*iis.top/$script,third-party
 /\.[a-z]weisi[a-z].top\//$script,third-party
 $script,subdocument,~third-party,websocket,xmlhttprequest,domain=m.6666xsw.com|m.chenkuan.com|m.jmshuwu.net|wodexiaoshuoh.com
 !#Novels
@@ -93021,6 +93030,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||userway.org/api/v1/stats
 ||usizy.com/external/pageview
 ||usr.interactiveone.com^
+||utics.nodejibi.in^
 ||utils.global-e.com/set?
 ||utt.pm/utm/
 ||v.shopify.com^
@@ -95000,6 +95010,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||events-tracker.deliveroo.net^
 ||events.api.godaddy.com^
 ||events.baselime.io^
+||events.bsky.app^
 ||events.character.ai^
 ||events.clips4sale.com^
 ||events.framer.com^
@@ -131998,7 +132009,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||stg-deeplink.ring.md^
 ||store.echovisuals.com^
 ||store.esquirrel.at^
-||stream.9now.com.au^
 ||studio.joinsalut.com^
 ||subito.openapp.link^
 ||summary.instaread.co^

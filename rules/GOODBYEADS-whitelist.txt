@@ -2,7 +2,7 @@
 ! Title: GOODBYEADS
 ! Homepage: https://github.com/8680/GOODBYEADS
 ! Expires: 12 Hours
-! Version: 2024-11-20 20:42:24（北京时间）
+! Version: 2024-11-21 09:43:51（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
 ! Total count: 14662
 @@#.banner%20ad.$image,domain=dokuo666.blog98.fc2.com
@@ -389,7 +389,6 @@
 @@/themes/flow/frontend_assets/js/advertisement.js|$~third-party
 @@/token/*/master.mp4$stealth,domain=anilife.*
 @@/track?*&ref=$~script,~xmlhttprequest,~other,~image
-@@/track?vid=*&mime=video/mp4&*&domain=*.drive.google.com$stealth,domain=kissasian.sh
 @@/track_click?$~script,~xmlhttprequest,~other,~image
 @@/tracking.php?id$domain=a1.express
 @@/tracking.php?id$domain=esisk.de
@@ -401,7 +400,6 @@
 @@/urchin.js$domain=on.cc
 @@/video/*$media,stealth,domain=douyin.com
 @@/video/*/index.m3u8?*&frame_commit=*&mw_pid=*&signature=$stealth
-@@/videoplayback?vid=*.drive.google.com&*&mime=video/mp4$stealth,domain=kissasian.sh
 @@/videos/*$domain=pornhub.com|pornhub.org|pornhub.net
 @@/viewad.$stylesheet,script,domain=adz7short.space|short.croclix.me|short.goldenfaucet.io
 @@/walla_vod/*$domain=walla.co.il
@@ -2187,6 +2185,7 @@
 @@||bam.nr-data.net^$script,domain=play.spotify.com
 @@||bam.nr-data.net^$xmlhttprequest,domain=abema.tv
 @@||bamgrid.com^$stealth,domain=disneyplus.com
+@@||bamgrid.com^$stealth=3p-auth|useragent
 @@||bams.my.id^$generichide
 @@||banaraswap.in^$xmlhttprequest,domain=techcyan.com
 @@||bancobrasil.com.br^$stealth=dpi
@@ -2367,6 +2366,7 @@
 @@||bing.com/translator/api/Translate/TranslateArray?$third-party,xmlhttprequest
 @@||bing.com/translator/dynamic/*/js/$elemhide,jsinject
 @@||bing.com^$generichide
+@@||bing.com^$stealth=ip
 @@||bingfeng.tw/source/plugin/unadblock/*_ads_*.js
 @@||biochemden.com^$generichide
 @@||biopills.net/wp-content/plugins/ad-inserter/*/*.js
