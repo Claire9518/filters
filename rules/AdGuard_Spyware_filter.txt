@@ -730,7 +730,6 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ||adtrack.adleadevent.com^
 ||metrics-fe-na1.hubspot.com^
 ||pixel.mintigo.com^
-||au1.qualtrics.com^
 ||siteintercept.qualtrics.com^
 ||dmp.one^$third-party
 ||dmp-ai.ru^$third-party
@@ -43002,6 +43001,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||au1.qualtrics.com^$third-party
 ||stats.amur.life^
 ||pixel.smartnews.com^
 ||pixel.dev.smartnews.com^
@@ -43557,6 +43557,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ||mcs-sg.tiktok.com^
 ||mssdk.bytedance.com^
 ||mssdk-sg.tiktok.com^
+||mssdk-*.tiktokw.us^
 ||mssdk-sg.byteoversea.com^
 ||tracker.smartseminar.jp^
 ||tracker.shanon-services.com^
@@ -98763,6 +98764,7 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||uploadfox.net/events/
 ||coopmobile.ch/analytics/at.js
 ||edge.curalate.com/api/v1/metrics/
 ||tiktok.com/web/report^
@@ -104884,6 +104886,7 @@ inapps.appsflyersdk.com^
 !
 ! NOTE: Regular rules
 !
+||caerulus.io^
 ||log.heartratepros.com^
 ||hw-sh-pcdn-*.biliapi.net^
 ||ali-bj-pcdn-*.biliapi.net^
@@ -105584,7 +105587,6 @@ inapps.appsflyersdk.com^
 ||zdbb.net^
 !
 ! TikTok
-||log-boot.tiktokv.com^
 ||log*-normal-*.tiktokv.us^
 ||sf16-telemetry-proxy-oci.tiktokcdn-us.com^
 ||mon*-platform-*.tiktokv.com^
@@ -105604,6 +105606,8 @@ inapps.appsflyersdk.com^
 ||mcs-va.tiktokv.com^
 ||mcs-va-*.tiktokv.com^
 ||analytics.tiktok.com^
+! https://github.com/AdguardTeam/AdguardFilters/issues/193267
+!||log-boot.tiktokv.com^
 !
 ! UC Browser
 ||localytics.com^
