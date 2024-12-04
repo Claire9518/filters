@@ -108279,6 +108279,9 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||api.novakidschool.com/api/*/metrics|
+||novakid.*/blog/wp-content/themes/novakid/public/build/js/metric.js
+||secure.planetfootball.com/tag/*/tag.js
 ||httpstatus.io/analytics/api/send
 ||account.protonvpn.com/api/data/v1/metrics
 ||dutchie.com/telemetry|
@@ -116710,9 +116713,6 @@ goodwillfinds.com#%#//scriptlet("set-constant", "_etmc", "emptyArr")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/118188
 !+ NOT_PLATFORM(windows, mac, android, ext_chromium)
 @@||ugdturner.com/xd.sjs$domain=nba.com
-! https://github.com/AdguardTeam/AdguardFilters/issues/117335
-@@||googletagmanager.com/gtag/js?id=$domain=autofaucet.dutchycorp.space
-||googletagmanager.com/gtag/js?id=$script,other,redirect=noopjs,domain=autofaucet.dutchycorp.space,important
 ! https://github.com/AdguardTeam/AdguardFilters/issues/117564
 !+ PLATFORM(ios, ext_android_cb, ext_safari)
 @@||googletagmanager.com/gtm.js$domain=secure.sakura.ad.jp
