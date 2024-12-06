@@ -1952,6 +1952,8 @@ motherless.com$$script[tag-content="awentw.com"][min-length="2000"][max-length="
 @@||api.apptentive.com^$app=de.mcdonalds.mcdonaldsinfoapp
 @@||customer.iad-03.braze.com^$app=de.burgerking.kingfinder
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/193869
+@@||imasdk.googleapis.com^$app=com.july.cricinfo
 ! https://github.com/AdguardTeam/AdguardFilters/issues/192893
 ! Fixing app update
 @@||ad1.vibio.tv^$app=mobi.zona
@@ -2724,6 +2726,8 @@ sp.manga.nicovideo.jp##div[style^="--ads-width:"]
 !
 ! SECTION: Regular rules
 !
+lokmattimes.com##.trendingBarMobile:empty
+lokmattimes.com##.Mobile_ATF
 m-apps.qoo-app.com###bottom-fixed-ad
 m-apps.qoo-app.com###bottom-fixed-ad + ins
 bellesa.co##div[class^="MediaQuery__Query-"]:has(div[class^="Display__RatioOuter"] > div[class^="Display__RatioInner"] > div > iframe[src^="https://go.go-srv.com/"])
