@@ -99,6 +99,8 @@ spletnik.ru#%#//scriptlet('set-local-storage-item', '/^_ym/', '$remove$')
 spletnik.ru#%#//scriptlet('set-local-storage-item', 'adrcid', '$remove$')
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/194454
+ohmynews.com#%#//scriptlet('set-constant', 'GA_Event', 'noopFunc')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/193023
 hgtv.com#%#//scriptlet('remove-class', 'block-user', '#root.block-user')
 hgtv.com#$#.block-user * { opacity: 1 !important; pointer-events: auto !important; touch-action: auto !important; }
@@ -608,6 +610,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 !
 !
 !
+||gw-dv.vip^
 ||trk.svr-algorix.com^
 ||tpi-app.herokuapp.com^
 ||api.rvere.com^
@@ -43875,6 +43878,9 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||f793.inc.com^
+||mytop.live.vkvideo.ru^
+||f703.twincities.com^
 ||event.newsbreak.com^
 ||pixel-static.spotify.com^
 ||pixel-config.reddit.com^
@@ -115330,6 +115336,11 @@ inapps.appsflyersdk.com^
 !@@||mc.yandex.ru/metrika/watch.js$domain=
 !#endif
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/194454
+!#if (adguard_ext_safari || adguard_app_ios || adguard_ext_android_cb)
+@@||ohmynews.com/NWS_Web/Common/JS/TagManager.JS
+@@||googletagmanager.com/gtm.js$domain=ohmynews.com
+!#endif
 ! https://github.com/easylist/easylist/pull/20815
 @@||googletagmanager.com/gtm.js$domain=almamedia.fi
 ! https://github.com/AdguardTeam/AdguardFilters/issues/194011
