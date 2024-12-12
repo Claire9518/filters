@@ -43878,6 +43878,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||profile-api.amplitude.com^
 ||f793.inc.com^
 ||mytop.live.vkvideo.ru^
 ||f703.twincities.com^
@@ -44126,26 +44127,6 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ||topspin.npo.nl^
 ||collect.stepstone.co.uk^
 ||analytics.poferries.com^
-||v225.ksbw.com^
-||k030.koco.com^
-||u082.wapt.com^
-||f361.wvtm13.com^
-||t733.wjcl.com^
-||r255.wmtw.com^
-||j178.wmur.com^
-||p769.wgal.com^
-||v066.wxii12.com^
-||s811.ketv.com^
-||m886.kmbc.com^
-||w110.kcra.com^
-||u999.wcvb.com^
-||e459.kcci.com^
-||h019.wtae.com^
-||y000.wyff4.com^
-||q511.wpbf.com^
-||c677.wisn.com^
-||u578.wlwt.com^
-||e993.wlky.com^
 ||collect.biomedcentral.com^
 ||eproof.drudgereport.com^
 ||doppler-beacon.cbsivideo.com^
@@ -46484,42 +46465,70 @@ charlestownwyllie.oaklawnnonantum.com^
 ||log2.musical.ly^
 ||xlog-va.musical.ly^
 !
+! Hearst Television Inc (blueconic.net analytics)
+!
+||v225.ksbw.com^
+||k030.koco.com^
+||u082.wapt.com^
+||f361.wvtm13.com^
+||t733.wjcl.com^
+||r255.wmtw.com^
+||j178.wmur.com^
+||p769.wgal.com^
+||v066.wxii12.com^
+||s811.ketv.com^
+||m886.kmbc.com^
+||w110.kcra.com^
+||u999.wcvb.com^
+||e459.kcci.com^
+||h019.wtae.com^
+||y000.wyff4.com^
+||q511.wpbf.com^
+||c677.wisn.com^
+||u578.wlwt.com^
+||e993.wlky.com^
+||v063.4029tv.com^
+||y494.wdsu.com^
+||b932.wesh.com^
+!
 ! blueconic.net on hearst.com sites
-||c993.westport-news.com^
 ||d276.ourmidland.com^
 ||d810.mysanantonio.com^
 ||f164.sheltonherald.com^
 ||f775.thehour.com^
-||f857.hearstmediatx.com^
 ||h353.ncadvertiser.com^
 ||h559.stamfordadvocate.com^
-||j158.hearstmediact.com^
 ||j198.registercitizen.com^
+||l029.recordpatriot.com^
 ||l936.expressnews.com^
 ||l997.lmtonline.com^
+||m367.michigansthumb.com^
+||m700.bigrapidsnews.com^
 ||n730.timesunion.com^
 ||o398.trumbulltimes.com^
 ||p593.seattlepi.com^
 ||q777.sfchronicle.com^
 ||r541.houstonchronicle.com^
 ||s232.theintelligencer.com^
+||t002.myjournalcourier.com^
 ||t570.wiltonbulletin.com^
 ||t810.ctpost.com^
 ||u566.chron.com^
 ||u652.myplainview.com^
+||u660.theheraldreview.com^
+||u896.weekand.com^
 ||u927.sfgate.com^
-||w020.newmilfordspectrum.com^
+||v812.lakecountystar.com^
 ||w740.newstimes.com^
 ||w982.middletownpress.com^
 ||x822.mrt.com^
-||y653.theridgefieldpress.com^
 ||y738.nhregister.com^
 ||y752.milfordmirror.com^
 ||y820.darientimes.com^
 ||y900.greenwichtime.com^
+||z210.manisteenews.com^
 ||z211.yourconroenews.com^
 ||z492.ctinsider.com^
-||z590.fairfieldcitizenonline.com^
 ||z680.beaumontenterprise.com^
 ||z929.fuelfix.com^
 !
@@ -107748,6 +107757,7 @@ zjjz6lpv44aguszo.cloud.s11.sfmc-osl.com$image
 ! ZhugeIO
 /zhugeio.js
 !
+/xhr/api/v2/collector
 /eclytics/*
 /app.php/ads/*
 /loader-wp/static/loader.min.js?
@@ -108641,7 +108651,6 @@ tousatu-ch.net##.widget_custom_html:has(> div.textwidget > div[style^="width: 10
 ||manoramaonline.com/acd/api/*/authorize/json?brand=*&ev_sid=
 ||yag.redefine.pl/events/
 ||wish.com/api/analytics/
-||stockx.com/*/xhr/api/v2/collector|
 ||execute-api.*.amazonaws.com/event|
 ||ridge.com/cdn/shopifycloud/media-analytics/
 ||cdn.boostcommerce.io/analytic/
@@ -108664,7 +108673,6 @@ pcmag.com##img[src^="https://t.myvisualiq.net/"]
 ||totaljobs.com/analytics/api/v1/tracking
 /^https:\/\/www\.totaljobs\.com\/[a-zA-Z0-9]+\/[a-zA-Z0-9]+\/[a-zA-Z0-9]\/[a-zA-Z0-9]+\/[a-zA-Z0-9]+\/[a-zA-Z0-9]+\/[a-zA-Z0-9]+\/[a-zA-Z0-9]+/$script,xmlhttprequest,domain=totaljobs.com
 ||blog.germanos.gr/core/*/statistics.php
-||erli.pl/*/xhr/api/v2/collector
 ||erli.pl/*/xhr/b/s|$xmlhttprequest
 ||api.streamelements.com/science/
 ||streamelements.com/z/i.js
@@ -108775,7 +108783,6 @@ erostopics.net###custom_html-137
 erostopics.net###related-box
 ||cdn.dzen.ru/pingx
 ||suggest.sso.dzen.ru/clck/$image
-manisteenews.com##div:has(> img[src^="https://cdn-channels-pixel.ex.co/"])
 ||cdn.rvohealth.com/preamp/api/*/decisions|
 ||api.cgyx.tv:66/tj/tongji.js
 ||checkoutshopper-live.adyen.com/checkoutshopper/images/analytics.png?
@@ -112371,8 +112378,11 @@ dreamprogs.net##td[width="88"][height="31"]
 ! do not block some requests from `/cadmium/` path - the videos won't play
 ||netflix.com*/msl*/*logblob*/
 !
+! Hearst Television Inc
+/script.js|$~third-party,domain=4029tv.com|98online.com|abc-7.com|hearst.com|kcci.com|kcra.com|ketv.com|kmbc.com|koat.com|koco.com|ksbw.com|mor-tv.com|mynbc5.com|nbc-2.com|wapt.com|wbal.com|wbaltv.com|wcvb.com|wdsu.com|wesh.com|wgal.com|wisn.com|wjcl.com|wlky.com|wlwt.com|wmtw.com|wmur.com|wpbf.com|wptz.com|wtae.com|wvtm13.com|wxii12.com|wyff4.com
+!
 ! blueconic.net on hearst.com sites
-/script.js|$~third-party,domain=beaumontenterprise.com|chron.com|ctinsider.com|ctpost.com|darientimes.com|expressnews.com|fairfieldcitizenonline.com|fuelfix.com|greenwichtime.com|hearstmediact.com|hearstmediatx.com|houstonchronicle.com|lmtonline.com|middletownpress.com|milfordmirror.com|mrt.com|myplainview.com|mysanantonio.com|ncadvertiser.com|newmilfordspectrum.com|newstimes.com|nhregister.com|ourmidland.com|registercitizen.com|seattlepi.com|sfchronicle.com|sfgate.com|sheltonherald.com|stamfordadvocate.com|thehour.com|theintelligencer.com|theridgefieldpress.com|timesunion.com|trumbulltimes.com|westport-news.com|wiltonbulletin.com|yourconroenews.com
+/script.js|$~third-party,domain=beaumontenterprise.com|bigrapidsnews.com|chron.com|ctinsider.com|ctpost.com|darientimes.com|education.seattlepi.com|expressnews.com|fuelfix.com|greenwichtime.com|houstonchronicle.com|lakecountystar.com|lmtonline.com|manisteenews.com|michigansthumb.com|middletownpress.com|milfordmirror.com|mrt.com|myjournalcourier.com|myplainview.com|mysanantonio.com|ncadvertiser.com|newstimes.com|nhregister.com|ourmidland.com|recordpatriot.com|registercitizen.com|seattlepi.com|sfchronicle.com|sfgate.com|sheltonherald.com|smallbusiness.chron.com|stamfordadvocate.com|theheraldreview.com|thehour.com|theintelligencer.com|thethetelegraph.com|timesunion.com|trumbulltimes.com|weekand.com|wiltonbulletin.com|work.chron.com|yourconroenews.com
 !
 ! https://github.com/AdguardTeam/AdguardForAndroid/issues/249
 ||do-not-tracker.org^$third-party
@@ -114448,6 +114458,9 @@ inapps.appsflyersdk.com^
 !
 ! NOTE: Regular rules
 !
+||mon-boot.capcutapi.com^
+||mon-va-us-looki.capcutapi.com^
+||metrics-prod.suno.com^
 -ulogl*.kwai-pro.com^
 ||ulog*.kwaipros.com^
 ||snowplow-collector.
@@ -119227,7 +119240,7 @@ kizi.com#%#window.google_trackConversion = function() {};
 @@||adobetag.com/d1/ewscripps/live/SNIFoodCategory.js$domain=food.com
 @@||adobetag.com/d1/octagoncommerce/live/metrics.js$domain=1saleaday.com
 @@||adobetag.com^*/amc.js$script
-@@||adobetag.com^*/sitecatalyst.js$domain=hbf.com.au|seattlepi.com|tv.com
+@@||adobetag.com^*/sitecatalyst.js$domain=hbf.com.au|tv.com
 @@||adobetag.com^*/sitecatalystnew.js$domain=playstation.com
 @@||adobetag.com^*s_code.js$domain=fnac.com
 @@||aflac.com/js/wt_capi.js
