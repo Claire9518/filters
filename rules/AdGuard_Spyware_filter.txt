@@ -43879,6 +43879,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||afl.rozetka.com.ua^
 ||c783.fastcompany.com^
 ||event.northghost.com^
 ||profile-api.amplitude.com^
@@ -112251,7 +112252,6 @@ dreamprogs.net##td[width="88"][height="31"]
 ||ostkcdn.com/js/ostk-user-tracking-*.js
 ||ostkcdn.com/js/thirdparty/siteIntercept.*.js
 ||pardot.com/pd.js
-||partner.rozetka.com.ua/ret_pixels/
 ||paypal.com/webapps/beaconweb/
 ||paypal.com^*/pixel.gif$third-party
 ||pcgames.de/webservices/socialShareCount.php
@@ -112297,7 +112297,6 @@ dreamprogs.net##td[width="88"][height="31"]
 ||ria.ru/polling?ticket=
 ||riotgames.com/m.gif
 ||rl0.ru/*/dist/post.js$domain=www.rambler.ru
-||rozetka.com.ua/w/?
 ||ruslab.net/a/p.js
 ||russianfood.com/js/informb_stat.core.js
 ||s.d.adup-tech.com/services/track.js
@@ -114526,6 +114525,7 @@ inapps.appsflyersdk.com^
 !
 ! NOTE: Regular rules
 !
+||stats.samsungpass.com^
 ||analytics.google.com^$domain=analytics.google.com
 ||log.pdfviewerscannerstore.live^
 ||mon-boot.capcutapi.com^
@@ -114564,7 +114564,6 @@ inapps.appsflyersdk.com^
 ||ali-bj-pcdn-*.biliapi.net^
 ||tatrack.thinkyeah.com^
 -rtb.gravite.net^
-||sdk-04.moengage.com^
 ||mon*-misc-lf.fqnovel.com^
 ||vcs.zijieapi.com^
 ||monsetting.toutiao.com^
@@ -115106,7 +115105,7 @@ inapps.appsflyersdk.com^
 ||geoplugin.net^
 ||d.applvn.com^
 ||rt.applvn.com^
-||apiv2.moengage.com^
+||moengage.com^
 ||rt.applovin.com^
 ||track.uc.cn^
 ||uc.ucweb.com^
@@ -115419,6 +115418,9 @@ inapps.appsflyersdk.com^
 !@@||mc.yandex.ru/metrika/watch.js$domain=
 !#endif
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/194142
+!+ PLATFORM(ext_android_cb)
+@@||habr.com/img/px.gif?
 ! https://github.com/AdguardTeam/AdguardFilters/issues/194417
 !+ PLATFORM(windows, mac, android)
 ||vgwort.de^$image,redirect-rule=1x1-transparent.gif,domain=experte.de
