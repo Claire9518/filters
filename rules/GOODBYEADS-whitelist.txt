@@ -2,9 +2,9 @@
 ! Title: GOODBYEADS
 ! Homepage: https://github.com/8680/GOODBYEADS
 ! Expires: 12 Hours
-! Version: 2024-12-19 20:42:51（北京时间）
+! Version: 2024-12-20 09:40:42（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 14514
+! Total count: 14508
 @@#.banner%20ad.$image,domain=dokuo666.blog98.fc2.com
 @@$csp=worker-src 'none',domain=uptostream.com
 @@$generichide,domain=stfly.cc
@@ -487,7 +487,6 @@
 @@truyen$stealth,image,domain=blogtruyen.vn
 @@weather.gov/xml/$document
 @@ws://localhost^$stealth,domain=play.sooplive.co.kr
-@@www.any.gs$urlblock
 @@yandex.*/user-id?$stealth=referrer|searchqueries
 @@|/wp-content/plugins/*/assets/fuckadblock.js
 @@|blob:https://www.twitch.tv
@@ -1200,7 +1199,6 @@
 @@||adserver.rhombusads.com/api/$domain=spin.com
 @@||adserver.skiresort-service.com/www/delivery/spcjs.php?$script,domain=skiresort.de|skiresort.fr|skiresort.info|skiresort.it|skiresort.nl
 @@||adservice.google.*/adsid/integrator.js$domain=paramountplus.com
-@@||adservice.google.*/adsid/integrator.js$domain=reuters.com
 @@||adservice.google.*/adsid/integrator.js$domain=soranews24.com
 @@||adservice.google.*/adsid/integrator.js$domain=thehouseofportable.com
 @@||adservice.google.*/adsid/integrator.js?domain=dl.ccbluex.net$domain=dl.ccbluex.net
@@ -2549,6 +2547,7 @@
 @@||bytecdntp.com^$script,domain=51eshu.com
 @@||bytedance.com/ttwid/union/register/
 @@||bytegoofy.com/ad/$domain=jinritemai.com
+@@||c-web.cedyna.co.jp/customer/img/spacer.gif?$~third-party
 @@||c.ad6media.fr/l.js$domain=scan-manga.com
 @@||c.adsco.re/|$domain=adshnk.com
 @@||c.adsco.re/|$script,domain=hotfrog.*
@@ -3040,15 +3039,15 @@
 @@||cdn.segment.com/analytics.js/*/analytics.min.js$domain=stacksocial.com
 @@||cdn.segment.com/analytics.js/*/analytics.min.js$domain=surfline.com
 @@||cdn.segment.com/analytics.js/v*/*/analytics.min.js$domain=learning.edx.org
-@@||cdn.segment.com/analytics.js/v*/*/analytics.min.js$domain=reuters.com
 @@||cdn.segment.com/analytics.js/v1/*/analytics.min.js$domain=shop.fender.com
 @@||cdn.segment.com/analytics.js^$domain=authenticate.trustpilot.com
 @@||cdn.segment.com/analytics.js^$domain=creativemarket.com
 @@||cdn.segment.com/analytics.js^$domain=crunchyroll.com
 @@||cdn.segment.com/analytics.js^$domain=freshly.com
+@@||cdn.segment.com/next-integrations/actions/*.js$domain=reuters.com
 @@||cdn.segment.com/next-integrations/integrations/
-@@||cdn.segment.com/v*/projects/*/settings$domain=reuters.com
 @@||cdn.segment.com/v1/projects/
+@@||cdn.segment.com/v1/projects/*/settings$domain=reuters.com
 @@||cdn.segmentify.com/*/segmentify.css$domain=koctas.com.tr
 @@||cdn.segmentify.com/*/segmentify.js$domain=gratis.com
 @@||cdn.segmentify.com/*/segmentify.js$domain=koctas.com.tr
@@ -9000,7 +8999,6 @@
 @@||nazolog.com^$generichide
 @@||nb-music.net^$generichide
 @@||nbaapi.neulion.com/api_nba/$stealth,domain=nba.com
-@@||nbc.com/generetic/scripts/ads.js
 @@||nbcolympics.com/profiles/olympics/*$domain=nbcolympics.com
 @@||nbcume.sc.omtrdc.net/id?d_visid_ver=$domain=nbcdfw.com,important
 @@||nbe.com.eg/NBEeChannelManager/CallMW.aspx$~third-party
@@ -11141,7 +11139,6 @@
 @@||retailmenot.com/__wsm.gif$ping,~third-party,xmlhttprequest
 @@||retronetwork.net/images/*_banner.gif
 @@||retweetpicker.com^$generichide
-@@||reuters.com/ads.js|
 @@||reuters.com^$generichide
 @@||reutersmedia.net/resources^
 @@||reutersmedia.net/resources_v*/js/rcom-scroll-tracker.js$domain=reuters.com
@@ -11533,7 +11530,6 @@
 @@||securepubads.g.doubleclick.net/gampad/ads?gdfp_req=1$domain=forums.hardwarezone.com.sg
 @@||securepubads.g.doubleclick.net/gampad/ads?gdfp_req=1$domain=gq-magazine.co.uk
 @@||securepubads.g.doubleclick.net/gampad/ads?gdfp_req=1$domain=joe.ie|joe.co.uk
-@@||securepubads.g.doubleclick.net/gampad/ads?gdfp_req=1$domain=reuters.com
 @@||securepubads.g.doubleclick.net/gampad/ads?gdfp_req=1$domain=thedailybeast.com
 @@||securepubads.g.doubleclick.net/gampad/ads?gdfp_req=1$domain=vogue.ru
 @@||securepubads.g.doubleclick.net/gampad/ads?gdfp_req=1$domain=wired.com
@@ -11558,7 +11554,6 @@
 @@||securepubads.g.doubleclick.net/gpt/pubads_impl_$domain=nbcsports.com
 @@||securepubads.g.doubleclick.net/gpt/pubads_impl_$domain=plug.dj
 @@||securepubads.g.doubleclick.net/gpt/pubads_impl_$domain=rappler.com
-@@||securepubads.g.doubleclick.net/gpt/pubads_impl_$domain=reuters.com
 @@||securepubads.g.doubleclick.net/gpt/pubads_impl_$domain=southwalesargus.co.uk
 @@||securepubads.g.doubleclick.net/gpt/pubads_impl_$domain=techadvisor.co.uk
 @@||securepubads.g.doubleclick.net/gpt/pubads_impl_$domain=tvmovie.de
@@ -13201,7 +13196,6 @@
 @@||tpc.googlesyndication.com/pagead/imgad?id=$domain=nbc.com
 @@||tpc.googlesyndication.com/pagead/js/$domain=googleads.g.doubleclick.net
 @@||tpc.googlesyndication.com/pagead/js/adsbygoogle.js$domain=sportshub.to
-@@||tpc.googlesyndication.com/safeframe/*/html/container.html$domain=reuters.com
 @@||tpc.googlesyndication.com/safeframe/*/html/container.html$xmlhttprequest,domain=megainteresting.com
 @@||tpc.googlesyndication.com/simgad/$domain=a2zapk.io,image
 @@||tpc.googlesyndication.com/simgad/$domain=dropgalaxy.com
