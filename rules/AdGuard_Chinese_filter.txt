@@ -940,7 +940,7 @@ popbee.com##.adblocker
 ##a[href^="https://adm.beimg.com/"]
 ! 91porny
 ! https://github.com/AdguardTeam/AdguardFilters/issues/190664
-##header + main > div[class$=" block"][id="rd0"][data-v-app]
+##.row > div.colVideoList:has(> div.video-elem > a[target="_blank"])
 
 !---------------------------------------------------------------------------!
 !-------------- General javascript, CSS and HTML extensions ----------------!
@@ -1323,6 +1323,9 @@ $script,third-party,denyallow=fastlycdn.com|doodcdn.co|intensedebate.com|vixclou
 !
 ! NOTE: Specific rules
 !
+||johojima.com/wp-content/uploads/*/bnr_*.jpg
+||johojima.com/wp-content/uploads/*/cropped-johojima_fabicon-*.jpg
+||johojima.com/wp-content/uploads/*/bn_*.jpg
 sto.cx##div[id^="ContAD"]
 ||sto.cx/skin/a_autoSize*.js
 4gamers.com.tw##div[style="min-height: 210px;"]
@@ -1445,7 +1448,6 @@ mirrormedia.mg##div[class^="gpt-placeholder"]
 mirrormedia.mg##div[class^="related-article-list__AdvertisementWrapper"]
 apachecn.org###coo_banner_WideScreen
 apachecn.org##.md-banner
-x9av1.com,jsav2.com##.row > div.colVideoList:not(:has(> div.video-elem > a[href^="/video"]))
 pindao.hao123.com##.cmsad_wrapper
 baike.baidu.com###J-union-wrapper
 letsplay.tw##.entry-content > div[style="min-width: 300px; min-height:300px;"]
@@ -1490,7 +1492,6 @@ msn.cn#%#//scriptlet('hide-in-shadow-dom', '.recommended-sites-container')
 car16.com##.modal-overlay
 olevod.com##.pc-ads
 olevod.com##.swiper-wrapper > div.swiper-slide:has(> img[src^="https://static.olelive.com/uploads/file/"])
-91porny.com##.row > div.colVideoList:has(> div.video-elem > a[target="_blank"])
 music.wandhi.com##.google-auto-placed
 6park.com##div[align="center"][style="background:#fbfeea;min-height:90px;"]
 6park.com##div[style^="width:990px;background:white;"]
@@ -5186,11 +5187,14 @@ newduba.cn###jq_youxi
 ||67.21.92.*.gif
 ||cnzz.trafficmanager.net^
 ||cupfox.app^$third-party
+||beenedsl.com^
 ||rusnuiyu.com^
 ||ndlwtl.icu^
 ||swilmib.top^
 ||nx8.icu^
 ||irgidshiv.com^
+||ix4.icu^
+||ewilmiw.top^
 ||pnpbjt.icu^
 ||tronkuks.com^
 ||ir4.icu^

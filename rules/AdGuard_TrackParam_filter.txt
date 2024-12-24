@@ -377,6 +377,10 @@ $removeparam=fb_source
 ! Bad: ||example.org^$xmlhttprequest,redirect=noopvast-3.0 (for instance, should be in specific.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/195153
+||vpnpay.io$removeparam=sr
+||vpnpay.io$removeparam=pr
+||vpnpay.io$removeparam=arf
 ! https://github.com/AdguardTeam/AdguardFilters/issues/194916
 ||fanatical.com^$removeparam=cj_pid
 ||fanatical.com^$removeparam=cj_aid
@@ -1049,7 +1053,7 @@ keepstreams.com^$removeparam=downloadmode
 ||v.daum.net^$removeparam=x_imp
 ||v.daum.net^$removeparam=x_hk
 ! https://github.com/AdguardTeam/AdguardFilters/issues/163568
-$removeparam=af_id,domain=dmm.co.jp|dmm.com
+!$removeparam=af_id,domain=dmm.co.jp|dmm.com
 $removeparam=dmmref,domain=dmm.co.jp|dmm.com
 $removeparam=i3_ref,domain=dmm.co.jp|dmm.com
 $removeparam=i3_ord,domain=dmm.co.jp|dmm.com
@@ -2624,6 +2628,16 @@ adguard.info,adguard.com,adguard.app#$#.hello_from_adguard_advanced_protection_i
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/195040
+@@||glavnoe.life^$removeparam=utm_campaign
+@@||glavnoe.life^$removeparam=utm_content
+@@||glavnoe.life^$removeparam=utm_medium
+@@||glavnoe.life^$removeparam=utm_referrer
+@@||glavnoe.life^$removeparam=utm_source
+@@||glavnoe.life^$removeparam=utm_term
+@@||kortko.cc^$removeparam=utm_campaign
+@@||kortko.cc^$removeparam=utm_content
+@@||kortko.cc^$removeparam=utm_source
 ! https://github.com/AdguardTeam/AdguardFilters/issues/194309 BookLive link
 @@||booklive.jp/vcentry/landing?$removeparam=vc_lpp
 ! https://www.reddit.com/r/uBlockOrigin/comments/1h1aaj7/ubo_on_firefox_android_is_causing_a_refresh_loop/
