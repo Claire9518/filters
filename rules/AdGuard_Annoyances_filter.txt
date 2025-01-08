@@ -2518,6 +2518,7 @@ scootertechno.com#$?#div[consent-skip-blocker] { remove: true; }
 !
 ! NOTE: Regular rules
 !
+hungermag.com##cookie-consent-banner
 mywot.com#%#//scriptlet('trusted-set-cookie-reload', 'cookies_consent_disclaimer', 'closed')
 weather.com##section[data-testid="PrivacyFeedCard"]
 divanpastaneleri.com.tr#%#//scriptlet('trusted-click-element', 'button.tr-cookie-reject', '', '500')
@@ -2566,7 +2567,7 @@ tgsoft.it#%#//scriptlet('trusted-set-cookie', 'cookie_google', '1')
 senecalearning.com##div[class^="Layout-module--"] > div[class^="Toast-module--"]:has(> a[href$="cookie-policy"])
 cryptorank.io###footer + div.sc-3e540587-0
 linztourismus.at#%#//scriptlet('trusted-click-element', '.f__privacy-cookie-manager__actions a[href="privacymanager/acceptOnlyFunctional"]')
-umigatari.jp,seaparadise.co.jp,aqua-park.jp##.el-cookie
+umigatari.jp,seaparadise.co.jp,aqua-park.jp,hakkeijima-partnership.jp##.el-cookie
 jfe-eng.co.jp###cookietarget
 cleanfox.io##.cookie__container
 turkiyesigorta.com.tr##div[data-sentry-component="Cookie"]
@@ -23070,6 +23071,7 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 ! Do not forget about '!#safari_cb_affinity' section for exclusions:
 ! LINK: AnnoyancesFilter/Popups/sections/antiadblock.txt#general
 !
+civitai.com#$#div[id]:has(> a[href="/pricing"] > img[alt*="adblock"]) { remove: true; }
 xcom-shop.ru#%#//scriptlet('prevent-addEventListener', 'load', 'adTest')
 ||xchina.co/plugins/sweetAlert2/sweetalert2.all.min.js
 lingust.ru###mod-custom95
@@ -25919,6 +25921,7 @@ api.flocktory.com
 !
 ! SECTION: Popups - Regular rules
 !
+/content/themes/ms-wpt-books/dist/js/notification.min.js$domain=stylebook.de|fitbook.de
 mywot.com##div[class*="StyledConnectWithGoogle-"]
 mybook.ru###__next > div[class^="sc-"] > a[href^="https://mybook.ru/payments/premium/"][target="_blank"]
 medme.pl##.dont-leave
@@ -34554,6 +34557,7 @@ polygon.com##.duet--layout--rail > div[class]:has(> div > form > div.duet--cta--
 faz.net##div[data-fsw="newsletterpromote"]
 digitalocean.com##div[class^="PreFooterStyles__StyledEmailCaptureContainer"]
 rskrf.ru##.page-text > p:has(> a[href="/subscr_edit.php"])
+gizmodo.com###newsletter + .mt-12:has(> .mt-4 > form.mc4wp-form)
 gizmodo.com##.post-bottom > div.mt-10:has(> div > form.mc4wp-form)
 1plus1.ua##.sidebar-banners__instagram
 pewresearch.org##.has-form.wp-block-prc-block-promo
@@ -42083,6 +42087,7 @@ turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,rabota.by,temp-
 !
 !
 !
+kitaaa.net##.d-md-block.mr-4 .text-white ~ ul.font-weight-bold.mb-4
 mybook.ru#?#div[class] + div[class]:has(> div[class] + p[class]:contains(мобильного приложения))
 zillow.com###local-app-upsell
 tubitv.com#%#//scriptlet('trusted-set-local-storage-item', 'isAppDownloadBannerDismissed', 'true')
@@ -46267,6 +46272,8 @@ instagram.com##._aagw:empty
 ! End: Instagram.com
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/195686
+gamereactor.eu###videoContainer.playersmall
 ! https://github.com/AdguardTeam/AdguardFilters/issues/195487
 softpedia.com##.hp_essentials
 ! https://github.com/AdguardTeam/AdguardFilters/issues/195187
@@ -51572,6 +51579,8 @@ book.oricon.co.jp##a[href^="https://apay-up-banner.com?merchantId="] > img
 !
 ! SECTION: Self-promo - Regular rules
 !
+videohelp.com##div[style] > span[style]:has(> a[href="https://www.videohelp.com/donate"])
+videohelp.com##div:not([class], [id]) > div[id]:has(> a[href="https://www.videohelp.com/donate"])
 citilink.ru##header > div[class^="app-catalog"]:has(> a[href^="https://www.citilink.ru/promo/"])
 e.mail.ru,octavius.mail.ru##div[class^="ReactVirtualized"] > div[style]:has(> div.promo-block-letter)
 foxford.ru##div[class^="styled__ContainerInner-"] > div[class^="styled__Wrapper-"]:has(> div[class^="styled__Container-"] > a[href^="https://foxford.ru/catalog/product_packs/"])
@@ -58442,6 +58451,7 @@ subbota.ua##aside.sidebar > div[id^="custom_html-"]
 !   NOTE: Donation widgets
 !   Really annoying only
 !
+matrix.org##.post-content > div.callout
 vox.com#?##zephr-anchor > aside:has(> form > div[class] div[class] > .duet--cta--button > span:contains(Monthly))
 rsf.org###block-rsf-bandeaux-alerte-block
 holod.media##.a-donate-block
