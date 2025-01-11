@@ -2,9 +2,9 @@
 ! Title: GOODBYEADS
 ! Homepage: https://github.com/8680/GOODBYEADS
 ! Expires: 12 Hours
-! Version: 2025-01-10 20:41:06（北京时间）
+! Version: 2025-01-11 09:40:17（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 14544
+! Total count: 14546
 @@#.banner%20ad.$image,domain=dokuo666.blog98.fc2.com
 @@$csp=worker-src 'none',domain=uptostream.com
 @@$generichide,domain=stfly.cc
@@ -347,6 +347,7 @@
 @@/pubads*theguardian.com
 @@/pubads.$script,other,~third-party,domain=bicycling.com|menshealth.com|prevention.com|rodalesorganiclife.com|rodalewellness.com|runnersworld.com|womenshealthmag.com
 @@/pubads_impl.js$domain=mytvsuper.com|tvb.com|tvbs.com.tw
+@@/remote_control.php?file=$stealth=referrer|ip
 @@/rwd_cap.js$domain=ibf.tw
 @@/s_code_acdc.js$domain=adobe.com
 @@/script/advert.js$domain=sunbtc.space|weatherx.co.in
@@ -1794,6 +1795,7 @@
 @@||api.mercari.jp^$stealth
 @@||api.mghubcdn.com/graphql$stealth
 @@||api.mi-img.com^$stealth=referrer
+@@||api.mindbox.ru/scripts/v1/tracker.js$domain=xcom-shop.ru
 @@||api.minecraftservices.com^$stealth
 @@||api.mixpanel.com/engage/?data=$xmlhttprequest,domain=deezer.com
 @@||api.mixpanel.com/track/*$domain=etcher.io
@@ -6266,6 +6268,7 @@
 @@||googletagmanager.com/gtm.js$domain=wutangclan.net
 @@||googletagmanager.com/gtm.js$domain=www3.nissan.co.jp
 @@||googletagmanager.com/gtm.js$domain=x-kom.pl|al.to
+@@||googletagmanager.com/gtm.js$domain=xcom-shop.ru
 @@||googletagmanager.com/gtm.js$domain=xn--80adinvscgek9d.xn--p1ai
 @@||googletagmanager.com/gtm.js$domain=yankeecandle.com
 @@||googletagmanager.com/gtm.js$domain=yargici.com
@@ -7408,6 +7411,7 @@
 @@||inews.co.uk^$generichide
 @@||inews.gtimg.com^
 @@||infectiousmedia.com/iab^$domain=youronlinechoices.com
+@@||infinityfree.com^$generichide
 @@||infinityscans.*/*.js$script,domain=infinityscans.xyz|infinityscans.net|infinityscans.org
 @@||info-desk.co.za^$generichide
 @@||info.seek.com/b/ss/$image,domain=seek.com.au
@@ -11292,7 +11296,6 @@
 @@||rv.treehousei.com/prm/js/*/public.min.js$domain=partnerportal.fortinet.com
 @@||rwaag.org^$generichide
 @@||ryanair.com/static/
-@@||rykoeb.com/remote_control.php^$stealth
 @@||rymg.net^$image,stealth=referrer,domain=mangasehri.net
 @@||rzd.ru^$stealth
 @@||s*-prod.glasgowlive.co.uk/*/prebid.js$domain=glasgowlive.co.uk
@@ -13773,7 +13776,6 @@
 @@||video.snidigital.com/*/AdManager.swf$domain=video.snidigital.com
 @@||video.unrulymedia.com/native/native-loader.js$domain=mothership.sg
 @@||video.weibocdn.com^$stealth
-@@||video.xpembed.me/remote_control.php$stealth
 @@||videoadept.com^$generichide
 @@||videobug.se/advertisement.js
 @@||videocore.tv/playlist.smil$document
