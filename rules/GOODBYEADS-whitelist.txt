@@ -2,9 +2,9 @@
 ! Title: GOODBYEADS
 ! Homepage: https://github.com/8680/GOODBYEADS
 ! Expires: 12 Hours
-! Version: 2025-01-16 09:37:07（北京时间）
+! Version: 2025-01-16 20:39:32（北京时间）
 ! Description: 适用于AdGuard的去广告规则，合并优质上游规则并去重整理排列
-! Total count: 14557
+! Total count: 14546
 @@#.banner%20ad.$image,domain=dokuo666.blog98.fc2.com
 @@$csp=worker-src 'none',domain=uptostream.com
 @@$generichide,domain=stfly.cc
@@ -46,7 +46,6 @@
 @@.gif#/ad-pub./$domain=cinestrenostv.tv
 @@.google-analytics.com%2Fanalytics.js$domain=free.com.tw
 @@.googleadservices.*.js$domain=ponominalu.ru
-@@.ico|$domain=wowebook.org|hdwallpapers.in|psypost.org
 @@.instantservice.com$document
 @@.jpg#$domain=huhupan.com
 @@.jpg#$domain=ktmx.pro
@@ -244,8 +243,6 @@
 @@/favicon.ico$domain=avaxhome.co
 @@/favicon.ico$domain=lubetube.com
 @@/favicon.ico$third-party,domain=thehouseofportable.com
-@@/favicon.ico^$domain=dot.ro|tamiltunes.live|cmacapps.com|itavisen.no|sankakucomplex.com|clubedohardware.com.br|torrenting.com|who-called.co.uk
-@@/favicon.ico^$domain=hackintosh.zone
 @@/fingerprint.$domain=abchina.com
 @@/fingerprint2.js$domain=fangcloud.com|fx678.com|gxpf.cn|hnair.com|pop-fashion.com
 @@/fingerprint2.min.js$domain=csdn.net|neets.cc|passport.vpgame.com|shixiseng.com
@@ -448,6 +445,7 @@
 @@://www.liquidweb.com/kb/wp-content/themes/lw-kb-theme/images/ads/vps-sidebar.jpg
 @@://www.sinya.com.tw^$stealth=ip
 @@://www3.doubleclick.net^|$xmlhttprequest
+@@://www3.doubleclick.net^|$xmlhttprequest,domain=sshkit.com
 @@=mywebloadt1&$domain=myweb.hinet.net
 @@?adType=$domain=taotaosou.com
 @@?sid=ads$domain=126.com|mail.163.com
@@ -4228,7 +4226,6 @@
 @@||dostats.info^$generichide
 @@||dostavista.ru^$stealth
 @@||dosyaload.com/embed/$stealth=referrer
-@@||dot.ro^$generichide
 @@||dota2freaks.com^$generichide
 @@||dotomi.com^$domain=bradsdeals.com|coupons.com|dealigg.com|dealnews.com|goodsearch.com|groupon.com|hotukdeals.com|moneysavingexpert.com|offers.com|retailmenot.com|slickdeals.net
 @@||douban.com/popup/login?
@@ -4385,7 +4382,7 @@
 @@||e.cquotient.com/recs/*?callback=$domain=sloggi.com
 @@||e.issuu.com^$stealth
 @@||e.mail.ru^$stealth
-@@||e.mp4.center^$domain=niceporn.tv
+@@||e.mp4.center^$domain=niceporn.tv|beeg.porn
 @@||e.zg-api.com/*/analytics.js$domain=zillow.com
 @@||e.zg-api.com/a/z/js/*/analytics.js$domain=zillow.com
 @@||e9china.net^$generichide
@@ -4430,7 +4427,6 @@
 @@||economictimes.com/*ads*/*.cms
 @@||ecostream.tv/js/ecos.js
 @@||ed-*.edgking.me/*/chunklist.m3u8$stealth
-@@||ed-protect.org^$generichide
 @@||edaily.co.kr^$stealth=dpi
 @@||eddiebauer.com/__ssobj/core.js+ssdomvar.js+generic-adapter.js
 @@||eden.international/script/ad_banner/
@@ -6507,7 +6503,6 @@
 @@||habr.com/img/px.gif?
 @@||hach.de^*/emstrack.js
 @@||hackingwithphp.com/js/adsbygoogle.js
-@@||hackintosh.zone^$generichide
 @@||haddozws.atlantaserver.me^$domain=haddoz.net,stealth=ip|donottrack
 @@||hadoantv.com^$generichide
 @@||haichaobiao.com^$generichide
@@ -6589,7 +6584,6 @@
 @@||hdvid.tv/player*/jwplayer.js
 @@||hdvid.tv/player*/lightsout.js
 @@||hdwall.us/js/adsbygoogle.js
-@@||hdwallpapers.in^$generichide
 @@||hdwatched.me/*/js/banger.js$domain=hdwatched.me
 @@||hdzog.ahcdn.com/key=$stealth
 @@||hdzog.com/assets/jwplayer-*/jw-icons.woff
@@ -7529,7 +7523,6 @@
 @@||it-developer.in.ua^$generichide
 @@||it-times.de^$generichide
 @@||italiashare.life^$generichide
-@@||itavisen.no^$generichide
 @@||itbusiness.com.ua^$generichide
 @@||itc.cn/site/share/
 @@||itdmusic.com^$generichide
@@ -9224,6 +9217,7 @@
 @@||nullpress.net^$generichide
 @@||nusantaraproject.my.id^$generichide
 @@||nutritiondata.self.com/ads/js/cn.dart.bun.min.js
+@@||nuyters.aestheticcanvas.site^$stealth=referrer
 @@||nv7s.com/key=*/referer=$media,stealth=referrer
 @@||nvidia.cn^*-300x250-
 @@||nvidia.com/*/drivers/results/$stealth=referrer
@@ -9688,7 +9682,6 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=duplichecker.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=dwgshare.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=dynast.io
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=ed-protect.org
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=edealinfo.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=education-load.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=educationat.xyz
@@ -9825,7 +9818,6 @@
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=kissanime.com.ru|kissanime.co
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=kitguru.net
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=kitploit.com
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=konnoznet.xyz
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=laptrinhx.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=lascimmiapensa.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=leechpremium.link
@@ -10864,7 +10856,6 @@
 @@||ps.w.org/wp-slimstat/$domain=wordpress.org
 @@||ps.w.org^$image,domain=wordpress.org
 @@||pstatic.net^$image,stealth
-@@||psypost.org^$generichide
 @@||ptah.m3pd.com/key=$media,domain=porntop.com,stealth=referrer
 @@||pttcell.com.tr^$stealth=dpi
 @@||pttplay.com/js/momo/adsbygoogle.js
@@ -10962,6 +10953,7 @@
 @@||qccommunity.qcloudimg.com^$stealth,domain=cloud.tencent.com
 @@||qcheng.cc/x/statics/js/guanggao.
 @@||qds.it/wp-content/plugins/digistream/digiplayer/js/videojs.ga.js?$script,~third-party
+@@||qertyus.celestialwallscapes.site^$stealth=referrer
 @@||qhimg.com^*/monitor_analytic.
 @@||qhres.com^*/monitor_analytic.js$domain=mse.360.cn
 @@||qianpanso.cn/other/*.js$domain=cilimao.co|cilimao.one
@@ -11401,7 +11393,6 @@
 @@||sandbox.cryptpad.info^$elemhide,jsinject,content,extension
 @@||sankakucomplex.com/*/post/index.content?next=$xmlhttprequest,jsinject,elemhide,extension
 @@||sankakucomplex.com/post/index.content?next=*&page=$jsinject,elemhide,extension
-@@||sankakucomplex.com^$generichide
 @@||sankei.co.jp/js/analytics/skd.Analysis.js$script
 @@||sanspo.com/parts/chartbeat/$xmlhttprequest
 @@||santafenewmexican.com^$generichide
@@ -12272,6 +12263,7 @@
 @@||ssante.com^$generichide
 @@||sshagan.net^$generichide
 @@||sshconect.com.br^$generichide
+@@||sshkit.com^$generichide
 @@||ssl-images-amazon.com^*/satelliteLib-$script,domain=audible.com
 @@||ssl-thumb2.720static.com^$stealth,image
 @@||ssl.cdne.cpmstar.com/cached/js/$domain=chickenkarts.io
@@ -12830,7 +12822,6 @@
 @@||talkceltic.net/forums/js/Siropu/AM/ads.min.js
 @@||talkgadget.google.com^$jsinject
 @@||tamilmovierockers.info^$generichide
-@@||tamiltunes.live^$generichide
 @@||tamiltunes.network^$generichide
 @@||tamilyogi.vip^$generichide
 @@||tampabay.com/resources/scripts/dfp/adbridg.js
@@ -14095,7 +14086,6 @@
 @@||where2getit.com/traderjoes/rest/clicktrack?$domain=traderjoes.com
 @@||whirlpool.com/foresee/foresee-trigger.js
 @@||whirlpool.tt.omtrdc.net/m2/whirlpool/mbox/json?mbox=$domain=kitchenaid.com
-@@||who-called.co.uk^$generichide
 @@||whoson.com/include.js$domain=oneplus.net|hotelchocolat.com
 @@||whowantstuffs.blogspot.com^$generichide
 @@||wideiptv.top/*/embed.html?token=*&remote=no_check_ip$stealth
@@ -14178,7 +14168,6 @@
 @@||worldometers.info^|$stealth
 @@||wouterplanet.com^$generichide
 @@||wowclassicbis.com^$generichide
-@@||wowebook.org^$generichide
 @@||wowtv.info^$generichide
 @@||wp.com/_static/*/gaAddons.js
 @@||wp.com/jaiminisbox.com/reader/content/$image,domain=kissmanga.com
