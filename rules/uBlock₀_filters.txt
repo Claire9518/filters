@@ -354,6 +354,7 @@ thepiratebay3.com^$all
 ||fortuneadvert.com^$all
 ||lalielynaualish.com^$all
 ||casino-ice.fun^$all
+.com/go/*?clickid=$doc
 
 ! hacked and abused for redirect
 tech4yougadgets.com##^meta[http-equiv="refresh"]
@@ -2846,15 +2847,15 @@ torrdroidforpc.com##[href^="http://slugmefilehos.xyz/"]
 ||windows.net/*/flscn.js
 ||windows.net/js/jsd1.js
 ||windows.net/js/jsd2.js
-||windows.net/media/beep.mp3
-||windows.net/*/media/beep.mp3
-||b-cdn.net/jupiter.js
-||b-cdn.net/noir.js
-||b-cdn.net/nvidia.js
 ||windows.net/js/jupiter.js
 ||windows.net/js/noir.js
 ||windows.net/js/nvidia.js
+||windows.net/media/beep.mp3
+||windows.net/*/media/beep.mp3
 ||windows.net/media/_Fm7-alert.mp3
+||b-cdn.net/jupiter.js
+||b-cdn.net/noir.js
+||b-cdn.net/nvidia.js
 
 ! https://twitter.com/genegene1234561/status/1647164176438280192
 ||japanonlinebroadcast.live^$all
@@ -4093,6 +4094,7 @@ www.cambe.pr.gov.br##+js(noeval-if, tigervip2)
 
 ! santander
 ||recompensaszurichsantander.com.mx^$all
+||santander.*.fino.digital^$all
 ||santander.cf.sandbox.motrada.ch^$all,to=~santanderbank.com|~santander.co.uk
 ! https://urldna.io/scan/67375864415af7ad29e177f6
 ! https://www.virustotal.com/gui/url/4b0287034559c9ad4cb28be0e557d2e14b745e8f7e59bee9b57a45f46230c9c6
@@ -6342,3 +6344,10 @@ uploadfox.net###ad-gs-05
 
 ! https://github.com/uBlockOrigin/uAssets/issues/26941
 ||teams-live.com^$all
+
+! https://www.reddit.com/r/phishing/comments/1i6j0m9/surely_this_cant_be_real_right/
+||irs.gov-$doc,to=~irs.gov
+
+! https://www.bleepingcomputer.com/news/security/hundreds-of-fake-reddit-sites-push-lumma-stealer-malware/
+/^https?:\/\/reddit-\d{1,2}\.[a-z]{4}\.(?:net|org|pw)\//$doc,to=net|org|pw|~reddit.com
+/^https?:\/\/wettransfer\d{2}\.[a-z]{4}\.(?:net|org|pw)\//$doc,to=net|org|pw|~wetransfer.com
