@@ -2475,6 +2475,9 @@ scootertechno.com#$?#div[consent-skip-blocker] { remove: true; }
 !
 ! NOTE: Regular rules
 !
+sigmalive.com#%#//scriptlet('set-local-storage-item', 'push-notifications', '0')
+||zagreb.hr/cookie_folder/gd-cookie.js
+kahhve.com##.gizlilik-politikasi-modal
 mobile.de#%#//scriptlet('trusted-click-element', '.mde-consent-decline-btn','','300')
 atlasformen.pl#%#//scriptlet('trusted-click-element', 'dialog[data-cookie-wall-configure-dialog] button[data-save]', '', '500')
 zrzutka.pl,4fund.com#%#//scriptlet('set-cookie', 'cookies', '0')
@@ -6828,7 +6831,6 @@ moment.co#?##root > div[class]:has(> div[class] > button:contains(Accept Cookies
 swffm.de##body:not(.dp--cookie-consent) .cc-window[aria-label="cookieconsent"]
 habitaclia.com###legalCookies
 gencat.cat###gcb-container
-okko.tv##div[class*=" "]:has(> div[class] > a[href="/terms"]:not([rel]))
 centrumrowerowe.pl#$#body { overflow: auto !important; }
 centrumrowerowe.pl#$##cookiePolicyDialog { display: none !important; }
 quantamagazine.org#%#//scriptlet('set-cookie', 'acceptedPolicy', 'true')
@@ -16732,6 +16734,8 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
 !
+! https://github.com/uBlockOrigin/uAssets/issues/27140
+@@||consent.cookiebot.com/uc.js$domain=cosmo-hairshop.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/198330
 ghelamco.com#@##cookieModal
 ! https://swiss-sport.tv/video/f16f2091-6219-4346-b8cb-4e11a5a8663d
@@ -21774,6 +21778,7 @@ reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#@#.Sid
 !
 ! Add without $third-party, so apps are blocking them too
 !
+||punyplant.com^
 ||jubilanttempest.com^
 ||hospitablehat.com^
 ||majesticwilderness.com^
@@ -34647,6 +34652,13 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+! sub
+mumsnet.com##div[x-show="$store.thread.newsletterCta.show()"]
+mumsnet.com#$#body { overflow: auto !important; }
+mumsnet.com#$#div[aria-labelledby="newsletter---daily-newsletter-heading"] { display: none !important; }
+mumsnet.com#$#.fixed.bottom-0:empty { display: none !important; }
+foxnews.com##.article-gating.gated-overlay.show-gate
+trovaprezzi.it##.newsletter_light_container
 hypebae.com###newsletter-popup-fullscreen
 thepioneerwoman.com###journey-inline
 atlasformen.pl##div[data-cb-zone] > div[data-cb-group]:has(> div[data-cb-layout] > div[data-cb-layout-grid] > div[data-cb-section] > section > a[href="/myaccount/newslettersloggedout.aspx"])
@@ -50036,6 +50048,8 @@ www.kinopoisk.ru##div[class^="trailer-promo"]
 !
 ! SECTION: Self-promo - Regular rules
 !
+udemy.com##section[data-testid="smart-bar-container"]
+fmworld.net##.webmart
 itc.ua##.widget-spec-projects
 netzpolitik.org###netzpolitik-cta
 backlinko.com##.header-popup:not(.open)
@@ -50551,8 +50565,6 @@ onepiece-tube.com##.home-tube-map
 duckduckgo.com##.footer > div.footer__left:has(> div.footer_cards > div.footer__card[data-pixel="browser"])
 gamer.ne.jp##.card-list__item:has(> div > div > span.card-list__ad)
 klerk.ru###__layout > div.h-full > footer ~ div > div.w-full.fixed
-navitime.co.jp##.kyujin-control-banner-container
-navitime.co.jp###kyujin-banner-offer-container
 h178.com###banner div.panel:has(> div.panel-body > div.text-center > a[href="https://j-baseball.club/"])
 dandy-house.co.jp##.post_content > a[href*="?utm_source"] > img
 numa2.jp##.plugin-extra
@@ -58067,7 +58079,6 @@ blog.livedoor.jp##div[id^="shitarss_title_"]
 !
 !   SECTION: Widgets - Marketing (specific)
 !
-navitime.co.jp###st-around-realestate-kodate-area
 ||asus-brand-assistant.asus.com/brand-assistant.js
 theporndude.vip,theporndude.com##.chat-widget
 pw.live##.sticky-call
