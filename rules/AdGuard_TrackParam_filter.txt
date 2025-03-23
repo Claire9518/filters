@@ -384,6 +384,8 @@ $removeparam=fb_source
 ! Bad: ||example.org^$xmlhttprequest,redirect=noopvast-3.0 (for instance, should be in specific.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/201324
+||read.amazon.$removeparam=ref
 ! bluestacks.com
 ||support.bluestacks.com^$removeparam=email
 ||support.bluestacks.com^$removeparam=guid
@@ -661,7 +663,8 @@ $removeparam=cid,domain=nhk.jp|nhk.or.jp
 ||puma.com^$removeparam=sc_eh
 ! reddit.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/191029
-||reddit.com^$removeparam=/deep_link|3p/
+||reddit.com^$removeparam=%243p
+||reddit.com^$removeparam=%24deep_link
 ||reddit.com^$removeparam=post_index
 ! reddit.com - email tracking
 ||reddit.com^$removeparam=post_fullname
