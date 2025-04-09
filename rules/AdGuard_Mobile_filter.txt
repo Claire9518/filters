@@ -824,7 +824,7 @@
 ||houseads.ttpsdk.info^
 ||httpool.com^
 ||huntmad.com^
-||i-mobile.co.jp^
+||i-mobile.co.jp^$third-party
 ||i-vengo.com^
 ||i.skimresources.com^
 ||iad.appboy.com^
@@ -1020,6 +1020,9 @@
 ! Bad: ||ad.doubleclick.net^ (should be in adservers.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/202334
+@@||d.applovin.com^$app=ac.hush.app
+@@||a.applovin.com^$app=ac.hush.app
 ! https://github.com/AdguardTeam/AdguardFilters/issues/202208
 @@||a.pub.network^$app=com.flightconnections
 @@||googletagservices.com^$app=com.flightconnections
@@ -1936,6 +1939,9 @@ motherless.com$$script[tag-content="awentw.com"][min-length="2000"][max-length="
 @@77.88.21.122$network,app=ru.yandex.rasp
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/202335
+@@||wxhepz-inapps.appsflyersdk.com^$app=com.getir
+@@||wxhepz-launches.appsflyersdk.com^$app=com.getir
 ! https://x.com/monmimami/status/1896441545177661923
 @@||a-adq.mediation.unity3d.com^$app=jp.step_official
 @@||i-sdk.mediation.unity3d.com^$app=jp.step_official
@@ -2719,6 +2725,8 @@ sp.manga.nicovideo.jp##div[style^="--ads-width:"]
 !
 ! SECTION: Regular rules
 !
+koreatimes.co.kr##div[class^="Detail_ad-container_"]
+pleasureme.jp##.mobile-footer-menu-buttons
 rat.xxx##.box-mobile
 pornid.*##.block-cs-wrap
 sexvid.*,pornid.*##.sp-bottom
@@ -6289,7 +6297,7 @@ ad-contents.jp##.mobile-big-banner
 sozcu.com.tr###hotelHideaway
 m.lenta.ru##.b-banner__amp
 m.lenta.ru##.b-banner-smi2
-m.ashemaletube.com,amp.ura.news##.adblock
+uranai.nosv.org,m.ashemaletube.com,amp.ura.news##.adblock
 ||cdn-eviewporn-com.cdn.ampproject.org/i/cdn.eviewporn.com/_reklam/
 bigbangnews.com##.container_publi
 gamepress.gg,amazingribs.com##.top-mobile-ad
