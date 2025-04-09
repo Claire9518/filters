@@ -972,9 +972,11 @@ popbee.com##.adblocker
 ##a[href^="https://adm.beimg.com/"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/202277
 ! https://publicwww.com/websites/%22app_tj%22/
+! Including mobile. Also generic $$ in general_extensions.txt
 ##.app > div.app_tj
 ##body > div.zdhf
 ##body > div.dbfh
+##body > div.zdhf ~ div[style$=";background: #000;opacity:0.01;"]
 ! 91porny
 ! https://github.com/AdguardTeam/AdguardFilters/issues/190664
 ##.row > div.colVideoList:has(> div.video-elem > a[target="_blank"])
@@ -1272,6 +1274,10 @@ apple.com.cn#$#.ac-gn-blur { top: 0 !important; }
 !--------------------------------------!
 ! SECTION: Chinese - HTML
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/202277
+! https://publicwww.com/websites/%22app_tj%22/
+!+ PLATFORM(android)
+$$script:contains(_mJd5Y2FNOfYm62LY5FuY7O5Yc6)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/106842
 hentaicomic.*,wnacg1.cc,wnacg.*$$script[wildcard="*tips[1]*document.write(tips*"][min-length="1000"][max-length="2000"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/34910
@@ -3599,6 +3605,7 @@ bmvc2020-conference.com#@#div[id][style="width: 100%;"] > iframe[scrolling="no"]
 .xyz:*?c=$script,third-party
 -*-*-*-*.panda^$script,third-party
 /haijiao3/*/popup.
+/templets/js/yala.js
 .tv/gg/
 .top/api.php?mod=ad&
 /webAdvert.php?ad_name=
@@ -5321,6 +5328,9 @@ newduba.cn###jq_youxi
 ||nbdtdt.icu^
 ||uucatiqnd.com^
 ||ixoe.cn^
+||trlptm.top^
+||enbg.cn^
+||vezeqzyb.com^
 ||zaiqnethl.com^
 ||pyxytj.icu^
 ||liog.cn^
@@ -13113,6 +13123,7 @@ hxsame.hexun.com$domain=~quote.hexun.com
 ||sojson.com/ui/images/upyun
 ||55kp.app/aini.
 sojson.com##.a-d-img
+baidu.com##a[class*="fengchaoContainer"]
 hcbbs.com##.pcbanner
 yalishi.com##.ad
 uiadmin.net##.jump-linker
