@@ -1,8 +1,8 @@
 [Adblock Plus 1.1]
-! Checksum: iF7Tc6aWSro4twJx5SilkQ
-! Version: 202504110101
+! Checksum: qTc/LJe+5EcbpgcqOzk+Rg
+! Version: 202504111221
 ! Title: EasyPrivacy
-! Last modified: 11 Apr 2025 01:01 UTC
+! Last modified: 11 Apr 2025 12:21 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -13,6 +13,7 @@
 !
 !-----------------General tracking systems-----------------!
 ! *** easylist:easyprivacy/easyprivacy_general.txt ***
+&&sub19=undefined&sub20=undefined
 &action=js_stats
 &ev=PageView&
 &EventType=DataDealImpression&
@@ -2465,6 +2466,7 @@
 /umg-analytics/umgaal.min.js
 /umt.gif?
 /unbxdAnalytics.js
+/uniclick.js?attribution=
 /UniqueUserVisit?
 /updatestats.js
 /urchin.gif?
@@ -2847,11 +2849,13 @@ _WebVitalsReporter_
 /gen_204?$image,other,ping,script
 /generate_204?$image
 ! Server-side GTM
+&event_name=page_view&
 &l=dataLayer&cx=c
 .js?id=GTM-
 /ns.html?id=GTM-
 ://gtm.*.js?st=
 ://load.*.js?st=$~third-party
+://sgtm.*.js?
 ||adservice.google.
 ||google.*/url?$ping
 ||google.com/gen_204?
@@ -13013,7 +13017,8 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||xhcdn.com/js/*.track.min.js
 ||xing.com/logjam/
 ||xnxx.com/picserror/
-||xp.apple.com^
+||xp.apple.com/config/*/report/
+||xp.apple.com/report/
 ||xvideos.com/picserror/
 ||xxf.mobi/hit
 ||ya.ru/clck/
