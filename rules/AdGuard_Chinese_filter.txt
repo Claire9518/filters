@@ -424,6 +424,10 @@ colamanga.com#$#div[class^="layui-layer-"]:not(#color) { display: none !importan
 bilinovel.com#%#//scriptlet('abort-current-inline-script', 'document.createElement', 'pagead2.googlesyndication.com')
 !+ PLATFORM(ios, ext_android_cb, ext_safari)
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=bilinovel.com
+!#if (adguard_app_ios || adguard_app_android)
+bilinovel.com#%#//scriptlet('set-constant', 'checkAndHandleAdBlock', 'undefined')
+bilinovel.com#@#.adv-box
+!#endif
 ! https://github.com/AdguardTeam/AdguardFilters/issues/176112
 ||174.127.195.66/bbs/include/javascript/adblock.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/170879
@@ -5329,6 +5333,11 @@ newduba.cn###jq_youxi
 .z.dkt-ib.com
 ||cnzz.trafficmanager.net^
 ||cupfox.app^$third-party
+||showkkkp.top^
+||pxrbnf.icu^
+||irkp.cn^
+||svcnmtb.top^
+||bhaelkaers.com^
 ||ruvgbv.icu^
 ||chugveasoy.com^
 ||sfile.top^
@@ -5337,6 +5346,7 @@ newduba.cn###jq_youxi
 ||jmif.cn^
 ||rvxo.cn^
 ||idhaiafq.com^
+||opdh.cn^
 ||tezlpl.icu^
 ||duuddots.com^
 ||mjik.cn^
@@ -20818,6 +20828,7 @@ _vwisbjs?
 .*yydstxt178.com/js/cdn.
 ||banzhu33333.net/js/cdn.
 ||banzhu33333.net/js/html
+||djdedu.net/static/*.gif
 $script,subdocument,~third-party,websocket,xmlhttprequest,domain=m.6666xsw.com|m.chenkuan.com|m.jmshuwu.net|wodexiaoshuoh.com
 $csp=script-src 'self' * 'unsafe-inline',domain=1kans.net|aidu123.com|biquluo.info|bqgh.com|jmshuwu.net|maxshuku.com|shukuge.com|sthuojia.net|tvyun07.com|zk01.net
 !#Novels
