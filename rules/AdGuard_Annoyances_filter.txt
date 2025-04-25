@@ -1241,7 +1241,7 @@
 ##.coockie_banner
 ##.cookie-accept-container
 ##.cookie-accept-overlay
-##.cookie-alert
+##body:not(.scroll-lock) .cookie-alert
 ##.cookie-alert-box
 ##.cookie-assistant
 ##.cookie-banner-bottom
@@ -2504,6 +2504,8 @@ scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl
 !
 ! NOTE: Regular rules
 !
+bbc.com#%#//scriptlet('trusted-click-element', 'div[data-testid="consentBanner"] button', '', '500')
+interestingsomething.com##body > div.cl-cb
 smallpdf.com#%#//scriptlet('trusted-set-cookie', '_s.cookie_consent', 'marketing=0:analytics=0:version=2021-07-01')
 amazon.jobs##div[data-react-class="CookieBanner"]
 amazon.jobs##div[class^="_banner_"]:has(> ul > li > a[href$="/cookies"])
@@ -5625,7 +5627,7 @@ fajnalazienka.com,czasnabuty.pl,4kom.pl,autochemia.pl##.iai_cookie
 mehilainen.fi#?#.MuiDialog-root:has(h2[id*="mark"])
 haberturk.com##body div[data-type="widgetCookiePolicy"]
 weverse.io##div[class^="CookieAgreeView_"]
-omoda.*#%#//scriptlet('set-cookie-reload', 'acceptedCookie', 'true')
+academy.openai.com,omoda.*#%#//scriptlet('set-cookie-reload', 'acceptedCookie', 'true')
 esmelux.com###rgdpAlert
 app.arzt-direkt.de#%#//scriptlet('set-cookie', 'ARE_DSGVO_PREFERENCES_SUBMITTED', 'true')
 czu.cz###webcore-widget-cookieOptIn
@@ -8698,7 +8700,7 @@ renewal.ru##div[data-cookie-banner]
 craft-cv.com###rodo_notice
 ||xsuite.com/typo3conf/ext/cu_cookies/
 itau.com.br##app-marco-civil
-gaming.gen.tr,doctoranytime.gr,fontstruct.com,biletinial.com,vitrinelinguistique.oqlf.gouv.qc.ca,sochic.com,intelcom.ca,polopetros.gr,epainfo.pl,finishers.com,streamgo.events,suncalc.org,o2.sk,cvut.cz,bezpieczny.pl,hyperbook.pl,nesine.com,mistral-poland.pl,saaq.gouv.qc.ca,onemocneni-aktualne.mzcr.cz,medvestnik.by,aptekamedkon.pl,xzone.pl,primepc.pl,systeminit.com,starsfromthestars.pl,speedlo.cz,soundcore.com,medicine.yale.edu,webtic.it,makerworld.com,sterbabike.cz,nix.cz,sklep.portosrolety.pl,antidote.info,entega.de,skechers.com.tr,cira.ca,infosport.pl,copcorp.pl,xlap24.pl,fargotex.pl,kolobrzeg.info.pl,nowpatient.com,forms.clickup.com,aftermath.site,streetsblog.org,deepbits.com,teksavvy.com,info.cz,figliedisancamillo.it,nzip.cz,packtpub.com,auxologico.it,reteimprese.it,ininal.com,wasgehtapp.de,stocksy.com,flowforge.com,zeno.fm,spielregeln-spielanleitungen.de,boardgamegeek.com###cc--main
+gaming.gen.tr,doctoranytime.gr,fontstruct.com,biletinial.com,vitrinelinguistique.oqlf.gouv.qc.ca,sochic.com,intelcom.ca,polopetros.gr,epainfo.pl,finishers.com,streamgo.events,suncalc.org,o2.sk,cvut.cz,bezpieczny.pl,hyperbook.pl,nesine.com,mistral-poland.pl,saaq.gouv.qc.ca,onemocneni-aktualne.mzcr.cz,medvestnik.by,aptekamedkon.pl,xzone.pl,primepc.pl,systeminit.com,starsfromthestars.pl,speedlo.cz,soundcore.com,medicine.yale.edu,webtic.it,makerworld.com,sterbabike.cz,nix.cz,sklep.portosrolety.pl,antidote.info,entega.de,skechers.com.tr,cira.ca,infosport.pl,copcorp.pl,xlap24.pl,fargotex.pl,kolobrzeg.info.pl,nowpatient.com,forms.clickup.com,aftermath.site,streetsblog.org,deepbits.com,teksavvy.com,info.cz,figliedisancamillo.it,nzip.cz,packtpub.com,auxologico.it,reteimprese.it,ininal.com,wasgehtapp.de,stocksy.com,flowforge.com,zeno.fm,spielregeln-spielanleitungen.de,boardgamegeek.com,techreviewer.de###cc--main
 skechers.com.tr###cl-cookie-settings
 realme.com##.r-cookie-footer ~ div.mask-untouch
 boxy-svg.com,checkpoint.com###notification
@@ -14166,7 +14168,7 @@ zajac.de,kopp-verlag.de,gartenversandhaus.de,the-british-shop.de,77onlineshop.de
 swoodoo.com##.Common-Privacy-AjaxHeaderCookiesMessage
 my.nintendo.com##.CookieAccept
 chip.de##.CookieBar
-blog.aboutamazon.de,agoda.com,m.vk.com##.CookiePolicy
+blog.aboutamazon.de,agoda.com,m.vk.com,abc.xyz##.CookiePolicy
 meduza.io##.GDPRPanel
 racedepartment.com,elektrikforum.de,wilderssecurity.com##.Notice.DismissParent
 cnn.com##.TermsOfService__component
@@ -35314,6 +35316,8 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+milwaukeetool.eu#$#div[class^="PromotionSignUpPopUpstyle"] { display: none !important; }
+milwaukeetool.eu#$#body { overflow: auto !important; }
 stihlusa.com#$#body[style^="overflow"] { overflow: auto !important; }
 stihlusa.com#$#.z-modal:has(> .sms-popup) { display: none !important; }
 canadiantire.ca##.nl-email-sticky-banner
@@ -35361,8 +35365,6 @@ substack.com##article > div > div.pencraft:has(> div.pencraft > div.subscribe-wi
 substack.com##.embedded-publication-subscribe
 chathamhouse.org##.newsletter-form.paragraph
 grazia.nl##.showheroes-unit:has(> div.newsletter)
-leaddev.com#$##zephr-zone-popup { display: none !important; }
-leaddev.com#$#body[style^="overflow: hidden;"] { overflow: auto !important; position: absolute !important }
 gamefile.news#%#//scriptlet('trusted-set-local-storage-item', 'pub-66124-subscribe-prompt-next-shown-at', '99999999999999')
 scmp.com##div[data-qa="HomePage-Newsletters"]
 pc-builds.com###newsletter-sidebar-form
@@ -39894,7 +39896,7 @@ order-order.com#?#.column--right > div.v-card:has(> div.v-card__text > div[id^="
 milatgazetesi.com#?#div[class^="col-"] > div.row:has(> a[href^="https://news.google.com"])
 informator.ua##.post__subscribe-banner
 informator.ua#?#.post__text > p:has(> a[href="https://t.me/informator_live"])
-cross.com,flip.gr,hoffmann-germany.de,centrumzdrowegowlosa.pl,groworganic.com,urnex.com,hermanmiller.co.jp,audeze.com,shopyalehome.com,neopetsshop.com,hanfgefluester.de,bleachpraylove.com,720dgree.de,vpd.fi##.needsclick
+secretlab.eu,cross.com,flip.gr,hoffmann-germany.de,centrumzdrowegowlosa.pl,groworganic.com,urnex.com,hermanmiller.co.jp,audeze.com,shopyalehome.com,neopetsshop.com,hanfgefluester.de,bleachpraylove.com,720dgree.de,vpd.fi##.needsclick
 idiva.com##.sunscribe-cont
 donbasstoday.ru##a[href^="https://yandex.ru/news/"] > img
 muzikmp3indir.com##.facereklam
@@ -43311,7 +43313,7 @@ alfafile.net##a[href="https://play.google.com/store/apps/details?id=net.alfafile
 downdetector.com###indicator-modal .phone-only.relative-flex-center
 nytimes.com###story > div[class^="css-"]:has(> div > div > div > a[href^="https://www.nytimes.com/audio/app?"])
 my-best.com##a[href^="https://mybest.go.link/"]:has(> div > img)
-besamex.de#%#//scriptlet('trusted-set-local-storage-item', 'popup-ad-data', '{"lastClosed":1744899154661}')
+besamex.de#%#//scriptlet('trusted-set-local-storage-item', 'popup-ad-data', '{"lastClosed":99999999999999}')
 z-library.sk##.android-announce-container:has(> .a-btn > a > img[alt="Download APK"])
 z-library.sk##.desktop-banner-container:has(> .a-message > div[data-name="desktopApp"])
 yelp.*##div[data-testid="open-app-button"]
@@ -51238,6 +51240,9 @@ hobbyhall.fi##.full-width-banner-top
 musee-pla.com##.bnrSideNav__list
 3dmgame.com##.Content_R > a[href="https://h5.3dmgame.com/activities/signinPc"]
 mail.proton.me##.bg-promotion
+ig-store.ru##div[class^="productAd--"]
+ig-store.ru##div[class^="productAd--"] + div.product-slider-wrapper
+ig-store.ru##.news-banner
 ig-store.ru##.banner-one-item
 ig-store.ru##.banner-gl
 ig-store.ru##.banner-3000-points-trigger
