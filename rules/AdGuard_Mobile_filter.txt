@@ -153,6 +153,7 @@
 ||startup.mobile.webvisor.com^
 ||startup-mobile.ap.yandex-net.ru^
 !
+||maticooads.com^
 ||ad*.zonaplus.tv^
 ||apishow.babybus.com^
 ||apppromoteapi.babybus.com^
@@ -2276,6 +2277,8 @@ motherless.com$$script[tag-content="awentw.com"][min-length="2000"][max-length="
 !
 !
 !
+! https://github.com/uBlockOrigin/uAssets/issues/28118
+my-angers.info#@#amp-auto-ads
 ! https://jbbs.shitaraba.net/bbs/read.cgi/internet/25463/1618326670/249
 watch.impress.co.jp#%#//scriptlet('trusted-replace-node-text', 'script', '/ipc.watch.js', 'ipc.loader.queue.jquery.push', 'ipc.loader.queue.ready.push')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/199147
@@ -2734,6 +2737,9 @@ sp.manga.nicovideo.jp##div[style^="--ads-width:"]
 !
 ! SECTION: Regular rules
 !
+indianexpress.com##.body-part > .mobile:has(> .top-ads-mobile)
+jjgirls.me##div[class]:has(> ins[data-zoneid])
+m.666biquge.com##body > div[style^="height:"]
 republicworld.com##.bannerWidth
 republicworld.com##section.w-full:has(.adWidget) + div[style^="margin-bottom:"]
 vistanet.it##.row-mobile-top
@@ -3533,7 +3539,6 @@ haber7.com###makroo-sticky-adunit
 apps.jeurissen.co##html > body .cja-pagewrapper .cja-landing__content > div.cja-sqrimage
 apps.jeurissen.co##html > body .cja-maincontent .cja-btmimage
 trthaber.com##.mobile-masthead-ads-container
-ntv.com.tr##.mobile-mpu-area
 nan-net.com##.bottom_menu:has(> div[style]:only-child > div[style]:only-child > iframe[id^="bottomad"]:only-child)
 chineseconverter.com##body .mobile-ad
 radiotimes.com##.ad-placement
@@ -8107,6 +8112,8 @@ livejournal.com##.mdspost-aside__item--banner
 ! END: Livejournal.com
 !
 !
+!+ NOT_OPTIMIZED
+ntv.com.tr##.mobile-mpu-area
 !+ NOT_OPTIMIZED
 lepoint.fr###WRAP_TOP_POS
 !+ NOT_OPTIMIZED
