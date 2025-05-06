@@ -3,7 +3,7 @@
 ! Description: Filter composed of several other filters (AdGuard Base filter, Social media filter, Tracking Protection filter, Mobile ads filter, EasyList, EasyPrivacy, etc) and simplified specifically to be better compatible with DNS-level ad blocking.
 ! Homepage: https://github.com/AdguardTeam/AdguardSDNSFilter
 ! License: https://github.com/AdguardTeam/AdguardSDNSFilter/blob/master/LICENSE
-! Last modified: 2025-05-06T00:03:47.447Z
+! Last modified: 2025-05-06T12:01:54.035Z
 !
 ! Compiled by @adguard/hostlist-compiler v1.0.38
 !
@@ -22,6 +22,7 @@
 !
 !
 !
+||gusoclji.com^
 ||lolostan.com^
 ||awdeliverynet.com^
 ||bevfpfekwskzg.world^
@@ -37652,6 +37653,7 @@ vkcdnservice.appspot.com^
 ! test for CNAME
 ||kib.hu^
 !
+||analytics.newsifier.nl^
 ||mn-tz.com^
 ||tr.thecontentserver.com^
 ||sst.hostnet.nl^
@@ -88745,6 +88747,12 @@ vkcdnservice.appspot.com^
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||apiproxy-log-nlb-1f304af4d3ac01a4.elb.us-east-*.amazonaws.com^
+||ichnaea.dradis.netflix.com^
+||customerevents.dradis.netflix.com^
+||customerevents.us-east-*.internal.dradis.netflix.com^
+||config.sdk.kochava.dewrain.life^
+||log.cookieyes.com^
 ||pl.elements.video^
 ||sgtm.alfinans.dk^
 ||sgtm.aziendechesifinanzianodasole.com^
@@ -89028,6 +89036,7 @@ vkcdnservice.appspot.com^
 ||agi-static.indiatimes.com^
 ||fail.adr.ec^
 ||t.adii.se^
+||s.bunkr.ru^
 ||stats.bunkr.ru^
 ||logs.netflix.com^
 ||mst.rnd.de^
@@ -92737,7 +92746,6 @@ inapps.appsflyersdk.com^
 ||log-*.previewnetworks.com^
 ||log-pq.shopfully.cloud^
 ||log.aimtell.com^
-||log.cookieyes.com^
 ||log.nordot.jp^
 ||log.seekda.com^
 ||logging.je-apps.com^
@@ -104321,9 +104329,12 @@ inapps.appsflyersdk.com^
 ||67.21.92.*.gif
 ||cnzz.trafficmanager.net^
 ||qsko05060mas.com^
+||qsko05061mas.com^
 ||pwchaukoieor.com^
 ||nzoj.cn^
 ||gawnaze.com^
+||bhddjf.top^
+||enwucnw.top^
 ||yqqv.cn^
 ||zxiws.cn^
 ||qiwqaagnaell.com^
@@ -109274,6 +109285,8 @@ analytics-*.aasaam.com
 ! Source name: Exception rules
 ! Source: Filters/exceptions.txt
 !
+! Popular anti-adblock bait
+@@|www3.doubleclick.net^|
 ! https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/1879
 ! Blocked by the rule, required for blocking Ingenious Technologies analytics
 @@||acs-m.daraz.pk^|
