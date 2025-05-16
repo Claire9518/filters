@@ -2505,6 +2505,10 @@ scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl
 !
 ! NOTE: Regular rules
 !
+xmtrading.com###js-cookieModal
+xmtrading.com###js-cookieModal ~ div[modal-backdrop]
+temp-mail.io##div[data-qa="cookie-warning"]
+coolblue.de#%#//scriptlet('trusted-click-element', 'button[name="accept_cookie"]')
 entuk.org#%#//scriptlet('set-cookie-reload', 'AllowCookies', 'true')
 cs.money#%#//scriptlet('trusted-set-cookie', 'cc_service2', '{%22services%22:[%22necessary%22]%2C%22acceptanceDate%22:1747288109365%2C%22revision%22:0%2C%22additionalData%22:{%22country%22:%22US%22}}')
 dmarket.com#%#//scriptlet('trusted-set-cookie', 'cookie_consent', '%7B%22analytics_storage%22%3A%22denied%22%2C%22ad_storage%22%3A%22denied%22%2C%22ad_personalization%22%3A%22denied%22%2C%22ad_user_data%22%3A%22denied%22%7D')
@@ -34607,6 +34611,7 @@ macwelt.de,pcwelt.de#%#//scriptlet("set-constant", "firebase.messaging", "noopFu
 !
 ! SECTION: Push notifications - Regular rules
 !
+||iobit.com/tpl/js/push/push-notification.js
 bianet.org###getpermission
 taobao.com##.tbpc-global-notification-user-allowed-popup
 ||passportnews.co.il/themes/HDB/wzpush.js
@@ -35795,6 +35800,7 @@ moorinsightsstrategy.com##div[data-elementor-type="footer"] > section[data-eleme
 ft.com##div[data-trackable="story:related-promo"]
 holyart.it#%#//scriptlet('set-cookie', 'nsl_subscribe_modal_shown_alt', '1')
 spot.uz##.tg-footer-popup
+asuracomic.net#%#//scriptlet('trusted-set-local-storage-item', 'asuraPremiumPromoClosed', '99999999999999')
 asuracomic.net#%#//scriptlet('set-local-storage-item', 'showPrompt', 'false')
 asuracomic.net#%#//scriptlet('trusted-click-element', 'button', 'containsText:Skip Ad', '1500')
 koc.com.tw#$##pum-460345 { display: none !important; }
@@ -43591,6 +43597,7 @@ alfastrah.ru,turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,ra
 !
 !
 !
+[$path=/maps]google.*#%#//scriptlet('set-local-storage-item', 'mapslitepromosdismissed', 'true')
 speedtest.cn##.speed-app
 10minutesemail.net##main.tm-drax-content > div[style^="display:"]
 temporary-mail.net###mobile-app-banner
@@ -43608,7 +43615,7 @@ startpage.com##.privacy-extension-and-app-widget
 uslugi.yandex.ru#%#//scriptlet('trusted-click-element', 'button.MobAppDistributionSlidingPanel-Close')
 tokopedia.com#$#body > div:has(> div[data-unify="Overlay"] + div > article[data-unify="Modal"] img[src^="https://p16-assets-sg.tokopedia-static.net/"][src$="/zeus/kratos/a79a26a0.png"]) { display: none !important; }
 tokopedia.com#$#body { overflow: auto !important; }
-books.yandex.ru##.app-offer-banner_container__RUE5E
+books.yandex.ru##div[class^="app-offer-banner_container"]
 autotrader.com###hpSmartBanner
 autotrader.com##.app-store-bar
 vivo.com##.vep-head-download
@@ -47211,6 +47218,7 @@ m.tokopedia.com#$#div[data-testid="divOverlay"] { display: none!important; }
 ! causes some issues: https://github.com/AdguardTeam/AdguardForMac/issues/550
 ~vert.sh,~search.brave.com,~status.im,~lafenice.io,~kurer-sreda.ru,~chorki.com,~zattoo.com,~zaycev.net,~hitta.se,~mail.ru,~facebook.com,~instagram.com,~drive.google.com$$link[rel="manifest"]
 !
+doctoranytime.gr##.mobile-app-promo-banner
 vnexpress.net##.installvneapp
 online.otpbank.ru#%#//scriptlet('set-cookie', 'redirect_app', 'false')
 altema.jp##.link-fixed
@@ -51545,6 +51553,7 @@ www.kinopoisk.ru##div[class^="trailer-promo"]
 !
 ! SECTION: Self-promo - Regular rules
 !
+app.tuta.com###modal:has( > div[class]:only-child > div[class]:only-child > div[class]:only-child > div[class]:only-child > .dialog-buttons > button[data-testid*="upgradeReminderCancel"])
 andina.nasuacasa.coca-cola.com.br#$#.wheel-modal { display: none !important; }
 andina.nasuacasa.coca-cola.com.br#$#body.modal-open { overflow: auto !important; }
 zimbra.aliceadsl.fr###partenaires
