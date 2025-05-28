@@ -22132,6 +22132,9 @@ dzen.ru#%#//scriptlet('json-prune', 'ssrData.exportResponse.feedData.adItems')
 dzen.ru#%#//scriptlet('set-constant', 'Object.prototype.ssrBanner', 'undefined')
 dzen.ru#%#//scriptlet('abort-on-stack-trace', 'Promise', 'initContext')
 dzen.ru#$?##LayoutTopMicroRoot div[style^="padding-top:"][style*="position: relative; height: 0;"] { remove: true; }
+! Sportsdzen
+sportsdzen.ru##div[class*="sports-button-ad"]
+sportsdzen.ru##div[class*="sport-match-rectangle-card__bookmakerOdds"]
 ! https://m.dzen.ru/articles
 m.dzen.ru##div[class^="desktop2--redesign-feed__"] div:has(> article[class*="--card-rtb__"])
 ! Ads in the feed
@@ -22387,6 +22390,8 @@ howtogeek.com#%#//scriptlet('prevent-element-src-loading', 'script', 'nebulousga
 ##body div.bOvWNQ
 ! https://github.com/AdguardTeam/AdguardFilters/issues/204353
 ||storage.googleapis.com/ta3-ad-script/
+! Common rule [27.05.2025]
+/ModalEngage|$third-party,script
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/176079
 !+ PLATFORM(ios)
@@ -22435,6 +22440,10 @@ reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#@#.Sid
 !
 ! NOTE: Add without $third-party, so apps are blocking them too
 !
+||thefishstops.com^
+||themepicker.com^
+||cartelsalsa.com^
+||precisear.com^
 ||zipthelake.com^
 ||subseaagent.com^
 ||soilcontent.com^
@@ -24564,7 +24573,6 @@ gofile.io###adsPlaywire
 gol.ru##.material-content-adblock
 goldesel.to#?#body > div[class] > ul[class]:has(> li > a[href^="apps/windows/"] > img)
 freecouchtuner.com,new-fmovies.cam,gomovies-online.cam,new-gomovies.online,new-123movies.live##.hhotnews
-good-football.org###player_block
 goodfon.ru##.js-adb
 gp.se##.adblock-checker
 gputracker.eu#%#//scriptlet("abort-current-inline-script", "$", "can_show_ads")
@@ -24718,9 +24726,7 @@ motoroids.com#%#//scriptlet('prevent-setTimeout', '.height() == 0')
 moving2canada.com##.header_advertisement_container
 mrexcel.com#%#//scriptlet("set-constant", "adblockDetector", "noopFunc")
 msfn.org##.cAnnouncements
-multifilemirror.com,smplace.com##.blockContainer
-multifilemirror.com##.jbanner
-multifilemirror.com##.noticeContainer
+smplace.com##.blockContainer
 multiup.org##.alert.alert-success
 goflix.sbs,multiup.io,multiup.org#$#.mfp-ready { display: none !important; }
 myshows.me##.likewiki
@@ -24815,8 +24821,8 @@ portableapps.com###block-block-39
 portfolio.hu#%#//scriptlet("abort-current-inline-script", "document.getElementById", "adblock")
 postimees.ee#%#//scriptlet("prevent-setTimeout", "adblockNotif")
 pradjadj.com##.ABD_display
-preguntandroid.com,iteramos.com##a[href^="https://brightdata.grsm.io/ae-"] > img
-preguntandroid.com,iteramos.com#%#//scriptlet("set-constant", "googlefc.getAdBlockerStatus", "noopFunc")
+iteramos.com##a[href^="https://brightdata.grsm.io/ae-"] > img
+iteramos.com#%#//scriptlet("set-constant", "googlefc.getAdBlockerStatus", "noopFunc")
 prepostseo.com##.bg-dark
 pri.org##.promo-box--promo
 proboards.com##div[id$="-banner"]
@@ -25008,7 +25014,6 @@ tulengua.es###Main_Content_divLabelAbuso
 tunefind.com##div[class^="BlockedAd__blockedAd"]
 tunefind.com#?#div[class^="MainContainer__container"] > ul[class^="MainList__container"] > li[class^="MainList__item"]:has(>div[class^="BlockedAd__blockedAd"])
 turkrock.com##body > div[style^="background: rgb(0, 0, 0); display: block;"]
-tusubtitulo.com###bannerAdBlock
 tv2.no##.aabl-container
 tvfeed.in#%#//scriptlet("prevent-setTimeout", "adblock")
 tvfeed.in$$script[tag-content="adblock"][max-length="500"]
@@ -25116,7 +25121,6 @@ zumvo.so##.top-message
 ||at.staticfiles.at/lib/sourcepoint/
 ||atc.studybreakmedia.com/modules/abb^
 ||b.adbox.lv/bxlib/js/loader.js$script,redirect=noopjs,domain=inbox.lv
-||battlestick.net/assets/gfx/gui/adblock.jpg
 ||betanews.com/wp-content/plugins/adtoniq^
 ||buhgalter.com.ua/assets/templates/base/js/blocker.js
 ||cdn*-*.fux.com/assets/padb-*.js
@@ -25229,7 +25233,6 @@ zumvo.so##.top-message
 ||playrust.io/js/as.js
 ||politiken.dk/bruger/AdblockBlocker/?
 ||prisnilos.su/js/check.js
-||raw.senmanga.com/js/reader.js
 ||redditpagematrics.com/dads/$script
 ||resourcepacks24.de/plugins/pnotify.custom.min.js
 ||returnofreckoning.com/forum/styles/dawar/template/js/ror.js?
@@ -25242,7 +25245,6 @@ zumvo.so##.top-message
 ||s.yimg.com/*/bundle_basic_mail_affiliate_partner_$domain=mail.yahoo.com
 ||salik.biz/templates/default/js/stopblock/stopblock.js
 ||sanluisobispo.com/static/yozons-lib/choice.*.js
-||senmanga.com/img/block_
 ||sinref.ru/avtomobili/antiblock.js
 ||smedata.sk/monitor/bundles/smeblockmanagerapi/build/js/gfcc.js
 ||sp.azcentral.com^
@@ -25976,7 +25978,6 @@ wvgazettemail.com#@#.adSense
 @@||translate.googleusercontent.com^$generichide
 @@||tt1069.com/dfp.min.js
 @@||tumangaonline.com*/_adsense_/*.json
-@@||tusubtitulo.com/js/dfp-*.js
 @@||tvigle.ru/static/js/adriver.js
 @@||txxx.com/js/advertising.js^
 @@||tyda.se/static/js/adsense.js
@@ -26767,6 +26768,7 @@ sanalkurs.net###toast-container > .toast-error[aria-live="assertive"]
 !
 ! SECTION: Popups - Regular rules
 !
+sleazyneasy.com###pre-block
 cityheaven.net###js-floatingbanner
 callibri.ru##callibri-popup-bg
 callibri.ru##callibri-popup-window
@@ -27166,7 +27168,7 @@ menunedeli.ru##div[id^="modal_mypopup_"]
 stopgame.ru#%#//scriptlet('trusted-set-local-storage-item', 'stalcraft_promo_shown', 'true')
 igotoworld.com#%#//scriptlet('set-cookie-reload', 'closing-banner', '1')
 defkey.com#$##showRegisterPopupAfterSecs { remove: true; }
-dzen.ru##.trapPopupContainer
+sportsdzen.ru,dzen.ru##.trapPopupContainer
 adbeat.com#$##forced_signup { display: none !important; }
 adbeat.com#$#.modal-backdrop { display: none !important; }
 adbeat.com#$#body.modal-open { overflow: auto !important; padding-right: 0 !important; }
@@ -27704,7 +27706,7 @@ slobodenpecat.mk#$?#.banner-sticky_desktop { remove: true; }
 ||medibot-image.s3.ap-northeast-1.amazonaws.com/medibot_lp_
 oh-my-teeth.com###cta-sticky-banner
 debounce.io##.salesnotice
-dzen.ru###recommend-tech-snackbar
+sportsdzen.ru,dzen.ru###recommend-tech-snackbar
 ask.clip-studio.com##.fixedBanner
 imyfone.com##.pop-up-box
 vivre.*#%#//scriptlet('set-cookie', 'notification-newsletter-closed', 'true')
@@ -34327,6 +34329,7 @@ labs.google.com#@##google-hats-survey
 .name/?pus=$script,third-party
 .site/?pus=$script,third-party
 !
+||cdn.pushloop.io^$third-party
 ||d335luupugsy2.cloudfront.net^
 ||kuolkoola.com^
 ||puhyjyf.com^
@@ -35639,6 +35642,7 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+tecnoandroid.it###google-news-banner
 turkiyetoday.com##.signupnowMain-container
 paulaschoice.com##div[class*="SignUpModalstyles__StickyTag"]
 paulaschoice.com##div[class^="AppContentstyles"] ~ div > div[class^="Modalstyles"]:has(div[class*="SignUpModalstyles__StyledModal"])
@@ -43322,7 +43326,7 @@ eusouandroid.co##.td-ss-main-sidebar .sfm_widget_sec
 t-online.de##.teaser-cr-subscribe
 brigitte.de##.teaserNewsletter
 wunderweib.de##.teaser_html
-spravochnick.ru,ru.beincrypto.com,charter97.org,regnum.ru##.telegram-banner
+tecnoandroid.it,spravochnick.ru,ru.beincrypto.com,charter97.org,regnum.ru##.telegram-banner
 bitgid.com##.telegram-long
 yurasumy.livejournal.com##.telegram-userpromo
 gazeta.ru##.telegram_info
@@ -43509,7 +43513,7 @@ metaratings.ru,metaratings.by,metarating.com.ua,meta-ratings.kz##div[class^="Sub
 telecomasia.net,meta.reviews##.subscription
 !
 ! Google Revenue Manager
-||news.google.com/swg/js/v1/swg-basic.js$domain=ilenta.com|studentwalker.com|turkiyegazetesi.com.tr|tv3.lt|roboin.io|iha.com.tr|premierguitar.com
+||news.google.com/swg/js/v1/swg-basic.js$domain=ilenta.com|studentwalker.com|turkiyegazetesi.com.tr|tv3.lt|roboin.io|iha.com.tr|premierguitar.com|tecnoandroid.it
 !
 ! Progorod
 gorodkirov.ru,navigator-kirov.ru,pg11.ru,pg12.ru,pg13.ru,pg21.ru,prochepetsk.ru,prodzer.ru,progorod33.ru,progorod43.ru,progorod58.ru,progorod59.ru,progorod62.ru,progorod76.ru,progorodnn.ru,progorodnsk.ru,progorodsamara.ru,progoroduhta.ru##div[class^="social-list-subscribe_"]
@@ -43760,6 +43764,8 @@ alfastrah.ru,turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,ra
 !
 !
 !
+singlecare.com##.stickyAppPromoBanner
+goodrx.com##div[data-qa="smart-banner"]
 substack.com#?#.pencraft > button:contains(/^Get (the )?app$/)
 op.gg##.items-center > div.flex:has(> div.text-center > a[href^="https://itunes.apple.com/"])
 shoebacca.com##div[id^="smsbump-form"]:has(div[aria-label="Shoebacca subscribe offer"])
@@ -48278,6 +48284,8 @@ instagram.com##._aagw:empty
 ! End: Instagram.com
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/206304
+heise.de##.article-content > .inread-cls-reduc
 ! https://github.com/AdguardTeam/AdguardFilters/issues/205414
 travelandleisure.com##.mm-video-medianet-bytes
 ! https://github.com/AdguardTeam/AdguardFilters/issues/204920
@@ -51768,6 +51776,9 @@ www.kinopoisk.ru##div[class^="trailer-promo"]
 !
 ! SECTION: Self-promo - Regular rules
 !
+jicoo.com##.css-y0rq08
+jicoo.com##.css-1bwd1ol
+jicoo.com##.css-mmowx0
 shoebacca.com##.yotpo-widget-loyalty-floater-widget
 paulaschoice.com##.ju_overlay
 paulaschoice.com##.ju_Con[data-title*="Anniversary%20Sale%20Message"]
