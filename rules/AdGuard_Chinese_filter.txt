@@ -272,6 +272,11 @@
 ! Bad: ||ad.doubleclick.net^ (should be in adservers.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/207465
+dqzboy.com#@#.ad-unit:not(.textads)
+dqzboy.com#$#.adblock-modal { display: none !important; }
+dqzboy.com#$#body.adblock-modal-active { overflow: auto !important; position: static !important; }
+dqzboy.com#%#//scriptlet('abort-current-inline-script', 'EventTarget.prototype.addEventListener', 'window.getComputedStyle')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/206449
 mytvsuper.com#%#//scriptlet('googletagservices-gpt')
 !+ PLATFORM(ios, ext_android_cb, ext_safari)
@@ -1279,6 +1284,7 @@ $script,xmlhttprequest,third-party,domain=00ksw.com|01zww.com|0biquge.com|114zw.
 !
 ! NOTE: Specific rules
 !
+dqzboy.com##body > #popup[style^="position: fixed; bottom:"]
 star.ebc.net.tw##body .ad_box
 star.ebc.net.tw##.main_content > .inline_text.has_marker:has(> span > span > a[target="_blank"])
 mrmad.com.tw##div[id^="mrmadad-"][style]:has(> .adsbygoogle)
@@ -5235,6 +5241,8 @@ newduba.cn###jq_youxi
 .z.dkt-ib.com
 ||cnzz.trafficmanager.net^
 ||cupfox.app^$third-party
+||yui06131shga.com^
+||uahivaqettl.com^
 ||e4jdb7k8j.com^
 ||yui06130shga.com^
 ||bborxjkan.com^
@@ -5243,6 +5251,9 @@ newduba.cn###jq_youxi
 ||munkrudhhv.com^
 ||1lqw75ogo.com^
 ||haole1xx.top^
+||xldyxnzo6.com^
+||n0usvkb1x.com^
+||zrbnte.top^
 ||c21x8nmdak.com^
 ||hvmdu6macy.com^
 ||yui06120shga.com^
@@ -13164,6 +13175,7 @@ meijutt.*/js/pcjs/
 ||waipian*.com/statics/recommend/
 ||taozi.icu/asfile/m/js/guding.
 zhihu.com##.Pc-word-new
+twword.com##.gadBlock
 mydrivers.com##.jdong1div_double
 mydrivers.com#?#li:-abp-has(>.titl+:-abp-contains(好  物))
 51.ca##.top-a-container

@@ -393,6 +393,8 @@ $removeparam=fb_source
 ! Bad: ||example.org^$xmlhttprequest,redirect=noopvast-3.0 (for instance, should be in specific.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/207414#issuecomment-2969009233
+||provereno.media^$removeparam=tg_rhash
 ! https://weathernews.jp/?fm=header
 ||weathernews.jp^$removeparam=fm
 ! https://github.com/AdguardTeam/AdguardFilters/issues/207330
@@ -440,7 +442,6 @@ $removeparam=fb_source
 ! https://github.com/AdguardTeam/AdguardFilters/issues/205132
 /viewforum.php?$removeparam=sid
 /viewtopic.php?$removeparam=sid
-.php?$removeparam=PHPSESSID
 ! https://github.com/AdguardTeam/AdguardFilters/issues/204732
 ||html5.gamedistribution.com^$removeparam=mp_site_url
 ||html5.gamedistribution.com^$removeparam=mp_site_name
@@ -2964,8 +2965,6 @@ adguard.info,adguard.com,adguard.app#$#.hello_from_adguard_advanced_protection_i
 !
 !
 !
-! https://github.com/AdguardTeam/AdguardFilters/issues/207390
-@@||bresink.$removeparam=PHPSESSID
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-13135670
 @@||em.dynamicyield.com^$removeparam=cuid
 ! Some a8 links on https://figure-times.com/
