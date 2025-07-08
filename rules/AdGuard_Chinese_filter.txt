@@ -1236,6 +1236,9 @@ $script,xmlhttprequest,third-party,domain=00ksw.com|01zww.com|0biquge.com|114zw.
 !
 ! NOTE: Specific rules
 !
+news.cnyes.com##.content-main > div[class]:has(div[id^="div-gpt-ad-"])
+news.cnyes.com##div[id^="desktop-ad-card-"]
+news.cnyes.com##.section-aside-wrapper ~ div[class] > a[title] ~ div[class]:not([title])
 vocus.cc##article > div[style^="min-height:"]:empty
 vocus.cc##article > div[style^="min-height:"]:has(> div[class^="sc-"] > div[class^="sc-"] > ins[data-rmax-space-id])
 biquge321.com#%#//scriptlet('prevent-addEventListener', 'touchend', 'window.location.href')
@@ -3224,6 +3227,8 @@ adguard.info,adguard.com,adguard.app#$#.hello_from_adguard_advanced_protection_i
 !+ PLATFORM(ext_chromium_mv3)
 @@||uniqlo.com^$jsinject,content
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/208953
+||cdn77.org^*.mp4|$badfilter
 ! https://github.com/AdguardTeam/AdguardFilters/issues/200865
 video4k.cc#@#a[href*="/?aff="][target="_blank"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/197816
