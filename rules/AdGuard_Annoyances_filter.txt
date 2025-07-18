@@ -2798,7 +2798,7 @@ unimedbauru.com.br###protegON-full-content-cookies
 remaker.ai##.remaker-container-footer-cookie
 helloclue.com###gatsby-focus-wrapper > section:has(> p[class*="CookieNotification"])
 longos.com##gg-cookies-consent-pop-up
-u-mama.ru,visionexpress.pl,psoriaz.life,poisknews.ru##.cookie
+sms-activate.page,u-mama.ru,visionexpress.pl,psoriaz.life,poisknews.ru##.cookie
 wegmans.com##.component--cookie-banner
 vod3.pl#$#body { overflow: auto !important; }
 podarkus.ru##div[class^="style_cookies"]
@@ -3555,7 +3555,7 @@ angular.dev##docs-cookie-popup
 nu.nl###pg-shadow-root-host
 zvuk.com##div[class^="Notification_wrapper__"]
 grizly.cz##.fancybox-container
-biathlon.com.pl,herodevs.com##.fs-consent_component
+sagemobile.com,biathlon.com.pl,herodevs.com##.fs-consent_component
 marieclaire.com.tw###privacyDesc
 heygen.com##.cw-cookie_banner
 egw.news,egamersworld.com###cookieBot
@@ -35693,6 +35693,7 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+skillbox.ru##.stk-grid:has(> div.stk-grid-col > p[class] > a[href="https://t.me/skillbox_media_code"])
 russian.rt.com##div[data-popup-max]
 dhbr.diamond.jp##.g-article-header-ad
 dhbr.diamond.jp##.g-article-subcolumn-ad
@@ -36144,7 +36145,6 @@ mathrubhumi.com##.mpp-story-bottom-updates
 myglo.com.ua###telegram_button
 big.az,sonxeber.az##.telegram_klas
 sourceforge.net###get-updates
-skillbox.ru##.stk-post > div.stk-grid:has(> .stk-grid-col > div[data-ce-tag="grid"] a[data-container-name="Telegram"])
 uu.se##.card-move-margin:has(> .card-body > .sv-skip-spacer > .sv-linked-portlet > form[action^="https://ui.ungpd.com/Api/Subscriptions/"])
 theatlantic.com##div[class^="HomepageMiddle_newsletters"]
 freepressjournal.in##.follow-channel
@@ -41374,8 +41374,6 @@ wowza.com#?#.sidebar > div.sidebar-widget:has(> div > a[href="https://www.wowza.
 pixalate.com#?#.widget-type-cell > div.row-fluid-wrapper:has(> div.row-fluid > div.sticky-item-wrapper > div.widget-type-custom_widget > div.widget-type-blog_subscribe)
 pixalate.com#?#.widget-type-cell > div.row-fluid-wrapper:has(> div.row-fluid > div.widget-type-cell > div.row-fluid-wrapper > div.row-fluid  > div.widget-type-cell > div.row-fluid-wrapper > div.row-fluid  > div.widget-type-blog_subscribe)
 pixalate.com#?#.row-fluid > div.widget-type-cell:has(> div.row-fluid-wrapper > div.row-fluid  > div.widget-type-cell > div.row-fluid-wrapper > div.row-fluid > div.vcenter-outer > div.widget-type-cell > div.row-fluid-wrapper > div.row-fluid > div.widget-type-cell > div.row-fluid-wrapper > div.row-fluid > div.widget-type-blog_subscribe)
-millionacres.com###cont-milli_mid_article_pitch
-millionacres.com##body > div.banner-wrap
 valueresearchonline.com##.vr-signup-box
 techmonitor.ai##.letter
 techmonitor.ai##.newsletter-article
@@ -51065,6 +51063,11 @@ m.facebook.com##article[data-ft*='originated_from_recommendation":"1']
 ! m.facebook.com#$?#div[data-status-bar-color] > div[data-mcomponent="MContainer"] > div[data-mcomponent="MContainer"]:has(> div[data-mcomponent="MContainer"] div[data-mcomponent="TextArea"] > .native-text > span:contains(/Suggested for you|Vorschläge für dich/)) + div[data-tti-phase] + div[data-tti-phase] + div[data-tti-phase] + div[data-tti-phase] { height: 1px !important; visibility: hidden !important; }
 ! m.facebook.com#$?#div[data-status-bar-color] > div[data-mcomponent="MContainer"] > div[data-mcomponent="MContainer"]:has(> div[data-mcomponent="MContainer"] div[data-mcomponent="TextArea"] > .native-text > span:contains(/Suggested for you|Vorschläge für dich/)) + div[data-tti-phase] + div[data-tti-phase] + div[data-tti-phase] + div[data-tti-phase] + div[data-tti-phase][data-actual-height="26"] { height: 1px !important; visibility: hidden !important; }
 ! m.facebook.com#$?#div[data-status-bar-color] > div[data-mcomponent="MContainer"] > div[data-mcomponent="MContainer"]:has(> div[data-mcomponent="MContainer"] div[data-mcomponent="TextArea"] > .native-text > span:contains(/Suggested for you|Vorschläge für dich/)) + div[data-tti-phase] + div[data-tti-phase] + div[data-tti-phase] + div[data-tti-phase] + div[data-tti-phase][data-actual-height] + div[data-tti-phase][data-actual-height^="4"]:has(> div[data-action-id] > div[class] > button) { height: 1px !important; visibility: hidden !important; }
+! non-followed sites (causes flickering when lots of sites are in feed)
+! desktop
+! facebook.com#$#.html-div:has( > div[class][style*="border-radius"] span > span > div[role="button"] > span) { position: absolute!important; left: -4000px!important; }
+! mobile
+! facebook.com#$##app-body div[data-pull-to-refresh-action-id] > div[data-tti-phase]:has( div[data-tti-phase] > div > .native-text[style="color:#1877f2;"]) { position: absolute!important; left: -4000px!important; }
 ! non-hidable (via interface) suggested posts
 m.facebook.com#$?#div[data-pull-to-refresh-action-id] > div[data-focusable="true"][data-action-id][data-mcomponent="MContainer"]:not([role="button"]):has(> div[data-mcomponent="TextArea"] > div > .native-text) { position: absolute !important; left: -3000px !important; }
 m.facebook.com#$?#div[data-pull-to-refresh-action-id] > div[data-focusable="true"][data-action-id][data-mcomponent="MContainer"]:not([role="button"])[style*="position: absolute !important; left: -3000px !important;"] + div[data-tracking-duration-id]:not([data-actual-height="1"]) { position: absolute !important; left: -3000px !important; }
@@ -51911,6 +51914,8 @@ www.kinopoisk.ru##div[class^="trailer-promo"]
 !
 ! SECTION: Self-promo - Regular rules
 !
+fitnesslove.net###text-6
+skillbox.ru##.topBanner
 fishingjapan.jp##.common__adv_full
 dhbr.diamond.jp##.g-article-header-ad
 dhbr.diamond.jp##.g-article-subcolumn-ad
