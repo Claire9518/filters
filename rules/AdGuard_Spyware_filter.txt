@@ -61752,6 +61752,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||slc.commerce.naver.com^
 ||a.klaviyo.com^
 ||nlog.shinhan.com^
 ||cdn.js.fpaudience.com^
@@ -109047,7 +109048,6 @@ semprotyuk.com##div[style^="margin-bottom:150px;"][style*="padding-right:2em;"]
 ||gold.contentsfeed.com/lb/sd/nw$domain=sportsseoul.com
 ||a.poki.com/observer/$script
 ||wcs.naver.com^$~script,domain=~smartstore.naver.com
-||wcs.naver.com^$~script,redirect=nooptext,domain=smartstore.naver.com
 ||tmgrup.com.tr/videojs/js/lib/streamsense.min.js
 ||news.chosun.com/svc/fb_count.html
 ||news.chosun.com/dhtm/*/collecter.js
@@ -114305,6 +114305,10 @@ d4?appid*type*
 !@@||mc.yandex.ru/metrika/watch.js$domain=
 !#endif
 !
+! smartstore.naver.com
+@@||connect.facebook.net/*/fbevents.js$domain=smartstore.naver.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/210079
+@@||googletagmanager.com/gtm.js$domain=jornaldocomercio.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/210109
 @@||curos.ca/res/*/resources/scripts/lib/fingerprint.js$domain=curos.ca
 ! https://github.com/AdguardTeam/AdguardFilters/issues/210207
