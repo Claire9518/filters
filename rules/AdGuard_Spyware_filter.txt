@@ -61752,6 +61752,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||aem-kakao-collector.onkakao.net^
 ||slc.commerce.naver.com^
 ||a.klaviyo.com^
 ||nlog.shinhan.com^
@@ -62321,7 +62322,6 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ||track.amebame.com^
 ||pks-analytics.raenonx.cc^
 ||pyxis.atp.fox^
-||collector.appconsent.io^
 ||r.sib2.gardrops.com^
 ||nst.trex.media^
 ||pixel.kodixauto.ru^
@@ -106146,6 +106146,7 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||collector.appconsent.io/t2.gif?a=
 dogdrip.net#%#//scriptlet('href-sanitizer', 'a[href^="/link.php?url="]', '?url')
 ||konturnovosti.com/packs/js/opm.js
 ||dzen.ru/api/v4/launcher/stats/
@@ -106650,7 +106651,9 @@ express.co.uk##.most-read-stories
 ||apay-us.amazon.com/cs/uedata
 ||emails.macys.com/pub/cct?
 ||fmkorea.com/_call/background_nickname.php
-coomer.su,kemono.su#%#//scriptlet('set-local-storage-item', 'plausible_ignore', 'true')
+coomer.st,kemono.cr#%#//scriptlet('set-local-storage-item', 'plausible_ignore', 'true')
+||coomer.st/api/v1/creators|
+||kemono.cr/api/v1/creators|
 ||hawky.pcgamer.com/js/*/analytics-library-entry-getCustomTrackingId.js
 ||cvs.com/shop-assets/proxy/criteo^
 ||cdn-production.polaranalytics.com/pap.txt$xmlhttprequest,redirect=nooptext
@@ -107915,8 +107918,6 @@ dealdoktor.de##img[src*="//vg09.met.vgwort.de/"]
 ||readthedocs.*/javascript/readthedocs-analytics.js
 ||ikarishintou.com/js/outLoging*.js
 ||qingflow.com/tracking/
-||kemono.party/api/event
-||kemono.party/onomek.js
 ||nocowanie.pl/plugin/tracking/
 ||wayfair.de/a/
 ||cpu-api.infor.pl/event
@@ -113235,6 +113236,12 @@ dlsdk.appsflyer.com^
 !
 ! NOTE: Regular rules
 !
+||gamedot.afafb.com^
+||tadata.afafb.com^
+||ecpm.afafb.com^
+||mediation-receiver.afafb.com^
+||df.afafb.com^
+||middle-defend.afafb.com^
 ||pangolin-sdk-toutiao.com^
 ||stat.tpns.sgp.tencent.com^
 ||guid.tpns.sgp.tencent.com^
