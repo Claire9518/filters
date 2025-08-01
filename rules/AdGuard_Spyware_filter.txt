@@ -61755,6 +61755,8 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||iws2.io.naver.com^
+||clog.tanshudata.com^
 ||gw.stape.fr^
 ||analytics-ipv6.tiktokw.us^
 ||aws-analytics.nmg.com.hk^
@@ -106156,6 +106158,11 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||peacocktv.com/*/tracking/
+||games-sdk.yandex.ru/games/api/sdk/v1/player/stats^
+s.response.jp##.aside-box-relation-arti
+||shueisha.online/op/analytics.js
+||tof.perfectworld.com/public/js/stat-tof-perfectworld-
 ||alia-cloudflare.com/*/events
 ||fotokino.sk/catalog/view/javascript/devmanextensions_gmt/gmt-library.js
 hpplus.jp#%#//scriptlet('set-local-storage-item', 'fw_se', '$remove$')
@@ -110858,6 +110865,9 @@ link.gmapp*.net$image
 /CI0/0$image
 %2FCI0%2F0$image
 !
+! c.groovehq.com
+c.groovehq.com/*.gif$image
+c.groovehq.com%2F*.gif$image
 ! Yandex
 feedback.send.yandex.ru/px/$image
 feedback.send.yandex.ru%2Fpx%2F$image
