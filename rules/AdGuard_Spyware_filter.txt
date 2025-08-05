@@ -101666,6 +101666,7 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+disqus.com#%#//scriptlet('href-sanitizer', 'a[href*="://disq.us/url?url="]', 'text')
 7-24blog.com##body > div[style="height:480px;"]
 ||aplus.aliexpress.*/ae.pc_click.statweb_ae_click
 ||aplus.aliexpress.*/aes.1.1
@@ -107110,6 +107111,13 @@ adguard.info,adguard.com,adguard.app#$#.hello_from_adguard_advanced_protection_i
 ! Bad:  ||example.com^$cookie=flat_r_mb (should be in cookies_specific.txt)
 !
 !
+! Kakao AdFit
+$cookie=adfit_sdk_id
+! Daum Ad
+$cookie=daum_ad
+! GoFundMe Pro (formerly Classy)
+$cookie=classy-session-id
+$cookie=classy-user-id
 ! WordPress Visitor Statistics plugin
 $cookie=_wp_visitor
 ! polarbyte
@@ -107922,6 +107930,8 @@ $cookie=bf_visit
 ! Bad:  ||monerominer.rocks^$third-party (should be in adservers.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/210626
+||news.kbs.co.kr^$cookie=STAT_WEBLOG_TOKEN
 ! hpplus.jp
 ||hpplus.jp^$cookie=fw_se
 ||hpplus.jp^$cookie=fw_uid
