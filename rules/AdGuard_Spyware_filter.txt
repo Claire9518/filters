@@ -602,7 +602,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ||stapecdn.com^
 ||jollyoutdoorjogger.com^
 ||ob.esnlocco.com^
-||ecommerce-events.adscale.com^
+||ecommerce-events*.adscale.com^
 ||adbeacon.com^$third-party
 ||transaction-watcher-2.littledata.io^
 ||mirabelanalytics.com^
@@ -64203,6 +64203,10 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||wphlvzycf5.execute-api.eu-west-2.amazonaws.com^
+||mp.cwtv.com^
+||logapi.sooplive.com^
+||log-api.sooplive.com^
 ||telemetry.proton.me^
 ||analytics.tempmail100.com^
 ||telemetry.sgp.pvp.net^
@@ -100930,6 +100934,7 @@ zmail.happycustomer.io$image
 !+ NOT_OPTIMIZED
 /.well-known/private-click-measurement
 !
+/~partytown/proxytown
 /fingerprint/iife.min.js
 /dtr/count.php
 /js/generateStats-min.js
@@ -106421,6 +106426,9 @@ link.gmapp*.net$image
 /CI0/0$image
 %2FCI0%2F0$image
 !
+! https://github.com/uBlockOrigin/uAssets/issues/29466
+.salesforce.com/servlet/servlet.ImageServer$image
+.salesforce.com%2Fservlet%2Fservlet.ImageServer$image
 ! nextdoor.com
 flask.us.nextdoor.com$image
 ! c.groovehq.com
@@ -107123,6 +107131,11 @@ adguard.info,adguard.com,adguard.app#$#.hello_from_adguard_advanced_protection_i
 ! Bad:  ||example.com^$cookie=flat_r_mb (should be in cookies_specific.txt)
 !
 !
+! Twilio Inc. (formerly Segment)
+||outdoorsy.com^$cookie=odc-s
+||outdoorsy.com^$cookie=odc-e
+||outdoorsy.com^$cookie=odc-d
+||outdoorsy.com^$cookie=odc-aid
 ! Kakao AdFit
 $cookie=adfit_sdk_id
 ! Daum Ad
@@ -109909,6 +109922,10 @@ d4?appid*type*
 !@@||mc.yandex.ru/metrika/watch.js$domain=
 !#endif
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/210417
+@@||cdn.segment.com/*/settings|$xmlhttprequest,domain=outdoorsy.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/210763
+@@||cdn.ing.de/ing-cms-ui/*/js/webtrekk-snwMKyfV.js
 ! smartstore.naver.com
 @@||connect.facebook.net/*/fbevents.js$domain=smartstore.naver.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/210079
