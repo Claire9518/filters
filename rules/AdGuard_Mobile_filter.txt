@@ -153,6 +153,11 @@
 ||startup.mobile.webvisor.com^
 ||startup-mobile.ap.yandex-net.ru^
 !
+||beijingzhongnanhai.com^
+||jybsb9oyss.com^
+||vniddlg.xyz^
+||tiu6ij9yqn.com^
+||drbbzzs.xyz^
 ||ads-segment-profile-noneu.truecaller.com^
 ||ad.intools.dev^
 ||mp-api.afafb.com^
@@ -2690,6 +2695,11 @@ sp.manga.nicovideo.jp##div[style^="--ads-width:"]
 !
 ! SECTION: Regular rules
 !
+tarnkappe.info##section[class="mobile-only"] > div[style^="height:"]
+borsaningundemi.com##.akAds
+beauty.oricon.co.jp##.ttl-kjbox + section:has(> ul.kjbox)
+sci.rambler.ru##div[id^="rambler-info-banner"]
+sci.rambler.ru#?##summary ~ div:contains(Продолжение истории после рекламы)
 duckduckgo.com##main[data-testid="zci-products"] > nav + div > div:has( > h2 button[data-testid="ad-badge"])
 hhmanga.com###text-5
 topics.smt.docomo.ne.jp##div[class*="ad_middle"]
@@ -8186,6 +8196,8 @@ livejournal.com##.mdspost-aside__item--banner
 ! END: Livejournal.com
 !
 !
+!+ NOT_PLATFORM(ext_android_cb)
+beauty.oricon.co.jp##.ttl-kjbox
 !+ NOT_PLATFORM(ext_ublock)
 9hentai.*#%#//scriptlet('abort-on-property-read', '_9HentaiJs.add')
 !+ NOT_OPTIMIZED
