@@ -3504,7 +3504,7 @@ dnb.com##.globalPrivacyControlPopupWrapper
 rwa.at#$#body.easycmp-overlay-active > * { pointer-events: auto !important; }
 vidal.fr###vidal_consent
 ||sfirmware.com/ajax/gdpr-desc
-dfbplay.tv#%#//scriptlet('trusted-click-element', '#usercentrics-root >>> button[data-testid="uc-deny-all-button"]')
+meineschufa.de,dfbplay.tv#%#//scriptlet('trusted-click-element', '#usercentrics-root >>> button[data-testid="uc-deny-all-button"]')
 fedex.com##fedex-gdpr
 foundryvtt.com###analytics-prompt
 genspark.ai##.agree_terms_dialog_background
@@ -17370,6 +17370,9 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 !+ NOT_OPTIMIZED PLATFORM(windows, mac, android)
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/210977
+@@||app.usercentrics.eu/browser-ui/$domain=meineschufa.de
+@@||api.usercentrics.eu/settings/$domain=meineschufa.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/210771
 bikepark24.pl#@#.shop_index > div.consents
 bikepark24.pl#@##shoper-foot ~ div.consents
@@ -35857,6 +35860,7 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+lifehacker.com##div[data-newsletter-key]
 usnews.com###sign_up_for_the_invested_email_newsletter
 rpp.pe##.cta-whatsapp
 rpp.pe##.article__follow
@@ -44119,6 +44123,7 @@ alfastrah.ru,turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,ra
 !
 !
 !
+gl.ali213.net##.share-container
 biquuge.com##.layui-row > div:has(> a[href*=".apk"])
 eksisozluk.com#$#html.scroll-lock { overflow-y: auto !important; }
 eksisozluk.com#$##app-suggestion-container { display: none !important; }
@@ -48734,6 +48739,8 @@ instagram.com##._aagw:empty
 ! End: Instagram.com
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/210602
+lifehacker.com##[data-ga-element="openweb_scroll"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/210615
 chejiahao.autohome.com.cn#$?##parent-container + div > div[class^="style_video_player_container"] { remove: true; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/210376
@@ -52215,6 +52222,8 @@ www.kinopoisk.ru##div[class^="trailer-promo"]
 !
 ! SECTION: Self-promo - Regular rules
 !
+gl.ali213.net##.go-lb
+redecanaistv.llc,redecanaistv.gd##.aviso-parceria
 gl.ali213.net##.tjdowngame
 gl.ali213.net##.hotwebgame
 gl.ali213.net##.rtit.tit5
@@ -60935,6 +60944,7 @@ full-count.jp#?#section > div.c-heading:has(> p.c-heading__en:contains(RECOMMEND
 /js/chat/edu_chat.js
 /wp-content/plugins/creame-whatsapp-me/public/js/joinchat.
 !
+||web-chat.global.assistant.watson.appdomain.cloud^$third-party
 ||services.exairon.com/assets/widget/index.js
 ||vivocha.com^$third-party
 ||ac-chatbot.freebie-ac.jp^$third-party
