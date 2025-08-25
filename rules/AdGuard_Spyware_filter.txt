@@ -554,6 +554,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 !
 !
 !
+||tagm.uneedcomms.com^
 ||openstats.co^
 ||http-inputs-notion.splunkcloud.com^
 ||sentinelpro.com^$third-party
@@ -67220,7 +67221,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ||log-api.sooplive.com^
 ||telemetry.proton.me^
 ||analytics.tempmail100.com^
-||telemetry.sgp.pvp.net^
+||telemetry.*.pvp.net^
 ||copilot-telemetry.githubusercontent.com^
 ||metrics.kapa.ai^
 ||analytics.org.coveo.com^
@@ -103889,6 +103890,8 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||ssl.pstatic.net/static.news/mnews/resources/*/js/generated/statistics_jquery.js
+||donga.com/proc/ad_history
 ||bazu.cc/api/baidu_tui.php
 ||assets.engoo-static.com/tracking.js
 ||espncdn.com/js/omniture/tracking.js
@@ -112388,7 +112391,8 @@ id.condenast.com#%#//scriptlet('set-constant', 'appInfo.snowplow.trackSelfDescri
 ! https://github.com/AdguardTeam/AdguardFilters/issues/204509
 @@||googletagmanager.com/gtm.js$domain=firsty.app
 ! https://github.com/uBlockOrigin/uAssets/issues/28164
-@@||cdn.optimizely.com/datafiles/*.json$domain=pizzahut.co.uk
+! https://github.com/AdguardTeam/AdguardFilters/issues/212062
+@@||cdn.optimizely.com/datafiles/*.json$domain=pizzahut.*
 ! https://github.com/AdguardTeam/AdguardFilters/issues/204080
 @@||tam.cdn-go.cn/aegis-sdk/latest/aegis.min.js$domain=sm-unsubscribe.intlgame.com
 ! unblock comics
