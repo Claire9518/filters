@@ -1931,7 +1931,7 @@
 /cookie-accept.js
 /cookie-alert.
 /cookie-bandeau.
-/cookie-banner$domain=~github.com|~praxismarketing-institut.com
+/cookie-banner$domain=~github.com|~praxismarketing-institut.com|~antritt-hilden.de
 /cookie-bar-
 /cookie-bar.
 /cookie-check.js
@@ -2528,6 +2528,7 @@ entrack.pl,kraemer-it.de,teslawissen.ch,scootertechno.com,mysize.ch,aeotec.com,g
 !
 ! NOTE: Regular rules
 !
+egdata.app##main ~ div.fixed.bottom-4
 pewresearch.org##.prc-privacy-consent-wrapper
 /wp-content/plugins/prc-privacy-consent/build/consent-banner/*$domain=pewresearch.org
 scripterswar.com##body > div[style^="pointer-events: none"]:has(> div[style] > a[href="/legal"])
@@ -3684,7 +3685,7 @@ hgtv.com#$#.block-user * { opacity: 1 !important; pointer-events: auto !importan
 compensa.pl###bee_cookie_widget
 innn.it#%#//scriptlet('trusted-set-cookie', 'cookieConsent', '%5B%22essential%22%5D')
 pepperdeals.se#%#//scriptlet('trusted-click-element', '.vue-portal-target .vue-portal-target button[data-t="acceptAll"] > span', '', '1000')
-bing.com#%#//scriptlet('trusted-click-element', '#bnp_cookie_banner #bnp_btn_reject', '', '1000')
+bing.com#%#//scriptlet('trusted-click-element', '#bnp_cookie_banner #bnp_btn_reject', '', '1500')
 kyonavi.kyoto.travel#%#//scriptlet('set-cookie', 'ktaAgreed', 'false')
 intloop.com##.cookie-opt
 info.b-platform.biz##div[class^="fs-cc-banner_component"]
@@ -13687,7 +13688,7 @@ guideautoweb.com##.notification[data-nots-uid="gdpr-guideauto"]
 orange.fr##.o-cookie-consent
 viarail.ca##.opened-cookie-alert
 origin.com##.otknotice-stripe
-sport.ua##.policy-accept
+ac.mos.ru,sport.ua##.policy-accept
 mnb.hu##.popupDialog
 webatic.com##.ppa-notice
 ultimaker.com##.preferences-bar
@@ -23010,8 +23011,8 @@ retail.ru##.markup__commercial
 retail.ru##.p2-info
 retail.ru##.further__aside > div.places
 retail.ru##div[class^="markup__info-"]
-truetrophies.com,truesteamachievements.com,trueachievements.com###ta-ab-overlay
-truetrophies.com,truesteamachievements.com,trueachievements.com#%#//scriptlet('prevent-element-src-loading', 'script', '/hb\.vntsm\.com|kumo\.network-n\.com/')
+overtake.gg,truetrophies.com,truesteamachievements.com,trueachievements.com###ta-ab-overlay
+overtake.gg,truetrophies.com,truesteamachievements.com,trueachievements.com#%#//scriptlet('prevent-element-src-loading', 'script', '/hb\.vntsm\.com|kumo\.network-n\.com/')
 plantmaps.com#%#//scriptlet('prevent-setTimeout', '.offsetWidth&&0==')
 bgsi.gg#%#//scriptlet('prevent-setTimeout', 'fired')
 bgsi.gg##body > div[style*="backdrop-filter"]:not([id])
@@ -25838,6 +25839,8 @@ sanalkurs.net###toast-container > .toast-error[aria-live="assertive"]
 !
 ! SECTION: Popups - Regular rules
 !
+360doc.com##div[id^="floatqrcode_"]
+360doc.com#%#//scriptlet('set-cookie', '360doc1', '1')
 ovd.info#%#//scriptlet('trusted-set-local-storage-item', 'popup-67856', 'shown')
 ovd.info#%#//scriptlet('trusted-set-local-storage-item', 'popup-72020', 'shown')
 gamerbulk.com#%#//scriptlet('trusted-click-element', '#elementor-popup-modal-314901 .dialog-close-button')
@@ -34691,6 +34694,7 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+kapital-rus.ru##.thsanxAndSubscribeUs
 ||seedsnow.com/cdn/shop/t/*/assets/pop-up.js
 seedsnow.com##body > form-embed[id^="app-embed-container-"]
 themirror.com##div[data-testid="newsletter-signup-inline"]
@@ -41991,7 +41995,7 @@ net4energy.com,gurmeajanda.com##.leadinModal
 pluggedin.com##div[data-pi-newsletter]
 povarenok.ru#?#.content-md-sub > div.bl:has(> span:contains(Наши рассылки))
 serveradmin.ru#?#.theiaStickySidebar > div.widget:has(> div.widget-container > div[style="text-align:center;"] > form[style] > input[value="Подписаться"])
-rg.ru##.b-telegram
+konkurent.ru,rg.ru##.b-telegram
 online.1c.ru#$#body { overflow: visible!important; }
 online.1c.ru#$#.fancybox-overlay { display: none!important; }
 zerohedge.com###sidebar-form
@@ -51092,6 +51096,7 @@ ya.ru,yandex.*##.simple-popup_direction_center:has(> div > div > div.dist-overla
 ya.ru,yandex.*##.simple-popup__overlay_shown_true
 !
 ! Yandex.Search
+ya.ru#?#.search3__inner-wrapper > div:matches-attr(/^data-cap/)
 ya.ru##main[class="body__wrapper"] form ~ div[style^="--height-ratio:"]
 yandex.*##main[class="body__wrapper"] form ~ div > div[style^="--height-ratio:"]
 [$path=/search]ya.ru,yandex.*##.AdvOffers
@@ -51205,6 +51210,7 @@ www.kinopoisk.ru##div[class^="trailer-promo"]
 !
 ! SECTION: Self-promo - Regular rules
 !
+360doc.com##.clear360doc > .vipact
 uaa.com###popup_box
 oppai.stream##.htok-early
 abw.by##.a100-widget
@@ -59411,7 +59417,7 @@ blog.livedoor.jp##div[style="width: 700px; height:450px; margin: 0 auto; overflo
 blog.livedoor.jp##div[class^="blogroll_innner"]
 blog.livedoor.jp##div[style="overflow-y:scroll; width:384px; height:300px;"]
 [$path=/soccerkusoyarou]blog.livedoor.jp##.column-inner-2 > .article-body2
-blog.livedoor.jp##.column-inner-2 > table[summary="<%blog_name>"][width="728"]
+nwknews.jp,blog.livedoor.jp##.column-inner-2 > table[summary="<%blog_name>"][width="728"]
 blog.livedoor.jp###article_rss
 blog.livedoor.jp##iframe[src="http://blog.livedoor.jp/nanjstu/top_rss.html"]
 blog.livedoor.jp##.article-sub-rss
