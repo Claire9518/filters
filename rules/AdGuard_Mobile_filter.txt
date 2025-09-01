@@ -2266,11 +2266,6 @@ motherless.com$$script[tag-content="awentw.com"][min-length="2000"][max-length="
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/211851
 @@||t7z.cupid.iqiyi.com/mixer$domain=iqiyi.com
-! https://github.com/AdguardTeam/AdguardFilters/issues/210010
-!#if (adguard_ext_firefox || ext_ublock)
-||dmcdn.net/playerv5/dmp.advertising.*.js$domain=dailymotion.com,badfilter
-||dmxleo.dailymotion.com/cdn/manifest/video/$xmlhttprequest,script,domain=dailymotion.com
-!#endif
 ! https://github.com/uBlockOrigin/uAssets/issues/28118
 my-angers.info#@#amp-auto-ads
 ! https://jbbs.shitaraba.net/bbs/read.cgi/internet/25463/1618326670/249
@@ -2715,6 +2710,8 @@ sp.manga.nicovideo.jp##div[style^="--ads-width:"]
 !
 ! SECTION: Regular rules
 !
+independentespanol.com###stickyFooterRoot
+independentespanol.com###main > div[class^="sc-"]:has(> div.mobile-only > div.mobile-only > div[data-mpu])
 owata-net.com##.fixed.w-full.h-\[100px\].overflow-hidden
 owata-net.com##iframe[width="300"][height="250"]
 pmvhaven.com##.bimbim-banner-wrapper
