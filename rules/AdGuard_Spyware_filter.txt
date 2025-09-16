@@ -557,6 +557,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 !
 !
 !
+||trck.digiteka.com^
 ||partnerlinks.io^
 ||hlstatus.com^
 ||pixel-img.com^
@@ -68398,6 +68399,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||pbc.nypost.com^
 ||stats.pronouns.page^
 ||ad-bls-tracking.lemino.docomo.ne.jp^
 ||bdvmetricas.banvenez.com.ve^
@@ -112674,6 +112676,15 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||static.gala.games/gal/fp/loader_v*.js
+gala.com#%#//scriptlet('set-local-storage-item', '_gal1', '$remove$')
+||luckyduckgames.com/global/index.php?controller=statistics
+||arte.tv/log-player/
+||static-cdn.arte.tv/static/analytics/
+||event.arte.tv/api/server-side-tracking/
+nypost.com#%#//scriptlet('set-local-storage-item', 'ow/social-browser-storage', '$remove$')
+nypost.com#%#//scriptlet('set-local-storage-item', 'SPOTIM_DEVICE_UUID_V2', '$remove$')
+||marketplace.geniusplus.ai/*/lre-events?cid=*&wid=
 ||yqzhishen.me/Statistics/statistics.
 ||dashichang.work/Statistics/statistics.
 ||parchment.com/wp-content/themes/wp-parchment/assets/utm-tags.min.js
@@ -115056,7 +115067,8 @@ augsburger-allgemeine.de,nikkansports.com##div[id^="cx_"]
 ||google.com/gsi/log?
 ||drop.com/statBeacon
 ||outlook-1.cdn.office.net/owamini/*/resources/analytics-ping.js
-||rocket.ivi.ru/event/
+||rocket.ivi.ru/playback/event
+||rocket.ivi.ru/event
 ||g.ivi.ru/track
 ||duckduckgo.com/*/reportAnalytics
 ||duckduckgo.com/*/reportAnalytics$xmlhttprequest,redirect-rule=noopjson
@@ -115546,7 +115558,7 @@ fategrandorder.info##.sidebar_acr.side_inline
 ||cio.economictimes.indiatimes.com/ajax_files/etb2b_ajax_trackers.php
 ||idm.economictimes.indiatimes.com/personalisation/logdata/
 ||dash.getsitecontrol.com/api/*/events?
-||dynatrace.com^$domain=~dynatracelabs.com|~dynatrace.com
+||dynatrace.com^$domain=~dynatracelabs.com|~dynatrace.com|~dcbstatic.com
 ||postback.affiliateport.eu/track.js
 ||mlstatic.com/analytics/
 suara.com##.dailymotion-widget
@@ -119181,6 +119193,8 @@ $cookie=bf_visit
 ! Bad:  ||monerominer.rocks^$third-party (should be in adservers.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/213280
+||aviasales.$cookie=/^_sp_id/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/213391
 ||flo.com.tr^$cookie=bunsar_visitor_id
 ! https://github.com/AdguardTeam/AdguardFilters/issues/213403
@@ -121202,6 +121216,9 @@ d4?appid*type*
 !@@||mc.yandex.ru/metrika/watch.js$domain=
 !#endif
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/213510
+!+ PLATFORM(windows, mac, android)
+||webtags.logitech.com^$redirect-rule=nooptext
 ! musinsa.com - adding an item into the cart doesn't work (a type of anti-adblock)
 musinsa.com#%#//scriptlet('trusted-suppress-native-method', 'CookieStore.prototype.set', '_dd_s', 'prevent', 'datadog')
 musinsa.com#%#//scriptlet('trusted-suppress-native-method', 'Date.prototype.toUTCString', 'undefined', 'abort', 'datadog')
