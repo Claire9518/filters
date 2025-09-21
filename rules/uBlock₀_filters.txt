@@ -2634,6 +2634,7 @@ cracksmid.com##div[style=""] > center > center
 /^https:\/\/[0-9a-z]{30,}\.s3\.[-a-z]+\d+\.backblazeb2\.com\/W[0-9A-Za-z]*in0[0-9A-Za-z]*Er0[0-9A-Za-z]*\/index\.html/$doc,match-case,domain=backblazeb2.com
 ||ondigitalocean.app/*/?bcda=$doc
 ||grootcam.shop^$all
+/^https:\/\/[a-z]{7,8}\.shop\/index\.php/$doc,to=shop,match-case
 
 ! https://github.com/uBlockOrigin/uBlock-discussions/discussions/302#discussioncomment-10338866
 ||pages.dev/*/Fm7-alert.wav
@@ -2674,8 +2675,18 @@ cracksmid.com##div[style=""] > center > center
 ||windows.net/js/customone.js
 ||windows.net/js/customtwo.js
 ||windows.net/media/apked.mp4
-.online/js/esc.js|$script,1p
-.online/js/flscn.js|$script,1p
+.online/js/esc.js
+.online/js/flscn.js
+.online/js/full.js
+.online/js/mouse.js
+.online/js/muse.js
+.online/js/noir.js
+.online/js/script2.js
+.online/js/script3.js
+.online/js/script5.js
+.online/js/script6.js
+.online/js/script7.js
+.online/media/webs.mp4
 ||amplifyapp.com/*/js/esc.js
 ||amplifyapp.com/*/js/flscn.js
 ||core.windows.net/takashi.mp3
@@ -4052,6 +4063,10 @@ www.cambe.pr.gov.br##+js(noeval-if, tigervip2)
 ||page-suspension.com^$all
 ! https://www.virustotal.com/gui/url/22fa70bd9df284391c97ec0567020a30c9297c61f82f8aa0ce747a4cbd60a6f0
 ||feacboolk.com^$all
+! https://www.virustotal.com/gui/url/10de0d74cde49125b352a5d3afa177214d3d7998268e9a2d46b319d79f01ea35
+||meta-for-business-$doc
+! https://www.virustotal.com/gui/url/29a47ae1cc0da3ca9415cd7745b91af24d03ce3760374ff1dba8fa5498e026f6
+||pages.dev/meta_for_business$doc
 
 ||lazada.bbc6666.com^$all
 ! shopee
@@ -4498,7 +4513,6 @@ www.cambe.pr.gov.br##+js(noeval-if, tigervip2)
 ||metamsklogix.godaddysites.com^$all
 ||usalgixa-mupohld.godaddysites.com^$all
 ||tomarket-rewards.vercel.app^$doc
-||interface-git-parallel-cypress-uniswap.vercel.app^$doc
 ||tronlink-walletextension.webflow.io^$all
 ||itrustcapitaalloginn.webflow.io^$all
 ||secure---sso---robinhood---com-cdn.webflow.io^$doc
@@ -4532,6 +4546,10 @@ www.cambe.pr.gov.br##+js(noeval-if, tigervip2)
 ||alienxchain*.pages.dev^$doc
 ! https://www.virustotal.com/gui/url/e0f4f24fcaab6c1f540ac141d0c2088d3c5f5f6a2fad4bde212a00a676825ac3
 ||xcoinspro.com^$doc
+
+! uniswap
+||interface-git-parallel-cypress-uniswap.vercel.app^$doc
+||web3-projects-beta.vercel.app^$all
 
 ! metamask.io
 ||clinitex.fr/META5KYC/$doc
@@ -4574,6 +4592,7 @@ www.cambe.pr.gov.br##+js(noeval-if, tigervip2)
 
 ! coinbase
 ||coinbaseexnsion.webflow.io^$all
+||coiiinbseprologn.godaddysites.com^$all
 ! https://www.virustotal.com/gui/url/35ca5ae411511f7c68dd4297ac19551e0dc2d562572c35234539516970135d61
 ||e-stata.ru/track/1/$all
 ! https://www.virustotal.com/gui/url/aad6cef484f8b6f4b186003ec4fe426cf01ea15cea8b668cff7315be7a8f937f
@@ -4587,6 +4606,8 @@ www.cambe.pr.gov.br##+js(noeval-if, tigervip2)
 ||mail.*-coinbase.com^$doc
 ! https://www.virustotal.com/gui/url/593ca31ca3cf2daa19831af584b382d1ff2dd49fcf05abb97a025dca055edf64
 ||gawavalen.fun^$all
+! https://www.virustotal.com/gui/url/4f8a2efde39094ce255277c0b8dabd46f2f663999a137136f68547e6e3c7c27a
+||paticableharent.com^$all
 
 ! imtoken
 ||imtoken.org.cn^$all
@@ -6281,3 +6302,9 @@ $doc,ipaddress=185.216.143.121
 ! https://www.virustotal.com/gui/url/53044a78745fc650f95c619a5557e240bb4386a6ec8301fcfebb2d69fa7d800b
 ||florida.revenue-*.net^$all
 ||phila.revenue*.cc^$all
+
+! https://www.youtube.com/watch?v=0fpihOP0qJ8
+||bitchats.app^$all
+||bitchat.pro^$all
+||bitchat.live^$all
+||myhuaweicloud.com/app/Bitchat_*.apk$all
