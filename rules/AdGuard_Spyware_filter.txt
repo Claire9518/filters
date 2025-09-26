@@ -73521,6 +73521,8 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||analytics.streamingworld.xyz^
+||stats.bouyguestelecom.fr^
 ||analytics-cdn.sport.es^
 ||analytics.prensaiberica.es^
 ||analytics.azrhymes.com^
@@ -115616,6 +115618,7 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||teltarif.de/cgi-bin/jswarn
 ||sgimage.netmarble.com/js/gtm/
 ||sr-cdn.shiprocket.in/sr-promise/static/uc.js
 ||bobbibrown.com.tr/sites/all/libraries/analytics/
@@ -121341,6 +121344,9 @@ adguard.info,adguard.com,adguard.app#$#.hello_from_adguard_advanced_protection_i
 ! Bad:  ||example.com^$cookie=flat_r_mb (should be in cookies_specific.txt)
 !
 !
+! tagContainer (commandersact.com)
+$cookie=weba_apprlid
+$cookie=weba_vstid
 ! unbounce analytics cookies
 $cookie=ubpv
 $cookie=ubvt
@@ -122172,6 +122178,8 @@ $cookie=bf_visit
 ! Bad:  ||monerominer.rocks^$third-party (should be in adservers.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/213694
+||bouyguestelecom.fr^$cookie=trackerId
 ! hostadvice.com
 ||hostadvice.com^$cookie=msvt_uid
 ! azrhymes.com
@@ -129073,6 +129081,7 @@ kizi.com#%#window.google_trackConversion = function() {};
 ||clarifyverse.com^
 ||classicnotebook.com^
 ||cleanhaircut.com^
+||climbingright.com^
 ||cloisteredcurve.com^
 ||cloudguppy.com^
 ||cloudhustles.com^
