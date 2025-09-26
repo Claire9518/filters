@@ -73521,6 +73521,8 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||cloudmetrics.xenforo.com^
+||api-analytics.pelikan.sk^
 ||analytics.streamingworld.xyz^
 ||stats.bouyguestelecom.fr^
 ||analytics-cdn.sport.es^
@@ -114855,6 +114857,7 @@ zjjz6lpv44aguszo.cloud.s11.sfmc-osl.com$image
 !+ NOT_OPTIMIZED
 /.well-known/private-click-measurement
 !
+/v1/rgstr?k=client-
 /ezais/analytics
 /detroitchicago/reno.js
 /detroitchicago/overlandpark.js
@@ -115618,6 +115621,13 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||pusti.svc.litv.tv/puid
+||player.svc.litv.tv/pixel/
+||fino.svc.litv.tv/acs/dms.js
+||litv.tv/api/generate-device-id
+pelikan.*#%#//scriptlet('set-local-storage-item', 'PAPVisitorId', '$remove$')
+iflscience.com#%#//scriptlet('set-local-storage-item', 'SPOTIM_DEVICE_UUID_V2', '$remove$')
+bloomberg.com#%#//scriptlet('set-local-storage-item', '/statsig|youboraDeviceUUID/', '$remove$')
 ||teltarif.de/cgi-bin/jswarn
 ||sgimage.netmarble.com/js/gtm/
 ||sr-cdn.shiprocket.in/sr-promise/static/uc.js
@@ -122178,6 +122188,8 @@ $cookie=bf_visit
 ! Bad:  ||monerominer.rocks^$third-party (should be in adservers.txt)
 !
 !
+! pelikan.sk
+$cookie=PAPVisitorId,domain=pelikan.cz|pelikan.hu|pelikan.sk
 ! https://github.com/AdguardTeam/AdguardFilters/issues/213694
 ||bouyguestelecom.fr^$cookie=trackerId
 ! hostadvice.com
