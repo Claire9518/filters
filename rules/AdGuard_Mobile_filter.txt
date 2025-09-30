@@ -1310,8 +1310,6 @@ plus.rtl.de#%#//scriptlet("set-constant", "cbcAdvertisingAdapter.smartClientCore
 plus.rtl.de#%#//scriptlet("set-constant", "cbcAdvertisingAdapter.smartClientCoreFacade.homad.playerConfig.unsupportedAdvertisingConfig.adReinsertion.homad.enabled", "false")
 !+ PLATFORM(ios, ext_android_cb)
 plus.rtl.de#%#//scriptlet("set-constant", "cbcAdvertisingAdapter.smartClientCoreModule.smartClientCoreApi.globalConfig.adReinsertion.homad.enabled", "false")
-! https://github.com/AdguardTeam/AdguardFilters/issues/152463
-uraaka.com#%#//scriptlet('prevent-addEventListener', 'touchmove', 'preventDefault')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/149559
 ragalahari.com#%#//scriptlet('trusted-click-element', 'html:not([class]) > body[bgcolor="#ffffff"] div#rglandingad a[style^="float:right;"]')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/147201
@@ -2728,6 +2726,9 @@ sp.manga.nicovideo.jp##div[style^="--ads-width:"]
 !
 ! SECTION: Regular rules
 !
+techmaniacs.gr##.td-banner-wrap-full
+cyzowoman.jp##div[style="min-height: 100px;"]
+cyzo.jp##.timeline_ad
 cyzo.jp##.entrybodyAd
 news.tv-asahi.co.jp#$#.timeline[data-parts-element="timeline-summary"] { min-height: fit-content !important; }
 motortrend.com##.min-h-\[250px\].overflow-hidden.lg\:hidden
@@ -4368,7 +4369,7 @@ makeuseof.com##.adsninja-ad-zone
 nicomanga.com###listImgs > img ~ center
 winfuture.de###articleBody > div:has(> div[id^="div-gpt-ad"])
 oliveoiltimes.com##.container-fluid > div[style^="margin:"].code-block
-s-restaurant24h.site##.foot-btn
+oasis3755.jp###ffb_content
 eporner.com###admobileoutstream
 eporner.com###EPimLayerOuter
 pornhits.com,onlyporn.tube##.video-header
@@ -5689,7 +5690,6 @@ inporn.com##.video__wrapper > div.header__item
 number.bunshun.jp##div[class^="container-banner-"]
 number.bunshun.jp##div[style="text-align:center; border-top: 1px solid #f3f3f3; border-bottom: 1px solid #f3f3f3;"]
 comic.pixiv.net##.w-screen.bg-surface4-default[data-testid="container"]
-laurier.excite.co.jp###exAsideRectangle
 refind2ch.org##.ads_sp_base
 winfuture.de##.author + .text > .nointelliTXT.table
 kuchi-lab.com###common-cta-sp
