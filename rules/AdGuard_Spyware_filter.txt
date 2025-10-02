@@ -69746,6 +69746,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||orderana*.spankbang.com^
 ||upsell.alphwidget.com^
 ||4hfvbao1ea.execute-api.ap-northeast-2.amazonaws.com^
 ||static.alphwidget.com^
@@ -105815,6 +105816,7 @@ zjjz6lpv44aguszo.cloud.s11.sfmc-osl.com$image
 !+ NOT_OPTIMIZED
 /.well-known/private-click-measurement
 !
+/piano/engagement
 /v1/rgstr?k=client-
 /ezais/analytics
 /detroitchicago/reno.js
@@ -106579,6 +106581,16 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||c.seznam.cz/js/rc.js
+||karte.io^$domain=delishkitchen.tv
+||delishkitchen.tv/api/access_trackers
+||tps.trovaprezzi.it/javascripts/tracking-vanilla.min.js
+||dcinside.com/_js/click_log.js
+inet.se#%#//scriptlet('set-local-storage-item', 'visitorInfo', '$remove$')
+inet.se#%#//scriptlet('set-local-storage-item', 'visitorId', '$remove$')
+||dubcdn.com/analytics/
+||spankbang.com/api/*/track-impression
+||spankbang.com/api/*/events
 ||whitepages.com/api/log-
 ||whitepages.com/static/dist/setupGaConfig.js
 ||whitepages.com/static/dist/amplitudeSetup.js
@@ -111396,8 +111408,6 @@ dreamprogs.net##td[width="88"][height="31"]
 ||yandex.ru/clck/click|
 !+ PLATFORM(ios, ext_safari, ext_android_cb)
 @@||ssl.pstatic.net/static.news/mnews/resources/*/js/generated/statistics_jquery.js
-!+ NOT_PLATFORM(ext_chromium_mv3)
-||youtube.com/api/stats/atr?ns=*&ver=2&cmt=1.*&fs=0&*&euri&lact=$method=post
 !+ NOT_PLATFORM(ios, ext_safari)
 /clck/*$domain=yandex.*|playhop.com
 !+ PLATFORM(ios, ext_safari, ext_android_cb)
@@ -113168,6 +113178,16 @@ $cookie=bf_visit
 ! Bad:  ||monerominer.rocks^$third-party (should be in adservers.txt)
 !
 !
+! agatameble.pl
+||agatameble.pl^$cookie=private_content_version
+! dcinside.com
+||dcinside.com^$cookie=ci_c
+||dcinside.com^$cookie=csid
+! superhuman.com
+||superhuman.com^$cookie=web-device
+! spankbang.com
+||spankbang.com^$cookie=ana_sid
+||spankbang.com^$cookie=ana_vid
 ! whitepages.com
 ||whitepages.com^$cookie=wp_pid
 ! jdpower.com
@@ -115205,6 +115225,8 @@ d4?appid*type*
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/214646
+@@||exacttarget.com^$domain=pub.msg.smbc.co.jp
 ! https://github.com/AdguardTeam/AdguardFilters/issues/214404
 telex.hu#%#//scriptlet('set-constant', 'pp_gemius_hit', 'noopFunc')
 !+ PLATFORM(ios, ext_android_cb, ext_safari)
