@@ -2725,13 +2725,18 @@ opinion.cw.com.tw,aidoly.net,celeby-media.net,kyun2-girls.com,hapiee.com,2ch-c.n
 ! ##.Ad
 chip.de,gamesworld.de,fnn.jp##.Ad
 ! ##body .banner
-medipalette.lotte.co.jp,genxy-net.com,m.price.com.hk,otakuma.net,nikkan-gendai.com,ranking.goo.ne.jp,m.hellporno.com,topics.smt.docomo.ne.jp,rank-king.jp,kun.uz,m.lenta.ru,m.aydin24haber.com,m.xcum.com,m.alphaporno.com,m.yourlust.com,m.3movs.com,m.sexu.com##body .banner
+medipalette.lotte.co.jp,genxy-net.com,m.price.com.hk,otakuma.net,nikkan-gendai.com,m.hellporno.com,topics.smt.docomo.ne.jp,rank-king.jp,kun.uz,m.lenta.ru,m.aydin24haber.com,m.xcum.com,m.alphaporno.com,m.yourlust.com,m.3movs.com,m.sexu.com##body .banner
 !
 ! TODO: Replace by class rule when https://github.com/AdguardTeam/FiltersCompiler/issues/221 is resolved.
 sp.manga.nicovideo.jp##div[style^="--ads-width:"]
 !
 ! SECTION: Regular rules
 !
+anime2you.de##.wam-banner
+anime2you.de###adbreak
+financial-field.com###glia-custom-container
+financial-field.com##.ats-placeholder
+financial-field.com##.fluct-overlay
 thehealthsite.com##.footerNav-add
 ekonomist.com.tr##div.display-mobile:has(> div.empower-ad)
 leslez.com##.opt
@@ -2748,6 +2753,7 @@ cyzo.jp##.timeline_ad
 cyzo.jp##.entrybodyAd
 news.tv-asahi.co.jp#$#.timeline[data-parts-element="timeline-summary"] { min-height: fit-content !important; }
 motortrend.com##.min-h-\[250px\].overflow-hidden.lg\:hidden
+motortrend.com##header + div[class$="\[&>div\]\:backdrop-blur-xs"]
 motortrend.com##.block.min-h-36.md\:hidden
 spectrum.ieee.org##div[id^="sSS"][class=""] > div[id^="sSS"][class=""]:has(> div[class^="rblad-"])
 miracle-live-ranking.com##.block-title:has(+ div.block4 > a[href^="https://a-trade.jp/redirect/"])
@@ -5570,8 +5576,6 @@ ap7am.com,m.ensonhaber.com##a[rel="sponsored"]
 m.tribuneindia.com##section[class^="ad-img"]
 seattletimes.com##.zeus-ad-right
 mapion.co.jp###adserver_rectangle
-ranking.goo.ne.jp##.first-banner
-ranking.goo.ne.jp##.overlay-ads-sp
 trinixy.ru##.clsbanner
 goguynet.jp##.mobileAdBox
 goguynet.jp##div[style$="height:250px; width: 300px;"]
