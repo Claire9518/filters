@@ -562,6 +562,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 !
 !
 !
+||analytics.metriko.app^
 ||stats.fluorescent.co^
 ||wurflcloud.com^
 ||tvspix.com^
@@ -110050,6 +110051,11 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||bunshun.jp/*/analytics.js
+bunshun.jp##.recommend-articles
+||play.*.com/vendor/$domain=play.aetv.com|play.mylifetime.com
+||vbr.ru/next/api/v2/n/help/*/view
+||vbr.ru/init-z.bmp
 ||redfast.com/ping/
 ||statix.business-gazeta.ru/js/components/metrics.js
 ||statix.business-gazeta.ru/js/components/murmur.js
@@ -115795,7 +115801,9 @@ adguard.info,adguard.com,adguard.app#$#.hello_from_adguard_advanced_protection_i
 @@||scrapbox.io^$cookie=connect.sid
 ! https://github.com/AdguardTeam/AdguardFilters/issues/211274
 @@||play.history.com^$cookie=/^AMCVS?_.*AdobeOrg/
+! https://github.com/AdguardTeam/AdguardFilters/issues/215550
 ! https://github.com/AdguardTeam/AdguardFilters/issues/210553
+@@||play.mylifetime.com^$cookie=/^AMCVS?_.*AdobeOrg/
 @@||play.aetv.com^$cookie=/^AMCVS?_.*AdobeOrg/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/207126
 @@||googletagmanager.com/gtm.js$domain=oto.net
@@ -116711,6 +116719,8 @@ $cookie=bf_visit
 ! Bad:  ||monerominer.rocks^$third-party (should be in adservers.txt)
 !
 !
+! vbr.ru
+||vbr.ru^$cookie=puid
 ! x.com
 ! https://cdn.cms-twdigitalassets.com/content/dam/help-twitter/rules-and-policies/cookie-description-lists/cookie-description-list-en.pdf
 ||x.com^$cookie=guest_id_ads
@@ -117670,6 +117680,9 @@ dlsdk.appsflyer.com^
 !
 ! NOTE: Regular rules
 !
+||experiment.pixverse.ai^
+||capture.pixverse.ai^
+||report.pixverse.ai^
 ||dxp.baidu.com^
 ||nsclickvideo.xiaodutv.com^
 ||api-access.pangolin-sdk-toutiao1.com^
@@ -118790,6 +118803,8 @@ d4?appid*type*
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/215550
+@@||play.*.com/vendor/VisitorAPI.js$domain=play.aetv.com|play.mylifetime.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/214804
 @@||analytics.prensaiberica.es/api/delivery/recommendations$domain=farodevigo.es
 @@||cdn.cxense.com/cx*.js$domain=farodevigo.es
@@ -124029,6 +124044,7 @@ kizi.com#%#window.google_trackConversion = function() {};
 ||functionalcrown.com^
 ||functionalfeather.com^
 ||funoverbored.com^
+||funtoyplanet.com^
 ||furryfork.com^
 ||fusedcontent.com^
 ||futuristicapparatus.com^
@@ -124068,6 +124084,7 @@ kizi.com#%#window.google_trackConversion = function() {};
 ||gloriousbeef.com^
 ||glowingmeadow.com^
 ||gluedpixel.com^
+||goddesslamps.com^
 ||godseedband.com^
 ||goldfishgrowth.com^
 ||goldstudies.com^
@@ -124200,6 +124217,8 @@ kizi.com#%#window.google_trackConversion = function() {};
 ||intentlens.com^
 ||internalcondition.com^
 ||internalsink.com^
+||intricateberry.com^
+||inventorycache.com^
 ||inventtango.com^
 ||iotapool.com^
 ||irelandroad.com^
@@ -124369,6 +124388,7 @@ kizi.com#%#window.google_trackConversion = function() {};
 ||mindfulgem.com^
 ||mindlessmark.com^
 ||mineinvoice.com^
+||minibilling.com^
 ||minorcattle.com^
 ||minuteburst.com^
 ||miscreantmoon.com^
@@ -124435,6 +124455,7 @@ kizi.com#%#window.google_trackConversion = function() {};
 ||notcardboard.com^
 ||notconscious.com^
 ||notifyglass.com^
+||notrealcat.com^
 ||noundictionary.com^
 ||novaseekers.com^
 ||nowaymail.com^
@@ -124611,6 +124632,7 @@ kizi.com#%#window.google_trackConversion = function() {};
 ||quizzicalzephyr.com^
 ||rabbitbreath.com^
 ||rabbitrifle.com^
+||rackforstorage.com^
 ||radiantcanopy.com^
 ||radiantlullaby.com^
 ||radiateprose.com^
@@ -125253,6 +125275,7 @@ kizi.com#%#window.google_trackConversion = function() {};
 ||wrongwound.com^
 ||wtaccesscontrol.com^
 ||yieldingwoman.com^
+||youcandrawanything.com^
 ||yourlifedream.com^
 ||zephyrcatalyst.com^
 ||zephyrlabyrinth.com^
