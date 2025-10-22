@@ -562,6 +562,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 !
 !
 !
+||tryzens-analytics.com^
 ||turbotargeting.io^
 ||inetstats.org^$third-party
 ||analysis.chatglm.cn^
@@ -70029,6 +70030,8 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||hbrcv.adobe.com^
+||hbrt.adobe.com^
 ||leo.tridge.com^
 ||haystack.wavve.com^
 ||user-event-log.aminer.cn^
@@ -71420,7 +71423,6 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ||analytics.newscred.com^
 ||analytics.digitalpfizer.com^
 ||intg.snapchat.com^
-||p.ura.news^
 ||statsapi.tiendeo.com.tr^
 ||perf.hsforms.com^
 ||tr.www.cloudflare.com^
@@ -110002,6 +110004,8 @@ zjjz6lpv44aguszo.cloud.s11.sfmc-osl.com$image
 !+ NOT_OPTIMIZED
 /.well-known/private-click-measurement
 !
+/home/new/v*/api/get-ip.php
+/home/new/v*/api/applogger.php
 /rum/events
 /gs/ccm/collect?
 /piano/engagement
@@ -110772,6 +110776,11 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||kio.ac/analytics/
+indianexpress.com#%#//scriptlet('set-local-storage-item', 'ev_did', '$remove$')
+indianexpress.com#%#//scriptlet('set-local-storage-item', 'ev_sid', '$remove$')
+||indianexpress.com/wp-content/themes/indianexpress/js/ie-events-all.js
+||embed.reddit.com/svc/shreddit/events
 ||bitdefender.com/dtm/
 ||bitdefender.com/cdp/
 ||fantasylandnews.com/wp-content/cache/min/*/analytics.js
@@ -110827,7 +110836,6 @@ novakid.*,novakidschool.com#%#//scriptlet('set-local-storage-item', 'ftr', '$rem
 ||events-proxy.mintlify.com/e/?ip=*&ver=$xmlhttprequest,redirect=noopjson
 ||icon.zol-img.com.cn/public/bdshare/static/api/js/trans/logger.js
 ||ws.cs.1worldsync.com/log?
-||fashionnova.com/api/search/events
 ||eneba.com/metrics/
 ||sdk.nsureapi.com/sdk.js
 ||ias.r10s.jp/grp15/lib/ichiba_frame.js
@@ -117452,6 +117460,9 @@ $cookie=bf_visit
 ! Bad:  ||monerominer.rocks^$third-party (should be in adservers.txt)
 !
 !
+! indianexpress.com
+||indianexpress.com^$cookie=ev_did
+||indianexpress.com^$cookie=ev_sid
 ! https://github.com/AdguardTeam/AdguardFilters/issues/215614
 ||heumm.com^$cookie=FB_EXTERNAL_ID
 ! vbr.ru
