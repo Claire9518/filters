@@ -6204,6 +6204,8 @@ $doc,ipaddress=185.216.143.121
 ||dogado.net/stadlholz/$doc
 
 ! https://github.com/uBlockOrigin/uAssets/issues/30533
+pages.dev##html[lang="ja"] > body > .main-container > #landing.auth-container
+/^https:\/\/[a-z0-9]{4,15}\.pages\.dev\/\d\/login\b/$doc,match-case,to=pages.dev
 ||blockcheck.pages.dev^$all
 ||checkx.pages.dev^$all
 ||xcheckx.pages.dev^$all
@@ -6211,6 +6213,8 @@ $doc,ipaddress=185.216.143.121
 ||blck.pages.dev^$all
 ||blockchecker5.pages.dev^$all
 ||gocheck.pages.dev^$all
+||checkfv.pages.dev^$all
+||xblocktest.pages.dev^$all
 
 ! https://blog.lastpass.com/posts/possible-cryptochameleon-social-engineering-campaign-targeting-lastpass-customers-and-more
 ||lastpassrecovery.com^$all
@@ -6222,3 +6226,11 @@ $doc,ipaddress=185.216.143.121
 
 ! https://github.com/AdguardTeam/AdguardFilters/issues/216474
 ||arrakis2.com^$all
+
+! https://github.com/uBlockOrigin/uAssets/issues/30623
+sport.elwatannews.com##+js(aost, Array.prototype.indexOf, isWin)
+||gomabalerainc.top^$all
+
+! https://github.com/uBlockOrigin/uAssets/issues/30626
+! https://www.virustotal.com/gui/file/32c72703cfef00987245c91f156aa9548f6597035e9c799ff871c0f583223f1d
+||gamefiledo6.pages.dev^$all
