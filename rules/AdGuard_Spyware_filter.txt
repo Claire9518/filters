@@ -566,6 +566,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 !
 !
 !
+||api.statsigcdn.com^
 ||logz.io^$third-party
 ||beacon.coofis.com^
 ||aditude.prebid-server.com^
@@ -76181,6 +76182,10 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||coll.lovense.com^
+||bilog.lovense-api.com^
+||log.lovense-api.com^
+||tms.hft.everyplate.com^
 ||tdum.alibaba.com^
 ||webpushstat-sgp.engagelab.com^
 ||analytics.simpler.so^
@@ -118867,6 +118872,11 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||cdn.lovense.com/front/web-analytics-sdk/bundle.js
+||service.account.adobe.com/log|
+||sstats.adobe.com/ee/irl1/v1/interact?requestId=
+||sstats.adobe.com/ee/v2/interact?datastreamId=
+||everyplate.com/gw/otlp/traces
 ||static.danawa.com/globaljs/static/Insight_WebAnalytics_
 /js/script.js$domain=codefa.st|datafa.st|fitymi.app|logofa.st|shipfa.st
 ||micro.rubiconproject.com/prebid/dynamic/*.js$script,redirect=noopjs,domain=ole.com.ar
@@ -119051,7 +119061,7 @@ inet.se#%#//scriptlet('set-local-storage-item', 'visitorId', '$remove$')
 ||forms.zoho.com/js/zf_gclid.js
 ||api.sdk.letscooee.com/v*/event/
 ||rtings.com/js/script.manual.js
-nytimes.com,slideshare.net#%#//scriptlet('set-local-storage-item', '/^statsig/', '$remove$')
+everyplate.com,nytimes.com,slideshare.net#%#//scriptlet('set-local-storage-item', '/^statsig/', '$remove$')
 ||kt.com/js/json/*_logUse_html.js
 ||m.kt.com/js/ADOBE/
 ||m.kt.com/js/integrate/mkLogcode.js
@@ -125578,6 +125588,12 @@ $cookie=bf_visit
 ! Bad:  ||monerominer.rocks^$third-party (should be in adservers.txt)
 !
 !
+! lovense.com
+||lovense.com^$cookie=_utm_os
+||lovense.com^$cookie=_utm_ref
+||lovense.com^$cookie=_utm_track_id
+||lovense.com^$cookie=Hytto-Referer-Detail
+||lovense.com^$cookie=USER-TRACK-ID
 ! https://github.com/AdguardTeam/AdguardFilters/issues/217065
 $cookie=/^UBT_/,domain=trip.com
 $cookie=/^ubtc_/,domain=trip.com
@@ -126557,6 +126573,7 @@ dlsdk.appsflyer.com^
 !
 ! NOTE: Regular rules
 !
+||api.monedata.io^
 ||tnc16-normal-us-ttp.capcutapi.us^
 ||mcs16-normal-us-ttp.capcutapi.us^
 ||appcpi.net^
@@ -127658,6 +127675,8 @@ d4?appid*type*
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/217617
+||ct.pinterest.com^$subdocument,redirect=noopframe
 ! https://github.com/AdguardTeam/AdguardFilters/issues/217599
 @@||tools.finra.org/monitoring/adrum_init.js$domain=tools.finra.org
 ! https://github.com/AdguardTeam/AdguardFilters/issues/217459
