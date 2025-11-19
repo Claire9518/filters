@@ -438,14 +438,32 @@ $removeparam=fb_source
 ! Bad: ||example.org^$xmlhttprequest,redirect=noopvast-3.0 (for instance, should be in specific.txt)
 !
 !
+! byn.kr - any product page via product listing page
+||byn.kr^$removeparam=rURL
+! https://github.com/AdguardTeam/AdguardFilters/issues/218031
+||smbc.co.jp^$removeparam=aff
+||smbc.co.jp^$removeparam=um
+||smbc.co.jp^$removeparam=us
+||smbc.co.jp^$removeparam=yclid
+||smbc.co.jp^$removeparam=yj_r
+||smbc.co.jp^$removeparam=_ly_c
+||smbc.co.jp^$removeparam=_ly_r
+! https://github.com/AdguardTeam/AdguardFilters/issues/218012
+||metlife.co.jp^$removeparam=BannerCode
+||metlife.co.jp^$removeparam=Page
+||metlife.co.jp^$removeparam=_ly_c
+||metlife.co.jp^$removeparam=_ly_r
+||metlife.co.jp^$removeparam=yj_r
 ! https://github.com/AdguardTeam/AdguardFilters/issues/217875
 ||gu-global.com^$removeparam=path
 ! https://github.com/AdguardTeam/AdguardFilters/issues/217874
 ||search.sbisec.co.jp^$removeparam=_ly_c
+! https://github.com/AdguardTeam/AdguardFilters/issues/218191
 ! https://github.com/AdguardTeam/AdguardFilters/issues/217872
 ! https://github.com/AdguardTeam/AdguardFilters/issues/217873
 ! https://github.com/AdguardTeam/AdguardFilters/issues/217875
-*$removeparam=ldtag_cl,domain=jpcast.japanpost.jp|fsa.go.jp|gu-global.com
+*$removeparam=ldtag_cl,domain=jpcast.japanpost.jp|fsa.go.jp|gu-global.com|fukushima-hook.jp
+*$removeparam=lt_r,domain=fukushima-hook.jp
 ! https://github.com/AdguardTeam/AdguardFilters/issues/217834
 ||mel.fm^$removeparam=infNews
 ! https://github.com/AdguardTeam/AdguardFilters/issues/217346
