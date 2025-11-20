@@ -35,6 +35,8 @@ spletnik.ru#%#//scriptlet('set-local-storage-item', '/^_ym/', '$remove$')
 spletnik.ru#%#//scriptlet('set-local-storage-item', 'adrcid', '$remove$')
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/218234
+southpark.*,southparkstudios.*#%#//scriptlet('set-constant', 'vtg', 'emptyObj')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/217458
 onet.pl#%#//scriptlet('prevent-element-src-loading', 'script', 'lib.onet.pl/static/pixel/')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/216735
@@ -75166,6 +75168,8 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||checkmal.com/_res/js/Beusable.js
+||checkmal.com/_res/js/Naver.PremiumLog.js
 ||portalrwd.bm5.pl/Ajax/GetIloscWyswietlen.aspx
 ||portalrwd.bm5.pl/Stat/statystyki.aspx
 ||byn.kr/main/exec.php?*exec_file=
@@ -84049,6 +84053,9 @@ d4?appid*type*
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/218234
+!+ PLATFORM(ios, ext_android_cb, ext_safari)
+@@||tags.tiqcdn.com/utag/cbsi/webplex-intl/prod/utag.js$domain=southpark.de|southpark.lat|southparkstudios.com.br|southparkstudios.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/216829
 @@||canadiantire.tt.omtrdc.net/rest/$domain=canadiantire.ca
 ! https://github.com/AdguardTeam/AdguardFilters/issues/217897
@@ -88808,6 +88815,7 @@ kizi.com#%#window.google_trackConversion = function() {};
 ||billowybelief.com^
 ||billtable.com^
 ||binarycrest.com^
+||binarykite.com^
 ||binspiredtees.com^
 ||birthdaybelief.com^
 ||blackbrake.com^
@@ -89165,6 +89173,7 @@ kizi.com#%#window.google_trackConversion = function() {};
 ||effervescentvista.com^
 ||effulgentnook.com^
 ||effulgenttempest.com^
+||eightgreens.com^
 ||elasticchange.com^
 ||elderlybean.com^
 ||elderlytown.com^
