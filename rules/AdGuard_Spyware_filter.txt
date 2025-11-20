@@ -50427,6 +50427,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||conversionsapigateway.com^
 ||ebm.lfmall.co.kr^
 ||analytics.adjust.io^
 ||jitsu.ixbt.site^
@@ -75168,6 +75169,10 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+itmedia.co.jp###endlinkConnection
+||aosom.*/track/do
+||cdn.aosomcdn.com/upload/js/dataflux-rum.js
+||inven.co.kr/api/banner_tracking/banner_view.php
 ||checkmal.com/_res/js/Beusable.js
 ||checkmal.com/_res/js/Naver.PremiumLog.js
 ||portalrwd.bm5.pl/Ajax/GetIloscWyswietlen.aspx
@@ -80970,17 +80975,17 @@ twitter.com%2Fscribe%2Fibis%3Ft%3D$image
 ! rules is to make test pages work so that users could verify that AdGuard
 ! is properly working.
 !
-!+ PLATFORM(windows, mac, android, ios) NOT_OPTIMIZED
+!+ PLATFORM(windows, mac, android, cli, ios) NOT_OPTIMIZED
 adguard.info,adguard.com,adguard.app##.hello_from_adguard_tracking_protection_app
-!+ NOT_PLATFORM(windows, mac, android, ios, ext_ublock) NOT_OPTIMIZED
+!+ NOT_PLATFORM(windows, mac, android, cli, ios, ext_ublock) NOT_OPTIMIZED
 adguard.info,adguard.com,adguard.app##.hello_from_adguard_tracking_protection_ext
 ! Detect of using AdGuard products
-!+ PLATFORM(windows, mac, android, ios) NOT_OPTIMIZED
+!+ PLATFORM(windows, mac, android, cli, ios) NOT_OPTIMIZED
 adguard.info,adguard.com,adguard.app##.hello_from_adguard_apps
-!+ NOT_PLATFORM(windows, mac, android, ios, ext_ublock) NOT_OPTIMIZED
+!+ NOT_PLATFORM(windows, mac, android, cli, ios, ext_ublock) NOT_OPTIMIZED
 adguard.info,adguard.com,adguard.app##.hello_from_adguard_ext
 ! Detect HTTPS filtering
-!+ PLATFORM(windows, mac, android) NOT_OPTIMIZED
+!+ PLATFORM(windows, mac, android, cli) NOT_OPTIMIZED
 ||https-filtering-check.adtidy.org^
 ! Detect Advanced Protection of AdGuard for iOS
 !+ PLATFORM(ios) NOT_OPTIMIZED
@@ -82913,6 +82918,8 @@ dlsdk.appsflyer.com^
 !
 ! NOTE: Regular rules
 !
+||config.toto.zipoapps.com^
+||tracking.ksztone.com^
 ||log.stickflow.xyz^
 ||stats.us-light-edge.com^
 ||log2.ihubgo.info^
