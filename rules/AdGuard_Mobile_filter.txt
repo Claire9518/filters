@@ -2717,6 +2717,9 @@ sp.manga.nicovideo.jp##div[style^="--ads-width:"]
 !
 ! SECTION: Regular rules
 !
+footballchannel.jp###article_btm_ad
+footballchannel.jp###single_under_ttl_ad
+tsurisoku.com##.sp_article_feature
 finance.yahoo.co.jp##section[class^="ServiceInformation_"] > div[class*="InfiniteNews__publicRelationInformationCard_"] > a:not([href*="yahoo.co.jp"])
 calciomercato.com##div[class^="mobile-sticky_"]
 jauns.lv##div[class*="min-h-[300px]"]
@@ -4438,7 +4441,7 @@ news-postseven.com##div[style="min-height: 180px; margin-bottom:10px;"]
 news-postseven.com##div[style^="position:fixed; height:auto; min-height: 100px; top:0px; width:100%;"]
 news-postseven.com##div[style="display:block; height:120px;"]
 appleinsider.com###mobile-ad-wrap
-times.abema.tv##div[style="min-height: 100px;margin-bottom: 2vh; text-align: center;"]
+times.abema.tv##div[style^="min-height:"][style$="margin-bottom: 2vh; text-align: center;"]
 times.abema.tv##.article-banner
 upworthy.com##.mobile_ads
 cumhuriyet.com.tr#?#.container > div.row > div.row.mb20:has(> #sticky-player)
@@ -5544,7 +5547,7 @@ woman.mynavi.jp##div[style="margin:20px auto 0;text-align: center;"]
 sirogohan.com##.sp-banner
 eromanga-yasan.com###spwrapper
 yomiuri.co.jp##.home-2021-ad-head-sp
-yomiuri.co.jp,lurenewsr.com##.sp_ad_banner
+tsurisoku.com,yomiuri.co.jp,lurenewsr.com##.sp_ad_banner
 ero-comic-hunter.net,eromanga-castle.com,nukerumannga.com,ero-mangasokuhou.com,eromanga-cafe.com,doujincafe.com##.archive > div[style="margin:0 auto;"]:not([class])
 augsburger-allgemeine.de##.aa-ad-frame
 mobile.baidu.com##.detail-banner
@@ -8854,7 +8857,7 @@ adguard.info,adguard.com,adguard.app#$#.hello_from_adguard_advanced_protection_i
 ! aglint-disable-next-line invalid-modifiers
 ||graph.facebook.com^$app=com.vitastudio.*
 !
-||app.adjust.com^$app=com.easybrain.nonogram|ru.pikabu.android|com.maroieqrwlk.unpin|com.touchtao.soccerkinggoogle|com.mobirix.zumaking2|com.mobirix.swipebrick2|com.mobirix.mahjongking2|com.mobirix.hit7.casino.slots|com.mobirix.gmm|com.mobirix.fishingchampionship|com.mobirix.airhockey|com.mobirix.abmon|com.mobirix.MultiplyWar|com.UCMobile.intl
+||app.adjust.com^$app=com.easybrain.nonogram|ru.pikabu.android|com.maroieqrwlk.unpin|com.touchtao.soccerkinggoogle|com.mobirix.zumaking2|com.mobirix.swipebrick2|com.mobirix.mahjongking2|com.mobirix.hit7.casino.slots|com.mobirix.gmm|com.mobirix.fishingchampionship|com.mobirix.airhockey|com.mobirix.abmon|com.mobirix.MultiplyWar|com.UCMobile.intl|kz.kolesa|uz.avtoelon|kz.krisha
 !
 ! NOTE: Yandex ads in mobile apps
 ! Be careful when applying `$network` rules to Yandex apps - check if nothing is broken (see @@ rules)
