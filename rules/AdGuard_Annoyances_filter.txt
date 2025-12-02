@@ -2552,6 +2552,11 @@ raz-zeitung.de,muensteraner-rechtsanwaelte.de,hardware-helden.de,naheland-apothe
 !
 ! NOTE: Regular rules
 !
+kulturkaufhaus.de#%#//scriptlet('trusted-click-element', 'button[data-katalon="acceptRequired"]')
+toujoursmikes.order-online.ai#%#//scriptlet('trusted-click-element', 'footer > div > button[data-variant="outline"]', 'containsText:Preferences')
+toujoursmikes.order-online.ai#%#//scriptlet('trusted-click-element', 'footer > div > button[data-variant="primary"]', 'containsText:Save my preferences')
+haberler.com##.cmp-reopen
+tcl.com#%#//scriptlet('trusted-set-cookie', 'UK_cookie-disclaimer', '{"agree":false,"categories":[],"visitor":""}')
 docs.cntd.ru##.kCookiePanel
 seisan.nananeko.co.jp#%#//scriptlet('trusted-click-element', '.flex-wrap.gap-2 > .disabled\:opacity-50.\[\&_svg\]\:pointer-events-none.border-gray-300:has(path[d="M18 6 6 18"])')
 gdanskticket.majaland.pl#%#//scriptlet('set-cookie-reload', 'cookiePolicyConfirmed', 'true')
@@ -18069,6 +18074,12 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 !+ NOT_OPTIMIZED PLATFORM(windows, mac, android)
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/219053
+tcl.com#@#.cookie-bar:not(body)
+tcl.com#@#.cookie-box:not(body):not(html)
+! https://github.com/AdguardTeam/AdguardFilters/issues/218953
+@@||cmp.bonniernews.se/*/loader.js$domain=sydsvenskan.se
+@@||cmp.bonniernews.se/sdk/*/modern/sdk.*.js$domain=sydsvenskan.se
 ! https://github.com/AdguardTeam/AdguardFilters/issues/218727
 gdanskticket.majaland.pl#@#.cookieContainer
 ! https://github.com/AdguardTeam/AdguardFilters/issues/218949
@@ -31033,7 +31044,7 @@ maersk.com##div[data-r-ds="NewsletterCallout"]
 centurylink.net##.video-widgets-v2_video-hero_fromBottomRight
 10web.io##.entry-content > div[id^="ctablocks_scrollbox_"]
 forward.com#%#//scriptlet('set-cookie', '_pc_signed_up', 'true')
-forward.com###piano_wrapper
+jutarnji.hr,forward.com###piano_wrapper
 marcandangel.com###ck_overlay
 marcandangel.com###ck_modal
 key4biz.it##.boxzilla-iscriviti-alla-newsletter
@@ -35628,6 +35639,8 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+glasnaya.media##.entry-header__meta-extra
+updatestar.com##.downloadlist
 stylecaster.com##div[data-component="newsletter"]
 thehindu.com#%#//scriptlet('remove-class', 'articlepaywall', 'body.articlepaywall')
 sportico.com#%#//scriptlet('set-constant', 'pmcPiano.newsletterForm', 'undefined')
@@ -42985,7 +42998,7 @@ thegatewaypundit.com##.email-list-subscribe
 belta.by##.bans
 ||chimpstatic.com^$domain=xakep.ru
 ekd.de,blog.mozilla.org###newsletter-subscribe
-cbc.ca##.newsletterWidget
+economictimes.indiatimes.com,cbc.ca##.newsletterWidget
 parfums.ua##.js-subscription_block
 vtm.be###block-vtm-blocks-vtm-blocks-newsletter-large
 classicalmusicnews.ru,ege-study.ru##.m365-embeded-showed
@@ -44396,6 +44409,11 @@ alfastrah.ru,turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,ra
 !
 !
 !
+travelist.jp##.sp-header-applink-banner
+skyticket.jp###__next > div[class^="Header__StHeaderArea"]:has(skyticket-header[show-app-promotion="true"])
+airtrip.jp###app_banner_top
+m.olx.ua##div[class^="css-"]:has(> button[data-testid="app-install-banner-open"])
+chirashiplus.jp##.contents > a[href="https://app.chirashiplus.jp/"]
 adidas.ua##.header__static-container ~ .sap
 poshmark.com##.btn--open-in-app
 hotokami.jp##a[onclick*="app"]
@@ -46135,7 +46153,7 @@ tapple.me#?#.t-flex > div[class]:has(> div.relative > div.absolute > div[data-ga
 kekememes.de#$#.aq4y { display: none!important; }
 kekememes.de#$#body { overflow: visible!important; }
 media.framu.world##a[href^="https://seeek.world/redirect_app_stores"]
-typhoon.yahoo.co.jp,livefans.jp##.appBnr
+sakuratravel.jp,typhoon.yahoo.co.jp,livefans.jp##.appBnr
 tabelog.com##.app-ranking-bnr
 wear.jp#?#.bg-gray-200:has(> div.bg-white a[href^="https://itunes.apple.com/jp/app/"])
 alphaindustries.eu##.ato-main-cont
@@ -48173,6 +48191,7 @@ m.tokopedia.com#$#div[data-testid="divOverlay"] { display: none!important; }
 ! causes some issues: https://github.com/AdguardTeam/AdguardForMac/issues/550
 ~lineup.withgoogle.com,~vert.sh,~search.brave.com,~status.im,~lafenice.io,~kurer-sreda.ru,~chorki.com,~zattoo.com,~zaycev.net,~hitta.se,~mail.ru,~facebook.com,~instagram.com,~drive.google.com$$link[rel="manifest"]
 !
+chirashiplus.jp##.bl_appStoreBnr
 retrip.jp,rtrp.jp#$##page[style^="padding-top"] { padding-top: 45px !important; }
 retrip.jp,rtrp.jp#$#header-induction { display: none !important; }
 retrip.jp,rtrp.jp#$#header.ng-scope[style^="height"] { height: auto !important; }
@@ -50594,6 +50613,7 @@ digitalvidya.com###text-13
 digitalvidya.com###text-8
 digitalvidya.com###text-21
 ! "Foreign agents" / "Иностранные агенты"
+glasnaya.media##.wp-block-glasnaya-help
 thebell.io##.subscription__inoagent
 podpisnie.ru##.foreign_agents
 music.yandex.ru##.page-artist__agent
@@ -52772,6 +52792,12 @@ www.kinopoisk.ru##footer > div:has(> div > div[data-testid="kp-ui.amediateka-foo
 !
 ! SECTION: Self-promo - Regular rules
 !
+bankersadda.com##main > .row a[href*="adda247.com"]
+bankersadda.com##.row > div > .top-package
+bankersadda.com##.footer-static-detail-bar
+economictimes.indiatimes.com##div[class^="styles_stickyFooterContainer"]
+tribuneindia.com#$#.popup.active:has(> .container-subscribe:only-child) { display: none !important; }
+tribuneindia.com#$#.popup-active { overflow: auto !important; }
 cloud.mail.ru##div[class^="AsidePromoModal__"]
 deepl.com##div[data-testid="above-navigation-banner"]
 dime.jp##.banner
@@ -58317,8 +58343,9 @@ okpeliz.com#%#//scriptlet('adjust-setInterval', '/countdown|progressLine/', '*',
 nexusmods.com#%#//scriptlet('adjust-setInterval', 'remaining--;')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/214159
 arahcloud.com#%#//scriptlet('adjust-setInterval', 'downloadTime', '*', '0.001')
+! https://github.com/AdguardTeam/AdguardFilters/issues/219085
 ! https://github.com/AdguardTeam/AdguardFilters/issues/213838
-topshare.in,tempmaile.me#%#//scriptlet('adjust-setInterval', 'count', '*', '0.001')
+topshare.in,tempmaile.me,filydot.fun#%#//scriptlet('adjust-setInterval', '/count|downloadButton/', '*', '0.001')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/213796
 crystal-launcher.pl#%#//scriptlet('adjust-setTimeout', 'timerCount', '*', '0.001')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/213725
