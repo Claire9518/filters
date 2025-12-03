@@ -50485,6 +50485,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1) { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||advancedanalytics-websocket-pri-001.hexaglobe.net^
 ||htm*.hepsiburada.com^
 ||valencia-beacons.xumo.com^
 ||sync.getpublica.com^
@@ -50857,7 +50858,6 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1) { remove: true; }
 ||tracking.ringieraxelspringer.tech^
 ||event.*.shoplive.cloud^
 ||aidsvc.netflix.com^
-||sensor.grubhub.com^
 ||kloggyr-service.kyruus.com^
 ||geo.justwatch.com^
 ||sspnm.emol.com^
@@ -77028,6 +77028,9 @@ mail.ferret-one.com%2Fbeacon$image
 /ss/o/*/ho.gif$image
 %2Fss%2Fo%2F*%2Fho.gif$image
 !
+! PayPal
+://t.paypal.com/ts?v=$image
+%3A%2F%2Ft.paypal.com%2Fts%3Fv%3D$image
 ! https://github.com/easylist/easylist/issues/20669
 emailtracking.cashstar.com$image
 ! https://ridibooks.com/
@@ -77434,6 +77437,8 @@ esputnik.com/repository/applications/commons/hidden.png
 ! SmartrMail
 email.mail2.smartrmail.co$image
 ! Klaviyo
+email.*.com/o/$image
+email.*.com%2Fo%2F$image
 trk.*.com/o/$image
 trk.*.com%2Fo%2F$image
 ctrk.klclick*.com/o/$image
@@ -79602,6 +79607,7 @@ dlsdk.appsflyer.com^
 !
 ! NOTE: Regular rules
 !
+||tc.vbnmhjlp.com^
 ||logrcv.adseyeservice.com^
 ||stats.cn.ronghub.com^
 ||statistic.live.126.net^
@@ -80748,6 +80754,10 @@ d4?appid*type*
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/219275
+||tms.post.ch/*gtm.js|$script,redirect=google-analytics
+!+ PLATFORM(ios, ext_android_cb, ext_safari)
+@@||tms.post.ch/*gtm.js|
 ! https://github.com/AdguardTeam/AdguardFilters/issues/219095
 @@||cdn.clerk.io/clerk.js$domain=smnovella.com
 ! fix login
