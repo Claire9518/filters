@@ -47134,6 +47134,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1) { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||mp.imgur.com^
 ||a.apkeditor.io^
 ||log.goodnovel.com^
 ||d2qxmykuaro8s3.cloudfront.net^
@@ -66791,6 +66792,7 @@ zjjz6lpv44aguszo.cloud.s11.sfmc-osl.com$image
 !+ NOT_OPTIMIZED
 /.well-known/private-click-measurement
 !
+/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-events-provider-contact-form-
 /web-vitals-tracker.js
 /.rum/@adobe/helix-
 ://sp.*/sp/h|$xmlhttprequest
@@ -67571,6 +67573,11 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||chatgpt.com/ces/v1/t$xmlhttprequest,redirect=noopjson
+||chatgpt.com/ces/v1/i^$xmlhttprequest,redirect=noopjson
+||chatgpt.com/ces/v1/p|$xmlhttprequest,redirect=noopjson
+||chatgpt.com/ces/statsc/$xmlhttprequest,redirect=noopjson
+/v1/rgstr?k=client-$xmlhttprequest,redirect=noopjson,domain=chatgpt.com
 ||contents.kyobobook.co.kr/resources/lib/kbb-js/kbb.stats.js
 arte.tv#%#//scriptlet('set-local-storage-item', '/^oidc\./', '$remove$')
 ||full-count.jp/ssc.min.js
@@ -70998,7 +71005,6 @@ semprotyuk.com##div[style^="margin-bottom:150px;"][style*="padding-right:2em;"]
 ||nature.com/platform/track/
 ||static.hankyung.com/js/ga/googleTagManager.js
 ||hankyung.com/resource/js/w/view.gtmet.js
-||discord.com/api/v*/science
 ||fensi.plus/*/tracking/
 ||tvid.in/log/
 ||intersc.igaming-service.io/hltv.org.js
@@ -72633,6 +72639,13 @@ dreamprogs.net##td[width="88"][height="31"]
 ||google.com/log?$redirect=nooptext
 ||yandex.ru/clck/click|
 !
+!#if (!ext_ublock)
+!#if (!adguard_ext_chromium && !adguard_ext_opera && !adguard_ext_firefox && !adguard_ext_chromium && !adguard_ext_chromium_mv3)
+||discord.com/api/v*/science
+!#else
+discord.com#%#//scriptlet('prevent-fetch', '/discord\.com\/api\/v[0-9]+\/science/')
+!#endif
+!#endif
 /^https:\/\/www\.purevpn\.[a-z]+\/[a-z0-9]{7}\/$/$script
 !+ PLATFORM(ios, ext_safari, ext_android_cb)
 /^https:\/\/www\.purevpn\.[a-z]+\/[a-z0-9][a-z0-9][a-z0-9][a-z0-9][a-z0-9][a-z0-9][a-z0-9]\/$/$script
@@ -74453,6 +74466,11 @@ $cookie=bf_visit
 ! Bad:  ||monerominer.rocks^$third-party (should be in adservers.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/220298
+||agoda.com^$cookie=agoda.analytics
+||agoda.com^$cookie=agoda.firstclicks
+||agoda.com^$cookie=agoda.lastclicks
+||agoda.com^$cookie=t_rc
 ! aws.amazon.com
 ||amazon.com^$cookie=aws-target-data
 ||amazon.com^$cookie=aws-target-session-id
@@ -81326,6 +81344,7 @@ kizi.com#%#window.google_trackConversion = function() {};
 ||alikeaddition.com^
 ||aliveachiever.com^
 ||alloutdubstep.com^
+||allsunflowers.com^
 ||alltypo.com^
 ||alluringbucket.com^
 ||almondbuns.com^
@@ -81442,6 +81461,7 @@ kizi.com#%#window.google_trackConversion = function() {};
 ||blissfullagoon.com^
 ||blitzcampaigns.com^
 ||blockdial.com^
+||bloomsend.com^
 ||blueeyedblow.com^
 ||bluenest.net^
 ||bluevinebooks.com^
@@ -82191,6 +82211,7 @@ kizi.com#%#window.google_trackConversion = function() {};
 ||jubilantwhisper.com^
 ||juicebard.com^
 ||juiceblocks.com^
+||juicingoasis.com^
 ||justconfig.com^
 ||justicejudo.com^
 ||justpickaname.com^
@@ -82650,6 +82671,7 @@ kizi.com#%#window.google_trackConversion = function() {};
 ||rememberdiscussion.com^
 ||remixslot.com^
 ||rentinfinity.com^
+||rentpenny.com^
 ||repeatsweater.com^
 ||replaceroute.com^
 ||rescuerhino.com^
