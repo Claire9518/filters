@@ -47134,6 +47134,9 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1) { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||metrics-ingress-web.svc.vinted.com^
+||metrics.vinted.lt^
+||d.nordvpn.com^
 ||ingress.linktr.ee^
 ||browser-fp.production.linktr.ee^
 ||app-performance.music.amazon.dev^
@@ -67577,6 +67580,8 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||vinted.*/relay/events
+||nordvpn.com/static/TrackersRuntimeScript.
 ||letu.ru/api/rrs/v*/analytics
 ||api-statist.tinkoff.ru/gateway/v*/events
 ||assets.production.linktr.ee/cep/
@@ -75086,6 +75091,8 @@ $cookie=ahoy_visitor,domain=instacart.ca|instacart.com
 !||tripadvisor.$cookie=TAUnique - breaks results https://github.com/AdguardTeam/AdguardFilters/issues/168373
 !||tripadvisor.$cookie=TADCID - breaks login
 ! https://github.com/AdguardTeam/AdguardFilters/issues/139322
+||nordvpn.com^$cookie=nv_tri
+||nordvpn.com^$cookie=nv_trs
 ||nordvpn.com^$cookie=CurrentSession
 ||nordvpn.com^$cookie=FirstSession
 ||nordvpn.com^$cookie=nextbid
@@ -75488,6 +75495,9 @@ dlsdk.appsflyer.com^
 !
 ! NOTE: Regular rules
 !
+||events.backtrace.io^
+||kbox-analytics-prod.s*.amazonaws.com^
+||logs.classdojo.com^
 ||api.arity.com^
 ||mob2.bpt.apprevork.com^
 ||cpatrk.net^
@@ -75787,6 +75797,7 @@ d4?appid*type*
 ||stats.samsungpass.com^
 ||analytics.google.com^$domain=analytics.google.com
 ||log.pdfviewerscannerstore.live^
+||mon-v*-boot.capcutapi.com^
 ||log-sg.capcutapi.com^
 ||mon-sg.capcutapi.com^
 ||tnc-sg.capcutapi.com^
@@ -81674,6 +81685,7 @@ kizi.com#%#window.google_trackConversion = function() {};
 ||controlswim.com^
 ||convertbatch.com^
 ||cooingcoal.com^
+||cookiestorybook.com^
 ||coolestcatcare.com^
 ||coolguesthouse.com^
 ||coordinatedcoat.com^
@@ -81681,6 +81693,7 @@ kizi.com#%#window.google_trackConversion = function() {};
 ||copycarpenter.com^
 ||copyfranchise.com^
 ||copyrightaccesscontrols.com^
+||copytweaks.com^
 ||copyvibes.com^
 ||coralcranes.com^
 ||coralreverie.com^
