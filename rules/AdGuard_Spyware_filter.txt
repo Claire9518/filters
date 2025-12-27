@@ -564,8 +564,9 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1) { remove: true; }
 !
 !
 !
+||b-sing.com^
+||client-sdk.hackle.io^
 ||t.jibeno.xyz^
-||fullrestore.net^
 ||ctxcollect.com^
 ||conduit-beacon-usw2.mtvnservices.com^
 ||tvp.tv^
@@ -47032,6 +47033,9 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1) { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||pftk.temu.com^
+||thtk.temu.com^
+||spa-tracker*.spapi.io^
 ||apistats.rg.ru^
 ||analytics.t-mobile.com^
 ||raw.vidyard.com^
@@ -66502,6 +66506,7 @@ zjjz6lpv44aguszo.cloud.s11.sfmc-osl.com$image
 !+ NOT_OPTIMIZED
 /.well-known/private-click-measurement
 !
+/sfp/universal_analytics.min.
 /ajax/whereami$ping
 /wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-events-provider-contact-form-
 /web-vitals-tracker.js
@@ -67284,6 +67289,8 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||temu.com/*/api/firefly/exp-config
+||temu.com/api/faas-abtest-server/firefly-api/exp-config
 ||splunkcloud.com/services/collector/event|
 ||splunkcloud.com/services/collector/event|$xmlhttprequest,redirect=noopjson
 ||lemrock.com/v1/publishers/tracking/
@@ -73372,6 +73379,8 @@ adguard.info,adguard.com,adguard.app#$#.hello_from_adguard_advanced_protection_i
 ! Bad:  ||example.com^$cookie=flat_r_mb (should be in cookies_specific.txt)
 !
 !
+! trkkn.com
+$cookie=universal_analytics_cid
 ! Galaksion
 $cookie=GL_UI4
 $cookie=GL_GI10
@@ -76409,6 +76418,10 @@ d4?appid*type*
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/221146#issuecomment-3692695354
+! URL - https://www.enedis.fr/faire-le-releve-en-ligne
+@@||cdn.tagcommander.com/*/tc_ENEDIS_*.js$domain=frontend-mes-prms-part-cloud.enedis.fr
+enedis.fr#%#//scriptlet('set-constant', 'window.tc_vars', 'emptyObj')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/220829
 @@||collector-*.px-cloud.net^$xmlhttprequest,domain=ifood.com.br
 ! https://github.com/AdguardTeam/AdguardFilters/issues/220570
@@ -81404,6 +81417,7 @@ kizi.com#%#window.google_trackConversion = function() {};
 ||coloradoserves.com^
 ||colorfulpet.com^
 ||coloringisland.com^
+||coloroptimizer.com^
 ||colossalclouds.com^
 ||colossalcoat.com^
 ||colossalcry.com^
@@ -82014,6 +82028,7 @@ kizi.com#%#window.google_trackConversion = function() {};
 ||juicingoasis.com^
 ||justconfig.com^
 ||justicejudo.com^
+||justlagoon.com^
 ||justpickaname.com^
 ||justwebcards.com^
 ||justwowjars.com^
