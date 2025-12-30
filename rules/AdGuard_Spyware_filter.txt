@@ -426,6 +426,8 @@ accountkiller.com#%#window.ga = function(){var a = arguments[5];a&&a.hitCallback
 !#if (!ext_ublock)
 ! Suppressing both Google's Topics API and Topics API using Permissions policy
 ! AGLint temporarily disabled for this rule due to https://github.com/AdguardTeam/AGLint/issues/191
+! TODO: 01.04.2026 check if Google removed these APIs from Permissions policy
+!       https://github.com/AdguardTeam/AdguardFilters/issues/221135
 ! TODO: Enable it back when AGLint is fixed.
 ! TODO: remove document modifier when this issue is fixed - https://github.com/AdguardTeam/AdguardBrowserExtension/issues/2954
 /.*/$permissions=join-ad-interest-group=(),document
@@ -564,6 +566,8 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1) { remove: true; }
 !
 !
 !
+||protected-api.branch.io^
+||pixel.visitiq.io^
 ||b-sing.com^
 ||client-sdk.hackle.io^
 ||t.jibeno.xyz^
@@ -47802,6 +47806,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1) { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||crs.pa.br.de^
 ||app-analysislog.sto.cn^
 ||pftk.temu.com^
 ||thtk.temu.com^
@@ -68396,6 +68401,9 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||creator-spring.com/ngjj/
+||br.reco.ebu.io/v3/collect?s=
+||br24.pa.br.de/event?s=
 ||ua.financialexpress.com/personlization-sdk.min.js
 ||etsy.com/include/tags.js
 ||etsy.com/api/v*/ajax/public/bacon|
@@ -77531,6 +77539,8 @@ d4?appid*type*
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/221167
+@@||st-marks-yoga.recess.tv/_app/immutable/chunks/pixelTracker
 ! https://github.com/AdguardTeam/AdguardFilters/issues/221146#issuecomment-3692695354
 ! URL - https://www.enedis.fr/faire-le-releve-en-ligne
 @@||cdn.tagcommander.com/*/tc_ENEDIS_*.js$domain=frontend-mes-prms-part-cloud.enedis.fr
@@ -83215,6 +83225,8 @@ kizi.com#%#window.google_trackConversion = function() {};
 ||lovelydrum.com^
 ||loveseashore.com^
 ||lowercases.com^
+||lowerthewatts.net^
+||luckyshelf.com^
 ||ludicrousarch.com^
 ||lumberamount.com^
 ||luminousboulevard.com^
