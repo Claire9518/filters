@@ -2559,6 +2559,12 @@ lockbarber-supplies.de,raz-zeitung.de,muensteraner-rechtsanwaelte.de,hardware-he
 !
 ! NOTE: Regular rules
 !
+miastokolobrzeg.pl#%#//scriptlet('trusted-click-element', 'div[aria-label="cookieconsent"] .cc-deny', '', '1500')
+nissan-nmc.co.jp##.cookie-approval
+nhkworldpremium.com#%#//scriptlet('trusted-click-element', '#gdpr .form__back.cookie__floating__buttons__button', '!cookie:gdpr-cookie')
+fissman.ru##.cookies-custom-popup
+hybecorp.com##.floating-cookie
+adoraudition.world##.heading-wrap.fade-enter-active:has(a[href="/cookies-policy"])
 geblitzt.de#%#//scriptlet('set-cookie', 'cookielawinfo-checkbox-analytics', 'no')
 efset.org#%#//scriptlet('trusted-set-local-storage-item', 'cookie_consent', '{"essential":true,"analytics":false}')
 /wp-content/plugins/pressidium-cookie-consent$domain=kiwix.org|itvm.pl
@@ -18233,6 +18239,9 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 !+ NOT_OPTIMIZED PLATFORM(windows, mac, android)
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/221695
+miastokolobrzeg.pl#@#.cc-window[aria-label="cookieconsent"]
+miastokolobrzeg.pl#@#.cc-floating
 ! https://github.com/AdguardTeam/AdguardFilters/issues/221814
 !#if (adguard_app_ios || adguard_ext_safari || adguard_ext_android_cb)
 geblitzt.de#@##cookie-consent
@@ -35952,6 +35961,9 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+evolvingtable.com##.wp-block-group > .cwp-inner.has-undenary-background-color:has(form[action$="/subscriptions"])
+evolvingtable.com##.cwp-save-recipe-shortcode
+long-mcquade.com#%#//scriptlet('set-cookie', 'LmInsiderModalClosed', '1')
 obozrevatel.com##.subscribePopup_wrapper
 echofm.online##main > div[class^="sc-"]:has(> div.ml_embed_container)
 kinogo.*##.notino
@@ -37919,7 +37931,7 @@ ovs.it#$#body[style] { overflow: auto !important; }
 globis.jp##.mail_magazine_card
 hanako.tokyo,noticias.uol.com.br##.register
 insightsonindia.com##aside > section[id^="text-"]:has(> .textwidget > .sub_youtube)
-picjumbo.com##.newsletter_popup
+toshiba-clip.com,picjumbo.com##.newsletter_popup
 ogrodosfera.pl#$##NewsletterExit { display: none !important; }
 ogrodosfera.pl#$#.modal-backdrop { display: none !important; }
 ogrodosfera.pl#$#body { overflow: auto !important; }
@@ -53397,6 +53409,9 @@ www.kinopoisk.ru##footer > div:has(> div > div[data-testid="kp-ui.amediateka-foo
 !
 ! SECTION: Self-promo - Regular rules
 !
+fissman.ru#$#body.popmechanic-disable-scroll { overflow: auto !important; }
+fissman.ru#$#.popmechanic-js-paranja { display: none !important; }
+fissman.ru#$##popmechanic-snippet { display: none !important; }
 kinogo.*##.zplata
 thirdspacelearning.com##body.single-usa_blog > div[style^="position:"]:not([class]):not([id])
 thirdspacelearning.com##.popup.resource_download_button
@@ -58560,6 +58575,9 @@ eiga.com##.header-pure-banner
 !##############################
 ! SECTION: Tweaks - CSS
 !
+! gplinks.co
+qrixpe.com,ajazijobs.in,bharti26.in,paidpe.com,grammarhindi.in,mfulecollegewarud.org,parivahansewa.live,tezjobs.in,blacksattaking786.com,niraamjob.in,sparktrail.site,jjcommunication.shop,sociallytrendz.online,sanadegreecollege.in,stpaulsschool.org.in,timesnewss.com,oreopix.com,jobernnews.com,bhumibihar.co.in,abresult.in,merainsurance.xyz,siliconcraft.in,jankarishala.com,coinnai.com,merainsurance.xyz,emipe.online,sankarmusic.in,rozgarguide.com,sarkaricarer.com,tallgalls.com,variedvortex.com,pubgmobile.cloud,general24news.in,arceusxdownload.com,htmlgames.website,iqmastered.com,jobjankari.online,examsnews.com#$##myNextInst { display: block !important; }
+qrixpe.com,ajazijobs.in,bharti26.in,paidpe.com,grammarhindi.in,mfulecollegewarud.org,parivahansewa.live,tezjobs.in,blacksattaking786.com,niraamjob.in,sparktrail.site,jjcommunication.shop,sociallytrendz.online,sanadegreecollege.in,stpaulsschool.org.in,timesnewss.com,oreopix.com,jobernnews.com,bhumibihar.co.in,abresult.in,merainsurance.xyz,siliconcraft.in,jankarishala.com,coinnai.com,merainsurance.xyz,emipe.online,sankarmusic.in,rozgarguide.com,sarkaricarer.com,tallgalls.com,variedvortex.com,pubgmobile.cloud,general24news.in,arceusxdownload.com,htmlgames.website,iqmastered.com,jobjankari.online,examsnews.com#$?##VerifyBtn { display: block !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/220404
 topshare.in,tempmaile.me#$#.this-an-container { display: none !important; }
 topshare.in,tempmaile.me#$#.btn-download { display: block !important; }
@@ -63096,6 +63114,7 @@ subbota.ua##aside.sidebar > div[id^="custom_html-"]
 !   NOTE: Donation widgets
 !   Really annoying only
 !
+fileditch.com###fd-donate-wall
 gazzettinodelchianti.it##.wpb_wrapper > div.vc_row_inner:has(> div.vc_column_inner form[action="https://www.paypal.com/cgi-bin/webscr"])
 recyclemap.ru##.donation-section
 recyclemap.ru##rc-donation-banner

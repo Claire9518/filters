@@ -156,6 +156,7 @@
 ||startup.mobile.webvisor.com^
 ||startup-mobile.ap.yandex-net.ru^
 !
+||up.ousabq.tech^
 ||ogads-pa.clients6.google.com^
 ||ad.mojisead.co.kr^
 ||openglass.tv^
@@ -1022,6 +1023,10 @@
 ! Bad: ||ad.doubleclick.net^ (should be in adservers.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/221944
+mangalivre.tv#%#//scriptlet('prevent-addEventListener', 'DOMContentLoaded', 'bait')
+mangalivre.tv#$##manga-safe-wrapper { display: block !important; }
+mangalivre.tv#$##adblock-overlay { display: none !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/211147
 !+ PLATFORM(ios)
 [$path=/e/]waaw.to#%#//scriptlet('set-constant', 'device.tv', 'trueFunc')
@@ -2740,6 +2745,7 @@ sp.manga.nicovideo.jp##div[style^="--ads-width:"]
 !
 ! SECTION: Regular rules
 !
+walesonline.co.uk##div[class^="TopSlotContainer_top-slot-container__"]
 sm.news##.head_part
 merkmal-biz.jp##div[style="padding-top:3px; padding-bottom:3px; min-height:280px;"]
 qlife.jp##main > div[style="text-align: center; margin: 20px auto;"]
@@ -2750,7 +2756,7 @@ daily.co.jp###dssp-relation-rcmTest3
 u-rennai.jp##.consult_ad_image
 u-rennai.jp##.items:has(> a[onclick][href^="https"]:not([href*="u-rennai.jp"]))
 u-rennai.jp##li[style="list-style: none;"]
-news.denfaminicogamer.jp##aside[id*="_"] > div[style="position: fixed;"]
+news.denfaminicogamer.jp###mainColumn > aside[id*="_"][id*="-"]:has(> div[style^="position:"])
 kurashiru.com##.SpApp-ArticleAds
 fnc.ebc.net.tw##.two300ad
 abplive.com##.middle-ad-btf-wrapper
@@ -2760,7 +2766,6 @@ koe-koe.com###ak_ad
 fc1adult.com##.sp_h200.tbm24
 newsyou.info###slidebox
 news.denfaminicogamer.jp##.show[id*="_"]:has(> i.fa-times[id$="-close"][aria-hidden] + a[id$="-link"][data-wpel-link="external"] > img)
-news.denfaminicogamer.jp##aside[id^="chaoszeronightmare_"]
 ||lettuceclub.net/asset/js/job_box_
 lettuceclub.net##.pt-\[58px\].md\:hidden
 lettuceclub.net###jobbox_list
