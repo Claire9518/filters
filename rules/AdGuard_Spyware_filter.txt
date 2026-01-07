@@ -48378,6 +48378,8 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1) { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||t.hentaivox.com^
+||tk.jtbc.co.kr^
 ||eventcom.api.np.km.playstation.net^
 ||pulsar.ebay.com^
 ||pixel-conversion.apps.seabroadnet.com^
@@ -68955,6 +68957,10 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||cast-imp.jtbc.co.kr/trac?event=
+||bsp-proxy.wetransfer.net/pico/v*/web-events
+||wetransfer.com/api/web-metrics
+||tokbox.com/prod/logging/
 ||telemetry-web.api.playstation.com^$redirect=nooptext
 ||smetrics.aem.playstation.com^$redirect=nooptext
 ||ir.ebaystatic.com/cr/ebay-rum/
@@ -78128,6 +78134,10 @@ d4?appid*type*
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/221500
+@@||a.klaviyo.com/client/subscriptions/$xmlhttprequest,domain=ahead-nutrition.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/222017
+@@||googletagmanager.com/gtm.js$domain=agrieuro.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/221480
 @@||e.cquotient.com/recs/blqj-smart/$domain=store.smart.com.ph
 @@||cdn.cquotient.com/js/*/gretel.min.js$domain=store.smart.com.ph
