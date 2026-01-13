@@ -48384,6 +48384,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1) { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||events.insiad.com^
 ||agatha-log-service-*.a.run.app^
 ||me9ddf.moebelix.
 ||hw-t.hypers.com.cn^
@@ -49044,7 +49045,7 @@ prd.api.bleacherreport.com^
 ||stats.bunkr.ru^
 ||logs.netflix.com^
 ||mst.rnd.de^
-||cza.crazygames.com^
+||cza*.crazygames.com^
 ||event-dot-procolor-backend.appspot.com^
 ||prod.event.mwm-asset-manager.mwmwebapis.com^
 ||api.amplitudeexperiment.com^
@@ -49301,7 +49302,6 @@ prd.api.bleacherreport.com^
 ||femetrics.grammarly.io^
 ||realtimeanalytics.yext.com^
 ||stats.indianpornempire.com^
-||lp.spac.me^
 ||analytics.verfacto.com^
 ||log.dzen.ru^
 ||flask.us.nextdoor.com^
@@ -68970,6 +68970,7 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||l.search.naver.com/n/responsive/*&no_qc=*&p=
 ||eadaily.com/tools/calc_news_stat.php
 ||scriber.webflix.ai/beacon
 ||rawpixel.com/external/gtag.js
@@ -70600,7 +70601,6 @@ pcmag.com##img[src^="https://t.myvisualiq.net/"]
 ||dataplane.rum.*.amazonaws.com/appmonitors
 ||suumo.jp/jj/jjcommon/sc/s_code.js
 ||bablic.com/api/engine/pling
-||spcs.*/api/common/beacon/
 ||unification.useinsider.com/api/event/
 ||rou.video/js/yd.js
 ||elle.com.hk/assets/js/ur.js
@@ -76957,6 +76957,10 @@ dlsdk.appsflyer.com^
 !
 ! NOTE: Regular rules
 !
+||track.applicaster.com^
+||hb-mob2.optiword.com^
+||tracking.geo.*.amazonaws.com^
+||telemetry.doxo.com^
 ||sensorsdata-datasink.stardust-tv.com^
 ||event-api-cs.stardust-tv.com^
 ||logreport-global-dual.cool*cloud.com^
@@ -78158,6 +78162,10 @@ d4?appid*type*
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/221977
+investor-web.hdfcfund.com#%#//scriptlet('set-constant', 'smartech', 'noopFunc')
+!+ PLATFORM(ios, ext_android_cb)
+@@||tw.netcore.co.in/smartechclient.js$domain=investor-web.hdfcfund.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/222196
 ! https://github.com/AdguardTeam/AdguardFilters/issues/221840
 @@||a.klaviyo.com/client/subscriptions/
@@ -84362,6 +84370,7 @@ kizi.com#%#window.google_trackConversion = function() {};
 ||scenicchicago.com^
 ||scenicdrops.com^
 ||scentedkindly.com^
+||scholarloop.com^
 ||sciencedart.com^
 ||scientificshirt.com^
 ||scintillatingscissors.com^
@@ -84386,6 +84395,7 @@ kizi.com#%#window.google_trackConversion = function() {};
 ||secretturtle.com^
 ||seedscissors.com^
 ||seekmyshop.com^
+||seekremote.com^
 ||seenvault.com^
 ||seespice.com^
 ||selectivesummer.com^
