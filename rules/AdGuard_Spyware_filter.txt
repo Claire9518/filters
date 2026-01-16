@@ -567,6 +567,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1) { remove: true; }
 !
 !
 !
+||heap-api.com^
 ||analytics.vinovo.si^
 ||cs.media.net^
 ||bidder.doceree.com^
@@ -48394,6 +48395,11 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1) { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||tracking.carfax.com^
+||analytics.carvana.io^
+||analytics.ticketmaster.com^
+||track.opentable.com^
+||mixpanel.tigocloud.net^
 ||analytics.launcherleaks.net^
 ||ingest.webcol.sdp.peacocktv.com^
 ||t.collectiveaudience.co^
@@ -48977,7 +48983,6 @@ prd.api.bleacherreport.com^
 ||pixels.argusplatform.com^
 ||egg.afisha.ru^
 ||tracking-app.diginetica.net^
-||c.us.heap-api.com^
 ||logging.g.sst.secureserver.net^
 ||metricreceiver.cellrebel.com^
 ||events.app-performance.music.amazon.dev^
@@ -68990,6 +68995,7 @@ $cookie=_awl;maxAge=30,domain=nypost.com|al.com|9news.com
 !
 ! NOTE: Specific rules
 !
+||question.searchiq.co/static/js/analytics.js
 ||app.birdsend.co/forms/*/display-stats-pixel
 ||marketplace.anyclip.com/v*/lre-events
 /log/client/messages$domain=momondo.com|kayak.com
@@ -76995,6 +77001,12 @@ dlsdk.appsflyer.com^
 !
 ! NOTE: Regular rules
 !
+||analytics.wachanga.app^
+||usage.digitalconcerthall.com^
+||report.starshort.online^
+||clarity.ms^|
+||engagelab.cc^
+||global-sis.engagelab.com^
 ||app.siteperformancetest.net^
 ||events-stream-svc.cordial.io^
 ||events.gonative.io^
@@ -77286,7 +77298,7 @@ d4?appid*type*
 ||103.41.167.237/v2/resolv?host=
 ||logs.nebulahoroscope.com^
 ||gateway.bingviz.microsoftapp.net^$app=com.microsoft.bing
-||app.adjust.com^$app=com.microsoft.bing|jp.gocro.smartnews.android|com.daily.health.tracker.monitor|com.glovo|com.edadeal.android|com.dailymotion.dailymotion
+||app.adjust.com^$app=com.microsoft.bing|jp.gocro.smartnews.android|com.daily.health.tracker.monitor|com.glovo|com.edadeal.android|com.dailymotion.dailymotion|com.novoda.dch
 ||sapphire.api.microsoftapp.net^$app=com.microsoft.bing
 ||browser.events.data.microsoft.com^$app=com.microsoft.bing
 ||mobile.events.data.microsoft.com^$app=com.microsoft.bing
@@ -78210,6 +78222,10 @@ d4?appid*type*
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/222570
+@@||cdn.cxense.com/cx.cce.js$domain=elle.com
+@@||cdn.cxense.com/cx.js$domain=elle.com
+@@||api.cxense.com/public/widget/data?json=$domain=elle.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/222154
 !+ NOT_PLATFORM(windows, mac, android, cli)
 @@||live.mrf.io/statics/marfeel/gardac-sync.js$domain=muylinux.com
