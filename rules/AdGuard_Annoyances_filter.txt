@@ -2570,6 +2570,8 @@ lockbarber-supplies.de,raz-zeitung.de,muensteraner-rechtsanwaelte.de,hardware-he
 !
 ! NOTE: Regular rules
 !
+sportsboom.com##body > .shadow-grey-d1.sm\:py-5:has(a[href$="/about-us/privacy-policy/"])
+growthdot.com###tuna_gdpr__cookie
 pwa.aeroflot.ru#%#//scriptlet('set-local-storage-item', 'is-cookies-agreed', 'true')
 gizmodo.com#$##sd-cmp { display: none !important; }
 gizmodo.com#$#html[class*="sd-cmp"] { overflow: auto !important; }
@@ -2929,7 +2931,7 @@ zoo-leipzig.de#%#//scriptlet('trusted-set-cookie', 'cs-cookie-banner', '|essenti
 volunteer.redcross.org.uk#$#body { overflow: auto !important; padding-right: 0 !important; }
 volunteer.redcross.org.uk#$#.assemble-cookie-settings-modal-opacity { display: none !important; }
 volunteer.redcross.org.uk#$##cookie-settings-popup { display: none !important; }
-maksavit.ru##.cookie-usage-wrapper
+s7.ru,maksavit.ru##.cookie-usage-wrapper
 baon.ru##.notification--right
 frankentourismus.de#%#//scriptlet('trusted-set-cookie', 'timm4cookie-consent', '%7B%22essential%22%3Atrue%2C%22ga%22%3Afalse%7D')
 aosom.*##.cookies-cons
@@ -17612,7 +17614,7 @@ rynekpierwotny.pl#%#//scriptlet('set-local-storage-item', 'lscache-cookieMessage
 uxfeedback.ru#%#//scriptlet('set-local-storage-item', 'uxfb_cookies', 'true')
 premiumkino.de#%#//scriptlet('set-cookie', 'cookie_required', 'true')
 happydog.de#%#//scriptlet('set-cookie', 'mnd-cookie-accepted-happydogde4', '1')
-hardwarehasky.com,edv-direkt24.de,schanzenfit-shop.de,blueshopfashion.de,anderweltverlag.com,trolley-center.com,rabe-markt.com,holland-shop.com,hanse-soft.de,bamboo-nr-1.de,kvm-ip.de,team-undercover.de,superpreis-moebel.de,kantenschutzprofi.shop,diorama-world.com,colvital.de#%#//scriptlet('set-cookie-reload', 'epCookieConsent', '0')
+honig-wernet.shop,hardwarehasky.com,edv-direkt24.de,schanzenfit-shop.de,blueshopfashion.de,anderweltverlag.com,trolley-center.com,rabe-markt.com,holland-shop.com,hanse-soft.de,bamboo-nr-1.de,kvm-ip.de,team-undercover.de,superpreis-moebel.de,kantenschutzprofi.shop,diorama-world.com,colvital.de#%#//scriptlet('set-cookie-reload', 'epCookieConsent', '0')
 lolaliza.com#%#//scriptlet('set-cookie', 'enableTracking', 'false')
 peakd.com#%#//scriptlet('set-cookie', 'COOKIE_CONSENT_ACCEPTED', 'true')
 tweakers.net#%#//scriptlet('trusted-click-element', 'button[data-action="refuseAll"]', '!cookie:SSLB', '800')
@@ -17722,7 +17724,7 @@ lazienkaplus.pl#%#//scriptlet('remove-class', 'cookies-policy', 'body.cookies-po
 debrid-link.*#%#//scriptlet('set-cookie', 'cookies_infos', '1')
 nonsolocap.it#%#//scriptlet("set-constant", "cookieChoices.showCookieConsent", "noopFunc")
 romeo.com#%#//scriptlet('set-local-storage-item', 'cookiesConsent', '1')
-bk-licht.eu,shirtlabor.de,vanlaack.com#%#//scriptlet("set-cookie", "cookie-preference", "1")
+torquato.de,bk-licht.eu,shirtlabor.de,vanlaack.com#%#//scriptlet("set-cookie", "cookie-preference", "1")
 boohooman.com#%#document.cookie="dw_cookies_accepted=D; path=/;";
 filmweb.pl#%#//scriptlet('adjust-setTimeout', '[native code]', '2000', '0.001')
 filmweb.pl#%#//scriptlet("set-constant", "rodo.waitForConsent", "noopPromiseResolve")
@@ -18615,7 +18617,7 @@ baur.eu#@#.cookie-consent-content
 @@||cdn.privacy-mgmt.com/unified/wrapperMessagingWithoutDetection.js$domain=supla.fi
 @@||cdn.privacy-mgmt.com/mms/v2/get_site_data$domain=supla.fi
 ! https://github.com/AdguardTeam/AdguardFilters/issues/213157
-@@||cdn.privacy-mgmt.com/wrapperMessagingWithoutDetection.js$domain=transfermarkt.com.tr
+@@||cdn.privacy-mgmt.com^$domain=transfermarkt.com.tr
 ! https://github.com/AdguardTeam/AdguardFilters/issues/213120
 @@||cdn.cookielaw.org/consent/*.json$domain=southparkstudios.com.br|southpark.lat|southparkstudios.com|southpark.de
 ! Never loads
@@ -24018,6 +24020,7 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 ! The rules for content blockers only:
 ! LINK: AnnoyancesFilter/Popups/sections/antiadblock.txt#content_blockers
 !
+geenstijl.nl##body > div.fixed.inset-0
 nataliac.tourister.ru##.tourwin_error
 escaneodeleyendas.com##body > .wrap + style + div[id][class*=" "]
 escaneodeleyendas.com#%#//scriptlet('prevent-addEventListener', 'DOMContentLoaded', '/^function\(e\) \{ init\(\); \}$/')
@@ -27001,6 +27004,7 @@ inews.co.uk,pinterest.com#%#//scriptlet('set-constant', 'google.accounts.id.prom
 !
 ! SECTION: Popups - Regular rules
 !
+transfermarkt.com.tr##div[id$="wrapper"][class*="bottom-left-position"]
 search.brave.com##.before-quick-goggles
 instacart.com#$#.ReactModalPortal > div.AuthModal__Overlay:has(> div.AuthModal__Content a[href="https://www.instacart.com/privacy"]) { display: none !important; }
 instacart.com#$#body.body--auth-modal-open { overflow: auto !important; }
@@ -36125,6 +36129,10 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+trip.com###pc-google-onetap-container
+messylittlemonster.com#$#.ck_form_container { display: none !important; }
+messylittlemonster.com#$##ck_overlay { display: none !important; }
+messylittlemonster.com#$#body { overflow: auto !important; }
 m.koreaherald.com##body > section.bnn:has(> div#hbanner_78)
 news.bloomberglaw.com##div[class^="TheContent_signupButtonContainer_"]
 helentech.jp###custom_html-16
@@ -45169,6 +45177,7 @@ alfastrah.ru,turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,ra
 !
 !
 !
+s7.ru##div[class^="ds-Modal-root ds-Popup-root ds-Dialog-root "]
 calendar.yandex.ru##div[class^="TouchApp__wrap--"] > div[class^="TouchBanner__wrap--"]:has(> div[class*="TouchBanner__popup--"] a[href^="https://redirect.appmetrica.yandex.com/serve/"])
 trip.com##.m-flightlist__chromepop
 rottentomatoes.com#$##main > overlay-base { display: none !important; }
@@ -51213,7 +51222,7 @@ football-tribe.com#?#.stamp > div.tribe-thumbnails-wrapper > div.post-thumbnail:
 football-tribe.com##.dugout
 football-tribe.com##.dugout_video_cont
 besoccer.com##.dugout-wrapper
-||embed.dugout.com^$script,third-party,domain=~sportowefakty.wp.pl|~ultra-soccer.jp
+||embed.dugout.com^$script,third-party,domain=~sportowefakty.wp.pl|~ultra-soccer.jp|~fcbinside.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/117432
 cureco.jp##object[width="640"][height="480"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/116397
