@@ -18345,6 +18345,9 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 !+ NOT_OPTIMIZED PLATFORM(windows, mac, android)
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
+! https://github.com/uBlockOrigin/uAssets/issues/31613
+@@||cdn.cookielaw.org/consent/*.json$domain=lasestrellas.tv
+@@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=lasestrellas.tv
 ! https://github.com/AdguardTeam/AdguardFilters/issues/223334
 traunstein.de#@##CookieConsent
 ! https://github.com/AdguardTeam/AdguardFilters/issues/222790
@@ -27041,7 +27044,7 @@ sinemalar.com#$#.page-backdrop { display: none !important; }
 sinemalar.com#$#body:is(.site-nav-open,.modal-open) { overflow: auto !important; }
 hosei.ac.jp###user-research
 esquire.com##section[data-show-google-banner="true"]
-keiyaku-watch.jp##div[id^="bfb_content_"]
+keiyaku-watch.jp##body > div[id^="bfb_content_"]:not(#style_important)
 keiyaku-watch.jp##.liquid_connect_modal_center
 keiyaku-watch.jp##.paywall-top-banner-widget
 keiyaku-watch.jp##.lfkw-c-calendar-badge
@@ -29416,7 +29419,7 @@ zoom.earth##.instagram
 valledeelda.com##.guiacomercial_pasando
 meijutt.tv##.widget-weixin
 varianty.lviv.ua###donate-popup
-keiyaku-watch.jp,vr-pro.jp,rfc-partners.co.jp,jp-news.mercari.com,magazine.steadyjapan.com##.bfb_imgBanner
+vr-pro.jp,rfc-partners.co.jp,jp-news.mercari.com,magazine.steadyjapan.com##.bfb_imgBanner
 atasunoptik.com.tr##div[id^="nmg-incentive-"]
 haertle.de#$#div[aria-labelledby="cob-modal-campaign-label"] { display: none !important; }
 haertle.de#$#.modal-backdrop { display: none !important; }
@@ -50391,7 +50394,7 @@ forbes.com#$##forbes-dv { display: none !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/196958
 ctvnews.ca##.b-alert-bar-wrapper-custom
 ! Google Search - AI Overview
-google.*##div[data-lhcontainer="1"][id][data-hveid] > div[data-mcpr][data-mg-cp][data-mcp]
+google.*##div[data-lhcontainer="1"][eid][data-ved] > div > div > div[jsname] > div[style="display:contents"]
 ://www.google.*/async/folsrch?*&async=_basejs:*,_basecomb:*&q=$xmlhttprequest
 google.*##div[data-q][data-al]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/197075
@@ -50463,8 +50466,6 @@ wap.baidu.com##.tab_news
 ! search - hot results
 ! https://github.com/AdguardTeam/AdguardFilters/issues/189327#issue-2541929185
 baidu.com##.s-hotsearch-wrapper
-! https://github.com/AdguardTeam/AdguardFilters/issues/188884
-lasestrellas.tv###video-players-container > .fixed.bottom-0
 ! https://github.com/AdguardTeam/AdguardFilters/issues/188673
 bloomberg.com##div[data-component="inline-recirc"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187902
@@ -53812,6 +53813,7 @@ www.kinopoisk.ru##footer > div:has(> div > div[data-testid="kp-ui.amediateka-foo
 !
 ! SECTION: Self-promo - Regular rules
 !
+hotokami.jp##.mx-1.md\:mx-2:has(> div.max-w-\[100vw\] > div.overflow-y-scroll > div[onclick^="gtag"])
 vrisko.gr###advertiseContainer
 yesstyle.com##div[class*="discountBarContainer"]
 webium.ru##.article-single > div.sticky-wrapper
