@@ -1963,6 +1963,8 @@ motherless.com$$script[tag-content="awentw.com"][min-length="2000"][max-length="
 @@77.88.21.122$network,app=ru.yandex.rasp
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/223253
+@@||stats.g.doubleclick.net^$app=jp.co.koshidaka.manekinekoapp
 ! https://github.com/AdguardTeam/AdguardFilters/issues/219449
 @@||analytics.tiktok.com^$app=jwa.or.jp.tenkijp3
 @@||analytics-ipv6.tiktokw.us^$app=jwa.or.jp.tenkijp3
@@ -2753,6 +2755,8 @@ sp.manga.nicovideo.jp##div[style^="--ads-width:"]
 !
 ! SECTION: Regular rules
 !
+newegg.com#%#//scriptlet('json-prune-fetch-response', ' RecommendItems.RecommendInfo.[-].DataSource.[=].spsr SimilarItems.RecommendInfo.[-].DataSource.[=].spsr', '', 'm/product/ajax/productPersonalization')
+newegg.com##span[data-nosnippet="true"] > .sponsored-brands-items
 fok.nl#$#@media (max-width: 1023px) { #pageWrapper { top: 5px !important; } }
 televisa.com##.sm\:hidden.-mb-2
 televisa.com##.mt-8.relative
@@ -4312,7 +4316,7 @@ scribd.com##.page_wrapper > div[class] > a[href^="https://www.scribd.com/oauth/s
 leekduck.com###ad-event-page-mobile
 ddd-smart.net##.content-scroll-img
 duniaku.idntimes.com##amp-script[script="parallax-script"]
-7mmtv.sx##.ut_cg1_top
+7tv081.com,7mmtv.sx##.ut_cg1_top
 fresherslive.com##.mob_btm_sticky_ad
 ilgiorno.it##div[style="min-height:100px"]
 ilgiorno.it##div[style^="min-height: 100px; top:"]
