@@ -2573,6 +2573,7 @@ lockbarber-supplies.de,raz-zeitung.de,muensteraner-rechtsanwaelte.de,hardware-he
 !
 ! NOTE: Regular rules
 !
+live24.gr###recommendation
 bonbon.hr##div[id^="gdpr"]
 portale.during.it#%#//scriptlet('trusted-click-element', '#cc--main button.c-bn.c_link, #cc--main #s-sv-bn')
 yeyiangaming.com#%#//scriptlet('set-local-storage-item', 'cookies-declined', 'true')
@@ -27063,7 +27064,7 @@ webium.ru#%#//scriptlet('set-constant', 'isPopupOpen', 'true')
 transfermarkt.com.tr##div[id$="wrapper"][class*="bottom-left-position"]
 search.brave.com##.before-quick-goggles
 instacart.com#$#.ReactModalPortal > div.AuthModal__Overlay:has(> div.AuthModal__Content a[href="https://www.instacart.com/privacy"]) { display: none !important; }
-instacart.com#$#body.body--auth-modal-open { overflow: auto !important; }
+instacart.com#$#body.body--auth-modal-open { overflow: auto !important; position: static !important; }
 healthgrades.com###feedback
 ebooks.health.elsevier.com#%#//scriptlet('set-local-storage-item', 'e-library-modal-shown', 'true')
 pozdravok.com###pwa-install-banner
@@ -36194,6 +36195,14 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+theoregondietitian.com#%#//scriptlet('set-local-storage-item', 'fd-form-659c5bfe29ac3339eb874f83-dismissed-count', 'true')
+lemonsandzest.com#%#//scriptlet('trusted-set-local-storage-item', 'ck/forms/modal/235e84db0d/hideUntil', '99999999999999')
+lemonsandzest.com##.wpforms-location-save_recipe_block
+caretobeauty.com##.footer__inner > .footer__content:has(> .footer__newsletter)
+namelymarly.com###email-recipe
+rbmediaglobal.com###audiobook-form-embed
+theproteinchef.co##.fl-module-pp-subscribe-form
+theproteinchef.co##header > div.fl-row:has(> div.fl-row-content-wrap div.fl-module-pp-subscribe-form)
 fragdenstaat.de##div[data-banner="bottomBanner"]
 fragdenstaat.de###main > section:has(> div.container h2#newsletter)
 chocolatewithgrace.com##div[data-ff-name="popupCardImage"]
@@ -36608,7 +36617,7 @@ noticiascaracol.com##.WhatsappChannel
 noticiascaracol.com##ps-lazy-section[data-template="article-whatsapp-template"]
 noticiascaracol.com##ps-lazy-section[data-template="article-google-template"]
 chocolatecoveredkatie.com##.block-area-save-recipe
-eatingonadime.com,chocolatecoveredkatie.com##.wpforms-location-save_recipe_wprm
+dessertsonadime.com,eatingonadime.com,chocolatecoveredkatie.com##.wpforms-location-save_recipe_wprm
 thesun.co.uk##.wp-block-nypost-editor-newsletter
 thekrazycouponlady.com##.mobile-cta-container
 thekrazycouponlady.com##.desktop-cta-container
@@ -38584,7 +38593,7 @@ jihadwatch.org,vridar.org,kevinstratvert.com#$#body { overflow: auto !important;
 jihadwatch.org,vridar.org,kevinstratvert.com#$#.jetpack-subscribe-modal { display: none !important; }
 m-strana.ru##.telegramSlide-block
 elle.com.hk##.block-default:has(> div.content-wrapper div.email-bar)
-terrabrasilnoticias.com###block-18
+groweatandrepeat.com,terrabrasilnoticias.com###block-18
 reform.news##.wpremark:has(> div.wpremark-body > div.wpremark-content > p > a[href="https://t.me/cult_front"])
 minimalistbaker.com##.vertical-subscribe
 minimalistbaker.com##img[alt="Get Our Fan Favorites eBook Here!"]
@@ -45281,6 +45290,8 @@ alfastrah.ru,turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,ra
 !
 !
 !
+caretobeauty.com##.pwa-download-footer__content
+caretobeauty.com#%#//scriptlet('set-local-storage-item', 'downloadPopupDisplayed', 'true')
 liveradious.com#%#//scriptlet('set-local-storage-item', 'stickyLineRemoved', 'true')
 satariz.com#%#//scriptlet('set-local-storage-item', 'satariz_mobile_app_banner_dismissed', 'true')
 radio.de,radio.at,radio.net##div:has(> div:first-child + div:last-child > .app-banner-btn)
@@ -45664,7 +45675,7 @@ scoopzapp.com#?#.fixed:has(> div[class]:only-child > div[class] > div:only-child
 bristol.ru##.first-order-modal
 raycast.com##div[class^="GlobalBanner"]
 imdb.com##.imdb-header__app-button
-doordash.com##main > div[style="border: none; margin-top: var(--usage-space-medium);"]
+doordash.com##div[class^="StyledStackChildren-"]:has(> div[data-testid="appDownload"]:first-child + button[data-testid="appDownloadButton"]:last-child)
 doordash.com#%#//scriptlet('trusted-set-local-storage-item', 'appDownloadPromptDismissedV2Ttl', '{"value":"99999999999999","expiresAt":99999999999999}')
 t.shuqi.com##.ReaderFreeFixedGuideBtn
 enerjisa.com.tr,easy.co.il##.qr-container
@@ -48939,6 +48950,8 @@ wear.jp#%#//scriptlet('trusted-set-session-storage-item', 'status_of_app_redirec
 !
 !
 !+ NOT_OPTIMIZED
+doordash.com##main > div[style="border: none; margin-top: var(--usage-space-medium);"]
+!+ NOT_OPTIMIZED
 ticketmaster.com##.page > div[style]:not([class],[id]):has(> div[class]:only-child > div[class]:only-child > div[class] > a[href*="onelink.me"]:only-child)
 !+ NOT_OPTIMIZED
 ticketmaster.com###__next > div[class]:has(> div[class]:only-child > button ~ div[class] > a[href*="onelink.me"])
@@ -49172,6 +49185,7 @@ m.tokopedia.com#$#div[data-testid="divOverlay"] { display: none!important; }
 ! causes some issues: https://github.com/AdguardTeam/AdguardForMac/issues/550
 ~odaibako.net,~lineup.withgoogle.com,~vert.sh,~search.brave.com,~status.im,~lafenice.io,~kurer-sreda.ru,~chorki.com,~zattoo.com,~zaycev.net,~hitta.se,~mail.ru,~facebook.com,~instagram.com,~drive.google.com$$link[rel="manifest"]
 !
+instacart.com,instacart.ca#%#//scriptlet('set-cookie', 'm3_app_download_banner', 'true')
 onlineradiobox.com##.about-mobile__section
 onlineradiobox.com###panel_mobile_playmarket
 delish.com#$#nav[data-tracking-id="topNav"] > div[class^="css-"]:has(> div[class^="css-"] > div[class^="css-"] > div[class^="css-"] > img[alt="Delish App Banner Logo"]) { display: none !important; }
@@ -50450,6 +50464,8 @@ forbes.com#$##forbes-dv { display: none !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/196958
 ctvnews.ca##.b-alert-bar-wrapper-custom
 ! Google Search - AI Overview
+google.*##style + div[data-mcpr][style^="margin-bottom:"]:has(div[data-async-type="folsrch"])
+google.*##style + div[data-mcpr][style^="margin-bottom:"] div[data-async-type="folsrch"]
 google.*##div[data-lhcontainer="1"][eid][data-ved] > div > div > div[jsname] > div[style="display:contents"]
 ://www.google.*/async/folsrch?*&async=_basejs:*,_basecomb:*&q=$xmlhttprequest
 google.*##div[data-q][data-al]
@@ -53869,6 +53885,7 @@ www.kinopoisk.ru##footer > div:has(> div > div[data-testid="kp-ui.amediateka-foo
 !
 ! SECTION: Self-promo - Regular rules
 !
+uakinogo.online##.kng-rekl
 theriagames.com##.theria-plus-banner
 nikkan-gendai.com##.aside_ranking_pr
 help.apiyi.com###block-15
