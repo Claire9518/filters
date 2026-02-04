@@ -13977,7 +13977,7 @@ condor.com##.site_header_cookie
 orlandosolarbearshockey.com##.s-navigation-tool-panel-disclaimer
 nflonlocation.com###tcPopup
 kto.com,iphone-tricks.de###accept-cookie-wrapper
-forums.thefashionspot.com,germancarforum.com##.bottomFixer >div.Notices
+discussingsecurity.com,forums.thefashionspot.com,germancarforum.com##.bottomFixer > div.Notices
 wiwo.de,handelsblatt.com###vhb-consentlayer
 nk.org.ua##div[class^="styled__CookieBanner"]
 expert.de##div[data-subwidget-id="ca052b43-fab4-4ed0-a488-89925fd63657"]
@@ -26861,6 +26861,7 @@ aol.com#$#.ad__tile { height: 10px!important; position: absolute!important; left
 ! SECTION[id=content_blockers]: Anti-adblock - The rules for content blockers only
 !#if (adguard_ext_safari || adguard_app_ios || adguard_ext_android_cb)
 !#safari_cb_affinity(general)
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=thegamer.com,xmlhttprequest
 @@||hardwaretimes.com^$generichide
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=hardwaretimes.com
 @@||wnflb2023.com^$generichide
@@ -34779,6 +34780,8 @@ adguard.info,adguard.com,adguard.app#$#.hello_from_adguard_advanced_protection_i
 !
 ! SECTION: Popups - Allowlist
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/224028
+@@||tracklib.com^$permissions=identity-credentials-get=()
 ! https://github.com/AdguardTeam/AdguardFilters/issues/220673
 @@||viki.com^$permissions=identity-credentials-get=()
 ! https://github.com/AdguardTeam/AdguardFilters/issues/210526
@@ -34908,6 +34911,7 @@ labs.google.com#@##google-hats-survey
 .name/?pus=$script,third-party
 .site/?pus=$script,third-party
 !
+||dashboard.bildircin.az^
 ||connect.cdnsb.net^
 ||hotbbawese.cc^
 ||qepolax.com^
@@ -36460,7 +36464,7 @@ eatstreet.com###exp-pop-modal
 glamour.mx##div[class^="NewsletterOneClickVertical"]
 bonappetit.com##div[data-testid^="NewsletterSubscribeFormWrapper"]
 bonappetit.com##div[class^="InContentBarrierFloatingBar-"]
-androidpolice.com,backyardboss.net,cbr.com,collider.com,dualshockers.com,fextralife.com,footballfancast.com,footballleagueworld.co.uk,gamerant.com,givemesport.com,hardcoregamer.com,hotcars.com,howtogeek.com,makeuseof.com,movieweb.com,pocket-lint.com,screenrant.com,simpleflying.com,thegamer.com,therichest.com,thesportster.com,thethings.com,thetravel.com,topspeed.com,xda-developers.com##.w-promotion-offer
+thegamer.com,androidpolice.com,backyardboss.net,cbr.com,collider.com,dualshockers.com,fextralife.com,footballfancast.com,footballleagueworld.co.uk,gamerant.com,givemesport.com,hardcoregamer.com,hotcars.com,howtogeek.com,makeuseof.com,movieweb.com,pocket-lint.com,screenrant.com,simpleflying.com,thegamer.com,therichest.com,thesportster.com,thethings.com,thetravel.com,topspeed.com,xda-developers.com##.w-promotion-offer
 career.levtech.jp###js-diagnosisIncomeBanner
 career.levtech.jp##.fixedSideBannerWrap.js-fixedSideBannerWrap
 career.levtech.jp##.js-downloadWhitePaperVisibility.js-stickySideBannerWrap
@@ -45356,6 +45360,8 @@ alfastrah.ru,turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,ra
 !
 !
 !
+jiotv.com##.bannerContainer
+jiotv.com##div[class^="CtaBanner_"]
 op.gg##.w-full > div.items-center:has(> a[href^="https://itunes.apple.com/"])
 mega.nz##.application
 m.yelp.com##div[data-testid="smart-banner-pitch-app-gif"]
@@ -49442,9 +49448,6 @@ pinterest.com#%#//scriptlet('trusted-set-local-storage-item', 'appUpsell', '$now
 ||m.webaslan.com/_img/banner/wa
 x.com#$#div[role="group"] > div[data-testid="mask"] + div:has(a[download]) { display: none !important; }
 x.com#$#div[role="group"]:has(> div[data-testid="mask"] + div:last-child a[download]) { display: none !important; }
-x.com#$#div[role="group"] > div[style]:not([class]):has(> div[class] > div[class] > a[href^="https://apps.apple.com/app/apple-store/"]) { display: none !important; }
-x.com#$#div[role="group"] > div[data-testid="mask"] { display: none !important; }
-x.com#$#html[style] { overflow: auto !important; position: static !important; }
 olimp.bet#$##header { top: 0 !important; }
 olimp.bet#$##subheader { top: 3rem !important; }
 olimp.bet#$##app-download-banner { display: none !important; }
