@@ -2576,6 +2576,7 @@ lockbarber-supplies.de,raz-zeitung.de,muensteraner-rechtsanwaelte.de,hardware-he
 !
 ! NOTE: Regular rules
 !
+lbtube.com##div[data-attr="modal-cookie"]
 dolphinradar.com#%#//scriptlet('set-cookie', 'myInsCookieConsent', 'true')
 hotline.finance#$#.accept-cookies-module__VtKOfq__modal { display: none !important; }
 drum-tec.de##.iwv-cookie-overlay
@@ -6064,7 +6065,7 @@ lublin.eu###polityka-ciastek
 metro.de,metro-cc.ru##.consent-disclaimer
 metro.at,metro.bg,metro-cc.hr,metro.fr,metro.it,metro-kz.com,metro.md,metro.pk,metro.ro,metro.rs,metro.sk,makro.es,metro-tr.com,metro.ua,makro.pt#$#.consent-disclaimer { display: none !important; }
 metro.at,metro.bg,metro-cc.hr,metro.fr,metro.it,metro-kz.com,metro.md,metro.pk,metro.ro,metro.rs,metro.sk,makro.es,metro-tr.com,metro.ua,makro.pt#$#body { overflow: auto !important; }
-migros.com.tr,isbank.com.tr,isbank.com.tr,turkcell.com.tr,lumberjack.com.tr,karaca.com,karaca-home.com,shiftdelete.net##body > efilli-layout-dynamic
+akbank.com,migros.com.tr,isbank.com.tr,isbank.com.tr,turkcell.com.tr,lumberjack.com.tr,karaca.com,karaca-home.com,shiftdelete.net##body > efilli-layout-dynamic
 atptour.com##.atp_cookie-message
 aterima-work.pl##.cm-popup-wrapper
 learnpick.in##.gdpr_holder
@@ -22832,6 +22833,7 @@ hobbybaecker.de#@#.cookie-notice:not(body):not(html)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/59462
 @@||sdk.privacy-center.org^$domain=softonic.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/59584
+@@||cdn.cookielaw.org/consent/*.json$domain=trustpilot.com
 @@||cdn.cookielaw.org/scripttemplates^$domain=trustpilot.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/59204
 ! game is locked
@@ -36331,6 +36333,8 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+fortune.com##div[data-cy="newsletters"]
+mashable.com##section[aria-label="Newsletter Sign-Up"]
 news.mynavi.jp#$#body.modal-open { overflow: auto !important; }
 news.mynavi.jp#$#header.header { display: block !important; }
 news.mynavi.jp#$##registration_guide_modal { display: none !important; }
@@ -45475,6 +45479,7 @@ alfastrah.ru,turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,ra
 !
 !
 !
+akbank.com#%#//scriptlet('trusted-set-cookie-reload', 'hscv', 'shown')
 piraeusbank.gr##app-banner-tabs
 polis.ua##section[class^="AppsModule_contentWrapper"]
 megapteka.ru##ma-grid-list-item > ma-card-qr-code
@@ -45647,7 +45652,7 @@ levelup.gitconnected.com#?#a[href^="https://itunes.apple.com/app/medium-everyone
 insider-gaming.com###ig-app-cta
 vkusnoitochka.ru##.app-banner-main
 maksavit.ru##.header-banner-wrapper
-unraid.net###ipsPwaInstall
+invisioncommunity.com,unraid.net###ipsPwaInstall
 textnow.com##.js-overlay
 textnow.com##.global-banner
 textnow.com##.js-globalPopup[data-max-dismiss-count]
@@ -50558,6 +50563,11 @@ instagram.com##._aagw:empty
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/224703
+nbcnews.com##.recommended-intersection-ref
+! https://github.com/AdguardTeam/AdguardFilters/issues/224702
+||mcd-playlist.ex.co/api/*7&targetedPlaylist=true&articleUrl=$domain=mashable.com
+mashable.com#?##article > div.w-full:has(> div > strong:contains(You May Also Like))
 ! https://github.com/AdguardTeam/AdguardFilters/issues/222973
 iceout.org#%#//scriptlet('set-local-storage-item', 'tos_accepted', 'true')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/223195
@@ -54144,6 +54154,7 @@ xo.gr##.promotion-area
 xo.gr##.navigation__premium-block
 meteoblue.com##.ad1-disable
 gemini.google.com##.advanced-upsell-bg
+chatgpt.com###page-header > div.pointer-events-none:has(button.button-glimmer-cta)
 chatgpt.com##.button-glimmer-cta
 lazada.com.ph##.pc-banner-slider-container
 lazada.com.ph##a[data-tracking="sky-line-banner"]
