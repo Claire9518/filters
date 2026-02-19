@@ -76,6 +76,8 @@ class Resolver(object):
                 # #* 注释
                 if match('^#.*', line):
                     break
+                
+                line = line.replace('\t', ' ')
 
                 if line.find('#') > 0:
                     line = line[:line.find('#')].strip()
@@ -319,6 +321,13 @@ class Resolver(object):
                 # @@||example.org^
                 if match('^@@\|\|.*\^$', line):
                     domain = line[4:-1]
+                    if domain.find('*') >= 0:
+                        if domain.startswith('*.') and domain[2:].find('*')<0:
+                            domain = domain[2:]
+                            unblock = self.__analysis(domain)
+                            break
+                        filter = line
+                        break
                     unblock = self.__analysis(domain)
                     break
                 # /REGEX/
