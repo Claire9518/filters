@@ -6,6 +6,8 @@ on:
 
 env:
   TZ: Asia/Shanghai
+  SINGBOX_VERSION: 1.12.12
+  MIHOMO_VERSION: 1.19.16
 
 jobs:
   Update_Filters:
@@ -22,22 +24,70 @@ jobs:
 
       - name: Install Dependencies
         run: |
+          sudo apt-get update -y
+          sudo apt-get install -y wget gzip
           sudo timedatectl set-timezone "$TZ"
           python -m pip install --upgrade pip
-          pip install -U tld IPy dnspython httpx loguru chardet
+          pip install -U tld IPy dnspython httpx loguru
 
       - name: Update Filters
         id: update
         run: |
           python adblock.py
           rm -rf __pycache__
+          rp -rf app/__pycache__
           echo "message=$(date)" >> $GITHUB_OUTPUT
+      
+      - name: Compile Sing-Box filters
+        run: |
+          wget https://github.com/SagerNet/sing-box/releases/download/v${{env.SINGBOX_VERSION}}/sing-box-${{env.SINGBOX_VERSION}}-linux-amd64.tar.gz
+          tar -zxvf sing-box-${{env.SINGBOX_VERSION}}-linux-amd64.tar.gz
+          chmod +x sing-box-${{env.SINGBOX_VERSION}}-linux-amd64/sing-box
+          ./sing-box-${{env.SINGBOX_VERSION}}-linux-amd64/sing-box rule-set compile --output rules/adblocksingbox.srs     rules/adblocksingbox.json
+          ./sing-box-${{env.SINGBOX_VERSION}}-linux-amd64/sing-box rule-set compile --output rules/adblocksingboxlite.srs rules/adblocksingboxlite.json
+          rm -rf sing-box*
+
+      - name: Compile mihomo filters
+        run: |
+          wget https://github.com/MetaCubeX/mihomo/releases/download/v${{env.MIHOMO_VERSION}}/mihomo-linux-amd64-v${{env.MIHOMO_VERSION}}.gz
+          gzip -d mihomo-linux-amd64-v${{env.MIHOMO_VERSION}}.gz
+          chmod +x mihomo-linux-amd64-v${{env.MIHOMO_VERSION}}
+          ./mihomo-linux-amd64-v${{env.MIHOMO_VERSION}} convert-ruleset domain yaml rules/adblockmihomo.yaml     rules/adblockmihomo.mrs
+          ./mihomo-linux-amd64-v${{env.MIHOMO_VERSION}} convert-ruleset domain yaml rules/adblockmihomolite.yaml rules/adblockmihomolite.mrs
+          rm -rf mihomo*
 
       - name: Commit Changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: ${{ steps.update.outputs.message }}
-          
+
+  Refresh_CDN:
+    needs: [ Update_Filters ]
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@main
+      
+      - name: Setup Python 3.9.x
+        uses: actions/setup-python@main
+        with:
+          python-version: '3.9.x'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -U tld IPy dnspython httpx loguru
+      
+      - name: Refsh CDN Cache
+        run: |
+          python refreshcdn.py
+
+  Delete_Workflow_Runs:
+    needs: [ Refresh_CDN ]
+    runs-on: ubuntu-latest
+
+    steps:
       - name: Delete workflow runs
         uses: Mattraks/delete-workflow-runs@main
         with:
