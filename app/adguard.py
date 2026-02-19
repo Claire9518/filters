@@ -27,11 +27,11 @@ class AdGuard(APPBase):
             with open(fileName, 'a') as f:
                 f.write("!\n")
                 if isLite:
-                    f.write("! Title: AdBlock Filter Lite\n")
-                    f.write("! Description: 适用于 AdGuard 的去广告合并规则，每 8 个小时更新一次。规则源：%s。Lite 版仅针对国内域名拦截。\n"%(self.sourceRule))
+                    f.write("! Title: AdBlock Filter Lite-Claire\n")
+                    f.write("! Description: 适用于 AdGuard 的去广告合并规则，每 12 个小时更新一次。规则源：%s。Lite 版仅针对国内域名拦截。\n"%(self.sourceRule))
                 else:
-                    f.write("! Title: AdBlock Filter\n")
-                    f.write("! Description: 适用于 AdGuard 的去广告合并规则，每 8 个小时更新一次。规则源：%s。\n"%(self.sourceRule))
+                    f.write("! Title: AdBlock Filter-Claire\n")
+                    f.write("! Description: 适用于 AdGuard 的去广告合并规则，每 12 个小时更新一次。规则源：%s。\n"%(self.sourceRule))
                 f.write("! Homepage: %s\n"%(self.homepage))
                 f.write("! Source: %s/%s\n"%(self.source, os.path.basename(fileName)))
                 f.write("! Version: %s\n"%(self.version))

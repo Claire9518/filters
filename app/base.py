@@ -7,8 +7,8 @@ from loguru import logger
 
 class APPBase(ABC):
     def __init__(self, blockList:List[str], unblockList:List[str], filterDict:Dict[str,str], filterList:List[str], filterList_var:List[str], ChinaSet:Set[str], fileName:str, sourceRule:str):
-        self.homepage:str = "https://github.com/217heidai/adblockfilters"
-        self.source:str = "https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules"
+        self.homepage:str = "https://github.com/Claire9518/filters"
+        self.source:str = "https://raw.githubusercontent.com/Claire9518/filters/main/rules"
         self.version:str = "%s"%(time.strftime("%Y%m%d%H%M%S", time.localtime()))
         self.time:str = "%s"%(time.strftime("%Y/%m/%d %H:%M:%S", time.localtime()))
         self.blockList:List[str] = blockList
