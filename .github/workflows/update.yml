@@ -40,21 +40,43 @@ jobs:
       
       - name: Compile Sing-Box filters
         run: |
-          wget https://github.com/SagerNet/sing-box/releases/download/v${{env.SINGBOX_VERSION}}/sing-box-${{env.SINGBOX_VERSION}}-linux-amd64.tar.gz
-          tar -zxvf sing-box-${{env.SINGBOX_VERSION}}-linux-amd64.tar.gz
-          chmod +x sing-box-${{env.SINGBOX_VERSION}}-linux-amd64/sing-box
-          ./sing-box-${{env.SINGBOX_VERSION}}-linux-amd64/sing-box rule-set compile --output rules/adblocksingbox.srs     rules/adblocksingbox.json
-          ./sing-box-${{env.SINGBOX_VERSION}}-linux-amd64/sing-box rule-set compile --output rules/adblocksingboxlite.srs rules/adblocksingboxlite.json
-          rm -rf sing-box*
+          NEED_COMPILE=false
+          [ ! -f rules/adblocksingbox.srs ]     && NEED_COMPILE=true
+          [ ! -f rules/adblocksingboxlite.srs ] && NEED_COMPILE=true
+
+          if [ "$NEED_COMPILE" = true ]; then
+            wget -q https://github.com/SagerNet/sing-box/releases/download/v${{env.SINGBOX_VERSION}}/sing-box-${{env.SINGBOX_VERSION}}-linux-amd64.tar.gz
+            tar -zxf sing-box-${{env.SINGBOX_VERSION}}-linux-amd64.tar.gz
+            chmod +x sing-box-${{env.SINGBOX_VERSION}}-linux-amd64/sing-box
+            SINGBOX=./sing-box-${{env.SINGBOX_VERSION}}-linux-amd64/sing-box
+
+            [ ! -f rules/adblocksingbox.srs ]     && $SINGBOX rule-set compile --output rules/adblocksingbox.srs     rules/adblocksingbox.json
+            [ ! -f rules/adblocksingboxlite.srs ] && $SINGBOX rule-set compile --output rules/adblocksingboxlite.srs rules/adblocksingboxlite.json
+
+            rm -rf sing-box*
+          else
+            echo "All Sing-Box .srs files already exist, skipping compilation."
+          fi
 
       - name: Compile mihomo filters
         run: |
-          wget https://github.com/MetaCubeX/mihomo/releases/download/v${{env.MIHOMO_VERSION}}/mihomo-linux-amd64-v${{env.MIHOMO_VERSION}}.gz
-          gzip -d mihomo-linux-amd64-v${{env.MIHOMO_VERSION}}.gz
-          chmod +x mihomo-linux-amd64-v${{env.MIHOMO_VERSION}}
-          ./mihomo-linux-amd64-v${{env.MIHOMO_VERSION}} convert-ruleset domain yaml rules/adblockmihomo.yaml     rules/adblockmihomo.mrs
-          ./mihomo-linux-amd64-v${{env.MIHOMO_VERSION}} convert-ruleset domain yaml rules/adblockmihomolite.yaml rules/adblockmihomolite.mrs
-          rm -rf mihomo*
+          NEED_COMPILE=false
+          [ ! -f rules/adblockmihomo.mrs ]     && NEED_COMPILE=true
+          [ ! -f rules/adblockmihomolite.mrs ] && NEED_COMPILE=true
+
+          if [ "$NEED_COMPILE" = true ]; then
+            wget -q https://github.com/MetaCubeX/mihomo/releases/download/v${{env.MIHOMO_VERSION}}/mihomo-linux-amd64-v${{env.MIHOMO_VERSION}}.gz
+            gzip -d mihomo-linux-amd64-v${{env.MIHOMO_VERSION}}.gz
+            chmod +x mihomo-linux-amd64-v${{env.MIHOMO_VERSION}}
+            MIHOMO=./mihomo-linux-amd64-v${{env.MIHOMO_VERSION}}
+
+            [ ! -f rules/adblockmihomo.mrs ]     && $MIHOMO convert-ruleset domain yaml rules/adblockmihomo.yaml     rules/adblockmihomo.mrs
+            [ ! -f rules/adblockmihomolite.mrs ] && $MIHOMO convert-ruleset domain yaml rules/adblockmihomolite.yaml rules/adblockmihomolite.mrs
+
+            rm -rf mihomo*
+          else
+            echo "All mihomo .mrs files already exist, skipping compilation."
+          fi
 
       - name: Commit Changes
         uses: stefanzweifel/git-auto-commit-action@v5
