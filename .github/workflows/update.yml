@@ -35,7 +35,7 @@ jobs:
         run: |
           python adblock.py
           rm -rf __pycache__
-          rp -rf app/__pycache__
+          rm -rf app/__pycache__
           echo "message=$(date)" >> $GITHUB_OUTPUT
       
       - name: Compile Sing-Box filters
