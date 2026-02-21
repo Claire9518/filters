@@ -160,7 +160,7 @@ class BlackList(object):
             logger.error("%s" % (e))
         finally:
             logger.info("adblock dns backup: %d" % (len(domainList)))
-            return domainList
+        return domainList
 
     def __getDomainSet_CN(self):
         logger.info("resolve China domain list...")
@@ -179,7 +179,7 @@ class BlackList(object):
         finally:
             logger.info("China domain list: full[%d], domain[%d], regexp[%d], keyword[%d]" % (
                 len(fullSet), len(domainSet), len(regexpSet), len(keywordSet)))
-            return fullSet, domainSet, regexpSet, keywordSet
+        return fullSet, domainSet, regexpSet, keywordSet
 
     def __getIPDict_CN(self):
         logger.info("resolve China IP list...")
@@ -208,7 +208,7 @@ class BlackList(object):
             logger.error("%s" % (e))
         finally:
             logger.info("China IP list: %d" % (len(IPDict)))
-            return IPDict
+        return IPDict
 
     async def __resolve(self, dnsresolver, domain):
         ipList = []
@@ -231,8 +231,7 @@ class BlackList(object):
             logger.warning(f'"{domain}": DNS resolution timeout')
         except Exception as e:
             logger.warning('"%s": %s' % (domain, e if e else "Resolver failed"))
-        finally:
-            return ipList
+        return ipList
 
     async def __pingx(self, dnsresolver, domain, semaphore):
         async with semaphore:  # 限制并发数，超过系统限制后会报错Too many open files
@@ -364,25 +363,25 @@ class BlackList(object):
                 if re.match(regexp, domain_without_port):
                     return domain, True
 
-            # keyword: 简单字符串匹配比正则更快
+            # keyword: 简单字符串包含比正则更快
             for keyword in keywordSet_CN:
                 if keyword in domain_without_port:
                     return domain, True
 
-            # IP 检查
-            if ipList:
-                for ip in ipList:
-                    try:
-                        ip_int = IPy.parseAddress(ip)[0]
-                        for network, bits in IPDict_CN.items():
-                            if (ip_int ^ network) >> (32 - bits) == 0:
-                                return domain, True
-                    except Exception as e:
-                        logger.debug(f'IP parse error for {ip}: {e}')
-                        continue
-
         except Exception as e:
             logger.warning(f'Domain check error for "{domain}": {str(e)}')
+
+        # IP 检查作为兜底，无论 get_tld 成功但域名未命中，还是 get_tld 失败，都会执行
+        if ipList:
+            for ip in ipList:
+                try:
+                    ip_int = IPy.parseAddress(ip)[0]
+                    for network, bits in IPDict_CN.items():
+                        if (ip_int ^ network) >> (32 - bits) == 0:
+                            return domain, True
+                except Exception as e:
+                    logger.debug(f'IP parse error for {ip}: {e}')
+                    continue
 
         return domain, False
 
