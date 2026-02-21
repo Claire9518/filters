@@ -52,8 +52,7 @@ class Resolver(object):
                     ip = address
             except Exception as e:
                 pass
-        finally:
-            return ip, fld, subdomain
+        return ip, fld, subdomain
     
     def __analysis(self, address:str) -> Tuple[str]:
         address_tmp = address
@@ -65,6 +64,41 @@ class Resolver(object):
         if fld:
             return fld, subdomain
         raise Exception('"%s": not domain or public ip'%(address))
+            
+    def __read_lines(self, filename: str) -> List[str]:
+        """多层编码 fallback 读取文件，确保零丢失"""
+        # 第一层：UTF-8
+        for encoding in ['utf-8', 'utf-8-sig']:
+            try:
+                with open(filename, 'r', encoding=encoding) as f:
+                    return f.readlines()
+            except (UnicodeDecodeError, UnicodeError):
+                continue
+
+        # 第二层：chardet
+        try:
+            with open(filename, 'rb') as file:
+                raw_data = file.read()
+            detected = chardet.detect(raw_data)
+            encoding = detected.get('encoding') or 'utf-8'
+            logger.info(f"Detected encoding for {filename}: {encoding} (confidence: {detected.get('confidence', 0)})")
+            with open(filename, 'r', encoding=encoding) as f:
+                return f.readlines()
+        except (UnicodeDecodeError, UnicodeError, LookupError) as e:
+            logger.warning(f"Chardet encoding failed for {filename}: {e}")
+
+        # 第三层：常见编码
+        for encoding in ['gbk', 'gb2312', 'gb18030', 'big5', 'latin-1', 'iso-8859-1', 'windows-1252', 'shift_jis', 'euc-kr']:
+            try:
+                with open(filename, 'r', encoding=encoding) as f:
+                    return f.readlines()
+            except (UnicodeDecodeError, UnicodeError):
+                continue
+
+        # 最终兜底
+        logger.warning(f"All encoding attempts failed for {filename}, using utf-8 with replacement")
+        with open(filename, 'r', encoding='utf-8', errors='replace') as f:
+            return f.readlines()
 
     # host 模式
     def __resolveHost(self, line) -> Tuple[str]:
@@ -91,8 +125,8 @@ class Resolver(object):
                 raise Exception('"%s": not keep'%(line))
         except Exception as e:
             logger.error("%s"%(e))
-        finally:
-            return block
+
+        return block
 
     # 从 filter 规则中找出包含的域名
     def __resolveFilterDomain(self, filter) -> Tuple[str, str]:
@@ -282,8 +316,8 @@ class Resolver(object):
                     raise Exception('"%s": not include domain or ip'%(filter))
         except Exception as e:
             logger.error("%s"%(e))
-        finally:
-            return filter,domain
+
+        return filter,domain
 
     # dns 模式
     def __resolveDNS(self, line) -> Tuple[Tuple[str],Tuple[str],Tuple[str]]:
@@ -345,8 +379,8 @@ class Resolver(object):
                 filter = self.__resolveFilterDomain(filter)
         except Exception as e:
             logger.error("%s"%(e))
-        finally:
-            return block,unblock,filter
+
+        return block,unblock,filter
 
     # filter 模式
     def __resolveFilter(self, line) -> Tuple[Tuple[str],Tuple[str],Tuple[str]]:
@@ -426,8 +460,8 @@ class Resolver(object):
                 filter = self.__resolveFilterDomain(filter)
         except Exception as e:
             logger.error("%s"%(e))
-        finally:
-            return block,unblock,filter
+
+        return block,unblock,filter
 
     def resolveHost(self, rule:Rule) -> Tuple[Dict[str,Set[str]],Dict[str,Set[str]],Dict[str,str]]:
         blockDict:Dict[str,Set[str]] = dict()
@@ -439,21 +473,22 @@ class Resolver(object):
         if not os.path.exists(filename):
             return blockDict,unblockDict,filterDict
 
-        with open(filename, "r") as f:
-            for line in f:
-                # 去掉换行符
-                line = line.replace('\r', '').replace('\n', '').strip()
-                # 去掉空行
-                if len(line) < 1:
-                    continue
+        lines = self.__read_lines(filename)
+        
+        for line in lines:
+            # 去掉换行符
+            line = line.replace('\r', '').replace('\n', '').strip()
+            # 去掉空行
+            if len(line) < 1:
+                continue
 
-                block = self.__resolveHost(line)
-                
-                if block:
-                    if block[0] not in blockDict:
-                        blockDict[block[0]] = {block[1],}
-                    else:
-                        blockDict[block[0]].add(block[1])
+            block = self.__resolveHost(line)
+            
+            if block:
+                if block[0] not in blockDict:
+                    blockDict[block[0]] = {block[1],}
+                else:
+                    blockDict[block[0]].add(block[1])
         logger.info("%s: block=%d, unblock=%d, filter=%d"%(rule.name,len(blockDict),len(unblockDict),len(filterDict)))
         return blockDict,unblockDict,filterDict
 
@@ -467,28 +502,29 @@ class Resolver(object):
         if not os.path.exists(filename):
             return blockDict,unblockDict,filterDict
 
-        with open(filename, "r") as f:
-            for line in f:
-                # 去掉换行符
-                line = line.replace('\r', '').replace('\n', '').strip()
-                # 去掉空行
-                if len(line) < 1:
-                    continue
+        lines = self.__read_lines(filename)
+        
+        for line in lines:
+            # 去掉换行符
+            line = line.replace('\r', '').replace('\n', '').strip()
+            # 去掉空行
+            if len(line) < 1:
+                continue
 
-                block,unblock,filter = self.__resolveDNS(line)
-                
-                if block:
-                    if block[0] not in blockDict:
-                        blockDict[block[0]] = {block[1],}
-                    else:
-                        blockDict[block[0]].add(block[1])
-                if unblock:
-                    if unblock[0] not in unblockDict:
-                        unblockDict[unblock[0]] = {unblock[1],}
-                    else:
-                        unblockDict[unblock[0]].add(unblock[1])
-                if filter:
-                    filterDict[filter[0]] = filter[1]
+            block,unblock,filter = self.__resolveDNS(line)
+            
+            if block:
+                if block[0] not in blockDict:
+                    blockDict[block[0]] = {block[1],}
+                else:
+                    blockDict[block[0]].add(block[1])
+            if unblock:
+                if unblock[0] not in unblockDict:
+                    unblockDict[unblock[0]] = {unblock[1],}
+                else:
+                    unblockDict[unblock[0]].add(unblock[1])
+            if filter:
+                filterDict[filter[0]] = filter[1]
         logger.info("%s: block=%d, unblock=%d, filter=%d"%(rule.name,len(blockDict),len(unblockDict),len(filterDict)))
         return blockDict,unblockDict,filterDict
     
@@ -502,40 +538,28 @@ class Resolver(object):
         if not os.path.exists(filename):
             return blockDict,unblockDict,filterDict
 
-        # 检测文件编码
-        with open(filename, 'rb') as file:
-            raw_data = file.read()
-        detected = chardet.detect(raw_data)
-        encoding = detected['encoding']
+        lines = self.__read_lines(filename)
 
-        logger.info(f"Detected encoding for {filename}: {encoding}")
+        for line in lines:
+            # 去掉换行符
+            line = line.replace('\r', '').replace('\n', '').strip()
+            # 去掉空行
+            if len(line) < 1:
+                continue
 
-        try:
-            with open(filename, "r", encoding=encoding) as f:
-                for line in f:
-                    # 去掉换行符
-                    line = line.replace('\r', '').replace('\n', '').strip()
-                    # 去掉空行
-                    if len(line) < 1:
-                        continue
+            block,unblock,filter = self.__resolveFilter(line)
 
-                    block,unblock,filter = self.__resolveFilter(line)
-                    
-                    if block:
-                        if block[0] not in blockDict:
-                            blockDict[block[0]] = {block[1],}
-                        else:
-                            blockDict[block[0]].add(block[1])
-                    if unblock:
-                        if unblock[0] not in unblockDict:
-                            unblockDict[unblock[0]] = {unblock[1],}
-                        else:
-                            unblockDict[unblock[0]].add(unblock[1])
-                    if filter:
-                        filterDict[filter[0]] = filter[1]
-        except UnicodeDecodeError as e:
-            logger.error(f"Failed to decode {filename} with detected encoding {encoding}: {str(e)}")
-            return blockDict,unblockDict,filterDict
-
+            if block:
+                if block[0] not in blockDict:
+                    blockDict[block[0]] = {block[1],}
+                else:
+                    blockDict[block[0]].add(block[1])
+            if unblock:
+                if unblock[0] not in unblockDict:
+                    unblockDict[unblock[0]] = {unblock[1],}
+                else:
+                    unblockDict[unblock[0]].add(unblock[1])
+            if filter:
+                filterDict[filter[0]] = filter[1]
         logger.info("%s: block=%d, unblock=%d, filter=%d"%(rule.name,len(blockDict),len(unblockDict),len(filterDict)))
         return blockDict,unblockDict,filterDict
