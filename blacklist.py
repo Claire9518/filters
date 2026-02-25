@@ -14,7 +14,7 @@ from dns.rdatatype import RdataType as DNSRdataType
 
 # 移除默认的处理器，添加新的处理器并设置级别
 logger.remove()
-logger.add(sink=sys.stderr, level="WARNING")
+logger.add(sink=sys.stderr, level="ERROR")
 
 
 class ChinaDomain(object):
@@ -210,11 +210,11 @@ class BlackList(object):
             logger.info("China IP list: %d" % (len(IPDict)))
         return IPDict
 
+    # ✅ 修改点1：将 async with asyncio.timeout(5) 改为 asyncio.wait_for()
     async def __resolve(self, dnsresolver, domain):
         ipList = []
         try:
-            # 添加超时控制
-            async with asyncio.timeout(5):
+            async def _do_resolve():
                 query_object = await dnsresolver.resolve(qname=domain, rdtype="A")
                 query_item = None
                 for item in query_object.response.answer:
@@ -223,10 +223,14 @@ class BlackList(object):
                         break
                 if query_item is None:
                     raise Exception("not A type")
+                result = []
                 for item in query_item:
                     ip = '{}'.format(item)
                     if ip != "0.0.0.0":
-                        ipList.append(ip)
+                        result.append(ip)
+                return result
+
+            ipList = await asyncio.wait_for(_do_resolve(), timeout=5)
         except asyncio.TimeoutError:
             logger.warning(f'"{domain}": DNS resolution timeout')
         except Exception as e:
@@ -249,21 +253,20 @@ class BlackList(object):
                 port = 80
 
             if port:
+                async def _connect(p):
+                    _, writer = await asyncio.open_connection(host, p)
+                    writer.close()
+                    await writer.wait_closed()
+
                 try:
-                    async with asyncio.timeout(5):
-                        _, writer = await asyncio.open_connection(host, port)
-                        writer.close()
-                        await writer.wait_closed()
-                        ipList.append(host)
+                    await asyncio.wait_for(_connect(port), timeout=5)
+                    ipList.append(host)
                 except Exception as e:
                     if port == 80:
                         port = 443
                         try:
-                            async with asyncio.timeout(5):
-                                _, writer = await asyncio.open_connection(host, port)
-                                writer.close()
-                                await writer.wait_closed()
-                                ipList.append(host)
+                            await asyncio.wait_for(_connect(port), timeout=5)
+                            ipList.append(host)
                         except Exception as e:
                             logger.warning('"%s": %s' % (domain, e if e else "Connect failed"))
             else:
