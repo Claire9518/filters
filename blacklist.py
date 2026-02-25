@@ -14,7 +14,7 @@ from dns.rdatatype import RdataType as DNSRdataType
 
 # 移除默认的处理器，添加新的处理器并设置级别
 logger.remove()
-logger.add(sink=sys.stderr, level="ERROR")
+logger.add(sink=sys.stderr, level="WARNING")
 
 
 class ChinaDomain(object):
