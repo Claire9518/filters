@@ -2578,6 +2578,7 @@ entwickler.de,lockbarber-supplies.de,raz-zeitung.de,muensteraner-rechtsanwaelte.
 !
 ! NOTE: Regular rules
 !
+creativo.one###accept_q
 camaramar.com#$?##cookie-dialog { remove: true; }
 gsvs.org#%#//scriptlet('trusted-set-local-storage-item', 'cookie_prefs', '{"essential":true,"analytics":false,"marketing":false}')
 voxly.pl##.MuiBox-root > .MuiPaper-elevation5.MuiPaper-rounded:has(a[aria-label="Odrzuć ciasteczka i opuść Voxly"][href="about:blank"])
@@ -18502,6 +18503,9 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 !+ NOT_OPTIMIZED PLATFORM(windows, mac, android)
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/224951
+!+ PLATFORM(android)
+@@||delivery.consentmanager.net^$app=cz.thinkeasy.sk.imeteo
 ! camaramar.com
 camaramar.com#@##cookie-dialog
 ! https://github.com/AdguardTeam/AdguardFilters/issues/225542
@@ -23836,6 +23840,8 @@ dzen.ru#%#//scriptlet('set-constant', 'Object.prototype.initAdvManager', 'undefi
 dzen.ru##div[class^="dzen-layout--desktop-page-layout__root-"] > div > div[data-appid^="dzen-desktop@"] div + div > div[style*="padding-top:"][style*="position:"]
 dzen.ru##div[aria-label="Лента Дзена"] article:has(> div[data-ad-type="direct"])
 ! Ads in news
+dzen.ru##div[class*="__forceShowPlaceholder-"]
+dzen.ru##div[style^="--maxRightAdHeight:"]
 dzen.ru##div[class*="MyTargetAdvert"]
 dzen.ru##div[class^="dzen-desktop--auto-slide-ad__"]
 dzen.ru##div[class*="-desktop-"][class*="-placeholder__"]
@@ -27246,6 +27252,7 @@ inews.co.uk,pinterest.com#%#//scriptlet('set-constant', 'google.accounts.id.prom
 !
 ! SECTION: Popups - Regular rules
 !
+creativo.one###dvd-cupon
 hdfilmdelisi.one#%#//scriptlet('trusted-set-local-storage-item', 'push-prompt-dismissed', '$now$')
 hdfilmdelisi.one##.min-h-screen > button.fixed:has(> svg[height="24"] > path[d="M7 11V7a5 5 0 0 1 10 0v4"])
 lmusic.kz##.c-subscribe-alert__wrapper
@@ -36421,6 +36428,7 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+fxempire.com##div[class^="sc-"]:has(> a[href^="https://www.google.com/preferences/source?q="])
 goodhousekeeping.com#$#journey-modal-newsletter { display: none !important; }
 goodhousekeeping.com#$#html.no-scroll { overflow: auto !important; }
 goodhousekeeping.com#%#//scriptlet('remove-class', 'noscroll', 'html')
@@ -45627,6 +45635,7 @@ rxgo.com,alfastrah.ru,turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepe
 !
 !
 !
+fxempire.com###app-smartbanner
 thevagwhisperer.com##.blog-app-promo-container
 idefix.com###__next > div.bg-neutral-0:has(> div.cursor-pointer img[alt="QR Code"])
 idefix.com###__next > div.bg-neutral-0.\!z-\[99\]
@@ -47835,7 +47844,7 @@ m.guancha.cn##.g_swiper_container
 m.guancha.cn##.g_sea
 whowatch.tv,ebay.*,locari.jp##.app-download-banner
 locari.jp##.in-app
-airpaz.com,techfeed.io,locari.jp##.app-install-banner
+membo.net,musicjob.net,airpaz.com,techfeed.io,locari.jp##.app-install-banner
 liggatelecom.com.br##.bl_app
 travel.navitime.com##.l-footer-app
 travel.navitime.com##.app-presents-frame
@@ -48924,7 +48933,7 @@ cna.com.tw##.qrcode_box
 itao.com###itao-bottom
 stitcher.com###appnag
 outlook.live.com##.notificationBarSlideIn
-radarbox.com,compendium.com.ua,maximonline.ru##.apps
+membo.net,musicjob.net,radarbox.com,compendium.com.ua,maximonline.ru##.apps
 bing.com##.mt-edge-extension
 comic-days.com##.entry-content > div.box1 + p + p > strong
 comic-days.com,banggood.com##.appdownload
@@ -58362,7 +58371,7 @@ kai-you.net##.l-side-banner_list
 ! https://github.com/AdguardTeam/AdguardFilters/issues/145119
 matzoo.pl###menu_left a[title="wykup strefę"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/112130
-matzoo.pl###login_wrap[style^="display:block;z-index:"][onclick="$('#login_wrap').hide()"]
+pisupisu.pl,matzoo.pl###login_wrap[style^="display:block;z-index:"][onclick="$('#login_wrap').hide()"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/112029
 newspicks.com###top-premium-banner-area
 ! aumo.jp promotinal ad links
@@ -61545,6 +61554,7 @@ tezgoal.com#%#//scriptlet('abort-current-inline-script', 'validateKey')
 instiz.net#%#//scriptlet("prevent-setInterval", "nocopy")
 author.today#%#//scriptlet('remove-attr', 'oncontextmenu|onselectstart|ondragstart|onmousedown|unselectable', '.noselect')
 author.today#%#//scriptlet('remove-attr', 'oncontextmenu|onselectstart|ondragstart|onmousedown|unselectable', '.page-content')
+pisupisu.pl#%#//scriptlet('prevent-addEventListener', 'contextmenu', '.preventDefault()')
 123pan.com#%#//scriptlet('prevent-addEventListener', 'contextmenu', '[native code]')
 comeinsidebox.com#%#//scriptlet("abort-current-inline-script", "addEventListener", "blockEvent")
 ufchgu.ru,mi-faq.ru#%#//scriptlet("abort-current-inline-script", "disable_keystrokes")
