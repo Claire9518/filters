@@ -46,7 +46,11 @@ class Filter(object):
         unblockDict:Dict[str,Set[str]] = dict()
         filterDict:Dict[str,str] = dict()
         for future in as_completed(taskList):
-            __blockDict,__unblockDict,__filterDict = future.result()
+            try:
+                __blockDict,__unblockDict,__filterDict = future.result()
+            except Exception as e:
+                logger.error("Future failed: %s" % e)
+                continue
             blockDict = dictadd(blockDict, __blockDict)
             unblockDict = dictadd(unblockDict, __unblockDict)
             for filter,domain in __filterDict.items():

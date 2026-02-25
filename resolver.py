@@ -52,7 +52,8 @@ class Resolver(object):
                     ip = address
             except Exception as e:
                 pass
-        return ip, fld, subdomain
+        finally:
+            return ip, fld, subdomain
     
     def __analysis(self, address:str) -> Tuple[str]:
         address_tmp = address
@@ -125,8 +126,8 @@ class Resolver(object):
                 raise Exception('"%s": not keep'%(line))
         except Exception as e:
             logger.error("%s"%(e))
-
-        return block
+        finally:
+            return block
 
     # 从 filter 规则中找出包含的域名
     def __resolveFilterDomain(self, filter) -> Tuple[str, str]:
@@ -316,8 +317,8 @@ class Resolver(object):
                     raise Exception('"%s": not include domain or ip'%(filter))
         except Exception as e:
             logger.error("%s"%(e))
-
-        return filter,domain
+        finally:
+            return filter,domain
 
     # dns 模式
     def __resolveDNS(self, line) -> Tuple[Tuple[str],Tuple[str],Tuple[str]]:
@@ -379,8 +380,8 @@ class Resolver(object):
                 filter = self.__resolveFilterDomain(filter)
         except Exception as e:
             logger.error("%s"%(e))
-
-        return block,unblock,filter
+        finally:
+            return block,unblock,filter
 
     # filter 模式
     def __resolveFilter(self, line) -> Tuple[Tuple[str],Tuple[str],Tuple[str]]:
@@ -460,8 +461,8 @@ class Resolver(object):
                 filter = self.__resolveFilterDomain(filter)
         except Exception as e:
             logger.error("%s"%(e))
-
-        return block,unblock,filter
+        finally:
+            return block,unblock,filter
 
     def resolveHost(self, rule:Rule) -> Tuple[Dict[str,Set[str]],Dict[str,Set[str]],Dict[str,str]]:
         blockDict:Dict[str,Set[str]] = dict()
