@@ -12,6 +12,7 @@
 ! Bad: /banner.jpg (should be in general_url.txt)
 ! Bad: ||adssubdomain.legitwebsite.com^ (should be in adservers_firstparty.txt)
 !
+||upload.xchina.io^
 ||fancyapi.com^
 ||fancydsp.com^
 ||puata.info^
@@ -891,6 +892,11 @@ popbee.com##.adblocker
 ##body > div#inplayer[align="center"]
 ##.Zi_ad_a_H
 ##a[href^="https://adm.beimg.com/"]
+! Porn sites with the same template on short-living domains
+##.main-container div[id^="z-extra-"]
+##.main-container div[id^="core-zone-"]
+##.main-container ~ div[class^="z"][class$="-root"]
+##.main-container ~ div.z-gate-mask
 ! 17kp.vip
 icu##.banner-layout-box
 ! 91porny
@@ -5553,6 +5559,8 @@ newduba.cn###jq_youxi
 .z.dkt-ib.com
 ||cnzz.trafficmanager.net^
 ||cupfox.app^$third-party
+||hnlghkmp.icu^
+||mhmciof8ef.com^
 ||x6d93mku0.com^
 ||bkam33lsr.com^
 ||fvfxpkmo.icu^
@@ -5563,6 +5571,8 @@ newduba.cn###jq_youxi
 ||xhgwho0fx.com^
 ||fpgxyjv3h.com^
 ||hebaidu.cc^
+||bwau1s2fm.com^
+||t57u6anx2.com^
 ||ddpoupmu.icu^
 ||fco896oi39.com^
 ||4cxup4kp3c.com^
