@@ -2583,6 +2583,9 @@ tuhlteim-pedia.de,entwickler.de,lockbarber-supplies.de,raz-zeitung.de,muensteran
 !
 ! NOTE: Regular rules
 !
+jobs.siemens-healthineers.com#%#//scriptlet('trusted-set-cookie', 'userCookieConsent-145', '%7B%221%22%3Atrue%2C%222%22%3Atrue%2C%223%22%3Afalse%7D')
+evoto.ai##.cookie-drawer-container
+epaper.kreiszeitung-wochenblatt.de#%#//scriptlet('trusted-click-element', 'div[aria-labelledby="prenly-cmp-heading"] div[class] > button[class]:nth-child(2)')
 humanmade.jp#%#//scriptlet('trusted-click-element', '#consent-tracking .modal-footer .decline')
 platformaofertowa.pl#%#//scriptlet('trusted-click-element', 'div[data-testid="cookie_baner"] button[data-testid="cookie_baner--rejectCookie"]', '!localStorage:OpenNexus_Ofertowa--cookieAgreements')
 bonus.ebrokerpartner.pl##div[class$="-cookiesInfoContainer"]
@@ -3029,7 +3032,7 @@ saksfifthavenue.com##.footer-email-signup
 bookvoed.ru##.cookie-suggest
 chitai-gorod.ru##.agreement-notice
 nibc.*#%#//scriptlet('trusted-set-cookie', 'dbh-cookie-consent', 'Essential=1')
-paulpadel.com,krmr.it,myoreflextherapie-heidelberg.de##.con-kit-component-cookie-banner
+cleverfit.fitness-konzepte.de,paulpadel.com,krmr.it,myoreflextherapie-heidelberg.de##.con-kit-component-cookie-banner
 mijn.host#%#//scriptlet('trusted-click-element', '.cky-consent-container .cky-btn-customize, #ckyPreferenceCenter button[data-cky-tag="detail-save-button"]', '!cookie:cookieyes-consent')
 mainz.de##sp-consent-banner
 postnl.nl#%#//scriptlet('trusted-click-element', 'pnl-cookie-wall-widget >>> pnl-cookie-widget-overview .pci-button.pci-button--secondary', '', '1500')
@@ -5668,7 +5671,7 @@ farmaciasunipreco.com.br##.wd-data-usage-confirm
 ||nowyswiat.online/gfx/frontend/js/cookies-dialog.js
 ascentoptics.com###WishCookieBox
 ||foodwatch.org/*/js.cookie
-akindo2000.net,fukuoka-airport.jp,visit-oita.jp,investkorea.org##.cookie-area
+kppecoworks.co.jp,akindo2000.net,fukuoka-airport.jp,visit-oita.jp,investkorea.org##.cookie-area
 heelys.eu.com##.pop-cookie-overlay
 rapfame.app###header > div[class^="MuiCollapse-container-"][style^="min-height:"]
 eltiempo.com##.c-popup--politicas
@@ -10109,7 +10112,7 @@ gravel.shimano.com###cookiesalert
 delta.com###gdpr-banner-blurred-background
 ||rabe-bike.de/uc/app/browser-ui/latest/loader.js
 starlingbank.com##div[class^="CookieModal-module--"]
-rifmelody.com,nationalgrid.co.uk,animecix.net,filmgezgini.com##cookie-notice
+rifmelody.com,nationalgrid.co.uk,ecchicix.com,animecix.tv,animecix.net,filmgezgini.com##cookie-notice
 upstage.ai,app.gigsky.com,mozemo.hr,cashify.eu,plurall.net,runna.com,vseti.app,identity.digital,import.io,frameright.io,ooux.com,sifugame.com,veed.io##div[fs-cc="banner"]
 whitebit.com###__layout > div > main + div.ui-kit.is-dark
 uber.com##div[data-baseweb="toaster"]
@@ -18757,9 +18760,10 @@ ecofamily.hu#@#body:not(.scroll-lock) .cookie-alert
 loadoutbuilder.gg#@#.cookie-content
 ! https://github.com/AdguardTeam/AdguardFilters/issues/219898
 @@||bitrefill.com/assets/CookieConsent-$script
+! https://github.com/AdguardTeam/AdguardFilters/issues/226418
 ! https://github.com/AdguardTeam/AdguardFilters/issues/224690
 ! https://github.com/AdguardTeam/AdguardFilters/issues/220837
-@@||onecdn.io/b/client/*/cookie-banner.$domain=myoreflextherapie-heidelberg.de|krmr.it
+@@||onecdn.io/b/client/*/cookie-banner.$domain=myoreflextherapie-heidelberg.de|krmr.it|cleverfit.fitness-konzepte.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/220012
 mijn.host#@#.cky-consent-bar
 @@||cdn-cookieyes.com/client_data/*.js$domain=mijn.host
@@ -36606,6 +36610,9 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+burton.com#$#.preloaded_lightbox[aria-label="Modal Overlay Box"][i18n_csv_url^="https://docs.google.com/spreadsheets/"] ~ .fb_lightbox-overlay { display: none !important; }
+burton.com#$#.preloaded_lightbox[aria-label="Modal Overlay Box"][i18n_csv_url^="https://docs.google.com/spreadsheets/"] { display: none !important; }
+burton.com#$#.box_active_disable_scrolling { touch-action: auto !important; overflow: auto !important; overscroll-behavior: auto !important; }
 aljazeera.com##.google-preferred-source
 bike-room.com##.widget--signup
 funmix.pl#?#.row > .col-xxs:has(> .section-title > span:contains(Newsletter))
@@ -54657,6 +54664,7 @@ www.kinopoisk.ru##footer > div:has(> div > div[data-testid="kp-ui.amediateka-foo
 !
 ! SECTION: Self-promo - Regular rules
 !
+euro.com.pl##.product-list > ems-ear-banner
 dribbble.com##.announcements
 ciperchile.cl##.col-lg-3 > div.d-lg-block:has(> div[style] > a[id^="cajaHZinterior"])
 datanodes.to##.items-center.shadow-sm:has(> p > a[href="/premium"])
