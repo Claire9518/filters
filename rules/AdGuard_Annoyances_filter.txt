@@ -2583,6 +2583,9 @@ ra-hoernschemeyer.de,tuhlteim-pedia.de,entwickler.de,lockbarber-supplies.de,raz-
 !
 ! NOTE: Regular rules
 !
+shangri-la.com#$##js-cookie-modal { display: none !important; }
+shangri-la.com#$#.sl-cookie-modal-body-hidden { overflow: auto !important; }
+map.ru##div[x-show$="showCookieBanner"]
 pinterest.com##body > div[style="z-index: 1000;"] > div > div[name="trap-focus"] > div[role="dialog"]:has(a[href="https://www.pinterest.com/_/_/policy/cookies/"])
 serv00.com##.page-cookies
 bkk.hu#%#//scriptlet('trusted-set-cookie', 'gdprAccept', 'form:1|login-cookie:1')
@@ -35069,6 +35072,10 @@ kurashiru.com#$#html.dly-modal-active { overflow: auto !important; }
 ! SECTION: Popups - Mobile sites only
 !#if (adguard_app_android || adguard_app_ios || adguard_ext_android_cb || ext_ublock)
 !
+sp.nicovideo.jp#$##jsAppModalWithLogin { display: none !important; }
+sp.nicovideo.jp#$#.is-fixed body:not(.player-horizontal):has(#jsAppModalWithLogin) { position: static !important; width: unset !important; }
+sp.nicovideo.jp#$#body.hdNoFixed.watch:has(#jsAppModalWithLogin) { padding-top: unset !important; overflow: auto !important; min-height: unset !important; }
+sp.nicovideo.jp#$#.is-fixed:has(#jsAppModalWithLogin) { position: static !important; width: unset !important; }
 mechacomic.jp##.p-floatBtnWrap
 smt.docomo.ne.jp###GenreModal
 smt.docomo.ne.jp##.modal_outer
@@ -36713,6 +36720,7 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+bbc.com##section[data-testid^="message-banner-"]
 gamesradar.com###utilitybar__button--newsletter
 gamesradar.com##a[href^="https://google.com/preferences/source?q="]
 winaero.com###ddpa
@@ -46060,6 +46068,7 @@ rxgo.com,alfastrah.ru,turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepe
 !
 !
 !
+smt.docomo.ne.jp###Hed_iosAppBanner
 realty.yandex.ru##footer > div[class^="container-"]:has(> div[class^="container-"] > div[class^="mainContainer-"] > a[href^="/app-download/"])
 smart-lab.ru#%#//scriptlet('trusted-set-local-storage-item', 'promo.reg.lastClose', '9999999999999')
 grok.com##.w-full > div.fixed.top-0:has(> div.flex > button[aria-label="Close"])
@@ -61941,7 +61950,7 @@ vivamaxstream.com#$#body *:not(input):not(textarea) { user-select: text !importa
 tv-tokyo.co.jp#$#html { cursor: auto !important; }
 google.*#$#div[data-attrid="kc:/music/recording_cluster:lyrics"] > div[data-lang-code-from="ja"] > div[class] { user-select: text !important; -webkit-touch-callout: default !important; -webkit-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text!important; }
 google.*#$#div[data-lyricid] { user-select: text !important; -webkit-touch-callout: default !important; -webkit-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; }
-revistaoeste.com#$#.select-none { -webkit-user-select: auto !important; user-select: auto !important; }
+divatoon.com,revistaoeste.com#$#.select-none { -webkit-user-select: auto !important; user-select: auto !important; }
 zdescargas.org#$#html { user-select: auto!important; -webkit-touch-callout: default!important; -webkit-user-select: auto!important; -moz-user-select: text!important; -ms-user-select: text!important; }
 zdescargas.org#$#body { user-select: auto!important; -webkit-touch-callout: default!important; -webkit-user-select: auto!important; -moz-user-select: text!important; -ms-user-select: text!important; }
 recut.ru#$##skip_panel { display: block !important; }
@@ -62065,6 +62074,8 @@ dora-guide.com,codedosa.com,gradium.co.kr,semesters.in#%#//scriptlet("set-consta
 ! #%#//scriptlet("set-constant", 'disable_copy_ie', 'noopFunc')
 dora-guide.com,codedosa.com,gradium.co.kr,semesters.in#%#//scriptlet("set-constant", "disable_copy_ie", "noopFunc")
 !
+templetoons.com#%#//scriptlet('prevent-addEventListener', 'contextmenu', 'e.preventDefault')
+divatoon.com,templetoons.com#%#//scriptlet('prevent-addEventListener', 'contextmenu', '[native code]')
 tv-tokyo.co.jp#%#//scriptlet('json-prune', 'preventCopy')
 toono.in#%#//scriptlet('abort-current-inline-script', 'addEventListener', 'wccp')
 toono.in#%#//scriptlet('abort-on-stack-trace', 'jQuery', '/_extentions|_ext_code/')
@@ -64290,6 +64301,7 @@ daddyhd.com##.sidebar__inner
 ||static.zdassets.com/web_widget/messenger/$domain=op.gg|p2pb2b.com|revouninstaller.com
 litres.ru###call_support
 !
+||app.qualified.com/*/messenger?$domain=cloudflare.com
 iport.ru##div[class^="layout_chat_widgets_wrap__"]
 elcomercio.pe###merlin-widget-root
 blog.csdn.net##.csdn-side-toolbar a.option-box[data-type="cs"]
