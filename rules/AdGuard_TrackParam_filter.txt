@@ -460,7 +460,7 @@ $denyallow=tix.axs.com,removeparam=irclickid
 $denyallow=booklive.jp,removeparam=vc_lpp
 $denyallow=lifehacker.ru|forbes.ru|kommersant.ru,removeparam=erid
 $denyallow=greenbuildingadvisor.com,removeparam=oly_enc_id
-$denyallow=login.aliexpress.com,removeparam=_ga
+$denyallow=login.aliexpress.us|login.aliexpress.com,removeparam=_ga
 $denyallow=tradedoubler.com,removeparam=tduid
 !#endif
 !
@@ -902,6 +902,10 @@ $removeparam=s-id,domain=item.rakuten.co.jp|www.rakuten.co.jp
 ||duckduckgo.com^$removeparam=vis
 ||duckduckgo.com^$removeparam=perf_id
 ||duckduckgo.com^$removeparam=parent_perf_id
+!
+! A/B testing
+||duckduckgo.com^$removeparam=atb
+||duckduckgo.com^$removeparam=/^experiment_/
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/208058
 ||olybet.lv^$removeparam=ref
