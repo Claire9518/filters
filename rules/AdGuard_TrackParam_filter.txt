@@ -447,7 +447,7 @@ $removeparam=fb_source
 !
 !#if (adguard_ext_chromium_mv3 || ext_ublock)
 $denyallow=cleviationly.com,removeparam=cmpid
-$denyallow=adj.st|yandex.go.link,removeparam=adj_t
+$denyallow=adj.st|yandex.go.link|dermanostic.go.link,removeparam=adj_t
 $denyallow=em.dynamicyield.com|mootoon.co.kr|iforms.americanexpress.com,removeparam=cuid
 $denyallow=a8cv.amiami.jp,removeparam=a8
 $denyallow=meishi.meituan.com|portal-portm.meituan.com|rd.bizrate.com|glavnoe.life|mmcref.pl|t.send.vt.edu|app.plex.tv,removeparam=utm_medium
@@ -511,6 +511,8 @@ $removeparam=tduid
 ! Bad: ||example.org^$xmlhttprequest,redirect=noopvast-3.0 (for instance, should be in specific.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/227596
+||duck.ai^$removeparam=origin
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-16099608
 ||t.ly^$removeparam=ref
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-16004356
@@ -2279,7 +2281,7 @@ $removeparam=ici,domain=shein.co.uk|shein.com
 ! SK Telecom (skt.sh domain used as their own URL shortening service )
 ||skt.sh/common/share/bridge?$removeparam=referer
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-4966523
-||login.sooplive.co.kr^$removeparam=szFrom
+||login.sooplive.com^$removeparam=szFrom
 ! moffme.com?source=gl&medium=moffme&campaign=article_2699
 ||moffme.com^$removeparam=source
 ||moffme.com^$removeparam=medium
