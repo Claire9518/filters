@@ -1044,8 +1044,7 @@ msn.cn#%#//scriptlet('json-prune', 'configs.*.properties.slideshowWCSettings.int
 ! which is set by "https://log.mmstat.com/eg.js" script, but it's blocked on DNS level, so we need to set cookie manually.
 ! Original cookie value is the same as ETag value from "https://log.mmstat.com/eg.js" response, but it's not static.
 ! So as a workaround we use hardcoded value from "https://g.alicdn.com/kplayer/kuplayer/4.5.26-xmedia/index.js" script.
-!+ PLATFORM(windows, mac, android, cli)
-v.youku.com#%#(()=>{const e="cna",t=()=>null!==document.cookie.match(new RegExp(`^${e}=|; ${e}=`));if(t())return;const o=new MutationObserver((()=>{const o=document.querySelector("preplay-layer > error-layer .preLayer-title");o&&o.textContent.includes("请关闭VPN代理软件或广告拦截插件后重试")&&!t()&&(document.cookie=`${e}=MwCHGEQKugYCAWoLKcbU0UGk;`,window.location.reload())})),n=document.documentElement;o.observe(n,{attributes:!0,childList:!0,subtree:!0}),setTimeout((()=>o.disconnect()),1e4)})();
+www.youku.com,v.youku.com#%#(()=>{const e="cna",t=()=>null!==document.cookie.match(new RegExp(`^${e}=|; ${e}=`));if(t())return;const o=new MutationObserver((()=>{const o=document.querySelector("preplay-layer > error-layer .preLayer-title");o&&o.textContent.includes("请关闭VPN代理软件或广告拦截插件后重试")&&!t()&&(document.cookie=`${e}=MwCHGEQKugYCAWoLKcbU0UGk;`,window.location.reload())})),n=document.documentElement;o.observe(n,{attributes:!0,childList:!0,subtree:!0}),setTimeout((()=>o.disconnect()),1e4)})();
 ! https://github.com/AdguardTeam/AdguardFilters/issues/34910
 goodav17.com#%#//scriptlet("abort-on-property-read", "popunder")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/132934
@@ -5656,6 +5655,18 @@ newduba.cn###jq_youxi
 ||ahtjhe1bka.com^
 ||aq0vs4ftni.com^
 ||q1yv4669q6.com^
+||cgihh.cn^
+||bandages84.com^
+||inquiry64.top^
+||okeeblr.com^
+||fprrpv.icu^
+||129esrd5q5.com^
+||mya2pg8cdg.com^
+||lbu6cadqq5.com^
+||rua50s4es8.com^
+||9ep0z3su1e.com^
+||qnywjs.buzz^
+||puevklj.com^
 ||ebgock7kz.com^
 ||xu919zz2i.com^
 ||pdjxoscm7.com^
@@ -15256,8 +15267,8 @@ iplark.com##div[style="position: relative;"]
 cngold.org#?#.w310:has(>.swiper-company)
 cngold.org##.headCompanys
 cngold.org##.mainRight > .border_top:first-child
-ping0.cc##.xyeles
-ping0.cc###adaright
+ping0.cc##.xzeles
+ping0.cc###adbright
 cngold.org##.foot_megagame
 cngold.org##.fixed_jt
 hanime1.me#?#div[style*="text-align:"]:has(>div[style*="color: white"])
