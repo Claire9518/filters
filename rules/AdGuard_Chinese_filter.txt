@@ -303,7 +303,9 @@ jav224.shop,ttp229.shop,clp126.shop,hsq233.shop#@#.ad-unit:not(.textads)
 jav224.shop,ttp229.shop,clp126.shop,hsq233.shop#%#//scriptlet('prevent-setTimeout', '](getComputedStyle,')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/228610
 ! https://github.com/AdguardTeam/AdguardFilters/issues/228606
-huaren.live,huavod.com#%#//scriptlet('prevent-setTimeout', 'bait.offsetHeight===0')
+huavod.cc,huavod.top,huavod.net,huaren.live,huavod.com#%#//scriptlet('abort-on-stack-trace', 'document.querySelector', 'isAdblocked')
+huavod.cc,huavod.top,huavod.net,huaren.live,huavod.com#%#//scriptlet('abort-current-inline-script', 'MutationObserver', 'isAdblocked')
+huavod.cc,huavod.top,huavod.net,huaren.live,huavod.com#%#//scriptlet('prevent-setTimeout', '/bait\.offsetHeight===0|isAdblocked|requestAnimationFrame\(/')
 huavod.cc,huavod.top,huavod.net,huaren.live,huavod.com#%#//scriptlet('prevent-addEventListener', 'DOMContentLoaded', 'showModal')
 huavod.cc,huavod.top,huavod.net,huaren.live,huavod.com##div[id^="anti-adblock-"]
 huaren.live,huavod.com#@#.ad_unit
@@ -1333,6 +1335,11 @@ $script,xmlhttprequest,third-party,domain=00ksw.com|01zww.com|0biquge.com|114zw.
 !
 ! NOTE: Specific rules
 !
+haokan.baidu.com###art-player-wrapper > div[class^="ArtVideo_"][class*="-pause-ad"]
+haokan.baidu.com##div[class^="videoList_videolist__"] > div[class^="videoList_videolist-item__"]:has(> div[class^="videoList_videolist-aditem__"])
+haokan.baidu.com##div[class^="video_land_pageBottomGuesslike__"] ul[class^="GuessLike_guess-list__"] > li[class^="GuessLike_guess-item__"]:not([vid]):empty
+haokan.baidu.com##div[class^="video_land_pageBottomGuesslike__"] ul[class^="GuessLike_guess-list__"] > li[class^="GuessLike_guess-item__"]:not([vid]):has(> div[class^="adItem_"])
+haokan.baidu.com##div[class^="guessLike_guess-like-index__"] ul[class^="guessLike_guess-list__"] > li[class^="guessLike_guess-item__"]:not([vid]):has(> div[class^="guessLike_guess-item-link__q"]:only-child)
 techorange.com##div.elementor-widget > div.elementor-widget-container:has(> a[href*="utm_campaign"] > img)
 techorange.com##a[href^="https://supr.link/"]
 supertaste.tvbs.com.tw##.min-h-\[15\.625rem\]
@@ -5723,6 +5730,11 @@ newduba.cn###jq_youxi
 ||1k2uh20wr.com^
 ||redtvxjmgjbtlw.com^
 ||division43.top^
+||bowo666.com^
+||7w7kditsz.com^
+||9obmf866d.com^
+||pkytxfiin.com^
+||bahpqcq.com^
 ||subtraction59.com^
 ||1u6hvoykk3.com^
 ||7q2701vx8e.com^
@@ -15508,7 +15520,7 @@ cnbeta.com.tw##.cb-help
 cnbeta.com.tw##.meta > .fr
 333ood.com###appBox
 333ood.com##div[style$="display: block;"]
-baidu.com##.tieba-pause-ad-container
+baidu.com##div[class*="tieba-pause-ad-container"]
 laozuo.org###focusslide
 laozuo.org##.container[style="margin-bottom: 3px;"]
 laozuo.org##.widget_ui_orbui
