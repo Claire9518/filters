@@ -2620,6 +2620,7 @@ sabancivakfi.org###ez-banner[role="banner"]
 !
 ! NOTE: Regular rules
 !
+trustlocal.de##div[class^="CookieBannerAnimation_panelEnter"]
 unesco.org##div[data-once="initCookieBanner"]
 restart.run#%#//scriptlet('trusted-set-local-storage-item', 'userConsent', '{"necessary":true,"preferences":true,"analytics":false,"marketing":true}')
 e-glamour.pl##.wpj-modal-overlay
@@ -6433,7 +6434,7 @@ remitly.com#%#//scriptlet('trusted-set-cookie', 'cookie_consent', '000')
 remitly.com#%#//scriptlet('trusted-set-local-storage-item', 'cookie_consent_date', '$now$')
 americanexpress.com#$##user-consent-management-granular-banner-overlay { display: none !important; }
 americanexpress.com#$#body { overflow: auto !important; }
-health.tvbs.com.tw#%#//scriptlet('set-cookie', 'cookie_accept', 'accept')
+health.tvbs.com.tw#%#//scriptlet('set-cookie', 'cookie_accept_health', 'accept')
 scaleway.com#%#//scriptlet('trusted-click-element', '.sc-dGCmGc.fJEvkp', '!localStorage:gbFeaturesCache')
 przewodnik-katolicki.pl##.ciastka
 ||teal.openbank.de/web-ok-de/prod/utag.js$domain=openbank.de
@@ -25213,6 +25214,7 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 ! The rules for content blockers only:
 ! LINK: AnnoyancesFilter/Popups/sections/antiadblock.txt#content_blockers
 !
+the-sun.com#%#//scriptlet('prevent-setTimeout', 'gu(gh)')
 ip.sb##.wwads_abp
 jetpunk.com#%#//scriptlet('prevent-setTimeout', 'isAdblocker')
 ricardocuisine.com#%#//scriptlet('set-cookie', 'adblock-modal.ads', '1')
@@ -47826,6 +47828,8 @@ rxgo.com,alfastrah.ru,turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepe
 !
 !
 !
+imgur.com#%#//scriptlet("prevent-addEventListener", "click", "[native code]")
+animotvslash.org##.atv-banner
 open.spotify.com##div[data-tippy-root] > div#context-menu:has(> div > div > div > button[class*="overflow-wrap-anywhere"])
 4029tv.com,wbaltv.com,wdsu.com,wcvb.com,wesh.com##.grid-content-app-promo
 streamfree.top##.app-notice
@@ -62492,8 +62496,8 @@ fossbytes.com##.td-ss-main-sidebar > .widget_execphp
 ! sputnik.ru- Sputnik browser
 sputnik.ru##.b-cover__box > div.b-panel.js-panel[data-sputnik][style]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/4494
-msn.com#$##skypefredialogcontainer[data-aop="skypefredialog"] { display: none!important; }
-msn.com#$#body { overflow: initial!important; }
+msn.com#$##skypefredialogcontainer[data-aop="skypefredialog"] { display: none !important; }
+msn.com#$#body:not(#style_important) { overflow: initial !important; }
 ! https://forum.adguard.com/index.php?threads/11654/
 technet.microsoft.com##.RightAdRail > div > table[width="100%"]
 ! dailytelegraph.com.au - subscription overlay
