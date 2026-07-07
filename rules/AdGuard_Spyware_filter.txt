@@ -79326,6 +79326,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1) { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||omnimove.tourradar.com^
 ||jitsu.ixbt.games^
 ||streams-scores.rbl.ms^
 ||sync.inmobi.com^
@@ -182307,6 +182308,9 @@ mexc.com#%#//scriptlet('set-local-storage-item', '_yjsu_yjad', '$remove$')
 !
 ! NOTE: Specific rules
 !
+||cdn.eu.amplitude.com/libs/analytics-browser-
+||trip.com/*/monitor/log
+||tripcdn.com/modules/ibu/xtracker/
 ||emule-security.org/tracker.js
 ||cdn.cardcluster.com/ma/j.js
 ||static.jvc.gg/*/js/traffic.js
@@ -189169,6 +189173,9 @@ $cookie=bf_visit
 ! Bad:  ||monerominer.rocks^$third-party (should be in adservers.txt)
 !
 !
+! greatandhra.com
+||greatandhra.com^$cookie=uid-s
+||greatandhra.com^$cookie=vsid
 ! https://github.com/AdguardTeam/AdguardFilters/issues/234433
 ||ridibooks.com^$cookie=fingerprint
 ||ridibooks.com^$cookie=attribution_tool_params
@@ -191577,6 +191584,9 @@ d4?appid*type*
 !@@||mc.yandex.ru/metrika/watch.js$domain=
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/235154
+@@||feliz.data.tm-awx.com^$domain=football.london
+@@||feliz-web.data.tm-awx.com^$domain=football.london
 ! https://github.com/AdguardTeam/AdguardFilters/issues/235024
 @@||cdn.clerk.io/clerk.js$domain=avxperten.at|avxperten.be|avxperten.com|avxperten.cy|avxperten.cz|avxperten.de|avxperten.dk|avxperten.ee|avxperten.es|avxperten.fi|avxperten.fr|avxperten.gr|avxperten.hr|avxperten.hu|avxperten.it|avxperten.lt|avxperten.lu|avxperten.lv|avxperten.nl|avxperten.no|avxperten.pl|avxperten.pt|avxperten.ro|avxperten.se|avxperten.si|avxperten.sk
 @@||api.clerk.io/v*/log/$domain=avxperten.at|avxperten.be|avxperten.com|avxperten.cy|avxperten.cz|avxperten.de|avxperten.dk|avxperten.ee|avxperten.es|avxperten.fi|avxperten.fr|avxperten.gr|avxperten.hr|avxperten.hu|avxperten.it|avxperten.lt|avxperten.lu|avxperten.lv|avxperten.nl|avxperten.no|avxperten.pl|avxperten.pt|avxperten.ro|avxperten.se|avxperten.si|avxperten.sk
