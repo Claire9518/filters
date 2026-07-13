@@ -79333,6 +79333,8 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1) { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||1414.hexa.su^
+||c.bubutv.top^
 ||anonymized-metrics.rmbl.ws^
 ||m.privatesportshop.es^
 ||analytics.pextra.cloud^
@@ -79375,7 +79377,6 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1) { remove: true; }
 ||sgtm.cmoa.jp^
 ||transporter.makemytrip.global^
 ||cchome-stage.adobe.io^
-||cchome.adobe.io^
 ||analytics.trbna.com^
 ||udderstack.allstar.gg^
 ||plausible.root-nation.net^
@@ -182328,6 +182329,14 @@ mexc.com#%#//scriptlet('set-local-storage-item', '_yjsu_yjad', '$remove$')
 !
 ! NOTE: Specific rules
 !
+||cchome.adobe.io/app/v*/logs^
+peacocktv.com#%#//scriptlet('set-local-storage-item', 'impressionTrackingSessionId', '$remove$')
+||czesciauto24.pl/securegtm/
+||czesciauto24.pl/p/g^
+||hexa.su/script.js
+/^https?:\/\/(android\.com\.pl|biznesenter\.pl)\/[a-z0-9]{1,4}\/$/$script,~third-party,domain=android.com.pl|biznesenter.pl
+biznesenter.pl#%#//scriptlet('abort-current-inline-script', 'document.createElement', 'gtm.start')
+||bifrost-api.hotstar.com/v*/events
 ||linuxcommunity.io/assets/google-universal-analytics-*.js
 x.com#%#//scriptlet('set-constant', '__INITIAL_STATE__.featureSwitch.defaultConfig.rweb_home_jot_context_enabled.value', 'false')
 x.com#%#//scriptlet('set-constant', '__INITIAL_STATE__.featureSwitch.user.config.rweb_home_jot_context_enabled.value', 'false')
@@ -191620,6 +191629,8 @@ d4?appid*type*
 !@@||mc.yandex.ru/metrika/watch.js$domain=
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/233479
+@@||trailblaze.my.salesforce-setup.com/_ui/common/config/field/*/d?id=*&type=
 ! https://gall.dcinside.com/mgallery/board/view/?id=adguard&no=11021&page=1
 @@||static.cloudflareinsights.com^$domain=quasarzone.com,script
 ! https://github.com/AdguardTeam/AdguardFilters/issues/235154
