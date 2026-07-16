@@ -568,6 +568,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1) { remove: true; }
 !
 !
 !
+||mtag.markopolo.ai^
 ||external-tag.mysquadbeyond.com^
 ||heatmap.support-inc.co.jp^
 ||clktrkd.com^
@@ -79336,6 +79337,9 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1) { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||l.ovhcloud.com^
+||mtag-*.wedevs.com^
+||h2tcbox.baidu.com^
 ||trk.swipey.me^
 ||evs.segment.complex.com^
 ||r.vares.top^
@@ -182337,6 +182341,8 @@ mexc.com#%#//scriptlet('set-local-storage-item', '_yjsu_yjad', '$remove$')
 !
 ! NOTE: Specific rules
 !
+||lc-event.pixiv.net^
+ipay.ztgame.com#%#//scriptlet('prevent-fetch', 'beacon.ztgame.com')
 ||sephora.com/js/ufe/isomorphic/thirdparty/fp.min.js
 ||celebtattler.com/world/cache/analytics.js
 complex.com#%#//scriptlet('set-local-storage-item', 'poll_anonymous_id', '$remove$')
@@ -182347,6 +182353,7 @@ complex.com#%#//scriptlet('set-local-storage-item', 'poll_anonymous_id', '$remov
 ||bissell.pl/datalayer/index/events
 ||grafana-app-proxy.consumer.gopuff.com/collect
 ||cchome.adobe.io/app/v*/logs^
+||flixtrz.com/api/analytics/watch-event|
 peacocktv.com#%#//scriptlet('set-local-storage-item', 'impressionTrackingSessionId', '$remove$')
 ||czesciauto24.pl/securegtm/
 ||czesciauto24.pl/p/g^
@@ -182365,6 +182372,12 @@ x.com#%#//scriptlet('set-constant', '__INITIAL_STATE__.featureSwitch.user.config
 compo.de#%#//scriptlet('set-local-storage-item', 'rid', '$remove$')
 ||tengrinews.kz/build/assets/analytic-
 ||cdn.eu.amplitude.com/libs/analytics-browser-
+! https://github.com/AdguardTeam/AdguardFilters/issues/234682#issuecomment-4887914109
+search.naver.com#%#//scriptlet('set-cookie-reload', 'NNB', '1', '/', '.naver.com')
+!#if (adguard_ext_safari || adguard_app_ios || adguard_ext_android_cb)
+@@||ntm.pstatic.net/scripts/ntm_*.js$domain=search.naver.com
+@@||nlog.naver.com/n|$domain=search.naver.com
+!#endif
 ||trip.com/*/monitor/log
 ||tripcdn.com/modules/ibu/xtracker/
 ||emule-security.org/tracker.js
@@ -198271,6 +198284,7 @@ kizi.com#%#window.google_trackConversion = function() {};
 ||skilledview.com^
 ||skillfuldrop.com^
 ||skillfullyfrugal.com^
+||skillpuppy.com^
 ||skisofa.com^
 ||skullmagnets.com^
 ||skullteeth.com^
@@ -198472,6 +198486,7 @@ kizi.com#%#window.google_trackConversion = function() {};
 ||swingslip.com^
 ||swipechief.com^
 ||swirlstop.com^
+||swordblock.com^
 ||swordgoose.com^
 ||syllablesight.com^
 ||synonymoussticks.com^
@@ -198645,6 +198660,7 @@ kizi.com#%#window.google_trackConversion = function() {};
 ||verdantsculpture.com^
 ||verseballs.com^
 ||versuswall.com^
+||verybark.com^
 ||vibrantcelebration.com^
 ||vibrantgale.com^
 ||vibranthaven.com^
