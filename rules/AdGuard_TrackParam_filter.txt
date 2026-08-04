@@ -552,6 +552,8 @@ $removeparam=tduid
 ! Bad: ||example.org^$xmlhttprequest,redirect=noopvast-3.0 (for instance, should be in specific.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/pull/237405
+||erkekadam.org^$removeparam=kaynak
 ! https://github.com/AdguardTeam/AdguardFilters/issues/237045
 ||supply.amazon.com^$removeparam=ref_
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-17821852
@@ -3667,8 +3669,9 @@ adguard.info,adguard.com,adguard.app#$#.hello_from_adguard_advanced_protection_i
 @@$removeparam=utm_medium,domain=hobbygames.ru
 @@$removeparam=utm_campaign,domain=hobbygames.ru
 @@$removeparam=utm_source,domain=hobbygames.ru
+! https://github.com/AdguardTeam/AdguardFilters/issues/237174
 ! https://github.com/AdguardTeam/AdguardFilters/issues/236387
-@@||shopify.com/authentication/$removeparam=analytics_trace_id,domain=momogo.de
+@@||shopify.com/authentication/$removeparam=analytics_trace_id
 ! https://github.com/AdguardTeam/AdguardFilters/issues/230641
 @@/e/er?$removeparam=elqTrackId,domain=s1740541080.t.eloqua.com|app.econnect.utexas.edu|clk.texaslonghorns.com
 @@/e/er?$removeparam=elq,domain=s1740541080.t.eloqua.com|app.econnect.utexas.edu|clk.texaslonghorns.com
