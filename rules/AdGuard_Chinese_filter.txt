@@ -1352,6 +1352,7 @@ $script,xmlhttprequest,third-party,domain=00ksw.com|01zww.com|0biquge.com|114zw.
 !
 ! NOTE: Specific rules
 !
+twword.com##.gadBlock
 xgcartoon.com#%#//scriptlet('abort-on-stack-trace', 'document.createElement', 'mount_adsqrt_ad')
 .gif|$image,third-party,domain=25img.com
 *$script,third-party,domain=25img.com
@@ -1409,8 +1410,13 @@ haokan.baidu.com##div[class^="video_land_pageBottomGuesslike__"] ul[class^="Gues
 haokan.baidu.com##div[class^="guessLike_guess-like-index__"] ul[class^="guessLike_guess-list__"] > li[class^="guessLike_guess-item__"]:not([vid]):has(> div[class^="guessLike_guess-item-link__q"]:only-child)
 techorange.com##div.elementor-widget > div.elementor-widget-container:has(> a[href*="utm_campaign"] > img)
 techorange.com##a[href^="https://supr.link/"]
+||sdk.tvbs.com.tw/ad/v*/ad-sdk.min.js
 supertaste.tvbs.com.tw##.min-h-\[15\.625rem\]
-supertaste.tvbs.com.tw##div[class]:has(> div[id^="supertaste_"])
+supertaste.tvbs.com.tw##.min-h-\[250px\]
+supertaste.tvbs.com.tw###article-content > div[class^="py-"]:has(> div[id^="supertaste_"])
+supertaste.tvbs.com.tw##aside > div[id^="supertaste_"]
+supertaste.tvbs.com.tw##aside > section:has(> div[id^="taboola-"])
+supertaste.tvbs.com.tw##footer > section:has(> div[id^="taboola-"])
 ||pic.deueza.cn/*.gif$domain=mqoeomads.cc
 mqoeomads.cc##div.dx-banner-item
 mqoeomads.cc##.dx-recommend-icons
@@ -5790,6 +5796,15 @@ newduba.cn###jq_youxi
 .z.dkt-ib.com
 ||cnzz.trafficmanager.net^
 ||cupfox.app^$third-party
+||95ktftpt6.com^
+||dhrbpvqqoovnxm.com^
+||ped146qez.com^
+||54igqsjd9.com^
+||rn30y7u7h.com^
+||in5nx9xbd.com^
+||2p3ebtxsp.com^
+||lht8yhbbl.com^
+||u1g98fo6b.com^
 ||7996epzfh.com^
 ||itm1yqknq.com^
 ||qnw0cru1i5.com^
@@ -5802,6 +5817,7 @@ newduba.cn###jq_youxi
 ||6ez760nwf0.com^
 ||hbiaz6xxya.com^
 ||pqruoaz4co.com^
+||049bv1hdzn.com^
 ||barqmajk.com^
 ||4j7mf4mmx.com^
 ||dixbvzvuzhvxbg.com^
@@ -22675,7 +22691,7 @@ bing.com##.b_algo:has(.b_ads1line)
 bing.com##li[class="b_algo"]:has(.b_attribution[data-partnertag]+p[class])
 bing.com##.sb_form_placeholder:has(>.ad-ghost-slug)
 bing.com###b_results > li:has(.b_adProvider)
-bing.com,~www.bing.com##.b_algo:has(p[style="display: none !important;"])
+bing.com##.b_algo:has(.sb_adTA_title_link_cn)
 !#Bingfeng.tw
 bingfeng.tw###adbt
 bingfeng.tw##.wow-ad-link
