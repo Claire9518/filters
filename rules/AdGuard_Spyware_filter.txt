@@ -79351,6 +79351,8 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1) { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||cat.pexels.com^
+||affiliate.unisender.com^
 ||ling.willowmovies.com^
 ||console-telemetry.oci.oraclecloud.com^
 ||stats.jerkmotion.com^
@@ -182386,6 +182388,7 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+||api.redgifs.com/v*/events/
 ||api.heikeji.me/api/logs/check
 ||statics.cedscdn.it/utils/src/js/shopalytics.js
 ||d26yk4zpyhjeeq.cloudfront.net/*/tracking/
@@ -184007,7 +184010,7 @@ colliers.com#%#//scriptlet('set-local-storage-item', 'visitorId', '$remove$')
 ||plutotv.net/measurements/
 ||cbsivideo.com/cb-measurements/
 ||scv.band.us/jackpotlog/*/logs|$xmlhttprequest
-||epicgames.com/id/api/analytics
+||epicgames.com/id/api/analytics$redirect=nooptext
 ||terabox.app/sse/events?
 ||widget2.vreview.tv/js/amplitude.js
 ||savefrom.net/build/js/basicMetricsTracking.js
@@ -191827,8 +191830,8 @@ d4?appid*type*
 @@||feliz.data.tm-awx.com^$domain=football.london
 @@||feliz-web.data.tm-awx.com^$domain=football.london
 ! https://github.com/AdguardTeam/AdguardFilters/issues/235024
-@@||cdn.clerk.io/clerk.js$domain=avxperten.at|avxperten.be|avxperten.com|avxperten.cy|avxperten.cz|avxperten.de|avxperten.dk|avxperten.ee|avxperten.es|avxperten.fi|avxperten.fr|avxperten.gr|avxperten.hr|avxperten.hu|avxperten.it|avxperten.lt|avxperten.lu|avxperten.lv|avxperten.nl|avxperten.no|avxperten.pl|avxperten.pt|avxperten.ro|avxperten.se|avxperten.si|avxperten.sk
-@@||api.clerk.io/v*/log/$domain=avxperten.at|avxperten.be|avxperten.com|avxperten.cy|avxperten.cz|avxperten.de|avxperten.dk|avxperten.ee|avxperten.es|avxperten.fi|avxperten.fr|avxperten.gr|avxperten.hr|avxperten.hu|avxperten.it|avxperten.lt|avxperten.lu|avxperten.lv|avxperten.nl|avxperten.no|avxperten.pl|avxperten.pt|avxperten.ro|avxperten.se|avxperten.si|avxperten.sk
+@@||cdn.clerk.io/clerk.js$domain=avxperten.at|avxperten.be|avxperten.com|avxperten.cy|avxperten.cz|avxperten.de|avxperten.dk|avxperten.ee|avxperten.es|avxperten.fi|avxperten.fr|avxperten.gr|avxperten.hr|avxperten.hu|avxperten.it|avxperten.lt|avxperten.lu|avxperten.lv|avxperten.nl|avxperten.no|avxperten.pl|avxperten.pt|avxperten.ro|avxperten.se|avxperten.si|avxperten.sk|brukas.no
+@@||api.clerk.io/v*/log/$domain=avxperten.at|avxperten.be|avxperten.com|avxperten.cy|avxperten.cz|avxperten.de|avxperten.dk|avxperten.ee|avxperten.es|avxperten.fi|avxperten.fr|avxperten.gr|avxperten.hr|avxperten.hu|avxperten.it|avxperten.lt|avxperten.lu|avxperten.lv|avxperten.nl|avxperten.no|avxperten.pl|avxperten.pt|avxperten.ro|avxperten.se|avxperten.si|avxperten.sk|brukas.no
 ! https://github.com/AdguardTeam/AdguardFilters/issues/234964
 !+ PLATFORM(ios, ext_safari, ext_android_cb)
 @@||cdn.perfops.net/rom3/rom3.min.js$domain=cdnperf.com
