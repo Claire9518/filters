@@ -2847,7 +2847,6 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1) { remove: true; }
 ||74.55.82.102^$third-party
 ||77tracking.com^$third-party
 ||79.125.117.123^$third-party
-||7bpeople.com^$third-party
 ||7eer.net^$third-party
 ||99stats.com^$third-party
 ||9nl.eu^$third-party
@@ -100570,6 +100569,8 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1) { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||stats.reanime.to^
+||stats.flixcloud.cc^
 ||posthog.worldshopping.global^
 ||aka.asiae.co.kr^
 ||analytics.watchott.org^
@@ -314746,6 +314747,8 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+||reanime.to/pv.js
+||flixcloud.cc/swetrix.js
 ||ondigitalocean.app/tracker.js
 ||appli.mixh.jp/appli.mixh.jp/app/*-track.php
 ||a.pixiv.org/yufulight-cdn/track.js
@@ -316145,7 +316148,6 @@ baseballpost.jp###highschool-pickup
 ||feedbackws.icloud.com/reportStats
 ||idmsa.apple.com/appleauth/jslog
 ppomppu.co.kr#%#//scriptlet('href-sanitizer', 'a[href^="https://s.ppomppu.co.kr?"][href*="&target="]', '?target', 'base64decode')
-baseballpost.jp###highschool-pickup
 berrykun.com##img[src*="a8.net/svt/"]
 ||xvp.imgix.net/assets/customer_tools/ip_checker-
 ||pub.pixels.ai/metrics-lib.js
@@ -329353,6 +329355,7 @@ kizi.com#%#window.google_trackConversion = function() {};
 ||berserkhydrant.com^
 ||bestboundary.com^
 ||bestclimbers.net^
+||bestcoffeemachine.net^
 ||bestshoesboot.com^
 ||bestsportsbra.com^
 ||betazebra.com^
@@ -331774,5 +331777,6 @@ bitdefender.com#$#body[style="opacity: 0;"] { opacity: 1 !important; }
 x.com#%#//scriptlet('ubo-no-xhr-if', '/i/api/1.1/flow/viewer.json')
 !#endif
 ! https://forum.ru-board.com/topic.cgi?forum=5&topic=51666&start=1420#14
-aliexpress.com,aliexpress.ru,aliexpress.us#%#//scriptlet('ubo-set', 'navigator.bluetooth', 'undefined')
 aliexpress.com,aliexpress.ru,aliexpress.us#%#//scriptlet('ubo-set', 'OfflineAudioContext', 'undefined')
+aliexpress.com,aliexpress.ru,aliexpress.us#%#//scriptlet('ubo-set', 'navigator.bluetooth', 'undefined')
+
