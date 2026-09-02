@@ -1060,6 +1060,8 @@ cracksmid.com##div[style=""] > center > center
 ||claude-ai.cyou^$all
 ! https://x.com/0offbeat/status/2083637560597959035
 ||aisyncad.com^$all
+! https://x.com/masaomi346/status/2094718930770403336
+||cdn.streameet.top^$all
 
 ! scam sites
 ||webuzz.me^$doc
@@ -2706,6 +2708,9 @@ igualdad.iaa.csic.es##+js(acs, String.prototype.toLowerCase, Contract)
 cizitensports.com##+js(rmnt, script, randomUUID)
 ###cf-challenge-root
 
+! https://x.com/sicehice/status/2094946837140549785
+||sites.google.com/view/brewapp$doc
+
 ! !SECTION: ClickFix
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/12ng4o8/
@@ -4086,6 +4091,9 @@ www.cambe.pr.gov.br##+js(noeval-if, tigervip2)
 ||scanlonchiro.com^$all
 ! https://www.virustotal.com/gui/url/010ec70b6c61ab44ab7babace2ce2dfae1a6d854741e5a1a966b56001ad91c11
 *$doc,ipaddress=178.16.53.131
+! https://github.com/uBlockOrigin/uAssets/issues/34349
+! https://www.virustotal.com/gui/url/75d5f9569ffdf9f3a346eb4f17a06bf24275100ac082c3861ef6daeec988d718
+||openlive.chat^$all
 
 ! telegram
 ||telegramhcn.com^$all
@@ -4101,7 +4109,8 @@ www.cambe.pr.gov.br##+js(noeval-if, tigervip2)
 ! https://www.virustotal.com/gui/url/cb39c3fd6faa42c07328f8e73f8a4d2258523b557b9f4e5a134ef4ec3cf4698c
 /^https:\/\/telegram-[a-z]{2}\.[a-z]{2,3}\//$doc,to=~gov|~edu|~com|~net|~org|~telegram.org
 ! https://www.virustotal.com/gui/url/d69ea33854b1c9f85ec27cee7cd98ecff0e2933c2644e43df657671ebacb003e
-/^https:\/\/telegram-[a-z]{3,4}\.com\//$doc,to=com|~telegram.org
+! https://github.com/uBlockOrigin/uAssets/issues/34345
+/^https:\/\/telegram-[a-z]{3,4}\.com\//$doc,to=com|~telegram.org|~telegram-gif.com
 ! https://www.virustotal.com/gui/url/6f1f98c84a061d10586c11ca7ad04f568724b0853aeb98b5139af1dabbfe3677
 ! https://www.virustotal.com/gui/url/943c29c6dc0b25ee5badf1810e99e29fe22889cc632f2221b5a6e7c2aeadf05b
 /^https?:\/\/web\.t(el)?gram[a-z][a-z][a-z]?\.top\//$doc,to=top
@@ -5179,7 +5188,7 @@ rapidkil.com.au##+js(aost, XMLHttpRequest, /wp-content)
 ||govearali.org^$all
 ||claritydelivr.com^$all
 ||dntds.shop^$all
-/^https:\/\/[a-z]+\.[a-z]+\/[a-z]+\?rnd=[a-z0-9][a-z0-9][a-z0-9][a-z0-9][a-z0-9][a-z0-9][a-z0-9][a-z0-9]&ts=[0-9]+$/$script,xhr,3p,match-case
+/^https:\/\/[a-z]+\.[a-z]+\/[a-z]+\?rnd=[a-z0-9]{8}&ts=\d+$/$script,xhr,3p,match-case
 /jsrepo?rnd=$script,xhr,3p
 /teamrepo?rnd=$script,xhr,3p
 *$xhr,3p,method=get,to=org|shop|win,ipaddress=178.16.53.137
