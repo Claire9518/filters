@@ -100563,6 +100563,8 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1) { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||sogu.tripster.ru^
+||a2.cineflix.st^
 ||tracker.bigl.ua^
 ||bigfluffycatexchange.crabdance.com^
 ||tracking.vivareal.com.br^
@@ -314748,6 +314750,12 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+||otrium.*/static/newrelic.js
+||otrium.*/measure/
+tellows.jp/ping.php?p=
+||janitorai.com/jstats/
+.cineflix.st/api/script.js|
+||yalispor.com.tr/u966/
 hokkaido-np.co.jp##.main > section:has(> #ai_recommend_section)
 ||forums.digitalspy.com/api/v*/tick|
 ||journalreport.cn/mstatistics.js
@@ -321789,6 +321797,9 @@ $cookie=bf_visit
 ! Bad:  ||monerominer.rocks^$third-party (should be in adservers.txt)
 !
 !
+! experience.tripster.ru
+||experience.tripster.ru^$cookie=device_id
+||experience.tripster.ru^$cookie=gb_uid
 ! wildberries.ru
 ||wildberries.ru^$cookie=_wbauid
 ! https://github.com/AdguardTeam/AdguardFilters/issues/239596
@@ -324225,6 +324236,8 @@ d4?appid*type*
 !@@||mc.yandex.ru/metrika/watch.js$domain=
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/240636
+@@||cdn.jsdelivr.net/npm/@thumbmarkjs/thumbmarkjs/dist/thumbmark.umd.js$domain=archive.is
 ! https://jbbs.shitaraba.net/bbs/read.cgi/internet/25463/1618326670/308
 @@||cdn.cxense.com/cx.cce.js$domain=j-cast.com
 @@||cdn.cxense.com/cx.js$domain=j-cast.com
