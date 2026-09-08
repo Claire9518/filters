@@ -100563,12 +100563,17 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1) { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||rta2.newscientist.com^
+||ureca.samsungapps.com^
+||orsdls.di.runestone.samsung.com^
+||shealth-analytics-api.samsunghealth.com^
 ||sogu.tripster.ru^
 ||a2.cineflix.st^
 ||tracker.bigl.ua^
 ||bigfluffycatexchange.crabdance.com^
 ||tracking.vivareal.com.br^
 ||lms.roblox.com^
+||stats.dulo.
 ||clientlog.wanmei.com^
 ||jnt.welt.de^
 ||agrau.aii.sh^
@@ -314750,9 +314755,13 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+||bwapi.irunfar.com/log/
+||bwapi.irunfar.com/event/
+harpersbazaar.com##div[aria-labelledby="recirc-heading"]
+na2ka4.blog.fc2.com###inner2 > div.section2:has(> div.ninja-recommend-block)
 ||otrium.*/static/newrelic.js
 ||otrium.*/measure/
-tellows.jp/ping.php?p=
+||tellows.jp/ping.php?p=
 ||janitorai.com/jstats/
 .cineflix.st/api/script.js|
 ||yalispor.com.tr/u966/
@@ -315064,7 +315073,7 @@ kio.ac#%#//scriptlet('set-local-storage-item', 'affiliate_advertiser_stats', '$r
 ||cdn.viberu.ru/dist/tracking.*.js
 ||rugbypass.com/api/tracking/
 ||static0.pocketlintimages.com/assets/sentinel-events-tracker.*.js
-||dulo.tv/api/ping
+||dulo.*/api/ping
 ||happycow.net/analytics_socket|
 ||operationsports.com/plow-lite-bundle
 ||shingakunet.com/rnet/dlpo/
@@ -324236,8 +324245,12 @@ d4?appid*type*
 !@@||mc.yandex.ru/metrika/watch.js$domain=
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/240759
+! Fixed bookmark button on Japanese version
+@@||assetsconfigcdn.org/v1/initialize?k=$domain=bloomberg.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/240349
 ! https://github.com/AdguardTeam/AdguardFilters/issues/240636
-@@||cdn.jsdelivr.net/npm/@thumbmarkjs/thumbmarkjs/dist/thumbmark.umd.js$domain=archive.is
+@@||cdn.jsdelivr.net/npm/@thumbmarkjs/thumbmarkjs/dist/thumbmark.$domain=archive.is|archive.today|archive.ph
 ! https://jbbs.shitaraba.net/bbs/read.cgi/internet/25463/1618326670/308
 @@||cdn.cxense.com/cx.cce.js$domain=j-cast.com
 @@||cdn.cxense.com/cx.js$domain=j-cast.com
@@ -331367,6 +331380,7 @@ kizi.com#%#window.google_trackConversion = function() {};
 ||sulkycook.com^
 ||summerobject.com^
 ||sunflaggroup.com^
+||sunnylettings.com^
 ||sunsetcampfires.com^
 ||sunsetstatic.com^
 ||sunshinegates.com^
@@ -331380,6 +331394,7 @@ kizi.com#%#window.google_trackConversion = function() {};
 ||surfacesmedia.com^
 ||surfform.com^
 ||surftogether.net^
+||sushivolant.com^
 ||sustaindenim.com^
 ||swankysquare.com^
 ||swanwebcreations.com^
