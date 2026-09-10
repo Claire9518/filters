@@ -571,6 +571,9 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1) { remove: true; }
 !
 !
 !
+||disutgh7q0ncc.cloudfront.net^
+||zodalt.com^
+||rer4.com^
 ||cloudx.io^
 ||lndrsapi.com^
 ||ac.conel.jp^
@@ -100565,6 +100568,8 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1) { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||events.plutus.ninja^
+||metrics.earlygame.com^
 ||pla.uqload.vc^
 ||rta2.newscientist.com^
 ||ureca.samsungapps.com^
@@ -314758,6 +314763,12 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+||leolist.cc/static/min/js/modules/bam-impressions-
+||adverts.ie/5g8u/
+||api.mindbox.ru/*/customer/track-visit?
+||api.mindbox.ru/*/js/operations/async?*&trackerName
+roomie.jp##.r-article ~ .r-section:has(> div[id^="logly-lift-"])
+roomie.jp##.r-sidesection[data-google-interstitial]
 ||runtimewire.com/api/analytics/*/events|
 newsnow.com#%#//scriptlet('set-session-storage-item', 'nfPageCount', '$remove$')
 newsnow.com#%#//scriptlet('set-session-storage-item', 'pageCount', '$remove$')
@@ -314947,8 +314958,8 @@ peacocktv.com#%#//scriptlet('set-local-storage-item', 'impressionTrackingSession
 ||czesciauto24.pl/p/g^
 ||hexa.su/script.js
 ||candytm.pl/gtmgateway/
-/^https?:\/\/(android\.com\.pl|biznesenter\.pl)\/[a-z0-9]{1,4}\/$/$script,~third-party,domain=android.com.pl|biznesenter.pl
-candytm.pl,biznesenter.pl#%#//scriptlet('abort-current-inline-script', 'document.createElement', '/gtm\.start|dataLayer/')
+/^https?:\/\/(android\.com\.pl|biznesenter\.pl|invezz\.com)\/[a-z0-9]{1,4}\/$/$script,~third-party,domain=android.com.pl|biznesenter.pl|invezz.com
+invezz.com,candytm.pl,biznesenter.pl#%#//scriptlet('abort-current-inline-script', 'document.createElement', '/gtm\.start|dataLayer/')
 ||bifrost-api.hotstar.com/v*/events
 ||linuxcommunity.io/assets/google-universal-analytics-*.js
 ||credistory.ru/api/Metrics/
@@ -321811,6 +321822,8 @@ $cookie=bf_visit
 ! Bad:  ||monerominer.rocks^$third-party (should be in adservers.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/239398
+||gipfel.ru^$cookie=UniqAnalyticsId
 ! newsnow.com
 ||newsnow.com^$cookie=nnusrst
 ||newsnow.com^$cookie=nn_sid
@@ -321829,8 +321842,9 @@ $cookie=bf_visit
 $cookie=tipssid,domain=krosno112.pl|zawszepomorze.pl|raportwarszawski.pl|nowinypolnocne.pl|cozadzien.pl|telewizjagorzow.pl|krosno112.pl|tvswietokrzyska.pl|przegladpiaseczynski.pl
 ! hna.de
 ||hna.de^$cookie=cua_uuid
+! https://github.com/AdguardTeam/AdguardFilters/issues/239398
 ! https://github.com/AdguardTeam/AdguardFilters/issues/237741
-||premierzal.ru^$cookie=/^__ddg/
+*$cookie=/^__ddg/,domain=premierzal.ru|gipfel.ru
 ! itmedia.co.jp
 ||itmedia.co.jp^$cookie=s_vid
 ||itmedia.co.jp^$cookie=s_ubid
@@ -324254,6 +324268,8 @@ d4?appid*type*
 !@@||mc.yandex.ru/metrika/watch.js$domain=
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/240995
+@@||pub-static.fotor.com/static/web/lib/sensors/sensorsdata.min.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/240759
 ! Fixed bookmark button on Japanese version
 @@||featureassets.org/v1/initialize?k=$domain=bloomberg.com
@@ -329437,6 +329453,7 @@ kizi.com#%#window.google_trackConversion = function() {};
 ||bigfishapparel.com^
 ||biggerbling.com^
 ||bighornbasin.net^
+||bigpicframing.com^
 ||bigwetbrush.com^
 ||bigworldfashion.com^
 ||bikeexerciser.com^
