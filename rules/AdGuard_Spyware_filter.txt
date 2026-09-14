@@ -571,6 +571,19 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1) { remove: true; }
 !
 !
 !
+||a.ussp.io^
+||bidderstack.com^
+||cs.ifedata.ru^
+||myweb3id.io^
+||targetrtb.com^
+||mpartner.digital^
+||onetarget.ru^
+||intent.ai^
+||rtb.dynotech.io^
+||sp.linkssp.ru^
+||sync.adsp.io^
+||sync.gonet-ads.com^
+||smartcallback.ru^
 ||inmobicdn.net^
 ||mydatascript.bubbleup.com^
 ||getads.ru^
@@ -100572,6 +100585,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1) { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||p.food.ru^
 ||7lzwgj.donaukurier.de^
 ||events.plutus.ninja^
 ||metrics.earlygame.com^
@@ -313929,6 +313943,9 @@ zonedirector.avadacom.com$image
 !+ NOT_OPTIMIZED
 /.well-known/private-click-measurement
 !
+.io/yndx^
+/jc/gtm.js
+/static/modules/js/AssertiveYield/*
 /get/live/web/_/*$script,~third-party
 /wp-content/plugins/plausible-analytics/*
 /api-integration/ad-rotator/track/*
@@ -314769,8 +314786,15 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+||app.easy.tools/api/stats
+||chatgpt.com/ces/v1/telemetry/
+||yandex.*/an/count/$ping
+ellegirl.jp##div[aria-label="Recommended articles carousel"]
+||wargamings.net/track.js
+||media-analytic.com/gtag.js
 na2ka4.blog.fc2.com###inner2 > div.section2:has(> div.ninja-recommend-block)
 ||pornhub.com/utils/reportTimeWatched
+||live.dealer-asset.co/globalscripts/analytics.min.js
 ||supportecom.ru/server.php?rqst=track
 ||independent.co.uk/Agent/GA/
 ||independent.co.uk/_build/prebid_
@@ -314788,6 +314812,7 @@ newsnow.com#%#//scriptlet('set-session-storage-item', 'nfPageCount', '$remove$')
 newsnow.com#%#//scriptlet('set-session-storage-item', 'pageCount', '$remove$')
 ||bwapi.irunfar.com/log/
 ||bwapi.irunfar.com/event/
+||animegratis.net/js/layout-signal.js
 harpersbazaar.com##div[aria-labelledby="recirc-heading"]
 na2ka4.blog.fc2.com###inner2 > div.section2:has(> div.ninja-recommend-block)
 ||otrium.*/static/newrelic.js
@@ -314860,7 +314885,6 @@ news.golfdigest.co.jp##.recommend_articles
 ||trees.com/rtb
 ||ar-cdn.net/api/v1/events/view
 ||cine.su/api/telemetry|
-||instyle.com/static/*/static/modules/js/AssertiveYield/
 nishispo.nishinippon.co.jp#?##access-ranking:contains(Recent Articles)
 ||theroot.com/wp-content/plugins/advanced-ads-tracking/
 ||api.redgifs.com/v*/events/
@@ -315027,7 +315051,6 @@ mashable.com#%#//scriptlet('href-sanitizer', 'a[href^="https://cc.mashable.com/v
 ||app-web-server.imagen-ai-op.com/analytics/
 ||myshows.me/v3/rpc/stat/
 ||pornhub.com/_i?
-||phncdn.com/www-static/js/lib/user-clogs.js
 ||harant-test.ru/statistics.php
 ||iculture.nl/ic-cgi/report/
 ||majikichi.com/js/tracking.js
@@ -316399,7 +316422,6 @@ raycast.com#%#//scriptlet('set-session-storage-item', '/ph_phc_/', '$remove$')
 ||anizmplayer.com/gMetrics/
 /metrics^|$script,domain=anizle.*|anizle.com|anizle.net|anizm.*|anizm.net|anizm.com.tr|anizm.pro|puffytr.com
 ||free.ranklet4.com/impression?
-||joymaxtr.net/jc/gtm.js
 ||capi.elements.video/tr/
 ||web-perf.booking.com^
 ||storage.googleapis.com/widget.kenect.com/resources/scripts/newRelic.js.gz
@@ -317486,7 +317508,6 @@ tousatu-club.com###text-9
 ||bnr.nl/pixel/$image
 ||arc.nexx.cloud/static/structure/pixel_transparent.png
 ||ssl.directferries.com/secure/ws/adtracking.asmx/
-||forum.turkmmo.com/jc/gtm.js
 ||634.tv/statics/api/js/trans/logger.js
 ||cgmagonline.com/wp-content/plugins/perfmatters/js/analytics-minimal-v*.js
 ||plausible.cgmagonline.com/api/event|
@@ -320630,6 +320651,13 @@ dreamprogs.net##td[width="88"][height="31"]
 ||google.com/log?$redirect=nooptext
 ||yandex.ru/clck/click|
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/241118
+!#if (!adguard_app_ios && !adguard_ext_android_cb && !adguard_ext_safari)
+||phncdn.com/www-static/js/lib/user-clogs.js
+pornhub.com#%#//scriptlet('set-constant', 'userClogTracking', 'noopFunc')
+pornhub.com#%#//scriptlet('set-constant', 'updateClogTracking', 'noopFunc')
+!#endif
+!
 ! https://github.com/AdguardTeam/AdguardFilters/issues/238893
 ! https://github.com/AdguardTeam/AdguardFilters/issues/215044
 !#if (!adguard_app_ios && !adguard_ext_android_cb && !adguard_ext_safari)
@@ -320726,9 +320754,6 @@ dzen.ru#%#//scriptlet('json-prune', 'ssrData.exportResponse.feedData.adPixelsDat
 !
 !#if (!adguard_app_ios && !adguard_ext_android_cb)
 ||chat.deepseek.com/api/v0/events
-! https://github.com/AdguardTeam/AdguardFilters/issues/241127
-! chat.deepseek.com##.ds-modal-overlay
-! chat.deepseek.com#?#.ds-theme.ds-modal-wrapper:contains(AdGuard)
 !#endif
 !
 ! Netflix
@@ -321837,6 +321862,9 @@ $cookie=bf_visit
 ! Bad:  ||monerominer.rocks^$third-party (should be in adservers.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/241302
+||food.ru^$cookie=spid
+||food.ru^$cookie=foodrusid
 ! https://github.com/AdguardTeam/AdguardFilters/issues/239398
 ||gipfel.ru^$cookie=UniqAnalyticsId
 ! newsnow.com
@@ -324285,6 +324313,10 @@ d4?appid*type*
 !@@||mc.yandex.ru/metrika/watch.js$domain=
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/241300
+@@||rj.com/layouts/system/VisitorIdentification.js$domain=rj.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/241161
+@@||sgtm.viking.de/gtm.js$domain=viking.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/240995
 @@||pub-static.fotor.com/static/web/lib/sensors/sensorsdata.min.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/240759
@@ -329911,6 +329943,7 @@ kizi.com#%#window.google_trackConversion = function() {};
 ||drainpaste.com^
 ||dramaticdirection.com^
 ||dreamsdome.com^
+||driedwheat.com^
 ||driftingchef.com^
 ||driftpizza.com^
 ||droidwiz.com^
@@ -330043,6 +330076,7 @@ kizi.com#%#window.google_trackConversion = function() {};
 ||fatcoil.com^
 ||faucetfoot.com^
 ||faultycanvas.com^
+||faxardent.net^
 ||faxcoupons.com^
 ||fearfulfish.com^
 ||fearfulmint.com^
