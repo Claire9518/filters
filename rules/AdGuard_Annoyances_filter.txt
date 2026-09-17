@@ -4849,7 +4849,6 @@ ediusworld.com##.vm-bgpr-wrapper
 ageverification.org,flamecomics.xyz,betsukawa.co.jp,search.upright-music.dk,gezinomi.com#%#//scriptlet('set-cookie', 'cookieConsent', 'true')
 gezinomi.com#%#//scriptlet('set-cookie', 'marketingCookies', 'false')
 gezinomi.com#%#//scriptlet('set-cookie', 'performanceCookies', 'false')
-walmart.ca#%#//scriptlet('trusted-set-cookie-reload', 'uxcon', 'enforce=true&p13n=false&ads=false', '', '/', 'walmart.ca')
 lovo.ai#%#//scriptlet('trusted-set-cookie', 'cookieConsent', '{"essential":true,"analytical":false,"functional":false,"marketing":false}', '', '/', 'lovo.ai')
 cronosnewdawn.com#%#//scriptlet('trusted-set-cookie', 'cookie_consent_level', '%7B%22strictly-necessary%22%3Atrue%2C%22functionality%22%3Afalse%2C%22tracking%22%3Afalse%2C%22targeting%22%3Afalse%2C%22undefined%22%3Afalse%7D')
 cronosnewdawn.com#%#//scriptlet('trusted-set-cookie', 'cookie_consent_user_accepted', 'true')
@@ -38834,6 +38833,8 @@ mainichikirei.jp,secretmelbourne.com,spur.hpplus.jp,spiegel.de,itmedia.co.jp,han
 !
 ! SECTION: Subscriptions - Regular rules
 !
+gori.me##.gorime-hub
+gori.me##.gm-pswish
 thewire.in##.subscribe-banner-widget
 businessinsider.es##.c-detail__google
 telegraph.co.uk##.e-source-cta-wrapper
@@ -58841,6 +58842,8 @@ www.kinopoisk.ru##footer > div:has(> div > div[data-testid="kp-ui.amediateka-foo
 !
 ! SECTION: Self-promo - Regular rules
 !
+gori.me##.post-reactions
+gori.me##.gorime-cta
 komputronik.pl###sidebar-banner
 lewdcorner.com##div.stfrtDonateBubble
 mercadobitcoin.com.br##a[href^="https://www.mercadobitcoin.com.br/campanhas/"] > img
@@ -64667,6 +64670,10 @@ eiga.com##.header-pure-banner
 !##############################
 ! SECTION: Tweaks - CSS
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/241238
+smart-flash.jp#$#.listNewestImage .itemInfo { padding: 10px 40px 0px !important; }
+smart-flash.jp#$#.imageRankingBlock { margin-bottom: 0px !important; padding-bottom: 0px !important; }
+smart-flash.jp#$#.imageRankingBlock li:last-child { border-bottom: none !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/239808
 mahitiplus.com,recruitmentaim.in#%#//scriptlet('adjust-setInterval', 'timer', '*', '0.001')
 ! https://github.com/uBlockOrigin/uAssets/issues/32331
