@@ -100592,6 +100592,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1) { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||data-www-weaver.wanted.co.kr^
 ||eventlog.setka.ru^
 ||metrics.temptcdn.com^
 ||analytics.click-or-die.ru^
@@ -314814,6 +314815,7 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+s.response.jp##.vsi-pickup-list
 ||status.tbank-online.com/front/log/
 ||ispazio.net/wp-content/plugins/wc-site-stats/
 ||tracker.telegram.hr^
@@ -321920,6 +321922,8 @@ $cookie=bf_visit
 ! Bad:  ||monerominer.rocks^$third-party (should be in adservers.txt)
 !
 !
+! yanolja.com
+||yanolja.com^$cookie=nol_device_id
 ! OpenAI
 $cookie=__oailb,domain=chatgpt.com|openai.com
 ! oita-press.co.jp
@@ -324378,8 +324382,6 @@ d4?appid*type*
 !@@||mc.yandex.ru/metrika/watch.js$domain=
 !
 !
-! https://github.com/AdguardTeam/AdguardFilters/issues/242223
-@@||static.criteo.net/js/ld/publishertag.prebid.js$domain=powerwatch.jp
 ! https://github.com/AdguardTeam/AdguardFilters/issues/242234
 @@||bookshop.org/astro-assets/google-analytics.*.js$domain=bookshop.org
 ! https://github.com/AdguardTeam/AdguardFilters/issues/242142
@@ -329465,6 +329467,7 @@ kizi.com#%#window.google_trackConversion = function() {};
 ||aloofmetal.com^
 ||aloofvest.com^
 ||alpineactor.com^
+||amazinglea.com^
 ||ambientdusk.com^
 ||ambiguousafternoon.com^
 ||ambiguousanger.com^
