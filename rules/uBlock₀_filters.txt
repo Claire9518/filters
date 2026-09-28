@@ -2803,6 +2803,19 @@ darumasushiantofagasta.cl##+js(aost, Function, /bxslider|wow/)
 /^https:\/\/[a-z]{8,}\.[a-z]+\/[a-zA-Z][a-z]+_[Pp]roliv\/api\?ver=\d\.\d\.\d$/$script,3p,match-case
 /^https:\/\/[-a-z]{9,}\.net\/embed\/[a-f0-9]{16}\?embed=1&host=/$frame,3p,match-case,to=net
 
+! https://github.com/AdguardTeam/AdguardFilters/issues/241462
+||way-to-ai.com^$all
+
+! https://github.com/uBlockOrigin/uAssets/issues/34646
+/checking?domain=*&captchashowed=$xhr,3p
+||ikeymate.co.nz^$all
+||59na.com^$all
+##body > .cf-page-wrap
+
+! https://www.malwarebytes.com/blog/news/2026/09/criminals-turn-placeholder-domain-into-clickfix-trap
+||third-party.com^$all
+##body > .main-wrapper > .main-content > .intro > .checkbox-window
+
 ! !SECTION: ClickFix
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/12ng4o8/
@@ -6520,3 +6533,6 @@ top##body > center + .A + .post
 
 ! https://www.reddit.com/r/Scams/comments/1wkoejl/us_simple_modern_impersonator_website/
 ||simplemobgtnc.shop^$all
+
+! https://github.com/uBlockOrigin/uAssets/issues/34648
+||koboldcpp.com^$all
