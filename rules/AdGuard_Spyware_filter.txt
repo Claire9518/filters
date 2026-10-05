@@ -100592,6 +100592,9 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1) { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||apm.volccdn.com^
+||apmplus.volces.com^
+||evs.segwww.incident.io^
 ||scout.data.funkedigital.de^
 ||sp.data.funkedigital.de^
 ||nao.kagane.to^
@@ -314806,6 +314809,13 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+||api.cdnlivetv.tv/p2p-stats
+||media.flixcar.com/log/
+||independentaustralia.net/_js/realtrack.js
+||mizuhobank.co.jp/bk-common/pc/js/rt_track_event.js
+||mizuhobank.co.jp/common/js/rt_track.js
+||lf3-data.volccdn.com/obj/data-static/log-sdk/
+||news-postseven.com/wp-content/common/visitdata.js
 /vite/assets/Viafoura/Core/Events.*.js$domain=imore.com|coachweb.com
 /.events-handler/*$domain=imore.com|coachweb.com
 ||coachweb.com/vite/assets/JwPlayer/Shared/TrackingEvents.*.js
@@ -316068,7 +316078,7 @@ express.co.uk,iflscience.com,nypost.com#%#//scriptlet('set-local-storage-item', 
 ||parchment.com/wp-content/themes/wp-parchment/assets/utm-tags.min.js
 ||try.elevenlabs.io/pr/js
 ||elevenlabs.io/hog/
-ricardocuisine.com,thegentlemansjournal.com,thekrazycouponlady.com,flo.com.tr#%#//scriptlet('set-local-storage-item', '__anon_id', '$remove$')
+incident.io,ricardocuisine.com,thegentlemansjournal.com,thekrazycouponlady.com,flo.com.tr#%#//scriptlet('set-local-storage-item', '__anon_id', '$remove$')
 ||market.samm.com/0/sendEventV2
 ezviz.ru#%#//scriptlet('set-local-storage-item', 'userUuid', '$remove$')
 ||c.sberlead.ru/clickstream.bundle.js
@@ -324377,6 +324387,14 @@ d4?appid*type*
 !@@||mc.yandex.ru/metrika/watch.js$domain=
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/243386
+@@||cmp.optimizely.com/assets/$image,domain=roadscholar.org
+! https://github.com/AdguardTeam/AdguardFilters/issues/243436
+@@||googletagmanager.com/gtm.js$domain=news-postseven.com
+! https://github.com/AdguardTeam/AdguardFilters/pull/243384
+@@||googletagmanager.com/gtm.js$domain=mizuhobank.co.jp
+! https://github.com/AdguardTeam/AdguardFilters/issues/243416
+@@||googletagmanager.com/gtm.js$domain=unicef.or.jp
 ! https://github.com/AdguardTeam/AdguardFilters/issues/242943
 @@||priem.menu^$cookie=_ga
 ! https://github.com/AdguardTeam/AdguardFilters/issues/241876
@@ -331869,6 +331887,7 @@ kizi.com#%#window.google_trackConversion = function() {};
 ||viowrel.com^
 ||viralfoodie.net^
 ||virtualvincent.com^
+||visualcommservices.com^
 ||vividcache.com^
 ||vividcanopy.com^
 ||vividfrost.com^
