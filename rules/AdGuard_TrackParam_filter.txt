@@ -554,6 +554,10 @@ $removeparam=tduid
 ! Good: ||example.org^$removeparam=cx
 ! Bad: ||example.org^$xmlhttprequest,redirect=noopvast-3.0 (for instance, should be in specific.txt)
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/243243
+||boots.com^$removeparam=affwin
+||boots.com^$removeparam=sv1
+||boots.com^$removeparam=sv_campaign_id
 ! https://github.com/AdguardTeam/AdguardFilters/issues/243180
 ||my-best.com^$removeparam=utm_y_top
 ||retty.me^$removeparam=utm_y_pc_top
@@ -810,6 +814,8 @@ $removeparam=ri,domain=khb-tv.co.jp|kab.co.jp|kfb.co.jp|maidonanews.jp|ncctv.co.
 ||chexy.co^$removeparam=_caid
 ||chexy.co^$removeparam=_cvid
 ! bestbuy.com
+||bestbuy.com^$removeparam=src
+||bestbuy.com^$removeparam=vehicle
 ||bestbuycreators.7tiv.net^$removeparam=sharedid
 ||bestbuycreators.7tiv.net^$removeparam=adcampaignid
 ||bestbuycreators.7tiv.net^$removeparam=svlink
@@ -3882,6 +3888,12 @@ adguard.info,adguard.com,adguard.app#$#.hello_from_adguard_advanced_protection_i
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/243495
+@@||archive.*^$removeparam
+@@||wayback.archive-it.org^$removeparam
+@@||warp.ndl.go.jp^$removeparam
+@@||gyo.tc^$removeparam
+@@||megalodon.jp^$removeparam
 ! https://github.com/AdguardTeam/AdguardFilters/issues/242046
 @@||eneba.com^$removeparam=utm_source
 ! https://github.com/AdguardTeam/AdguardFilters/issues/235814
