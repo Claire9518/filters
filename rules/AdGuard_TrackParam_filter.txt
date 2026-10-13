@@ -558,6 +558,10 @@ $removeparam=tduid
 ! Good: ||example.org^$removeparam=cx
 ! Bad: ||example.org^$xmlhttprequest,redirect=noopvast-3.0 (for instance, should be in specific.txt)
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/243890
+||bfmtv.com^$removeparam=at_brand
+||bfmtv.com^$removeparam=at_compte
+||bfmtv.com^$removeparam=at_plateforme
 ! https://github.com/AdguardTeam/AdguardFilters/issues/244026
 ||elcomercio.es^$removeparam=mrfcid
 ! https://github.com/AdguardTeam/AdguardFilters/issues/243658
@@ -3904,6 +3908,8 @@ adguard.info,adguard.com,adguard.app#$#.hello_from_adguard_advanced_protection_i
 !
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/243495
+@@||archiveiya74codqgiixo33q62qlrqtkgmcitqx5u2oeqnmn5bpcbiyd.onion^$removeparam
+@@||archivecaslytosk.onion^$removeparam
 @@||archive.*^$removeparam
 @@||wayback.archive-it.org^$removeparam
 @@||warp.ndl.go.jp^$removeparam
