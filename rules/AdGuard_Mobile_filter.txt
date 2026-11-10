@@ -1089,6 +1089,8 @@
 ! Bad: ||ad.doubleclick.net^ (should be in adservers.txt)
 !
 !
+! filmymeet.cc antiadblock
+filmymeet.cc###mobileAdblockModal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/233611
 pornhex.com#%#//scriptlet('prevent-setTimeout', '/AdBlock/i')
 !+ PLATFORM(ios, ext_android_cb, ext_safari)
@@ -2858,6 +2860,12 @@ sp.manga.nicovideo.jp##div[style^="--ads-width:"]
 !
 ! SECTION: Regular rules
 !
+biz.nv.ua##.main-wrapper > .container:has(> div.row > a[target="_blank"] picture)
+biz.nv.ua##section[data-type="advertising"]
+linkvertise.com##lv-ad-sense
+jprime.jp#$#body > .l-main { margin-top: -160px !important; }
+jprime.jp#$#body > .l-header { margin-top: -160px !important; }
+jprime.jp#$#body { padding-bottom: 0px !important; }
 remontka.pro##article > div[id^="rem_"]
 allsoft.ru##.main-mobile-banner
 winfuture.de###ab_google_336x280_35_35
@@ -9215,6 +9223,8 @@ livejournal.com##div[id^="billboard_mobile_"]
 ! END: Livejournal.com
 !
 !
+!+ NOT_OPTIMIZED
+dot.asahi.com##.article-inarticle-guide
 !+ NOT_OPTIMIZED
 heise.de##.ad-mobile-group-3
 !+ NOT_OPTIMIZED
