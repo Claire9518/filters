@@ -3,9 +3,9 @@
 ! Description: 适用于 AdGuard 的去广告合并规则，每 12 个小时更新一次。规则源：360、AdBlocker Ultimate、adbyby、ADgk、AdGuard Annoyances filter、AdGuard Base filter、AdGuard Chinese filter、AdGuard DNS filter、AdGuard Mobile filter、AdGuard Spyware filter、AdGuard TrackParam filter、AdGuard Useful filter、AdRules DNS List、anti-ad-adguard、CJX's Annoyance List、damengzhu、Dandelion Sprout's Anti-Malware List、EasyList、EasyList China、EasyPrivacy、fanboy、GOODBYEADS-blacklist、GOODBYEADS-whitelist、HaGeZi Abused TLDs、HaGeZi Badware Hoster、halflife-list-ad、halflife-list-ad-edentw、halflife-list-ad-pc、hBlock、i dont care about cookies、jiekouAD、Online Malicious URL Blocklist、Perflyst and Dandelion Sprout's Smart-TV Blocklist、Peter Lowe's List、Phishing Army、Phishing URL Blocklist、Scam Blocklist、ShadowWhisperer's Malware List、Stalkerware Indicators List、uBlock₀ filters、xinggsf rule、xinggsf mv、1hosts (Lite)、anti-AD、AWAvenue Ads Rule、hagezi-allowlist、hagezi-anti.piracy、hagezi-gambling、hagezi-multi、hagezi pro plus、Hblock、NEO DEV HOST、OISD Big、SmartTV Blocklist、大圣、1007、1024 hosts、AdAway、ad-wars hosts、Dan Pollock's List、NoCoin Filter List、Peter Lowe's ad host、StevenBlack host + fakenews + gambling + porn、The Big List of Hacked、WindowsSpyBlocker、yhost、yhost-tvbox、YoursList。
 ! Homepage: https://github.com/Claire9518/filters
 ! Source: https://raw.githubusercontent.com/Claire9518/filters/main/rules/adblockfilters.txt
-! Version: 20261115014307
-! Last modified: 2026/11/15 01:43:07
-! Blocked Filters: 593758
+! Version: 20261115124848
+! Last modified: 2026/11/15 12:48:48
+! Blocked Filters: 593763
 !
 ###-CookieConsentContainer
 ###ACCETTA_COOKIES
@@ -108555,6 +108555,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 @@||imore.com/sites/imore.com/files/*/public/field/image/*/adchoices-$image,domain=imore.com
 @@||imore.com/sites/imore.com/files/*/public/field/image/*/google-ad$image,domain=imore.com
 @@||imore.com/sites/imore.com/files/advagg_js/$script
+@@||imp.i*.net^
 @@||imperialtechforesight.com/wp-content/plugins/creare-eu-cookie-law-banner/js/eu-cookie-law.js
 @@||imperiofilmes.co^$generichide
 @@||impossible3ds.com/wp-content/plugins/uk-cookie-consent/js/uk-cookie-consent-js$~third-party
@@ -149358,7 +149359,6 @@ coating-converting.de,umweltwirtschaft.com###footer-middle
 coating-converting.de,umweltwirtschaft.com###social-icon-col
 cobak.co.kr##div[class^="Popup__popup"]
 cobasi.com.br##.lgpd
-cobephim.fit##.sspp-area
 cobephim.icu##.sspp-area
 cobephim.ink##.sspp-area
 cobo.com##div[class^="CookieRemind_"]
@@ -527703,6 +527703,7 @@ timesofindia.indiatimes.com##.et_newsletter_widget
 timesofindia.indiatimes.com##.fromaroundwebrhs
 timesofindia.indiatimes.com##.imageBanner
 timesofindia.indiatimes.com##.js_tbl_article > .clearfix > div:not([data-pos]):not([data-type]):has(textarea[placeholder="Join the conversation"])
+timesofindia.indiatimes.com##.js_tbl_article ~ div[class]:not([id]):has(> div.wdt-taboola[onclick="stpPgtn(event)"])
 timesofindia.indiatimes.com##.l0TBl
 timesofindia.indiatimes.com##.main-paisa
 timesofindia.indiatimes.com##.mgid_second_mrec_parent
@@ -527719,6 +527720,7 @@ timesofindia.indiatimes.com##.taboola_ad_mid
 timesofindia.indiatimes.com##.toi-amazon
 timesofindia.indiatimes.com##.toinewsletternudge
 timesofindia.indiatimes.com##.topBand_adwrapper
+timesofindia.indiatimes.com##.wrapperclearfix > div[class] > div[class]:not([id]) > div[data-translate-id="cw"]:has(> div:is(div[id^="div-gpt-ad"], .taboolaBtmVsAd))
 timesofindia.indiatimes.com##[class]:has(> .wdt-taboola)
 timesofindia.indiatimes.com##[data-contentprimestatus]
 timesofindia.indiatimes.com##[data-sp-click="stpPgtn(event)"]
@@ -527755,6 +527757,7 @@ timesofindia.indiatimes.com#%#//scriptlet('set-cookie', 'minitvClose', '1')
 timesofindia.indiatimes.com#?#.as_article > div.article_content > div[class*=" "]:has(> div > div > a[onclick])
 timesofindia.indiatimes.com#?#.clearfix > div[class]:has(> ul[class] > li > h6 + p > a[href="http://get.timesofindia.com"])
 timesofindia.indiatimes.com#?#.clearfix > div[class^="_"]:has(> div.LazyLoad:first-child > div[id^="div-gpt-ad-"])
+timesofindia.indiatimes.com#?#.js_tbl_article ~ div[class]:not([id]):has(> div.wdt-taboola[onclick="stpPgtn(event)"])
 timesofindia.indiatimes.com#?#.main-content > div.article_content ~ div[class*=" "]:has(> div > div > a[onclick])
 timesofindia.indiatimes.com#?#.main-content > div.article_content~div[class*=" "]:has(> div > div > a[onclick])
 timesofindia.indiatimes.com#?#.main-content > div[style="display: none !important;"] ~ div:has(> div > div > a[onclick][rel="nofollow"] > span)
@@ -527763,6 +527766,7 @@ timesofindia.indiatimes.com#?#.pmr:has(> div[class] > h2 > a[data-label="Sponsor
 timesofindia.indiatimes.com#?#.sidebar > .one-third.outer > style + div[class*=" "] > div[data-cb="processCtnAds"]:upward()
 timesofindia.indiatimes.com#?#.sidebar > .one-third.outer > style + div[class*=" "] > div[data-cb="processCtnAds"]:upward(2)
 timesofindia.indiatimes.com#?#.sidebar > div[class*=" "]:has(> div > div > a[onclick])
+timesofindia.indiatimes.com#?#.wrapperclearfix > div[class] > div[class]:not([id]) > div[data-translate-id="cw"]:has(> div:is(div[id^="div-gpt-ad"], .taboolaBtmVsAd))
 timesofindia.indiatimes.com#?#div[class^="topBand_"] + div > div[class]:has(> div[id^="div-gpt-ad"])
 timesofindia.indiatimes.com#?#div[data-articlebody] > div[data-type="in_view"]:has(> div[class] > #creditscoreiframe)
 timesofindia.indiatimes.com#?#div[data-font] > div:has(> div[id^="div-gpt-"]:only-child)
@@ -556381,7 +556385,7 @@ zzzyk.com###Tinfo
 ||*.dating^$denyallow=boo.dating|breeze.dating|gaudi.dating
 ||*.deals^$denyallow=gg.deals
 ||*.degree^$denyallow=opf.degree|three60.degree
-||*.delivery^$denyallow=meucarrinho.delivery|push.delivery|return-my.delivery|wedos.delivery|ze.delivery
+||*.delivery^$denyallow=logistix.delivery|meucarrinho.delivery|push.delivery|return-my.delivery|wedos.delivery|ze.delivery
 ||*.dental^$denyallow=clear.dental
 ||*.desi^$denyallow=xhamster45.desi|xhamster46.desi|xhamster.desi
 ||*.directory^$denyallow=2fa.directory|cursor.directory|fedi.directory|ooh.directory|passkeys.directory|reactnative.directory
@@ -560618,7 +560622,6 @@ zzzyk.com###Tinfo
 ||app.inkind.com/api/*/events
 ||app.intercom.io/gtm_tracking/
 ||app.kajabi.com/health_check/ping
-||app.kulgacdn.com/js/script.js
 ||app.leadfox.co/js/api/leadfox.js$domain=avantages-familles.ch
 ||app.leadplan.ru/assets/img/1px.gif
 ||app.leadster.com.br/*/analytics/
@@ -566532,6 +566535,7 @@ zzzyk.com###Tinfo
 ||d2zs9z3hmfhcr6.cloudfront.net^$script,domain=omnicalculator.com
 ||d335luupugsy2.cloudfront.net^$domain=~btgpactual.com
 ||d33t3vvu2t2yu5.cloudfront.net/pub/
+||d33wubrfki0l68.cloudfront.net/js/*/js/ad-payment.js$domain=duellinksmeta.com
 ||d34gglw95p9zsk.cloudfront.net/clipkit_assets/beacon-*.js
 ||d3584kspbipfh3.cloudfront.net/cm/
 ||d38tudgzjt8cbb.cloudfront.net/log.gif?
@@ -580409,6 +580413,7 @@ zzzyk.com###Tinfo
 ||p-mel.net^$doc
 ||p-pure.jp^$doc
 ||p.a2d.io/plx.js
+||p.alimama.com
 ||p.jwpcdn.com/*/vast.js$app=nl.sanomamedia.android.nu,important
 ||p.jwpcdn.com/*/vast.js$domain=apa.tv,important
 ||p.jwpcdn.com/*/vast.js$domain=gooqlevideo.com
