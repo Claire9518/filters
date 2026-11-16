@@ -295,6 +295,11 @@
 ! Bad: ||ad.doubleclick.net^ (should be in adservers.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/247356
+usca.my903.com#%#//scriptlet('prevent-constructor', 'Promise', '/ats.js')
+!#if (adguard_app_ios || adguard_ext_safari || adguard_ext_android_cb)
+@@||anymind360.com/js/*/ats.js$domain=usca.my903.com
+!#endif
 ! https://github.com/AdguardTeam/AdguardFilters/issues/245318
 xchina.co##div[data-block-overlay]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/234769
@@ -1364,6 +1369,8 @@ $script,xmlhttprequest,third-party,domain=00ksw.com|01zww.com|0biquge.com|114zw.
 !
 ! NOTE: Specific rules
 !
+||91cg1.com/ssp/
+91cg1.com##.post-content > div[style="text-align:center;margin:20px 0;"]
 cars.tvbs.com.tw##div[class]:has(> div[class^="min-h-"] > div[id^="car_"][id*="_read_"])
 ||sudugu.cc/scripts/yuedu.js
 ||ksou.tv/api/v1/ad/
@@ -1381,6 +1388,8 @@ wenshushu.cn##.cont-right .mer-item
 31w3.cn##.adSwipebox
 /api/v1/ad/*$xmlhttprequest,domain=31w3.cn
 31w3.cn##.gridContent
+cleanip.io##aside[data-nosnippet][class*="--"]
+cleanip.io##section[data-nosnippet] > div > aside[class*="--"]
 cleanip.io##div[aria-label^="Sponsored"]
 cleanip.io##.iu--banner
 cleanip.io##.netfish-invite-compact
@@ -4418,7 +4427,6 @@ bmvc2020-conference.com#@#div[id][style="width: 100%;"] > iframe[scrolling="no"]
 /gg_d.php
 /gg_details_
 /gg_t.php
-/ggao.
 /ggao/*
 /ggclass/*
 /ggdata1.
@@ -5464,6 +5472,14 @@ newduba.cn###jq_youxi
 ||iytnwiw0e1.com^
 ||divisible26.com^
 ||681znub3xp.com^
+||ll4d0puaa2.com^
+||01wgskp9y3.com^
+||grmxqjo.com^
+||1bdy5sl4fc.com^
+||y756n8wwt8.com^
+||52cg5n8jjd.com^
+||tlomdebs.com^
+||7xjdieyglr.com^
 ||extraction14.com^
 ||uxawyas.com^
 ||lwlqblkcucbrjy.com^
