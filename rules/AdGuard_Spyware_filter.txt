@@ -877,7 +877,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1) { remove: true; }
 ||api.eventbus.me^
 ||rumt-sg.com^
 ||gm.mmstat.com^
-||yazio-analytics.com^
+||event-ingestion.yazio-analytics.com^
 ||hightouch-events.com^
 ||rtbuniverse.com^
 ||imp_track.zmaticoo.com^
@@ -114920,7 +114920,6 @@ prd.api.bleacherreport.com^
 ||fxgate.baidu.com^
 ||p.controld.com^
 ||collector.bsg.brave.com^
-||sy.ameba.jp^
 ||tracker.uira.live^
 ||col.surfside.io^
 ||tsn.dmcmedia.co.kr^
@@ -427533,6 +427532,9 @@ naver.com#%#//scriptlet('trusted-json-set', 'JSON.stringify', '$.env.br_sr', '38
 !
 ! NOTE: Specific rules
 !
+||seznam.cz/*/hit|
+||seznam.cz/*/imp?k=
+||fls-eu.amazon.de/*batch/*uedata*Gateway
 ||ev.chitchat.tv/e/
 ||ev.chitchat.tv/i/*/e/
 ||kasemato.net/wp-content/themes/kasemato/assets/access-analytics.js
@@ -434985,6 +434987,8 @@ mcp.directory#%#//scriptlet('remove-cookie', 'dotcom_user')
 ||amazon.com^$cookie=aws-target-session-id
 ||amazon.com^$cookie=aws-target-visitor-id
 ||amazon.com^$cookie=aws-vid
+! amazon.*
+||amazon.*^$cookie=csm-hit
 ! yellowpages.com
 ||yellowpages.com^$cookie=vrid
 ! spooncast.net
@@ -443786,6 +443790,7 @@ kizi.com#%#window.google_trackConversion = function() {};
 ||marsnextdoor.com^
 ||mascguys.com^
 ||maskedadmin.com^
+||masondown.com^
 ||masseurexpress.com^
 ||massivemark.com^
 ||masterenter.com^
@@ -444004,6 +444009,7 @@ kizi.com#%#window.google_trackConversion = function() {};
 ||orangebirdie.com^
 ||orchidgenius.com^
 ||orderjumper.com^
+||ordinalzero.com^
 ||orgbackups.com^
 ||orientedargument.com^
 ||originblocks.com^
@@ -444238,6 +444244,7 @@ kizi.com#%#window.google_trackConversion = function() {};
 ||rangeplayground.com^
 ||rangergustav.com^
 ||rankaddict.com^
+||rapidscraper.com^
 ||rarelyfans.com^
 ||raresummer.com^
 ||razzweb.com^
